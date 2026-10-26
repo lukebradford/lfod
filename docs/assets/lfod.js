@@ -80,9 +80,10 @@
       this.playBtn = btn("▶", "Play / pause", () => this.toggle());
       btn("⏭", "Step one generation", () => { this.pause(); this.tick(); });
       btn("⟲", "Reset", () => { this.reset(); });
+      // The counter sits over the canvas so its changing width never moves the buttons.
       this.info = document.createElement("span");
       this.info.className = "pinfo";
-      bar.appendChild(this.info);
+      el.appendChild(this.info);
       const copy = btn("Copy RLE", "Copy RLE to clipboard", () => {
         navigator.clipboard && navigator.clipboard.writeText(this.rle).then(() => {
           copy.textContent = "Copied"; setTimeout(() => (copy.textContent = "Copy RLE"), 1200);

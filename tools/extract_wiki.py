@@ -5,6 +5,7 @@ Machine captures (2015-04-22, 2016-10-14, 2018-03-25). Links appear as
 'text [->target]' and images as '[IMG ...]'. The newest capture of each page wins.
 """
 import json, re
+from urllib.parse import quote_plus
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -51,7 +52,8 @@ for title, (stamp, text) in sorted(pages.items()):
     m = re.search(r"Discovered by ([A-Za-z][\w.]*(?: [A-Z][\w.]*)*?)(?: \(|[.,;]| in | and )", desc)
     if m:
         credit = m.group(1).rstrip(".")
-    out.append({"name": title, "captured": f"{stamp[:4]}-{stamp[4:6]}-{stamp[6:8]}", "paras": paras,
+    url = f"https://web.archive.org/web/{stamp}/http://lfod.wikispaces.com/{quote_plus(title)}"
+    out.append({"name": title, "captured": f"{stamp[:4]}-{stamp[4:6]}-{stamp[6:8]}", "url": url, "paras": paras,
                 "desc": desc, "rle": rle, "extra_rles": rles[1:], "credit": credit})
 (ROOT / "data/wiki.json").write_text(json.dumps(out, indent=1, ensure_ascii=False))
 print(len(out), "wiki pages;", sum(1 for e in out if e["rle"]), "with RLE")

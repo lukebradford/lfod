@@ -19,8 +19,6 @@ NAMES = {"Sokwe": "Matthias Merzenich (Sokwe)", "wildmyron": "Arie Paap (wildmyr
          "simsim314": "Michael Simkin (simsim314)", "glider_rider": "Nico Brown (glider_rider)",
          "bprentice": "Brian Prentice", "velcrorex": "Josh Ball (velcrorex)", "lukebradford": "Luke Bradford"}
 CONCEPTS = {"chaos", "natural", "flotilla", "gun", "speed of light"}
-# Wiki pages whose newer pattern is worth showing next to the 2009 one.
-SHOW_WIKI_RLE = {"anchor stack", "freedom fighter", "anchored"}
 
 def post_url(pid):
     return f"https://conwaylife.com/forums/viewtopic.php?p={pid[1:]}#{pid}"
@@ -35,16 +33,16 @@ for p in WIKI:
         continue
     old = GLOSSARY.get(name.lower())
     if old:
-        if norm(old["desc"]) == norm(p["desc"]):
-            continue
-        e = {"name": old["name"], "desc": p["desc"], "source": f"wiki, captured {p['captured'][:4]}"}
-        if name in SHOW_WIKI_RLE and p["rle"]:
-            e["rle"] = p["rle"]
-        entries.append(e)
+        # The wiki text supersedes the 2009 text; keep the 2009 pattern only if the wiki page had none.
+        entries.append({"name": old["name"], "desc": p["desc"] or old["desc"], "rle": p["rle"], "credit": p["credit"],
+                        "paras": p["paras"] if p["desc"] else None, "rles": ([p["rle"]] if p["rle"] else []) + p["extra_rles"],
+                        "replace": True, "source": "wiki", "url": p["url"], "captured": p["captured"]})
     elif p["rle"] or name in CONCEPTS:
         desc = p["desc"] if p["rle"] else " ".join(p["paras"][:2])
         entries.append({"name": name, "desc": desc, "rle": p["rle"], "credit": p["credit"] or "",
-                        "source": "wiki 2013–2018"})
+                        "paras": p["paras"] if p["rle"] else p["paras"][:2],
+                        "rles": ([p["rle"]] if p["rle"] else []) + p["extra_rles"],
+                        "source": "wiki", "url": p["url"], "captured": p["captured"]})
 
 # Names that survive only on the wiki's speed table and in the forum: take the pattern from the forum post.
 BY_TITLE = {f["title"]: f for f in FORUM}
@@ -58,8 +56,7 @@ for name, title, desc in [
 ]:
     f = BY_TITLE[title]
     entries.append({"name": name, "desc": desc, "rle": f["rle"], "credit": NAMES.get(f["by"], f["by"]),
-                    "source": "forum " + f["date"][:4],
-                    "post": post_url(f["post"])})
+                    "source": "forum", "url": post_url(f["post"]), "captured": f["date"]})
 
 # Families in Nico Brown's organized c/2 collection (forum, 2014-12-29), named in private messages
 # between Luke and Nico that week: rows of horned, unicorn, hippo and buffalo ships, and the fox ship.
@@ -82,7 +79,7 @@ for name, key, desc, credit in [
 ]:
     f = C2[key]
     entries.append({"name": name, "desc": desc.format(count=f["count"], minpop=f["smallest"]["minpop"]),
-                    "rle": f["smallest"]["rle"], "credit": credit, "source": "forum 2014", "post": C2_POST})
+                    "rle": f["smallest"]["rle"], "credit": credit, "source": "forum", "url": C2_POST, "captured": "2014-12-29"})
 for name, title, desc in [
     ("horned rake", "c/2 backrake",
      "A p4 c/2 clean backward moon rake, named by its discoverer in December 2014. Can be stabilized into a horned ship."),
@@ -93,7 +90,7 @@ for name, title, desc in [
 ]:
     f = BY_TITLE[title]
     entries.append({"name": name, "desc": desc, "rle": f["rle"], "credit": NAMES.get(f["by"], f["by"]),
-                    "source": "forum " + f["date"][:4], "post": post_url(f["post"])})
+                    "source": "forum", "url": post_url(f["post"]), "captured": f["date"]})
 
 news = []
 for f in FORUM:

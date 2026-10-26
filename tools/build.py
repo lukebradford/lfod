@@ -97,12 +97,14 @@ def table_html(rows, link_names=None, header=True):
 # ---------------------------------------------------------------- glossary data
 
 KIND_LABELS = {
-    "oscillator": "Oscillators", "spaceship": "Spaceships", "puffer": "Puffers & rakes",
+    "oscillator": "Oscillators", "spaceship": "Spaceships", "puffer": "Puffers, rakes & guns",
     "tagalong": "Tagalongs & trailers", "reaction": "Sparks, pre-sparks & reactions", "term": "Terms",
 }
 TERM_NAMES = {"anchored", "bi-anchored", "left-anchored", "right-anchored", "attached wing", "floating wing",
               "boxy", "dusty", "empty", "heavy", "engine", "engine horn", "flame", "horn", "nose", "wing",
-              "wing notation", "W-winged", "phase type", "anchor track flotilla", "anchor stack", "stack"}
+              "wing notation", "W-winged", "phase type", "anchor track flotilla", "stack"}
+
+TAG_OVERRIDES = {"moon laser": "Gun", "sawtooth": "Sawtooth"}
 
 def kind_of(e):
     if e["name"] in TERM_NAMES or not e.get("rle"):
@@ -112,8 +114,10 @@ def kind_of(e):
     d = e["desc"].lower()
     m = re.search(r"\b(oscillator|spaceship|puffer|rake|trailer|tagalong|pre-spark|spark|reaction|fuse|predecessor)s?\b", d)
     w = m.group(1) if m else "term"
-    if e["name"] in ("bomb", "shrinker"):
+    if e["name"] in ("bomb", "shrinker", "sawtooth"):
         return "reaction"
+    if e["name"] == "moon laser":
+        return "puffer"
     if e["name"] in ("dot",):
         return "oscillator"
     if e["name"] in ("checker",):
@@ -135,9 +139,14 @@ def all_entries():
     names = {x["name"].lower() for x in entries}
     for e in LATER.get("entries", []):
         if e["name"].lower() in names:
-            for x in entries:
-                if x["name"].lower() == e["name"].lower():
-                    x.setdefault("later_notes", []).append(e)
+            x = next(x for x in entries if x["name"].lower() == e["name"].lower())
+            x.update(desc=e["desc"], source=e["source"], url=e.get("url"), captured=e.get("captured"),
+                     paras=e.get("paras"), rles=e.get("rles"))
+            if e.get("credit"):
+                x["credit"] = e["credit"]
+            if e.get("rle"):
+                x["rle"] = e["rle"]
+                x.pop("reconstructed", None)
         else:
             entries.append(dict(e))
     for e in entries:
@@ -187,6 +196,22 @@ def loop_for(e):
         return 60
     return 120
 
+def wiki_body(e, h):
+    """Wiki pages interleave text and patterns: each pattern follows the paragraph that introduces it.
+    Short unpunctuated paragraphs are subsection names (e.g. the three kinds of anchor stack)."""
+    rles = list(e.get("rles") or ([e["rle"]] if e.get("rle") else []))
+    out = []
+    for para in e["paras"]:
+        if len(para) < 40 and not para.rstrip().endswith((".", ":", ")")):
+            out.append(f'<h4>{esc(para)}</h4>')
+            continue
+        out.append(f'<p>{autolink(para, e["slug"])}</p>')
+        if rles and re.search(r"\b(following|shown below|below is|as below)\b|\bbelow[.:]\s*$", para, re.I):
+            out.append(player(rles.pop(0), e["name"], height=h, loop=loop_for(e)))
+    for r in rles:
+        out.append(player(r, e["name"], height=h, loop=loop_for(e)))
+    return out
+
 # ---------------------------------------------------------------- pages
 
 def build_glossary():
@@ -198,28 +223,32 @@ def build_glossary():
         if L != letter:
             letter = L
             cards.append(f'<div class="letter" data-letter>{L}</div>')
-        tags = [f'<span class="tag">{esc(KIND_LABELS[e["kind"]].rstrip("s").split(" &")[0].split(",")[0])}</span>']
+        label = TAG_OVERRIDES.get(e["name"]) or KIND_LABELS[e["kind"]].split(" &")[0].split(",")[0].rstrip("s")
+        tags = [f'<span class="tag">{esc(label)}</span>']
         credit = e.get("credit") or ""
         if credit:
             tags.append(f'<span class="tag credit">{esc(credit)}</span>')
-        if e.get("source", "").startswith("wiki") or e.get("source", "").startswith("forum"):
-            tags.append(f'<span class="tag">added {esc(e["source"])}</span>')
         if e.get("reconstructed"):
             tags.append('<span class="tag" title="Pattern decoded from the original glossary image">from image</span>')
-        body = [f'<p>{autolink(e["desc"], e["slug"])}</p>']
-        if e.get("post"):
-            body.append(f'<p class="muted"><a href="{esc(e["post"])}">Original forum post</a></p>')
-        if e.get("rle"):
-            h = 120 if e["kind"] in ("reaction",) else 170
-            body.append(player(e["rle"], e["name"], height=h, loop=loop_for(e)))
-        elif e.get("images"):
+        h = 120 if e["kind"] in ("reaction",) else 170
+        if e.get("paras"):
+            body = wiki_body(e, h)
+        else:
+            body = [f'<p>{autolink(e["desc"], e["slug"])}</p>']
+            if e.get("rle"):
+                body.append(player(e["rle"], e["name"], height=h, loop=loop_for(e)))
+        if not (e.get("rle") or e.get("paras")) and e.get("images"):
             for im in e["images"][:1]:
                 src = "img/glossary/" + Path(im["src"]).name
                 body.append(f'<img class="orig" src="{src}" alt="Original 2009 illustration for {esc(e["name"])}" loading="lazy">')
-        for n in e.get("later_notes", []):
-            body.append(f'<p class="muted"><em>Later ({esc(n.get("source", ""))}):</em> {esc(n["desc"])}</p>')
-            if n.get("rle"):
-                body.append(player(n["rle"], e["name"] + " (later)", loop=120))
+        src = e.get("source", "")
+        if src == "wiki":
+            cite = f'<a href="{esc(e["url"])}">Wiki page</a>, archived {esc(e["captured"])}'
+        elif src == "forum":
+            cite = f'<a href="{esc(e["url"])}">Forum post</a>, {esc(e["captured"])}'
+        else:
+            cite = "Live Free or Die Universe glossary, 2009"
+        body.append(f'<p class="src">Source: {cite}</p>')
         cls = "entry term" if e["kind"] == "term" else "entry"
         search = esc((e["name"] + " " + e["desc"]).lower())
         cards.append(f'<article class="{cls}" id="{e["slug"]}" data-kind="{e["kind"]}" data-search="{search}">'
@@ -230,8 +259,9 @@ def build_glossary():
 <h1>Glossary</h1>
 <div class="prose">
 <p class="lede">Every named object and term in Live Free or Die: {len(ENTRIES)} entries, {n_pat} with runnable patterns.</p>
-<p class="muted">Text is from the June 2009 glossary unless marked otherwise. All objects found and named by Luke Bradford
-unless otherwise noted. General CA terms are taken from Stephen Silver’s Life Lexicon. Each pattern runs live; click to pause,
+<p class="muted">Text is from the Live Free or Die wiki (2013–2018) where an archived copy of the page survives, and otherwise from
+the June 2009 Live Free or Die Universe glossary or the ConwayLife forum; each entry links to its source. All objects found and named
+by Luke Bradford unless otherwise noted. General CA terms are taken from Stephen Silver’s Life Lexicon. Each pattern runs live; click to pause,
 or copy its RLE into <a href="https://golly.sourceforge.io/">Golly</a> (rule <code>B2/S0</code>).</p>
 </div>
 <div class="toolbar" role="search">

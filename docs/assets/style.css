@@ -59,13 +59,15 @@ main { max-width: 1100px; margin: 0 auto; padding: 1.5rem 16px 4rem; }
 .site-footer .inner { max-width: 1100px; margin: 0 auto; padding: 1.2rem 16px 2rem; }
 
 /* Pattern player */
-.pattern { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.pattern { position: relative; background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
 .pattern canvas { display: block; width: 100%; cursor: pointer; }
-.pbar { display: flex; align-items: center; gap: 0.3rem; padding: 0.3rem 0.4rem; border-top: 1px solid var(--rule); font-size: 0.8rem; flex-wrap: wrap; }
+.pbar { display: flex; align-items: center; gap: 0.3rem; padding: 0.3rem 0.4rem; border-top: 1px solid var(--rule); font-size: 0.8rem; flex-wrap: nowrap; }
+.pbar button { flex: none; }
 .pbar button { font: inherit; background: none; border: 1px solid var(--rule); color: var(--fg); border-radius: 4px; padding: 0.1rem 0.5rem; cursor: pointer; min-height: 28px; }
 .pbar button:hover { border-color: var(--accent); color: var(--accent); }
-.pinfo { color: var(--muted); font-family: var(--mono); font-size: 0.75rem; margin-left: 0.3rem; }
-.pcopy { margin-left: auto; }
+.pinfo { position: absolute; top: 6px; left: 6px; pointer-events: none; color: var(--muted); background: var(--panel); opacity: 0.85; padding: 0 0.35rem; border-radius: 3px; font-family: var(--mono); font-size: 0.72rem; line-height: 1.5; white-space: pre; font-variant-numeric: tabular-nums; }
+.pcopy { margin-left: auto; min-width: 4.8em; }
+.entry .src { font-size: 0.78rem; color: var(--muted); margin-top: auto; }
 
 /* Glossary */
 .toolbar { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin: 1rem 0 1.5rem; position: sticky; top: 0; background: var(--bg); padding: 0.6rem 0; z-index: 2; border-bottom: 1px solid var(--rule); }
@@ -80,6 +82,7 @@ main { max-width: 1100px; margin: 0 auto; padding: 1.5rem 16px 4rem; }
 .tag { font-size: 0.72rem; padding: 0.05rem 0.5rem; border-radius: 999px; background: var(--code-bg); color: var(--muted); border: 1px solid var(--rule); }
 .tag.credit { color: var(--accent); }
 .entry p { margin: 0; font-size: 0.93rem; }
+.entry h4 { margin: 0.4rem 0 -0.3rem; font-family: var(--serif); font-size: 1rem; font-weight: 600; }
 .entry.term { background: transparent; }
 .entry img.orig { image-rendering: pixelated; max-width: 100%; height: auto; align-self: flex-start; background: #fff; border: 1px solid var(--rule); }
 .letter { grid-column: 1 / -1; font-family: var(--serif); font-size: 1.4rem; margin: 0.6rem 0 -0.4rem; color: var(--muted); }
