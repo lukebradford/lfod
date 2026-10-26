@@ -477,7 +477,7 @@
   },
   {
    "name": "flicker rake",
-   "desc": "The first p2 rake.",
+   "desc": "A p2 rake, probably the pattern catalogued under this name in March 2015. It was hailed as the first p2 rake, but Josh Ball’s c p2 backrake from July 2014 is earlier.",
    "rle": "x = 50, y = 80, rule = B2/S0\n6bobo3bobo20bobo3bobo2$8b2o30b2o$6bo3b4o2bo16bo2b4o3bo$obo3bo7b2o18b2o\n7bo3bobo$3bo7b2o2bo18bo2b2o7bo$2b2o6bo3bo3bo12bo3bo3bo6b2o$2bo4bo7b3o1\n4b3o7bo4bo$5bo3bo7bo14bo7bo3bo$o7bo32bo7bo$5b4o4bo22bo4b4o$2bo4bobobob\nobobo2bo8bo2bobobobobobo4bo$2bo2bo12b2o10b2o12bo2bo$2bo3bo2bo2bo2bo18b\no2bo2bo2bo3bo$bo5b2o4b2o20b2o4b2o5bo$2bo44bo$2bobo40bobo$4bobo2bo30bo2\nbobo$4bo2b2o32b2o2bo2$2bo44bo2$4bo2bo2bo28bo2bo2bo$4bo3b2o30b2o3bo$3bo\n42bo$4bo40bo$4bobo36bobo$6bobo2bo26bo2bobo$6bo2b2o28b2o2bo2$4bo40bo2$6\nbo2bo2bo24bo2bo2bo$6bo3b2o26b2o3bo$5bo38bo$6bo36bo$6bobo32bobo$8bobo2b\no22bo2bobo$8bo2b2o24b2o2bo2$6bo36bo2$8bo2bo2bo20bo2bo2bo$8bo3b2o22b2o3\nbo$7bo34bo$8bo32bo$8bobo28bobo$10bobo2bo18bo2bobo$10bo2b2o20b2o2bo2$8b\no32bo2$10bo2bo2bo16bo2bo2bo$10bo3b2o18b2o3bo$9bo30bo$10bo28bo$10bobo24\nbobo$12bobo2bo14bo2bobo$12bo2b2o16b2o2bo2$10bo28bo2$12bo2bo2bo12bo2bo2\nbo$12bo3b2o14b2o3bo$11bo26bo$12bo24bo$12bobo20bobo$14bobo2bo10bo2bobo$\n14bo2b2o12b2o2bo2$9bo2bo24bo2bo$24b2o$11bobo5bo3bo2bo3bo5bobo$11b4o3b2\nobobo2bobob2o3b4o$7bo2bobobobo3bob2o2b2obo3bobobobo2bo$8b2o11bo6bo11b2\no$12bo2bo7bo2bo7bo2bo$13b2o7bo4bo7b2o$19bo10bo$20b2o6b2o!",
    "credit": "Nico Brown (glider_rider)",
    "source": "forum 2015",
@@ -493,9 +493,9 @@
   },
   {
    "name": "hippo ship",
-   "desc": "Any of a family of p4 c/2 spaceships with the same front-end mechanism. Nico Brown’s 2014 collection has 4; the smallest, shown below, has a minimum population of 261 cells. The original hippo ship page is lost.",
+   "desc": "Any of a family of p4 c/2 spaceships with the same front-end mechanism. Nico Brown’s 2014 collection has 4; the smallest, shown below, has a minimum population of 261 cells. The original hippo ship page is lost, and no surviving source records who found the first one.",
    "rle": "x = 27, y = 69, rule = B2/S0\n13bo$9b9o3$11b2ob2o$8bo3b3o3bo$13bo$12b3o$11bobobo$6bo13bo$10bo5bo$8b2\nobobobob2o$6bo4bo3bo4bo$3b2o2b2o9b2o2b2o$4b3o5bobo5b3o$2b6o11b6o$ob4o2\nbob2o3b2obo2b4obo$b2obo4bob2ob2obo4bob2o$5bo15bo$8bo9bo$9bo7bo$10bo5bo\n$8b3o5b3o2$4bobobo2bo3bo2bobobo$8b2o2b3o2b2o$9b2o2bo2b2o$8bo4bo4bo2$6b\no3bo5bo3bo$5bo2bo9bo2bo$5bo2bo9bo2bo$4bo17bo$10bo5bo$9bo7bo$2bo5bo9bo5\nbo$3b4o13b4o3$8bo9bo2$7bo11bo$6b4o7b4o$5b2obo9bob2o$6bobo9bobo$8bobo5b\nobo$9b2o5b2o$4bobo3bo5bo3bobo$11bobobo$4bobo5b3o5bobo$8bobo2bo2bobo$8b\no2bo3bo2bo$5bo6b3o6bo$13bo$9bo3bo3bo$7b2obo5bob2o$6b2o4b3o4b2o$5bo7bo7\nbo$12b3o$12bobo2$6bo13bo$10bo5bo$4b3o3bo5bo3b3o$6bo4b2ob2o4bo$bo9bo3bo\n9bo2$3b2o3b2o7b2o3b2o$5bobo11bobo!",
-   "credit": "",
+   "credit": "discoverer not recorded",
    "source": "forum 2014",
    "post": "https://conwaylife.com/forums/viewtopic.php?p=15361#p15361"
   },
@@ -561,7 +561,7 @@
    "date": "2012-08-01",
    "source": "forum",
    "paras": [
-    "<strong>Two growing spaceships</strong> by velcrorex. Spaceships that grow as they travel. <a href=\"https://conwaylife.com/forums/viewtopic.php?p=6895#p6895\">Forum post</a>."
+    "<strong>Two growing spaceships</strong> by Josh Ball (velcrorex). Spaceships that grow as they travel. <a href=\"https://conwaylife.com/forums/viewtopic.php?p=6895#p6895\">Forum post</a>."
    ],
    "rle": "x = 51, y = 33, rule = B2/S0\n37bo2bo$34bo3b2o3bo$35bo6bo3$35bo6bo$36bo4bo3$29bobo14bobo$28bo20bo$34\nbo3b2o3bo$28bo8bo2bo8bo$5bo6bo16bo2bo2bo6bo2bo2bo$6bo4bo20bo12bo$7bo2b\no21bo4b4o4bo$30b2o14b2o$28bo3b2o10b2o3bo$8b2o17b3ob2o2bo6bo2b2ob3o$7bo\n2bo17b3obo2bobo2bobo2bob3o$30b2o3bo6bo3b2o$38b2o$29bo2bo12bo2bo$29bo18\nbo$bobo10bobo12bo2b2o2b2o2b2o2b2o2bo$o16bo10b3o2bo2b2o2b2o2bo2b3o$8b2o\n17b2obo2bobo2b2o2bobo2bob2o$o5b2o2b2o5bo16bo8bo$bo4b2o2b2o4bo11bo5b2o2\nb2o2b2o5bo$2bo3b2o2b2o3bo13bo18bo2$3b2o2bo2bo2b2o15b2o2b2o2b2o2b2o2b2o\n$8b2o!"
   },
@@ -577,7 +577,7 @@
    "date": "2014-03-19",
    "source": "forum",
    "paras": [
-    "<strong>p8 c/2 ship</strong> by velcrorex. A new p8 c/2 spaceship that deletes its trails of dots like the dust mite ship. <a href=\"https://conwaylife.com/forums/viewtopic.php?p=11308#p11308\">Forum post</a>."
+    "<strong>p8 c/2 ship</strong> by Josh Ball (velcrorex). A new p8 c/2 spaceship that deletes its trails of dots like the dust mite ship. <a href=\"https://conwaylife.com/forums/viewtopic.php?p=11308#p11308\">Forum post</a>."
    ],
    "rle": "x = 51, y = 25, rule = B2/S0\n3bo31bo$36bo$bo4bo$bo3b3o10bo17bo$o3bob3o4bo3b2o$5bo6b3ob2o6bo10bo4bo3\nbo$o3bo3bo3bo2bo2bo5bo10bo4bo2b3o$bo6bo3b3o9bo6bo3bo3bo2b2obo$bo3bo7b2\no7bo7b3o2bo6b2ob2o3bo$5bo2bobo5b2o9bo3bo4bo$3b4o11b3ob3o2bo2b3o3bo$4bo\n3b2o6bo5b2ob2o4b2obo4bo$9bo4b3o4b3o8b2o5bo$4bo3b2o6bo5b2ob2o4b2obo4bo$\n3b4o11b3ob3o2bo2b3o3bo$5bo2bobo5b2o9bo3bo4bo$bo3bo7b2o7bo7b3o2bo6b2ob2\no3bo$bo6bo3b3o9bo6bo3bo3bo2b2obo$o3bo3bo3bo2bo2bo5bo10bo4bo2b3o$5bo6b3\nob2o6bo10bo4bo3bo$o3bob3o4bo3b2o$bo3b3o10bo17bo$bo4bo$36bo$3bo31bo!"
   },
@@ -585,7 +585,7 @@
    "date": "2014-07-08",
    "source": "forum",
    "paras": [
-    "<strong>c/2 p4 spaceship and backrake</strong> by velcrorex. Only the second known rake or puffer slower than c. Catalogued on the wiki (probably as the hippo rake). <a href=\"https://conwaylife.com/forums/viewtopic.php?p=12570#p12570\">Forum post</a>."
+    "<strong>c/2 p4 spaceship and backrake</strong> by Josh Ball (velcrorex). Luke: “only the second known rake/puffer slower than c”, after Josh Ball’s c/5 backrake. <a href=\"https://conwaylife.com/forums/viewtopic.php?p=12570#p12570\">Forum post</a>."
    ],
    "rle": "x = 63, y = 28, rule = B2/S0\n4bo$3bo$bobo$3bo$2bo$2o19bo$2bo3bo2bo10bo$3bob2ob2o10b3o2bo9bo2b3o$o2b\nobo4bo2bo7b3obo2bob2o4b2obo2bo$3bo16b2o16b4o$2bo6bo3bo5bobo16bo$3bo6b2\nob4o4b2o11bo2bo24bo$4b2o2bobo5b2o2bo5bo4bob2o2bo2bobo5bo5bo5b2o$13b2o2\nbo13bo2bobo6bo5bo5bo5bo$13b2o2bo13bo2bobo6bo5bo5bo5bo$4b2o2bobo5b2o2bo\n5bo4bob2o2bo2bobo5bo5bo5b2o$3bo6b2ob4o4b2o11bo2bo24bo$2bo6bo3bo5bobo16\nbo$3bo16b2o16b4o$o2bobo4bo2bo7b3obo2bob2o4b2obo2bo$3bob2ob2o10b3o2bo9b\no2b3o$2bo3bo2bo10bo$2o19bo$2bo$3bo$bobo$3bo$4bo!"
   },
@@ -593,7 +593,7 @@
    "date": "2014-07-08",
    "source": "forum",
    "paras": [
-    "<strong>c p4 side rake</strong> by velcrorex. The smallest-period side rake, and the first sideways rake that isn’t a flotilla. <a href=\"https://conwaylife.com/forums/viewtopic.php?p=12571#p12571\">Forum post</a>."
+    "<strong>c p4 side rake</strong> by Josh Ball (velcrorex). The smallest-period side rake, and the first sideways rake that isn’t a flotilla. <a href=\"https://conwaylife.com/forums/viewtopic.php?p=12571#p12571\">Forum post</a>."
    ],
    "rle": "x = 19, y = 29, rule = B2/S0\n2bo$bo$bo$2bo6b2o$3b2o3bo2bo$3bobo$16bobo$bo4bobo6bo$bo2bo3b2o4bo3bo$2\nb3o3b3o3bo2bo$2bo4bo2b2o4bo$9b2o$bo8bo4bo2bo$o2b2o$o2b2o$bo8bo4bo2bo$9\nb2o$2bo4bo2b2o4bo$2b3o3b3o3bo2bo$bo2bo3b2o4bo3bo$bo4bobo6bo$16bobo$3bo\nbo$3b2o3bo2bo$2bo6b2o$bo$bo15bo$2bo9bo$13bo3bo!"
   },
@@ -601,7 +601,7 @@
    "date": "2014-07-09",
    "source": "forum",
    "paras": [
-    "<strong>c p2 backrake</strong> by velcrorex. Luke: “the first known rake or puffer at p2.” <a href=\"https://conwaylife.com/forums/viewtopic.php?p=12574#p12574\">Forum post</a>."
+    "<strong>c p2 backrake</strong> by Josh Ball (velcrorex). Luke: “the first known rake or puffer at p2.” Checked by simulation: the front end repeats every 2 generations. <a href=\"https://conwaylife.com/forums/viewtopic.php?p=12574#p12574\">Forum post</a>."
    ],
    "rle": "x = 14, y = 34, rule = B2/S0\n3bo$2bo$2bo4bo$3bo$4b2o$bob2o2bo$o7bo$o2bo4bo$bo$3b2o2bo$4b2o$bob2o$o5\nbo5bo$o2bo6b4o$bo5bo4bo$2bo$4b3o$4b3o$2bo$bo5bo4bo$o2bo6b4o$o5bo5bo$bo\nb2o$4b2o$3b2o2bo$bo$o2bo4bo$o7bo$bob2o2bo$4b2o$3bo$2bo4bo$2bo$3bo!"
   },
@@ -609,7 +609,7 @@
    "date": "2014-07-09",
    "source": "forum",
    "paras": [
-    "<strong>c p6 side rake</strong> by velcrorex. A p6 side rake with a cleanup flotilla (probably the hex rake on the wiki). <a href=\"https://conwaylife.com/forums/viewtopic.php?p=12574#p12574\">Forum post</a>."
+    "<strong>c p6 side rake</strong> by Josh Ball (velcrorex). A p6 side rake; the basic mechanism leaves debris, so a flotilla cleans it up. <a href=\"https://conwaylife.com/forums/viewtopic.php?p=12574#p12574\">Forum post</a>."
    ],
    "rle": "x = 73, y = 66, rule = B2/S0\n22bo5b3o$21bobo$19bo$19bo28bo5b3o$21bobo23bobo$22bo5b3o14bo$45bo$47bob\no$48bo5b3o$29bo$24bo$23bo$23bo7bo5bo5bo5bo5bo$25bo$25bo$25bo4$37bo14bo\nbo$20b2o8bo5b3o$19bo2bo5bob2o3b2ob2o12bo$27bo3bo4b3o9bobo$25bo5bo5bo9b\no5bo$25bo5bo5bo9bob2o$27bo3bo4b3o13bo$14b2o12bob2o3b2ob2o12bo11bo5b3o$\n3bo9bo2bo13bo5b3o8bob2o12bobo$2bo34bo9bo5bo7bo$2bo45bobo10bo$3bo2bo12b\no5bo5bo5bo14bo10bobo$7bo2bo2bo50bo5b3o$7bo44bobo$2bo$bo3bo3b2o7bo5bo5b\no5bo5bo5bo5bo$bo6b2o7bo5bo5bo5bo5bo5bo5bo5bo5bo5bo$9bo$3b3o7bo$bobob3o\n3b2o$o7bo3bo$o7bo3bo$bobob3o3b2o$3b3o7bo$9bo$bo6b2o7bo5bo5bo5bo5bo5bo5\nbo5bo5bo5bo$bo3bo3b2o7bo5bo5bo5bo5bo5bo5bo$2bo$7bo44bobo$7bo2bo2bo50bo\n5b3o$3bo2bo12bo5bo5bo5bo14bo10bobo$2bo45bobo10bo$2bo34bo9bo5bo7bo$3bo9\nbo2bo13bo5b3o8bob2o12bobo$14b2o12bob2o3b2ob2o12bo11bo5b3o$27bo3bo4b3o1\n3bo$25bo5bo5bo9bob2o$25bo5bo5bo9bo5bo$27bo3bo4b3o9bobo$19bo2bo5bob2o3b\n2ob2o12bo$20b2o8bo5b3o$37bo14bobo4$25bo2bo$26b2o!"
   },
@@ -617,7 +617,7 @@
    "date": "2014-07-10",
    "source": "forum",
    "paras": [
-    "<strong>New p4 oscillators and a big six shooter stack</strong> by velcrorex. Includes the oscillators catalogued as shortwave and longwave, and a new way to connect big six shooters. <a href=\"https://conwaylife.com/forums/viewtopic.php?p=12592#p12592\">Forum post</a>."
+    "<strong>New p4 oscillators and a big six shooter stack</strong> by Josh Ball (velcrorex). Includes the oscillators catalogued as shortwave and longwave, and a new way to connect big six shooters. <a href=\"https://conwaylife.com/forums/viewtopic.php?p=12592#p12592\">Forum post</a>."
    ],
    "rle": "x = 113, y = 36, rule = B2/S0\n78bo9bo$77bo6bo$80bo$5bobo71bo3bo5bo$3o7b3o69bobobo$4bo3bo72bo2bobo$80\nbo$5bobo70bo2b2obo$5b3o$5bobo73b2o5bo$12bo$4bo3bo2b3o39bo7bo15bo8bo$3o\n6bo3bo2bo34b2o5bo21bo10bo$5bo2bo3bo6b3o29b2o5b5o$8b3o2bo3bo32bo6bo2bo2\n8bo$9bo46bo37bo$14bobo38bo4b2o$14b3o37bobo3bo31bo$14bobo36bo5bo37bo$21\nbo29b2o5b2o$13bo3bo2b3o29bo4b3o35bo$9b3o6bo3bo2bo26b2ob2o3b2o38bo$14bo\n2bo3bo6b3o19bobo2bo4b2o$17b3o2bo3bo25bo9bo35bo10bo$18bo84bo8bo$23bobo$\n23b3o75bo5b2o$23bobo$105bob2o2bo$22bo3bo82bo$18b3o7b3o72bobo2bo$23bobo\n77bobobo$100bo5bo3bo$109bo$105bo6bo$101bo9bo!"
   },
@@ -657,7 +657,7 @@
    "date": "2014-10-02",
    "source": "forum",
    "paras": [
-    "<strong>Wave-riding ship</strong> by velcrorex. A p6 ship carrying an infinitely growing wave, found with WinLifeSearch using “don’t care” cells. <a href=\"https://conwaylife.com/forums/viewtopic.php?p=13595#p13595\">Forum post</a>."
+    "<strong>Wave-riding ship</strong> by Josh Ball (velcrorex). A p6 ship carrying an infinitely growing wave, found with WinLifeSearch using “don’t care” cells. <a href=\"https://conwaylife.com/forums/viewtopic.php?p=13595#p13595\">Forum post</a>."
    ],
    "rle": "x = 224, y = 224, rule = B2/S0\n105b2o10b2o$104bo2bo8bo2bo$103bo7b2o7bo$102bo4b3o4b3o4bo$101bo6bo6bo6b\no$100bo7bo6bo7bo$99bo3bo2bob3o2b3obo2bo3bo$98bo3bo4bo8bo4bo3bo$97bo28b\no$96bo7bo14bo7bo$95bo8bo3bobo2bobo3bo8bo$94bo10bobo3b2o3bobo10bo$93bo3\nbo11bo4bo11bo3bo$92bo3bo10bo8bo10bo3bo$91bo10bo2bobo2bo2bo2bobo2bo10bo\n$90bo15b4o4b4o15bo$89bo12bo4bo8bo4bo12bo$88bo46bo$87bo3bo13bo2bo6bo2bo\n13bo3bo$86bo3bo19b4o19bo3bo$85bo16bo4bobo4bobo4bo16bo$84bo26b2o26bo$83\nbo56bo$82bo18bo4b2o8b2o4bo18bo$81bo3bo21bobo4bobo21bo3bo$80bo3bo16bo3b\nob2o6b2obo3bo16bo3bo$79bo22bo3b3o6b3o3bo22bo$78bo66bo$77bo28b2o8b2o28b\no$76bo33bo2bo33bo$75bo3bo22bo2bo12bo2bo22bo3bo$74bo3bo25b3o10b3o25bo3b\no$73bo31bo12bo31bo$72bo33b2o2bo2bo2b2o33bo$71bo34bo10bo34bo$70bo25b2o7\nb3o8b3o7b2o25bo$69bo3bo21bo2bo6b2o3bo2bo3b2o6bo2bo21bo3bo$68bo3bo26bo6\nbo3bo2bo3bo6bo26bo3bo$67bo30bo3bob2o12b2obo3bo30bo$66bo33b2o2b2o2bobo2\nbobo2b2o2b2o33bo$65bo37bo4bobo2bobo4bo37bo$64bo36b2o2bo12bo2b2o36bo$63\nbo3bo39bobo4bobo39bo3bo$62bo3bo34bo9b2o9bo34bo3bo$61bo38b3o3bo4b2o4bo3\nb3o38bo$60bo36bo3bo6b2o4b2o6bo3bo36bo$59bo43b2o14b2o43bo$58bo43b2o3bo8\nbo3b2o43bo$57bo3bo39bobobo12bobobo39bo3bo$56bo3bo36bo5bobo12bobo5bo36b\no3bo$55bo46bo18bo46bo$54bo42bo2b2o4bo10bo4b2o2bo42bo$53bo45bo3bo16bo3b\no45bo$52bo45b3o22b3o45bo$51bo3bo43bo24bo43bo3bo$50bo3bo114bo3bo$49bo54\nbo14bo54bo$48bo50bo5bo12bo5bo50bo$47bo48bo30bo48bo$46bo56bo16bo56bo$45\nbo3bo54bo6b2o6bo54bo3bo$44bo3bo55bo5bo2bo5bo55bo3bo$43bo59bo5bo4bo5bo5\n9bo$42bo56bo10bo2bo10bo56bo$41bo47b2o5bo8b2o2bo4bo2b2o8bo5b2o47bo$40bo\n64b4o6b4o64bo$39bo3bo44bo2bo14bo4b2o4bo14bo2bo44bo3bo$38bo3bo44bo4bo9b\no4b2o6b2o4bo9bo4bo44bo3bo$37bo61bobo4bob2o4b2obo4bobo61bo$36bo49b2o4b2\no16b4o16b2o4b2o49bo$35bo51b6o3bo11b2o4b2o11bo3b6o51bo$34bo154bo$33bo3b\no65bo16bo65bo3bo$32bo3bo63b5o14b5o63bo3bo$31bo55bo4bo10bo2bo10bo2bo10b\no4bo55bo$30bo55b3o2b3o12bo10bo12b3o2b3o55bo$29bo55b2ob4ob2obo12bo4bo12\nbob2ob4ob2o55bo$28bo57b3o2b3o36b3o2b3o57bo$27bo3bo55bo4bo38bo4bo55bo3b\no$26bo3bo76bo8bo76bo3bo$25bo172bo$24bo174bo$23bo82bobo6bobo82bo$22bo82\nbo12bo82bo$21bo3bo79bo12bo79bo3bo$20bo3bo51bo27bob2obo4bob2obo27bo51bo\n3bo$19bo49bo5b3o27bo12bo27b3o5bo49bo$18bo48bob2o3b2ob2o26bo12bo26b2ob2\no3b2obo48bo$17bo48bo3bo4b3o28bo2bob2obo2bo28b3o4bo3bo48bo$16bo47bo5bo5\nbo28bo3bob2obo3bo28bo5bo5bo47bo$15bo3bo44bo5bo5bo27bo14bo27bo5bo5bo44b\no3bo$14bo3bo47bo3bo4b3o30bo6bo30b3o4bo3bo47bo3bo$13bo53bob2o3b2ob2o28b\no8bo28b2ob2o3b2obo53bo$12bo56bo5b3o31bo4bo31b3o5bo56bo$11bo64bo33bo2bo\n33bo64bo$10bo25bo68bo12bo68bo25bo$9bo3bo21bo22bo5bo5bo5bo70bo5bo5bo5bo\n22bo21bo3bo$8bo3bo22bo9bo3bobo120bobo3bo9bo22bo3bo$7bo28bobo14bo53bo8b\no53bo14bobo28bo$6bo30bo14b3o2bo5bo4bo39bo6bo39bo4bo5bo2b3o14bo30bo$5bo\n33bo4bo6bobo19bo34bo6bo34bo19bobo6bo4bo33bo$4bo18bobo13bobob3o2bo2bo16\nbo4bo33bo8bo33bo4bo16bo2bo2b3obobo13bobo18bo$3bo3bo6bobo3bo5bo3bo7bo2b\no2bo2bo2bo16bo5bo76bo5bo16bo2bo2bo2bo2bo7bo3bo5bo3bobo6bo3bo$2bo3bo33b\no5b4o2bo6bo2bo9b3o74b3o9bo2bo6bo2b4o5bo33bo3bo$bo7b2o20bo6b2o6bo9bo3b2\no11bo11bo4bo42bo4bo11bo11b2o3bo9bo6b2o6bo20b2o7bo$o10bo2bo3bo6bo4b3o2b\n2ob2obo6b2o7bo6b2o17b2ob2obo5bo32bo5bob2ob2o17b2o6bo7b2o6bob2ob2o2b3o4\nbo6bo3bo2bo10bo$o5bo8bo7bo2bobo2bob5o6bo6bo12b3obo5b2o6bo2bo2bo46bo2bo\n2bo6b2o5bob3o12bo6bo6b5obo2bobo2bo7bo8bo5bo$bobo3bo3bob4o3bo2b4obo4bob\no6bo4bo17bobo11bo5bo6bo5bo2bo20bo2bo5bo6bo5bo11bobo17bo4bo6bobo4bob4o2\nbo3b4obo3bo3bobo$3b4o3bo4bo2bo6b2o12b2o4bo19bob2obo11bo8bo7b2o22b2o7bo\n8bo11bob2obo19bo4b2o12b2o6bo2bo4bo3b4o$3bo2bo5bo2bo4bo3bo17bo2bo16bobo\n3bobo5bo8bo2b2o3bo36bo3b2o2bo8bo5bobo3bobo16bo2bo17bo3bo4bo2bo5bo2bo$6\nbo3bo3bo4bo9bo3bo2b2ob2o20bobo5bo24bo34bo24bo5bobo20b2ob2o2bo3bo9bo4bo\n3bo3bo$2bo8bo7bobo21b2o15bo5bo2bo18b2o44b2o18bo2bo5bo15b2o21bobo7bo8bo\n$2bo8bo7bobo21b2o15bo5bo2bo18b2o44b2o18bo2bo5bo15b2o21bobo7bo8bo$6bo3b\no3bo4bo9bo3bo2b2ob2o20bobo5bo24bo34bo24bo5bobo20b2ob2o2bo3bo9bo4bo3bo3\nbo$3bo2bo5bo2bo4bo3bo17bo2bo16bobo3bobo5bo8bo2b2o3bo36bo3b2o2bo8bo5bob\no3bobo16bo2bo17bo3bo4bo2bo5bo2bo$3b4o3bo4bo2bo6b2o12b2o4bo19bob2obo11b\no8bo7b2o22b2o7bo8bo11bob2obo19bo4b2o12b2o6bo2bo4bo3b4o$bobo3bo3bob4o3b\no2b4obo4bobo6bo4bo17bobo11bo5bo6bo5bo2bo20bo2bo5bo6bo5bo11bobo17bo4bo6\nbobo4bob4o2bo3b4obo3bo3bobo$o5bo8bo7bo2bobo2bob5o6bo6bo12b3obo5b2o6bo2\nbo2bo46bo2bo2bo6b2o5bob3o12bo6bo6b5obo2bobo2bo7bo8bo5bo$o10bo2bo3bo6bo\n4b3o2b2ob2obo6b2o7bo6b2o17b2ob2obo5bo32bo5bob2ob2o17b2o6bo7b2o6bob2ob2\no2b3o4bo6bo3bo2bo10bo$bo7b2o20bo6b2o6bo9bo3b2o11bo11bo4bo42bo4bo11bo11\nb2o3bo9bo6b2o6bo20b2o7bo$2bo3bo33bo5b4o2bo6bo2bo9b3o74b3o9bo2bo6bo2b4o\n5bo33bo3bo$3bo3bo6bobo3bo5bo3bo7bo2bo2bo2bo2bo16bo5bo76bo5bo16bo2bo2bo\n2bo2bo7bo3bo5bo3bobo6bo3bo$4bo18bobo13bobob3o2bo2bo16bo4bo33bo8bo33bo4\nbo16bo2bo2b3obobo13bobo18bo$5bo33bo4bo6bobo19bo34bo6bo34bo19bobo6bo4bo\n33bo$6bo30bo14b3o2bo5bo4bo39bo6bo39bo4bo5bo2b3o14bo30bo$7bo28bobo14bo5\n3bo8bo53bo14bobo28bo$8bo3bo22bo9bo3bobo120bobo3bo9bo22bo3bo$9bo3bo21bo\n22bo5bo5bo5bo70bo5bo5bo5bo22bo21bo3bo$10bo25bo68bo12bo68bo25bo$11bo64b\no33bo2bo33bo64bo$12bo56bo5b3o31bo4bo31b3o5bo56bo$13bo53bob2o3b2ob2o28b\no8bo28b2ob2o3b2obo53bo$14bo3bo47bo3bo4b3o30bo6bo30b3o4bo3bo47bo3bo$15b\no3bo44bo5bo5bo27bo14bo27bo5bo5bo44bo3bo$16bo47bo5bo5bo28bo3bob2obo3bo2\n8bo5bo5bo47bo$17bo48bo3bo4b3o28bo2bob2obo2bo28b3o4bo3bo48bo$18bo48bob2\no3b2ob2o26bo12bo26b2ob2o3b2obo48bo$19bo49bo5b3o27bo12bo27b3o5bo49bo$20\nbo3bo51bo27bob2obo4bob2obo27bo51bo3bo$21bo3bo79bo12bo79bo3bo$22bo82bo1\n2bo82bo$23bo82bobo6bobo82bo$24bo174bo$25bo172bo$26bo3bo76bo8bo76bo3bo$\n27bo3bo55bo4bo38bo4bo55bo3bo$28bo57b3o2b3o36b3o2b3o57bo$29bo55b2ob4ob2\nobo12bo4bo12bob2ob4ob2o55bo$30bo55b3o2b3o12bo10bo12b3o2b3o55bo$31bo55b\no4bo10bo2bo10bo2bo10bo4bo55bo$32bo3bo63b5o14b5o63bo3bo$33bo3bo65bo16bo\n65bo3bo$34bo154bo$35bo51b6o3bo11b2o4b2o11bo3b6o51bo$36bo49b2o4b2o16b4o\n16b2o4b2o49bo$37bo61bobo4bob2o4b2obo4bobo61bo$38bo3bo44bo4bo9bo4b2o6b2\no4bo9bo4bo44bo3bo$39bo3bo44bo2bo14bo4b2o4bo14bo2bo44bo3bo$40bo64b4o6b4\no64bo$41bo47b2o5bo8b2o2bo4bo2b2o8bo5b2o47bo$42bo56bo10bo2bo10bo56bo$43\nbo59bo5bo4bo5bo59bo$44bo3bo55bo5bo2bo5bo55bo3bo$45bo3bo54bo6b2o6bo54bo\n3bo$46bo56bo16bo56bo$47bo48bo30bo48bo$48bo50bo5bo12bo5bo50bo$49bo54bo1\n4bo54bo$50bo3bo114bo3bo$51bo3bo43bo24bo43bo3bo$52bo45b3o22b3o45bo$53bo\n45bo3bo16bo3bo45bo$54bo42bo2b2o4bo10bo4b2o2bo42bo$55bo46bo18bo46bo$56b\no3bo36bo5bobo12bobo5bo36bo3bo$57bo3bo39bobobo12bobobo39bo3bo$58bo43b2o\n3bo8bo3b2o43bo$59bo43b2o14b2o43bo$60bo36bo3bo6b2o4b2o6bo3bo36bo$61bo38\nb3o3bo4b2o4bo3b3o38bo$62bo3bo34bo9b2o9bo34bo3bo$63bo3bo39bobo4bobo39bo\n3bo$64bo36b2o2bo12bo2b2o36bo$65bo37bo4bobo2bobo4bo37bo$66bo33b2o2b2o2b\nobo2bobo2b2o2b2o33bo$67bo30bo3bob2o12b2obo3bo30bo$68bo3bo26bo6bo3bo2bo\n3bo6bo26bo3bo$69bo3bo21bo2bo6b2o3bo2bo3b2o6bo2bo21bo3bo$70bo25b2o7b3o8\nb3o7b2o25bo$71bo34bo10bo34bo$72bo33b2o2bo2bo2b2o33bo$73bo31bo12bo31bo$\n74bo3bo25b3o10b3o25bo3bo$75bo3bo22bo2bo12bo2bo22bo3bo$76bo33bo2bo33bo$\n77bo28b2o8b2o28bo$78bo66bo$79bo22bo3b3o6b3o3bo22bo$80bo3bo16bo3bob2o6b\n2obo3bo16bo3bo$81bo3bo21bobo4bobo21bo3bo$82bo18bo4b2o8b2o4bo18bo$83bo5\n6bo$84bo26b2o26bo$85bo16bo4bobo4bobo4bo16bo$86bo3bo19b4o19bo3bo$87bo3b\no13bo2bo6bo2bo13bo3bo$88bo46bo$89bo12bo4bo8bo4bo12bo$90bo15b4o4b4o15bo\n$91bo10bo2bobo2bo2bo2bobo2bo10bo$92bo3bo10bo8bo10bo3bo$93bo3bo11bo4bo1\n1bo3bo$94bo10bobo3b2o3bobo10bo$95bo8bo3bobo2bobo3bo8bo$96bo7bo14bo7bo$\n97bo28bo$98bo3bo4bo8bo4bo3bo$99bo3bo2bob3o2b3obo2bo3bo$100bo7bo6bo7bo$\n101bo6bo6bo6bo$102bo4b3o4b3o4bo$103bo7b2o7bo$104bo2bo8bo2bo$105b2o10b2\no!"
   },
@@ -705,7 +705,7 @@
    "date": "2015-01-13",
    "source": "forum",
    "paras": [
-    "<strong>p5 oscillator (crossroads)</strong> by velcrorex. The second p5 oscillator after the starfish. Named crossroads. <a href=\"https://conwaylife.com/forums/viewtopic.php?p=16001#p16001\">Forum post</a>."
+    "<strong>p5 oscillator (crossroads)</strong> by Josh Ball (velcrorex). The second p5 oscillator after the starfish. Named crossroads. <a href=\"https://conwaylife.com/forums/viewtopic.php?p=16001#p16001\">Forum post</a>."
    ],
    "rle": "x = 48, y = 48, rule = B2/S0\n21b6o3$21b2o2b2o$22b4o$22bo2bo2$18bobo2b2o2bobo$19bo8bo$19bo2bo2bo2bo3\n$17bo4bo2bo4bo2$21bo4bo2$21bo4bo$12bo4bo12bo4bo$7bo12bobo2bobo12bo$8b2\no12b4o12b2o$7bo10bobobo2bobobo10bo$o2bo10bobo14bobo10bo2bo$o2b3o3bo2bo\n5b3obo2bob3o5bo2bo3b3o2bo$o3bo2bo11bo8bo11bo2bo3bo$o3bo2bo11bo8bo11bo2\nbo3bo$o2b3o3bo2bo5b3obo2bob3o5bo2bo3b3o2bo$o2bo10bobo14bobo10bo2bo$7bo\n10bobobo2bobobo10bo$8b2o12b4o12b2o$7bo12bobo2bobo12bo$12bo4bo12bo4bo$2\n1bo4bo2$21bo4bo2$17bo4bo2bo4bo3$19bo2bo2bo2bo$19bo8bo$18bobo2b2o2bobo2\n$22bo2bo$22b4o$21b2o2b2o3$21b6o!"
   },
@@ -737,7 +737,7 @@
    "date": "2015-01-23",
    "source": "forum",
    "paras": [
-    "<strong>Small c/2 ships</strong> by velcrorex. Small c/2 ships. <a href=\"https://conwaylife.com/forums/viewtopic.php?p=16169#p16169\">Forum post</a>."
+    "<strong>Small c/2 ships</strong> by Josh Ball (velcrorex). Small c/2 ships. <a href=\"https://conwaylife.com/forums/viewtopic.php?p=16169#p16169\">Forum post</a>."
    ],
    "rle": "x = 26, y = 97, rule = B2/S0\n6bo$5bo$5b3o$6bo$5b2o13bo$4bobobobo$18bo4bo$8bobo7bo3b3o$3bo10bo2bo4bo\nb2o$bobo3bo12bob3o$o2bo7b2obobo6bo$4bo4bo6bobobo$5bo7bo$obo9b2o5b2o$b2\no9bo5b2o$2bo3bo3bo2bo$b2o6bo3bo$bobobob2o8bo$2bo4bo14bo$5bobo5bo3bo4bo\n$5b3o10bo3bo$6bo11bo$5b2obo$4bobo13bo3$4bo$5bo11$15bo$14bo$4bo5bo3b3o$\n3bo5bo5bo$3b3o3b3o2b2o$4bo5b2obobo2bobo$3b2o4b3o4bo$2bobo3bo2bo6bobo$1\n2bo$7bo$2bo7bo$3bo6bo3bobo$8bobo3$12bo$11bo$11bo$9bobo$10b3o$4bo4b2ob2\no$3bo5b2o2bo$3b3obo2bo$4b2o5bobo4bo$3b5o2bo4b3o$2bobo3bobo$14bob2o$13b\nobo2bo$2bo5bo$3bo5bo$13bo$14bo11$16bo$4bo$14bo$2bo11bo4bo$2bo2bo7bo$bo\n17bo$6bob2o3bo2bo$bo3bo8b2o$2bo3bobo3bo$2bo5b2o4bo$6b3o4bo4bo$4bo4bo7b\n3o$12b2o4bo$9bo$7bob2o3bo$9bo3b3o$14bo!"
   },
@@ -745,7 +745,7 @@
    "date": "2015-02-23",
    "source": "forum",
    "paras": [
-    "<strong>p9 dot puffer</strong> by Arie Paap (wildmyron). The only known p9 object other than the arrow puffer. <a href=\"https://conwaylife.com/forums/viewtopic.php?p=17132#p17132\">Forum post</a>."
+    "<strong>p9 dot puffer</strong> by Arie Paap (wildmyron). The first p9 object other than the arrow puffers. <a href=\"https://conwaylife.com/forums/viewtopic.php?p=17132#p17132\">Forum post</a>."
    ],
    "rle": "x = 87, y = 28, rule = B2/S0\n67bobo$52bo3bo13bo$51b3o5bo2bo6bo2bo$52bo4bo11bo2bo$56bo11b2o$16bo38b3\no7b2obo$15b3o3bo4bo3bo7bo4bo5bo2bo5b2obobo2b4o3bo$16bo16bo3b3o3b2o17bo\n4bo2bo3bobo6bo$21bo5bobo3b4obo3b3o24bo5bo6bobo$18bo8b2o14bo4bo2bo3bo13\nbo6bo9bo$o8bo7b3o2bo5bo3b2o8bo2bo2bo6b2o2bo9bo7b2obo3bobo$4bo8bo4bo4bo\n2bo6bo14bo6bo5bo12b3o3bo$24bo8bo21bo3bobo20bo$23bo7bo21b2o23bo4b2obo$2\n3bo7bo21b2o23bo4b2obo$24bo8bo21bo3bobo20bo$4bo8bo4bo4bo2bo6bo14bo6bo5b\no12b3o3bo$o8bo7b3o2bo5bo3b2o8bo2bo2bo6b2o2bo9bo7b2obo3bobo$18bo8b2o14b\no4bo2bo3bo13bo6bo9bo$21bo5bobo3b4obo3b3o24bo5bo6bobo$16bo16bo3b3o3b2o1\n7bo4bo2bo3bobo6bo$15b3o3bo4bo3bo7bo4bo5bo2bo5b2obobo2b4o3bo$16bo38b3o7\nb2obo$56bo11b2o$52bo4bo11bo2bo$51b3o5bo2bo6bo2bo$52bo3bo13bo$67bobo!"
   },
@@ -777,7 +777,7 @@
    "date": "2015-03-07",
    "source": "forum",
    "paras": [
-    "<strong>p2 rake (flicker rake)</strong> by Nico Brown (glider_rider). The first p2 rake, catalogued as the flicker rake. <a href=\"https://conwaylife.com/forums/viewtopic.php?p=17535#p17535\">Forum post</a>."
+    "<strong>p2 rake (flicker rake)</strong> by Nico Brown (glider_rider). A p2 rake, the second after Josh Ball’s July 2014 backrake (Luke hailed it as the first, but the earlier one is also p2). Probably the one catalogued as the flicker rake. <a href=\"https://conwaylife.com/forums/viewtopic.php?p=17535#p17535\">Forum post</a>."
    ],
    "rle": "x = 50, y = 80, rule = B2/S0\n6bobo3bobo20bobo3bobo2$8b2o30b2o$6bo3b4o2bo16bo2b4o3bo$obo3bo7b2o18b2o\n7bo3bobo$3bo7b2o2bo18bo2b2o7bo$2b2o6bo3bo3bo12bo3bo3bo6b2o$2bo4bo7b3o1\n4b3o7bo4bo$5bo3bo7bo14bo7bo3bo$o7bo32bo7bo$5b4o4bo22bo4b4o$2bo4bobobob\nobobo2bo8bo2bobobobobobo4bo$2bo2bo12b2o10b2o12bo2bo$2bo3bo2bo2bo2bo18b\no2bo2bo2bo3bo$bo5b2o4b2o20b2o4b2o5bo$2bo44bo$2bobo40bobo$4bobo2bo30bo2\nbobo$4bo2b2o32b2o2bo2$2bo44bo2$4bo2bo2bo28bo2bo2bo$4bo3b2o30b2o3bo$3bo\n42bo$4bo40bo$4bobo36bobo$6bobo2bo26bo2bobo$6bo2b2o28b2o2bo2$4bo40bo2$6\nbo2bo2bo24bo2bo2bo$6bo3b2o26b2o3bo$5bo38bo$6bo36bo$6bobo32bobo$8bobo2b\no22bo2bobo$8bo2b2o24b2o2bo2$6bo36bo2$8bo2bo2bo20bo2bo2bo$8bo3b2o22b2o3\nbo$7bo34bo$8bo32bo$8bobo28bobo$10bobo2bo18bo2bobo$10bo2b2o20b2o2bo2$8b\no32bo2$10bo2bo2bo16bo2bo2bo$10bo3b2o18b2o3bo$9bo30bo$10bo28bo$10bobo24\nbobo$12bobo2bo14bo2bobo$12bo2b2o16b2o2bo2$10bo28bo2$12bo2bo2bo12bo2bo2\nbo$12bo3b2o14b2o3bo$11bo26bo$12bo24bo$12bobo20bobo$14bobo2bo10bo2bobo$\n14bo2b2o12b2o2bo2$9bo2bo24bo2bo$24b2o$11bobo5bo3bo2bo3bo5bobo$11b4o3b2\nobobo2bobob2o3b4o$7bo2bobobobo3bob2o2b2obo3bobobobo2bo$8b2o11bo6bo11b2\no$12bo2bo7bo2bo7bo2bo$13b2o7bo4bo7b2o$19bo10bo$20b2o6b2o!"
   },
@@ -793,7 +793,7 @@
    "date": "2016-08-09",
    "source": "forum",
    "paras": [
-    "<strong>p5 moon gun</strong> by Arie Paap (wildmyron). A surprisingly small p5 moon gun: the second gun ever, at a new period. <a href=\"https://conwaylife.com/forums/viewtopic.php?p=34047#p34047\">Forum post</a>."
+    "<strong>p5 moon gun</strong> by Arie Paap (wildmyron). A surprisingly small p5 moon gun, the second known working gun. <a href=\"https://conwaylife.com/forums/viewtopic.php?p=34047#p34047\">Forum post</a>."
    ],
    "rle": "x = 19, y = 46, rule = B2/S0\n7bo3bo$6b3ob3o$2bo2bo7bo2bo2$bo5bo3bo5bo$2o2bo2bobobo2bo2b2o$3bo4b3o4b\no$bobo4bobo4bobo$4bo9bo2$o17bo$2bo13bo$3b2o3bobo3b2o$4bo9bo$2bo2bo7bo2\nbo$b2o4b5o4b2o$2b3o9b3o2$7b5o$9bo2$4bo4bo4bo$3bo4b3o4bo$3bo4b3o4bo$4bo\n4bo4bo2$9bo$7b5o2$2b3o9b3o$b2o4b5o4b2o$2bo2bo7bo2bo$4bo9bo$3b2o3bobo3b\n2o$2bo13bo$o17bo2$4bo9bo$bobo4bobo4bobo$3bo4b3o4bo$2o2bo2bobobo2bo2b2o\n$bo5bo3bo5bo2$2bo2bo7bo2bo$6b3ob3o$7bo3bo!"
   },
@@ -857,22 +857,22 @@
    "date": "2025-04-21",
    "source": "forum",
    "paras": [
-    "<strong>c/5 spaceship collection</strong> by confocaloid. Three p5 c/5 ships that together exhibit all 102 isotropic neighborhood conditions. <a href=\"https://conwaylife.com/forums/viewtopic.php?p=210405#p210405\">Forum post</a>."
+    "<strong>c/5 spaceship collection</strong> by confocaloid. Three p5 c/5 ships, at least two already known, in whose evolution all 102 isotropic neighborhood conditions occur. <a href=\"https://conwaylife.com/forums/viewtopic.php?p=210405#p210405\">Forum post</a>."
    ],
    "rle": "x = 141, y = 74, rule = B2/S0\n28bo7bo5bo37bo4bo$3bo18bo6bo4bob6obo20bo14bo$23bo11b2obo6b2o2bo15bo22b\no39bo$o32b2o3bo3bobo3b3o9bo18bo7bo39bo$3bo8bo15bo3bo5bo4bo3bo8bo24bo3b\n2o7bo20bo4bo3bo14bo$2bo10bo13bo5b2o9bo2bo14b3o22bo7bo12bo10b3o3b2obo11\nbo$o18b3o6bo7bo4bo2b2o5bo9b2obo3bo5bo2bo15b3o7bo8bo4b2o19b3o$3bo4bo2bo\n2bo7b2o3bo9b4o3bo4b2obo3b3o2bobo9b3o2b2o7bob5o15b2ob2o2bo8bo2bo7bo$obo\nb2ob3obo4bo10bo26b3ob2o9bo3bo3bo18bo3b2o7bob3obo3bo6bo2b2o9bo$4b3ob4ob\no2bo6bo8bo4bo7bo2bo14bo5bo4bo3bobo2bo6bo6bo10b2o10bo5b3o6bo$4bo12bo14b\no32bob2o14bo4bo11b4o3bo6bo4bo3bo2bo2b2o2bobo$4bo12bo14bo32bob2o14bo4bo\n11b4o3bo6bo4bo3bo2bo2b2o2bobo$4b3ob4obo2bo6bo8bo4bo7bo2bo14bo5bo4bo3bo\nbo2bo6bo6bo10b2o10bo5b3o6bo$obob2ob3obo4bo10bo26b3ob2o9bo3bo3bo18bo3b2\no7bob3obo3bo6bo2b2o9bo$3bo4bo2bo2bo7b2o3bo9b4o3bo4b2obo3b3o2bobo9b3o2b\n2o7bob5o15b2ob2o2bo8bo2bo7bo$o18b3o6bo7bo4bo2b2o5bo9b2obo3bo5bo2bo15b3\no7bo8bo4b2o19b3o$2bo10bo13bo5b2o9bo2bo14b3o22bo7bo12bo10b3o3b2obo11bo$\n3bo8bo15bo3bo5bo4bo3bo8bo24bo3b2o7bo20bo4bo3bo14bo$o32b2o3bo3bobo3b3o9\nbo18bo7bo39bo$23bo11b2obo6b2o2bo15bo22bo39bo$3bo18bo6bo4bob6obo20bo14b\no$28bo7bo5bo37bo4bo3$96bo24bo$72bo24bo26bo4bo$71bo39bo16bo$64bo6bo23bo\n16bo9bo$71bo4bo8bo10bo23b3o2bo2bo2bo$66bo5bo9bo13bo8b3o15b3o$64bo2bo4b\no12bo8bo9bo2bo5bo10b2o5bo$68bo3bo5bobob3o3bo3bobo2bobo5b3o4b2o15b2o$64\nbobobo3b2o6bo2bo6bob3o2b2o5bo4bobo2b3obobo6b4o$68bo6bobo15bo3b2o12bo3b\nobo4bo4b3o$69bo5bo17bobo2bo3b2o6b2o4b2o2bo2bo7bo$65bobob2o21bo6bo9bobo\n5b2o5bo2bo$63bo8bo3bo13b2o7bo3bo12b3o5b2obo3bo$62b2o8bo2bo14bo21bo4bo6\nbo6b2o$63bo8bo3bo13b2o7bo3bo12b3o5b2obo3bo$65bobob2o21bo6bo9bobo5b2o5b\no2bo$69bo5bo17bobo2bo3b2o6b2o4b2o2bo2bo7bo$68bo6bobo15bo3b2o12bo3bobo4\nbo4b3o$64bobobo3b2o6bo2bo6bob3o2b2o5bo4bobo2b3obobo6b4o$68bo3bo5bobob3\no3bo3bobo2bobo5b3o4b2o15b2o$64bo2bo4bo12bo8bo9bo2bo5bo10b2o5bo$66bo5bo\n9bo13bo8b3o15b3o$71bo4bo8bo10bo23b3o2bo2bo2bo$64bo6bo23bo16bo9bo$71bo3\n9bo16bo$72bo24bo26bo4bo$96bo24bo4$33bo6bo8bo9bo$30bo3bo4bo22bo33bo$25b\nobo18bo8bo39bo$28b2o2bo3b2o2bo10bo8bo4bob2o14bo4bo3bo14bo$31bo17b3o6b2\nobo4bo9bo10b3o3b2obo11bo$35b3o2bo2bo4bo2bo5bobo4b2o14bo4b2o19b3o$25bo4\nbo3bobo7bo3bo2bo5b2o13bo4b2ob2o2bo8bo2bo7bo$25bo4bo2bob2o5b3o3bo6bo3bo\n3bobo11bob3obo3bo6bo2b2o9bo$24b2o5b2ob2o8bo8bo2bobo3bo7bo5b2o10bo5b3o6\nbo$25bobo17bo4b3o17b2o3bo6bo4bo3bo2bo2b2o2bobo$25bobo17bo4b3o17b2o3bo6\nbo4bo3bo2bo2b2o2bobo$24b2o5b2ob2o8bo8bo2bobo3bo7bo5b2o10bo5b3o6bo$25bo\n4bo2bob2o5b3o3bo6bo3bo3bobo11bob3obo3bo6bo2b2o9bo$25bo4bo3bobo7bo3bo2b\no5b2o13bo4b2ob2o2bo8bo2bo7bo$35b3o2bo2bo4bo2bo5bobo4b2o14bo4b2o19b3o$3\n1bo17b3o6b2obo4bo9bo10b3o3b2obo11bo$28b2o2bo3b2o2bo10bo8bo4bob2o14bo4b\no3bo14bo$25bobo18bo8bo39bo$30bo3bo4bo22bo33bo$33bo6bo8bo9bo!"
   },
   {
-   "date": "2012-07-28",
+   "date": "2012-07-22",
    "source": "forum",
    "paras": [
-    "Paul Tooke revives the <a href=\"https://conwaylife.com/forums/viewtopic.php?t=649\">Live Free or Die thread</a> on the ConwayLife forums, where members piece the site back together from the Wayback Machine and an old collection."
+    "Josh Ball (velcrorex) posts the first c/4 orthogonal spaceship, later named the beachcomber ship, to the <a href=\"https://conwaylife.com/forums/viewtopic.php?t=649\">Live Free or Die thread</a> on the ConwayLife forums (started in 2011). A week later he asks whether the Verizon site was saved anywhere, and Paul Tooke points to its March 2008 Wayback Machine snapshot."
    ]
   },
   {
-   "date": "2013-10-14",
-   "source": "wiki",
+   "date": "2013-10-12",
+   "source": "forum",
    "paras": [
-    "Luke launches <em>lfod.wikispaces.com</em> with a new pattern collection “including all known objects as of October 14th, 2013”, crediting Luke Bradford, Josh Ball, David Eppstein and Jason Summers."
+    "Luke, pointed to the thread by Andrew Trevorrow, announces <em>lfod.wikispaces.com</em>, built over the previous week or two. Its pattern collection is dated October 14, 2013."
    ]
   },
   {
@@ -893,7 +893,7 @@
    "date": "2014-10-19",
    "source": "private messages",
    "paras": [
-    "Luke names Michael Simkin’s c/3 ship the wasp ship. Simkin asks for WinLifeSearch to share the credit, and redirects his prize money to a challenge of his own."
+    "Luke names Michael Simkin’s c/3 ship the wasp ship. Simkin asks for WinLifeSearch to share the credit, and offers to put his prize money toward a challenge of his own."
    ]
   },
   {
@@ -911,10 +911,17 @@
    ]
   },
   {
+   "date": "2020-10-21",
+   "source": "forum",
+   "paras": [
+    "Peter Naszvadi bumps the thread for a new result on LifeWiki: a W110 unit cell, which emulates the one-dimensional Rule 110 cellular automaton (itself known to be universal) in Live Free or Die."
+   ]
+  },
+  {
    "date": "2020-11-12",
    "source": "forum",
    "paras": [
-    "FWKnightship posts a W110 unit cell: a construction that emulates the one-dimensional Rule 110 inside Live Free or Die, and so suggests the rule is Turing complete."
+    "FWKnightship builds the puffer setup LaundryPizza03 asked for, laying a pattern of dots that leads to superlinear growth."
    ]
   },
   {
@@ -1063,7 +1070,7 @@
    "desc": "Nico Brown’s (glider_rider) collection of c/2 spaceships and rakes, posted as a Golly macrocell on December 29, 2014; converted to RLE. Grouped by front end: rakes at top; then rows of horned ships and unicorn ships; then four hippo ships and, to their right, the fox ship; and buffalo ships at the bottom."
   }
  ],
- "challenges_html": "\n<p>The 2013 wiki kept this page going, adding cash prizes in July 2014: $25 for a spaceship of a new speed, $25 for any\nmoon reflector, and $50 for a stable moon reflector. Several of the 2008 challenges have since been answered:</p>\n<ul>\n<li><strong>A gun</strong>: the p4 <a href=\"glossary.html#moon-laser\">moon laser</a>, by Matthias Merzenich (August 2012). A much smaller p5 moon gun followed from Arie Paap in August 2016.</li>\n<li><strong>c/3 and c/4 orthogonal spaceships</strong>: the <a href=\"glossary.html#wasp-ship\">wasp ship</a> (Michael Simkin, October 2014, which won a prize) and the <a href=\"glossary.html#beachcomber-ship\">beachcomber ship</a> (Josh Ball).</li>\n<li><strong>Period 10</strong>: the <a href=\"glossary.html#decade-ship\">decade ship</a> (Paul Tooke, 2012), then p10 puffers (Arie Paap, 2015).</li>\n<li><strong>p2 rakes and puffers</strong>: velcrorex’s c p2 backrake (July 2014) and the <a href=\"glossary.html#flicker-rake\">flicker rake</a> (Nico Brown, 2015).</li>\n<li><strong>Slower-than-light rakes</strong>: the <a href=\"glossary.html#buffalo-rake\">buffalo rake</a> and hippo and horned rakes (c/2, 2014–15).</li>\n<li><strong>Breeders</strong>: the first, an MMS breeder, by Arie Paap (March 2015). Game of Life Fun built the first MMM breeder in May 2025.</li>\n<li><strong>Universality</strong>: FWKnightship’s W110 unit cell (2020).</li>\n</ul>\n<p>As of the last archived wiki (2018), no moon reflector and no knightship was known, and there were no objects at period 11, 13, 14 or 15.</p>\n",
+ "challenges_html": "\n<p>The 2013 wiki kept this page going, adding cash prizes in July 2014: $25 for a spaceship of a new speed, $25 for any\nmoon reflector, and $50 for a stable moon reflector. Several of the 2008 challenges have since been answered:</p>\n<ul>\n<li><strong>A gun</strong>: the p4 <a href=\"glossary.html#moon-laser\">moon laser</a>, by Matthias Merzenich (August 2012). A much smaller p5 moon gun followed from Arie Paap in August 2016.</li>\n<li><strong>c/3 and c/4 orthogonal spaceships</strong>: the <a href=\"glossary.html#wasp-ship\">wasp ship</a> (Michael Simkin, October 2014, which won a prize) and the <a href=\"glossary.html#beachcomber-ship\">beachcomber ship</a> (Josh Ball, July 2012).</li>\n<li><strong>Period 10</strong>: the <a href=\"glossary.html#decade-ship\">decade ship</a> (Paul Tooke, 2012), then p10 puffers (Arie Paap, 2015).</li>\n<li><strong>p2 rakes and puffers</strong>: Josh Ball’s c p2 backrake (July 2014) and the <a href=\"glossary.html#flicker-rake\">flicker rake</a> (Nico Brown, 2015).</li>\n<li><strong>c/2 rakes</strong>: Josh Ball’s c/2 backrake (July 2014), then the <a href=\"glossary.html#buffalo-rake\">buffalo rake</a>, <a href=\"glossary.html#horned-rake\">horned rake</a> and hippo rake (by 2015).</li>\n<li><strong>Breeders</strong>: the first, an MMS breeder, by Arie Paap (March 2015). Game of Life Fun built the first MMM breeder in May 2025.</li>\n<li><strong>Universality</strong>: a W110 unit cell, emulating Rule 110 (2020, on LifeWiki).</li>\n</ul>\n<p>As of the wiki’s Challenges page in April 2015, no moon reflector, knightship, spacefiller or replicator was known, and there were no objects at period 11, 13, 14 or 15.</p>\n",
  "contributors_html": ", and, after 2012, <strong>Paul Tooke</strong>, <strong>Matthias Merzenich</strong>, <strong>Arie Paap</strong> (wildmyron), <strong>Michael Simkin</strong>, <strong>Nico Brown</strong> (glider_rider), and many others on the ConwayLife forums, including <strong>Game of Life Fun</strong>, praosylen, AforAmpere, confocaloid and FWKnightship. The Glider Database credits earlier finds of the key ship to Peter Naszvadi (2001) and the robot ship to Alex Fink (2000)",
- "periods_note": "Since 2009, objects have been found at p9 (puffers), p10 (the decade ship and p10 puffers), and at many high periods built from rakes and breeders. See the <a href=\"news.html\">News</a> page."
+ "periods_note": "Since 2009, the first p10 objects (the decade ship and p10 puffers) have been found, along with new p3, p5 and p9 objects and many high-period rakes and breeders. See the <a href=\"news.html\">News</a> page."
 }

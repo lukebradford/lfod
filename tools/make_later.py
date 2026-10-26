@@ -17,7 +17,7 @@ FORUM = json.loads((DATA / "forum_patterns.json").read_text())
 THREAD = "https://conwaylife.com/forums/viewtopic.php?t=649"
 NAMES = {"Sokwe": "Matthias Merzenich (Sokwe)", "wildmyron": "Arie Paap (wildmyron)",
          "simsim314": "Michael Simkin (simsim314)", "glider_rider": "Nico Brown (glider_rider)",
-         "bprentice": "Brian Prentice", "lukebradford": "Luke Bradford"}
+         "bprentice": "Brian Prentice", "velcrorex": "Josh Ball (velcrorex)", "lukebradford": "Luke Bradford"}
 CONCEPTS = {"chaos", "natural", "flotilla", "gun", "speed of light"}
 # Wiki pages whose newer pattern is worth showing next to the 2009 one.
 SHOW_WIKI_RLE = {"anchor stack", "freedom fighter", "anchored"}
@@ -54,7 +54,7 @@ for name, title, desc in [
      "Can be converted to a spaceship with a trailer. Shown with the spaceship it was posted with."),
     ("buffalo bird", "Buffalo bird",
      "A small c/2 tagalong for a majority of the known c/2 spaceships and rakes. Shown riding a ship."),
-    ("flicker rake", "p2 rake (flicker rake)", "The first p2 rake."),
+    ("flicker rake", "p2 rake (flicker rake)", "A p2 rake, probably the pattern catalogued under this name in March 2015. It was hailed as the first p2 rake, but Josh Ball’s c p2 backrake from July 2014 is earlier."),
 ]:
     f = BY_TITLE[title]
     entries.append({"name": name, "desc": desc, "rle": f["rle"], "credit": NAMES.get(f["by"], f["by"]),
@@ -71,7 +71,7 @@ for name, key, desc, credit in [
      "the smallest, shown below, has a minimum population of {minpop} cells.", "Nico Brown (glider_rider)"),
     ("hippo ship", "hippo",
      "Any of a family of p4 c/2 spaceships with the same front-end mechanism. Nico Brown’s 2014 collection has {count}; "
-     "the smallest, shown below, has a minimum population of {minpop} cells. The original hippo ship page is lost.", ""),
+     "the smallest, shown below, has a minimum population of {minpop} cells. The original hippo ship page is lost, and no surviving source records who found the first one.", "discoverer not recorded"),
     ("buffalo ship", "buffalo",
      "Any of a family of p4 and p8 c/2 spaceships with even bilateral symmetry, found by Arie Paap with gfind and WinLifeSearch in August 2014. "
      "Nico Brown’s 2014 collection has {count} with the buffalo front end; the smallest, shown below, has a minimum population of {minpop} cells.",
@@ -103,12 +103,13 @@ for f in FORUM:
                            f'<a href="{post_url(f["post"])}">Forum post</a>.'],
                  "rle": f["rle"]})
 news += [
-    {"date": "2012-07-28", "source": "forum", "paras": [
-        f'Paul Tooke revives the <a href="{THREAD}">Live Free or Die thread</a> on the ConwayLife forums, '
-        "where members piece the site back together from the Wayback Machine and an old collection."]},
-    {"date": "2013-10-14", "source": "wiki", "paras": [
-        "Luke launches <em>lfod.wikispaces.com</em> with a new pattern collection “including all known objects as of "
-        "October 14th, 2013”, crediting Luke Bradford, Josh Ball, David Eppstein and Jason Summers."]},
+    {"date": "2012-07-22", "source": "forum", "paras": [
+        f'Josh Ball (velcrorex) posts the first c/4 orthogonal spaceship, later named the beachcomber ship, to the '
+        f'<a href="{THREAD}">Live Free or Die thread</a> on the ConwayLife forums (started in 2011). A week later he asks whether the '
+        "Verizon site was saved anywhere, and Paul Tooke points to its March 2008 Wayback Machine snapshot."]},
+    {"date": "2013-10-12", "source": "forum", "paras": [
+        "Luke, pointed to the thread by Andrew Trevorrow, announces <em>lfod.wikispaces.com</em>, built over the previous week or two. "
+        "Its pattern collection is dated October 14, 2013."]},
     {"date": "2014-07-04", "source": "forum", "paras": [
         "Luke offers cash prizes: $25 for a spaceship of a new speed, $25 for a moon reflector, $50 for a stable moon reflector."]},
     {"date": "2014-12-29", "source": "private messages", "paras": [
@@ -118,15 +119,17 @@ news += [
         "the <a href=\"glossary.html#fox-ship\">fox ship</a>. Luke plans an updated collection “so that the set of known spaceships can be "
         "found in a single place”."]},
     {"date": "2014-10-19", "source": "private messages", "paras": [
-        "Luke names Michael Simkin’s c/3 ship the wasp ship. Simkin asks for WinLifeSearch to share the credit, and redirects his "
-        "prize money to a challenge of his own."]},
+        "Luke names Michael Simkin’s c/3 ship the wasp ship. Simkin asks for WinLifeSearch to share the credit, and offers to put his "
+        "prize money toward a challenge of his own."]},
     {"date": "2014-09-29", "source": "email", "paras": [
         "Full HTML and PDF exports of the wiki are made (lfod_20140922 and lfod_20140929). Their download links have since died."]},
     {"date": "2018-03-25", "source": "Wayback", "paras": [
         "The last Wayback Machine capture of the wiki. Wikispaces shut down later in 2018."]},
+    {"date": "2020-10-21", "source": "forum", "paras": [
+        "Peter Naszvadi bumps the thread for a new result on LifeWiki: a W110 unit cell, which emulates the one-dimensional "
+        "Rule 110 cellular automaton (itself known to be universal) in Live Free or Die."]},
     {"date": "2020-11-12", "source": "forum", "paras": [
-        "FWKnightship posts a W110 unit cell: a construction that emulates the one-dimensional Rule 110 inside Live Free or Die, "
-        "and so suggests the rule is Turing complete."]},
+        "FWKnightship builds the puffer setup LaundryPizza03 asked for, laying a pattern of dots that leads to superlinear growth."]},
     {"date": "2022-01-09", "source": "forum", "paras": [
         "Luke returns to the thread, having found that Wikispaces shut down without his noticing."]},
     {"date": "2025-05-26", "source": "forum", "paras": [
@@ -142,14 +145,14 @@ challenges = f"""
 moon reflector, and $50 for a stable moon reflector. Several of the 2008 challenges have since been answered:</p>
 <ul>
 <li><strong>A gun</strong>: the p4 <a href="glossary.html#moon-laser">moon laser</a>, by Matthias Merzenich (August 2012). A much smaller p5 moon gun followed from Arie Paap in August 2016.</li>
-<li><strong>c/3 and c/4 orthogonal spaceships</strong>: the <a href="glossary.html#wasp-ship">wasp ship</a> (Michael Simkin, October 2014, which won a prize) and the <a href="glossary.html#beachcomber-ship">beachcomber ship</a> (Josh Ball).</li>
+<li><strong>c/3 and c/4 orthogonal spaceships</strong>: the <a href="glossary.html#wasp-ship">wasp ship</a> (Michael Simkin, October 2014, which won a prize) and the <a href="glossary.html#beachcomber-ship">beachcomber ship</a> (Josh Ball, July 2012).</li>
 <li><strong>Period 10</strong>: the <a href="glossary.html#decade-ship">decade ship</a> (Paul Tooke, 2012), then p10 puffers (Arie Paap, 2015).</li>
-<li><strong>p2 rakes and puffers</strong>: velcrorex’s c p2 backrake (July 2014) and the <a href="glossary.html#flicker-rake">flicker rake</a> (Nico Brown, 2015).</li>
-<li><strong>Slower-than-light rakes</strong>: the <a href="glossary.html#buffalo-rake">buffalo rake</a> and hippo and horned rakes (c/2, 2014–15).</li>
+<li><strong>p2 rakes and puffers</strong>: Josh Ball’s c p2 backrake (July 2014) and the <a href="glossary.html#flicker-rake">flicker rake</a> (Nico Brown, 2015).</li>
+<li><strong>c/2 rakes</strong>: Josh Ball’s c/2 backrake (July 2014), then the <a href="glossary.html#buffalo-rake">buffalo rake</a>, <a href="glossary.html#horned-rake">horned rake</a> and hippo rake (by 2015).</li>
 <li><strong>Breeders</strong>: the first, an MMS breeder, by Arie Paap (March 2015). Game of Life Fun built the first MMM breeder in May 2025.</li>
-<li><strong>Universality</strong>: FWKnightship’s W110 unit cell (2020).</li>
+<li><strong>Universality</strong>: a W110 unit cell, emulating Rule 110 (2020, on LifeWiki).</li>
 </ul>
-<p>As of the last archived wiki (2018), no moon reflector and no knightship was known, and there were no objects at period 11, 13, 14 or 15.</p>
+<p>As of the wiki’s Challenges page in April 2015, no moon reflector, knightship, spacefiller or replicator was known, and there were no objects at period 11, 13, 14 or 15.</p>
 """
 
 contributors = (", and, after 2012, <strong>Paul Tooke</strong>, <strong>Matthias Merzenich</strong>, "
@@ -186,7 +189,7 @@ for src, name, date in [("att_482", "Nico Brown c/2 collection (first version)",
 
 later = {"entries": entries, "news": news, "files": files, "challenges_html": challenges,
          "contributors_html": contributors,
-         "periods_note": "Since 2009, objects have been found at p9 (puffers), p10 (the decade ship and p10 puffers), "
-                         "and at many high periods built from rakes and breeders. See the <a href=\"news.html\">News</a> page."}
+         "periods_note": "Since 2009, the first p10 objects (the decade ship and p10 puffers) have been found, along with new p3, p5 and p9 objects "
+                         "and many high-period rakes and breeders. See the <a href=\"news.html\">News</a> page."}
 (DATA / "later.json").write_text(json.dumps(later, indent=1, ensure_ascii=False))
 print(len(entries), "entries,", len(news), "news,", len(files), "files")
