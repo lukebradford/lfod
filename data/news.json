@@ -1,0 +1,416 @@
+[
+ {
+  "date": "2009-09-11",
+  "paras": [
+   "Josh Ball has sent me a set of new discoveries, including several p5 c/5 spaceships, an p5 moon “gun” with no way of being stabilized, and a p3 fuse composed of pre-spark-like patterns."
+  ]
+ },
+ {
+  "date": "2009-06-21",
+  "paras": [
+   "A five-month gap brings Live Free or Die closer and closer to Conway’s current pace. Anyway, messing around with the forge puffer has led me to discover a larger iteration, which happens to hold the current record for the longest wing in any object, at 14 cells. Tinkering to try to find more extensions proved fruitless. On an unrelated but interesting note, I’ve made a function to look for puffers and spaceships in PLT scheme which exploits the fact that the universe is so explosive: it assumes, apparently correctly, that any pattern which expands in one orthogonal direction but not the other is not chaotic and must be a mobile object of some sort. Whether this will lead to new discoveries remains to be seen."
+  ]
+ },
+ {
+  "date": "2009-01-19",
+  "paras": [
+   "First news of the new year! Josh Ball has sent me another set of discoveries, including a p4 oscillator the beacon, a p6 oscillator the big six shooter, p4 c/2 spaceships the rhino ship and elephant ship, and p8 c/2 spaceship the dust mite ship, which is by far the smallest c/2 spaceship with a minimum population of only 36 cells, and is the smallest slower-than-c craft yet discovered."
+  ]
+ },
+ {
+  "date": "2008-12-09",
+  "paras": [
+   "I’ve finished cataloguing Josh Ball’s new discoveries. They are a p3 oscillator the rotunda, a p4 oscillator the buoy, a p6 oscillator the anthill, a p4 c/2 spaceship the crab ship, and p4 c/4 diagonal spaceships the ram ship and giraffe ship. They lead to significant updates to the Object Tables page and Live Free or Die condensed and Oscillators in the Files page."
+  ]
+ },
+ {
+  "date": "2008-12-07",
+  "paras": [
+   "Josh Ball has sent me another set of discoveries, including new p3, p4, and p6 oscillators, a relatively small p4 c/2 spaceship, a very small p4 c/4 diagonal spaceship, and a glide-symmetric p4 c/4 spaceship. They’ll be up within a few days."
+  ]
+ },
+ {
+  "date": "2008-12-05",
+  "paras": [
+   "Another pre-spark development. My search program has found a four-cell pre-spark that dies in 12 generations, which means I now have pre-sparks of four cells or fewer for every longevity of 14 generations or fewer. I’ve also added my table of pre-spark attributes to the Object Tables page for your enjoyment."
+  ]
+ },
+ {
+  "date": "2008-11-28",
+  "paras": [
+   "After an even longer break, which suggests that this pace might now be the norm for Live Free or Die, I’ve found a new four-cell pre-spark that dies in 14 generations. I used a function that I created in PLT scheme to search randomly for small pre-sparks. This is the first time I’ve made a successful discovery with a tool built from scratch. Extensions of this pre-spark also dropped the record for 17 and 22 generations by one cell, and the pre-spark itself is the longest-lived four-cell pre-spark, making four cells the only population less than six cells of which the longest-lived pre-spark is not a member of the pre-donut + hot sand “family.” See the size records for each longevity of pre-sparks in Pre-sparks in the Files page."
+  ]
+ },
+ {
+  "date": "2008-09-09",
+  "paras": [
+   "After the longest pause in Live Free or Die history, I’ve discovered another puffer that works with the aid of a metronome puffer by the same mechanism as the life support puffer, which I’m calling the fence puffer."
+  ]
+ },
+ {
+  "date": "2008-07-29",
+  "paras": [
+   "I’ve finished cataloguing Josh Ball’s recent set of discoveries. They are a p5 oscillator, the starfish, p8 puffers the cactus puffer, blob puffer, and nervous puffer, a trailer for the nervous puffer, the nervous trailer, a p4 backward moon rake, the flip-flop rake, trailers for the flip-flop rake, the backflip and belly flop, and a p3 c spaceship, the wide tricycle ship. These have again led to significant updates in the Period Explorations, Challenges, and Object Tables pages, as well as Live Free or Die condensed, Period examples, and Oscillators in the Files page."
+  ]
+ },
+ {
+  "date": "2008-07-27",
+  "paras": [
+   "To cure a relatively slow streak in Live Free or Die history, Josh Ball has sent me a set of discoveries including a p5 oscillator, p8 puffers, a p4 backward moon rake, a p3 c spaceship, and various trailers. I’ll have them catalogued within a few days."
+  ]
+ },
+ {
+  "date": "2008-07-15",
+  "paras": [
+   "I’ve built an interesting reaction by trial and error in which a moon collides with a pattern of eight dots and leaves behind a pattern of five dots. It’s not useful, but very cool because two of the dots reappear in their original orientation. Similar reactions could lead to the creation of a stable eater, and (dare I say it) perhaps even a stable reflector. In Conway’s Life, which starved for a stable reflector for decades, the set of still lifes in the stable toolbox is infinite, and in Live Free or Die it consists of only one simple tool, the dot. But everything is very reactive, and dots are very easy to create, so the task is daunting but intriguing."
+  ]
+ },
+ {
+  "date": "2008-07-15",
+  "paras": [
+   "I’ve found a way to stabilize a bizarre wing on a robot puffer-like craft using a long, useful p4 horn on a metronome puffer. I’ll call the puffer itself the life support puffer."
+  ]
+ },
+ {
+  "date": "2008-07-13",
+  "paras": [
+   "Messing around with engines has led me to the discovery of an odd p8 puffer that operates on a similar mechanism to the rake and bake puffer. The fact that this mechanism works with another engine suggests that a clean p8 c backward moon rake may be possible. I’ll call this the fake rake puffer."
+  ]
+ },
+ {
+  "date": "2008-07-09",
+  "paras": [
+   "A few bits of miscellany: the Challenges page now contains a list of more specific goals for Live Free or Die technology, rather than just general CA objects, and a few more explorations are going up on the Files page."
+  ]
+ },
+ {
+  "date": "2008-07-09",
+  "paras": [
+   "Discovery of a strange, skew-symmetrical p4 puffer with multiple iterations by explosion tracking and messing with the result. I’ll call it the twin puffer."
+  ]
+ },
+ {
+  "date": "2008-07-02",
+  "paras": [
+   "I’ve successfully completed a simple graphic representation of the possible iterations of various p4 c spaceships, which should render the cumbersome iteration tables obsolete."
+  ]
+ },
+ {
+  "date": "2008-07-01",
+  "paras": [
+   "By using the donut produced by two eclipse puffers to support a freedom fighter, I’ve broken the record for the smallest p16 puffer by 5 cells, the new one having an initial population of 36 cells. This is the first use of the freedom fighter with a support mechanism of period other than 6n."
+  ]
+ },
+ {
+  "date": "2008-06-30",
+  "paras": [
+   "Through asymmetrical explosion tracking, I’ve discovered a strange p8 puffer that uses the mechanisms of an R car and dot puffer. I’ll call it the rope puffer."
+  ]
+ },
+ {
+  "date": "2008-06-26",
+  "paras": [
+   "Through endless tinkering and brute force, I’ve created Live Free or Die’s largest engineered object to date: a p192 backward free ship rake, the first backward free ship rake created. Only two p192 freedom fighter flotillas are actually necessary, and the remaining technology is mostly p96 and around half the size. The device includes nine p96 free rakes, three p12 free rakes, and a large contingent of free ships and hex ships to clean up debris. With no optimization, the beast stands at an initial population of about 30,000 cells, in a box 3600 cells long and 1400 wide. The key to its completion was a reaction in which a moon converts a checker and dot left by a free rake into two dots, which can then be deleted by free ships."
+  ]
+ },
+ {
+  "date": "2008-06-22",
+  "paras": [
+   "By working with metronome puffers, I’ve made some amazing breakthroughs in ways to stabilize the tails, including methods that don’t require anything more than the moon itself. This has led to the creation of some very small objects, including a 16-cell metronome ship and 17-cell metronome puffer. Working with the mechanism has also led me to the discovery of an entirely different p8 puffer, the eclipse puffer, which turns out to be the smallest p8 puffer, with only 13 cells."
+  ]
+ },
+ {
+  "date": "2008-06-21",
+  "paras": [
+   "By working with the behavior and appearance of anchor tracks, I’ve determined a simple formula for predicting the presence of anchors at intervals of 4 * (2n - 1) generations, the possible periods for any track, and therefore the ability to find the period of any track in comparatively few steps, rather than running the pattern for millions of generations."
+  ]
+ },
+ {
+  "date": "2008-06-18",
+  "paras": [
+   "In a mechanism very similar to the lever puffer, I’ve used several moon rakes and hex ship checker reactions to create Live Free or Die’s first clean ant puffer. It has an initial population of around 3500 cells."
+  ]
+ },
+ {
+  "date": "2008-06-15",
+  "paras": [
+   "Tinkering with Josh Ball’s moon rake, I’ve improved his design to a version which only uses three free rakes, and which can be implemented at periods of 12n rather than just 12. I’ve also used phase manipulation to reduce the initial population of the lever puffer. And I’ve come up with a foolproof plan, but not an implementation, for a backward free ship rake of period 96*2n with n (as far as I know) being at least 1 and possibly at least 2. The plan is as follows: Using successive layers of freedom fighter flotillas, produce trails of single dots at a period P of 96*2n (for now, let’s assume 192, though this may be insufficient.) Using these dot trails, build a free rake of period P. Using three of these free rakes and a small deletion flotilla, build a moon rake. Using another free rake of period P with free ships traveling opposite the direction of the moons, set off a free rake reaction on the back of the sideways-traveling moons. Free ships are now being produced traveling backward, but will collide with the two dots and checker left behind in the free rake reaction. Delete the dots with two more free rakes (If period P leaves insufficient space for any of these deleting operations, double the period of the entire device by enlarging the freedom fighter flotillas.) Delete the checker with two more sideways moon rakes (converting the checker to dots) and three more free rakes (deleting the dots). If anyone wants more specifics about these individual reactions and would like to attempt construction of the thing, please e-mail me."
+  ]
+ },
+ {
+  "date": "2008-06-11",
+  "paras": [
+   "Using Josh Ball’s clean moon rake and his hex ship checker reaction, I’ve created Live Free or Die’s first clean lever puffer. Like the original monster puffer, the object is enormous, with an initial population of around 2700 cells and a length of around 500 cells. It’s now part of the Output examples file in the Files page."
+  ]
+ },
+ {
+  "date": "2008-06-09",
+  "paras": [
+   "Josh Ball has sent me another set of amazing discoveries, which have been named and catalogued: an infinitely extensible p6 oscillator, the six shooter, a p8 oscillator with a few variations, the black widow, p5 c puffer the nickel puffer, p5 c backward moon rake the nickel rake, p5 c spaceship the nickel ship, p8 c puffer the zigzag puffer, p2 c spaceships the flicker ship and flutter ship, p8 c spaceship the squid ship, and p5 2c/5 spaceship the zirconium ship, along with a way for cleaning up the debris from the free rake and a way to build a clean sideways moon rake from free rakes. These objects have again led to major updates in the Period Explorations, Challenges, and Object Tables pages, as well as Live Free or Die condensed, Period examples, and Oscillators in the Files page."
+  ]
+ },
+ {
+  "date": "2008-06-06",
+  "paras": [
+   "I’ve built a small assembly of dots which can be attached to the end of a p4 dot trail and which will cleanly delete a sun car, making this reaction a cleanly burning lightspeed fuse."
+  ]
+ },
+ {
+  "date": "2008-06-05",
+  "paras": [
+   "The ant and mantis, which have components resembling anchors, can be stacked in the same three ways (wavy, rusty, and shiny), creating large p6 oscillators. And an anchor can interact with an ant as if the two are part of a wavy anchor or ant stack, but because they only meet when their phases coincide, i.e. at p12, this creates a true p12 oscillator, though there is only one p12 cell, at the point where the stack interaction occurs. This is the first known p12 oscillator other than the two-slot anchor track."
+  ]
+ },
+ {
+  "date": "2008-06-02",
+  "paras": [
+   "I’ve finished naming and cataloguing Josh Ball’s discoveries, which are: a p3 oscillator, the trilogy, p6 oscillators the ant and mantis, p3 c puffers the tricycle puffer and wide tricycle puffer, p3 c backward moon rake the tricycle rake, p3 c spaceship the tricycle ship, p5 c/5 spaceship the quintessential ship, and p4 c/4 diagonal spaceship the slanted ship. These objects have also led to major updates in the Period Explorations, Challenges, and Object Tables pages, as well as Live Free or Die condensed, Period examples, and Oscillators in the Files page."
+  ]
+ },
+ {
+  "date": "2008-06-01",
+  "paras": [
+   "Josh Ball has sent me a set of incredible discoveries, including p3 and p6 oscillators, p3 c puffers and a p3 c backward rake, a p3 c spaceship, a p5 c/5 spaceship, a p4 c/4 diagonal spaceship. They should be added to the glossary soon."
+  ]
+ },
+ {
+  "date": "2008-05-30",
+  "paras": [
+   "The improbable puffer may not be so improbable after all. I found another in a random explosion and isolated a 7-cell “seed” pattern through persistent deletion which produces an improbable puffer and chaos."
+  ]
+ },
+ {
+  "date": "2008-05-29",
+  "paras": [
+   "I’ve discovered a small p4 puffer with multiple iterations by asymmetrical explosion tracking. A friend of mine has named it the oof puffer."
+  ]
+ },
+ {
+  "date": "2008-05-28",
+  "paras": [
+   "I’ve revamped the Files page so that site visitors can have access to all the files that I use, rather than just the most significant collections."
+  ]
+ },
+ {
+  "date": "2008-05-26",
+  "paras": [
+   "And a funky little p4 asymmetrical puffer that I’ll call the hook puffer."
+  ]
+ },
+ {
+  "date": "2008-05-26",
+  "paras": [
+   "Astounding discovery by asymmetrical explosion tracking and tinkering – a p8 puffer with an oversized dot puffer engine. Normally engines with such large wings explode as their flames continue to expand backward, but the reactions in the two main wings of this puffer manage to tame each other into a strange trail of checkers. I’ll call it the forge puffer. There are probably more that work by a similar mechanism."
+  ]
+ },
+ {
+  "date": "2008-05-18",
+  "paras": [
+   "Metronome puffers can also be extended vertically by messing with the internal structure. At the right points, they become spaceships. And they can go horizontally indefinitely just by building the right moon setups and putting sun or R cars at the right points. The little plus-like tails inside can be infinitely long if they are bordered by tails of length varying only by two cells."
+  ]
+ },
+ {
+  "date": "2008-05-18",
+  "paras": [
+   "The metronome puffer can be extended horizontally by stabilizing each side with another moon and R car, eliminating the sun car. Whether this can be pushed indefinitely remains to be seen."
+  ]
+ },
+ {
+  "date": "2008-05-18",
+  "paras": [
+   "Very interesting discovery with explosion tracking and persistent tinkering. A p4 puffer which stabilizes a tail on a moon with a sun car and an R car. I’ve worked with similar mechanisms before because they can travel and propagate along a row of moons with two cells of space between each. The mechanism might be able to be extended vertically or horizontally. I’m calling it the metronome puffer."
+  ]
+ },
+ {
+  "date": "2008-03-16",
+  "paras": [
+   "Scratch that last message. Using tippy trailers to slide my dot trail, I’ve created a workable support mechanism and therefore the first p96 spaceship. The thing is almost as enormous as the original monster puffer, with a minimum population of around 1500 cells. By the same method spaceships of any period 48n should be possible, but they will be immense, as successive layers of freedom fighters are required to repeatedly double the period of the object."
+  ]
+ },
+ {
+  "date": "2008-03-16",
+  "paras": [
+   "I’m forced into an unfortunate revision of my last report. It turns out that due to the size restrictions on the construction of freedom fighter support mechanisms, it’s impossible to build them at period higher than 24, so p96 and higher objects are impossible by this method."
+  ]
+ },
+ {
+  "date": "2008-03-16",
+  "paras": [
+   "By using a p24 support mechanism for the freedom fighter and an additional forward free ship that interacts with the one fired backward, I’ve created the first clean p48 dotter. Before the discovery of the freedom fighter, which doubles the period of its support mechanism, p48 objects were possible only by using a p6 hex ship to interact with a p16 anchor nibbler puffer. (By extension, this mechanism could produce an object of any period 48n.) The creation of the p48 dotter, by enabling p48 anchor track flotillas, has yielded another method of arbitrarily high p48n objects, including spaceships, by using freedom fighters as period doublers, with each successively higher period creating a support mechanism for the next freedom fighter in the object. These are the first p48n spaceships I have."
+  ]
+ },
+ {
+  "date": "2008-03-09",
+  "paras": [
+   "I’ve discovered an enormous, strange p8 puffer with an immense reaction trailing it by asymmetrical explosion tracking. I’m calling it the improbable puffer."
+  ]
+ },
+ {
+  "date": "2008-02-24",
+  "paras": [
+   "I’ve managed to produce levers, the last small oscillator that doesn’t have a puffer yet, using reactions between free ships, but there is a pile of excess debris."
+  ]
+ },
+ {
+  "date": "2008-02-24",
+  "paras": []
+ },
+ {
+  "date": "2008-02-24",
+  "paras": [
+   "I’m on the verge of creating a moon rake using reactions between free rakes, but the extra debris from the rakes always seems to be in the way."
+  ]
+ },
+ {
+  "date": "2008-02-24",
+  "paras": [
+   "I’ve created a new version of the glossary organized by the type of the object or term. Both are now accessible from the Glossary link."
+  ]
+ },
+ {
+  "date": "2008-02-19",
+  "paras": [
+   "I’ve discovered an interesting p8 puffer by asymmetrical explosion tracking that I’m calling the tick puffer. It actually beats the smallest flotilla with a spider by one cell in population, making it a smaller p8 puffer example for the Period Examples pages."
+  ]
+ },
+ {
+  "date": "2008-02-18",
+  "paras": [
+   "Momentous news – Live Free or Die has its first rake. Using a p12 anchor track flotilla to activate one side of a moon in the same way as in the moonlighter, I’ve created a mechanism which produces a sideways free ship and a pattern of checkers and dots (which, unfortunately, thanks to the checker, I don’t have the ability to delete.) This should lead to extremely interesting reactions and puffers. I’m calling it the free rake."
+  ]
+ },
+ {
+  "date": "2008-02-18",
+  "paras": [
+   "I’ve succeeded in creating a p12 rather than p6 support mechanism for the freedom fighter using the deletion reaction of anchors in an anchor track flotilla, which gives me much more time to attempt to get rid of the pair of dots that delete each free ship. Free ships are too close to delete the dots, so for now I’m stuck with a pretty cool-looking spaceship, but I could be on the verge of the first rake in Live Free or Die history."
+  ]
+ },
+ {
+  "date": "2008-02-17",
+  "paras": [
+   "I’ve discovered a big p12 tagalong for a pair of free ships that follows behind a moonlighter, and I’m calling it the freedom fighter. One very intriguing aspect of it is that it would be a backward free ship rake except for a pair of dots that delete the next free ship in line. I’ll keep tinkering with it and see what I can come up with."
+  ]
+ },
+ {
+  "date": "2008-02-14",
+  "paras": [
+   "Amazingly enough, I’ve just had another major improvement in the size of the monster puffer thanks to the realization that I don’t need p24 double dots because the revolver puffer’s trail is far enough away that I can leave the p24 trail as anchors until the Liberty Bell reaction, eliminating the need for three free ships, a 2-2 dot puffer and the 3-2 dot puffer with its tippy trailer. The initial population is 231, or, with removal of the unnecessary internal bits, 185. It’s unbelievable how the discovery of new mechanisms and the tweaking of existing ones can lead to such dramatic improvement."
+  ]
+ },
+ {
+  "date": "2008-02-12",
+  "paras": [
+   "I’ve built a miraculous new monster puffer with an initial population of about 300 cells, or, after deleting all unnecessary internal trails, sparks, and pre-sparks, 243. Turns out the revolver puffer is just as capable of side dot production at p6 as the occidental puffer at p8. With a little fiddling to produce a proper spark for the Liberty Bell reaction (in this case a crosshairs), I was able to create the right four-dot frame for monster creation almost instantly, with none of the hassle of deletion that the occidental puffer required."
+  ]
+ },
+ {
+  "date": "2008-02-11",
+  "paras": [
+   "I’ve found a smaller version of the p24 double dot trail mechanism for the monster puffer, cutting down the initial population to about 1100. Now if only I could delete p8 dot trails from the side, instead of having to move them with tippy trailers..."
+  ]
+ },
+ {
+  "date": "2008-02-11",
+  "paras": [
+   "With a little work on the monster puffer, I’ve been able to produce the necessary p24 double dot trail by a different method, eliminating the excess checker, and a few rounds of optimization in the other mechanisms have led me to a sleeker machine which is around 1300 cells in population and 900 in length, which is still by far the largest constructed object I’ve ever made, but a prime candidate for addition to my Output examples.rle file."
+  ]
+ },
+ {
+  "date": "2008-02-10",
+  "paras": [
+   "Amazing news! I’ve finally completed the construction of an enormous monster puffer that produces monsters at p24, along with excess checkers that I still can’t get rid of, using a p8 Liberty Bell reaction on a p24 trail of anchors to create the frame of dots which two free ships convert into a monster. The key ingredient was, surprisingly enough, the occidental puffer, which produced p8 dots close enough to the trail of dots, neatly skirting the problem of not having any puffers which produce trails on the side of the puffer at any period greater than p4. The mechanisms for deleting the three extra p8 trails of dots produced by the occidental puffer and for extricating the proper p24 anchor-receptive double trail of dots from the initial p24 dot trail both require several 3-2 dot puffers with tippy trailers, so the initial population of the entire beast, as yet not built with proper minimalism, is around 2000 cells, and the puffer is about 1300 cells long."
+  ]
+ },
+ {
+  "date": "2008-02-10",
+  "paras": [
+   "Discovery by explosion tracking of a small tagalong for some p4 puffers and spaceships based on the same mechanism as the R ship. I’ll call it the R car."
+  ]
+ },
+ {
+  "date": "2008-02-10",
+  "paras": [
+   "Discovery by explosion tracking of a new class of p4 puffers (and a spaceship) based on a sufficiently large dot puffer or dot ship in which one of the wings is offset by two phases. I’m calling them dotset puffers and the dotset ship."
+  ]
+ },
+ {
+  "date": "2008-02-05",
+  "paras": [
+   "Discovery of a new p8 puffer by a method that has yielded surprisingly little in the past months – persistent tinkering. I was trying to find a stable support mechanism for the unique engine that the puffer has, in which an extra dot is present directly behind the front floating wing of the dot puffer component. It produces anchors and a pattern of dots, making it the fastest anchor producer I have. It has a dot puffer side and a sun puffer side. The dot puffer’s wing can be extended one cell and anchored to produce p4 checkers, but no other variation is possible because its output will interfere with the anchors. The sun side can be extended and anchored to create interesting p8 dot and checker reactions with the big anchor-producing internal flame. Another variation moves the sun side’s nose to the position it would hold in a sunset puffer. I’ll call it the ferry puffer."
+  ]
+ },
+ {
+  "date": "2008-01-31",
+  "paras": [
+   "There haven’t been any new discoveries in a while, but I’ve been working on tables of objects which describe every significant trait like symmetry, minimum population, and, most recently, a shorthand engine notation which can describe the engine of any lightspeed spaceship or puffer in only a short string of characters. The tables come in handy so I think I’ll upload them to the site."
+  ]
+ },
+ {
+  "date": "2008-01-09",
+  "paras": [
+   "Found another variation on the sun car, this one with a phase offset to create a puffer."
+  ]
+ },
+ {
+  "date": "2008-01-07",
+  "paras": [
+   "Weird p4 puffer discovered thanks to explorations of the enormous versatility of the sun car. This consists of the engine of a sun ship and two anchored sun cars, but the cars cause some strange plus-producing reaction in the center while creating lines of checkers. I’m calling it the sun dial puffer."
+  ]
+ },
+ {
+  "date": "2008-01-02",
+  "paras": [
+   "Brian Prentice has shown me a huge c/2 spaceship by David Eppstein that is the first slower-than-c craft I have seen in this rule and as far as I know, the only one that has been discovered. I will log it in the glossary as Eppstein’s slow ship as all that is provided on Eppstein’s site is a code number."
+  ]
+ },
+ {
+  "date": "2008-01-02",
+  "paras": [
+   "The sun car can be used to stabilize the normally explosive 3-cell wing of a 3-6 dot puffer. There may be other objects that it can attach to which will not normally work."
+  ]
+ },
+ {
+  "date": "2008-01-01",
+  "paras": [
+   "Brian Prentice has done some exploration with anchor track flotillas, such as creating large spaceships which contain all the phases of an anchor track."
+  ]
+ },
+ {
+  "date": "2008-01-01",
+  "paras": [
+   "First discovery of the new year! A 7-cell infinitely extensible pre-spark formed from a moon which collides with a checker and dot to result in a three-plus, a spark I have never used before. Because there is little delay between the collision and the death of the object, it is still much more efficient in terms of bounding box to use monster toasters, which also have seven cells, for pre-sparks of arbitrary longevity. Still, an iteration of this pre-spark replaces the 8-cell object I was using that died in 23 generations, reducing the maximum number of cells for the smallest pre-spark of any longevity from eight to seven. I have also not yet exhausted the possibilities of a moon collision with a checker or two dots, which could yield a 6-cell infinitely extensible pre-spark."
+  ]
+ },
+ {
+  "date": "2007-12-29",
+  "paras": [
+   "Explosion tracking from 1-cell-wide random fields has led me to discover that the plus ship is actually quite common, because two dominoes placed four cells apart will produce a plus ship on either side, much like the free ship-producing reaction of a single domino."
+  ]
+ },
+ {
+  "date": "2007-12-24",
+  "paras": [
+   "Discovery of a weird little p8 tagalong for a plus ship called the octoplus using asymmetrical explosion tracking."
+  ]
+ },
+ {
+  "date": "2007-12-19",
+  "paras": [
+   "Another update (they’re coming fast!): I’ve found a symmetrical p6 puffer by messing with the output of a random asymmetrical explosion, the first indivisible p6 puffer that I have, which I’ll call the revolver puffer."
+  ]
+ },
+ {
+  "date": "2007-12-19",
+  "paras": [
+   "Quick update: I’ve just found another asymmetrical puffer, this one with multiple iterations, by the same means as the shrapnel puffer, which I’m calling the ugly puffer."
+  ]
+ },
+ {
+  "date": "2007-12-19",
+  "paras": [
+   "The site has been going for a few months now, and exploration of the universe for even longer, but this page is an effort to begin to keep some chronological record of discoveries and other news. Right now discoveries have been coming along fairly steadily, which is part of the reason for this page. Some very recent discoveries, in order of novelty, are the sun car, the shrapnel puffer, the sprout puffer, and the scorpion puffer. The sun car is interesting because of its smallness and simplicity, and its incredible versatility. The shrapnel puffer is the first discovery from asymmetrical explosion tracking. Previously, symmetrical craft were found using random but symmetrical explosions, but the shrapnel puffer was the product of a random 1-cell-wide line, and is the first isolated asymmetrical object that has been found in a while. The sprout puffer is unique because it was built using a very similar object in the Seeds universe, which required only a little manipulation to yield this large p4 puffer.",
+   "Now I will try to go back in time and paint a general picture as well as I can. Other fairly recent individual objects include the accidental ship and accidental puffers, the arrow puffer, and tagalongs like the harvest moon and moonlighter. I have also been doing considerable work with small pre-sparks, and the monster toaster is another recent success, which reduced the number of cells necessary for infinite longevity from 8 to 7. Somewhat connected to this area is my work with stable fuses, especially hot sand, which has led to some initial attempts at logic gates and other similar mechanisms.",
+   "Before that, much of my work was with anchor track flotillas and objects like anchor biters and anchor eaters, while much of my earliest work consisted of exploring the various iterations of objects like the dot puffer and robot puffer."
+  ]
+ }
+]

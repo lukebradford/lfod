@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Live Free or Die Universe</title>
+<meta name="description" content="An exploration of the Live Free or Die (B2/S0) cellular automaton.">
+<link rel="icon" href="img/icon.png">
+<link rel="stylesheet" href="assets/style.css?v=59a6faff">
+<script src="assets/lfod.js?v=59a6faff" defer></script>
+</head>
+<body>
+<header class="site-header"><div class="inner">
+<a class="brand" href="index.html">Live Free or Die Universe<small>B2/S0</small></a>
+<nav class="main" aria-label="Main"><a href="index.html" class="active">Home</a><a href="news.html">News</a><a href="glossary.html">Glossary</a><a href="tables.html">Object tables</a><a href="periods.html">Periods</a><a href="iterations.html">Iterations</a><a href="challenges.html">Challenges</a><a href="files.html">Files</a><a href="restoration.html">About this restoration</a></nav>
+</div></header>
+<main>
+
+<div class="hero">
+<div class="prose">
+<h1>Live Free or Die Universe</h1>
+<p class="lede">An exploration of the Moore neighborhood s0/b2 cellular automaton.</p>
+<p>Live Free or Die, like Conway’s Game of Life, is a two-dimensional two-state Moore neighborhood cellular automaton. In other words,
+it is an infinite grid of cells which can either be live or dead. Given an initial configuration of cells, each cell applies simple rules
+based on its eight neighboring cells to determine whether its state will change. <strong>A live cell will die if it has any neighbors,
+and a dead cell will come to life if it has exactly two neighbors.</strong> Every cell in the grid changes at the same instant. As the pattern
+evolves through consecutive generations, it exhibits emergent and often beautiful behavior.</p>
+</div>
+<div><div class="pattern" data-rle="x = 63, y = 23, rule = s0/b2
+54bo4bo$57b2obo$62bo$62bo$57b2obo$54bo4bo3$38bo11bo$58bo$54bo4bo$55bo3bo$38bo18bo$43bo10bobo$44bo$42bo3bo$21bo4bo14bo4bo$3o5bo15b2obo17bo$7bobo19bo$11bo17bo$11bo12b2obo$7bobo11bo4bo$3o5bo!" data-label="radar puffer" data-height="260" data-speed="8" data-loop="160"></div>
+<p class="muted" style="font-size:.85rem;margin-top:.4em">A p12 anchor track flotilla: the <a href="glossary.html#radar-puffer">radar puffer</a>.</p></div>
+</div>
+
+<div class="cards">
+<a class="card" href="news.html"><strong>News</strong><span>Dated list of discoveries and explorations</span></a>
+<a class="card" href="glossary.html"><strong>Glossary</strong><span>222 terms and objects, 36 oscillators, 46 spaceships, 54 puffers and rakes</span></a>
+<a class="card" href="tables.html"><strong>Object tables</strong><span>Statistics for each object or its smallest iteration</span></a>
+<a class="card" href="periods.html"><strong>Period explorations</strong><span>The smallest oscillator, puffer and spaceship for each known period</span></a>
+<a class="card" href="iterations.html"><strong>Iteration guides</strong><span>Possible iterations of puffer and spaceship families</span></a>
+<a class="card" href="challenges.html"><strong>Challenges</strong><span>Objects nobody had found yet</span></a>
+<a class="card" href="files.html"><strong>Files</strong><span>Run-length encoded collections and explorations</span></a>
+<a class="card" href="restoration.html"><strong>About this restoration</strong><span>What was recovered, from where, and what is lost</span></a>
+</div>
+
+<div class="prose">
+<h2>A short explanation</h2>
+<p>I found Live Free or Die by accident while messing around with simple variations of Seeds (/b2). It is so named because the only cells
+that survive between generations are free of neighbors. What first intrigued me about it were the extremely common free ship, the double
+and 2-2 dot puffers, and the key ship.</p>
+</div>
+<div class="cards"><div><div class="pattern" data-rle="x = 9, y = 6, rule = s0/b2
+o4bo$3b2obo$8bo$8bo$3b2obo$o4bo!" data-label="free ship" data-height="150" data-speed="8" data-loop="48"></div><p class="muted" style="margin:.3em 0 0;font-size:.85rem"><a href="glossary.html#free-ship">free ship</a></p></div><div><div class="pattern" data-rle="x = 4, y = 3, rule = s0/b2
+o2bo$o2bo$o2bo!" data-label="monster" data-height="150" data-speed="8" data-loop="57"></div><p class="muted" style="margin:.3em 0 0;font-size:.85rem"><a href="glossary.html#monster">monster</a></p></div><div><div class="pattern" data-rle="x = 6, y = 5, rule = s0/b2
+4bo$o4bo$bo3bo$3bo$obo!" data-label="key ship" data-height="150" data-speed="8" data-loop="40"></div><p class="muted" style="margin:.3em 0 0;font-size:.85rem"><a href="glossary.html#key-ship">key ship</a></p></div><div><div class="pattern" data-rle="x = 63, y = 23, rule = s0/b2
+54bo4bo$57b2obo$62bo$62bo$57b2obo$54bo4bo3$38bo11bo$58bo$54bo4bo$55bo3bo$38bo18bo$43bo10bobo$44bo$42bo3bo$21bo4bo14bo4bo$3o5bo15b2obo17bo$7bobo19bo$11bo17bo$11bo12b2obo$7bobo11bo4bo$3o5bo!" data-label="radar puffer" data-height="150" data-speed="8" data-loop="120"></div><p class="muted" style="margin:.3em 0 0;font-size:.85rem"><a href="glossary.html#radar-puffer">radar puffer</a></p></div></div>
+<div class="prose">
+<p>Live Free or Die is a small, fast, intuitive universe, in which most objects are more reminiscent of machinery than of the organic fluidity
+that is characteristic of Conway’s Life (s23/b3). It is full of readily visible patterns, and flotillas and other large projects are easy to
+assemble. The explosive nature of the rule makes it receptive to the naturalistic study of mobile objects. It has oscillators of each period
+and spaceships of each speed that is possible in the Seeds universe, along with objects that are impossible or undiscovered in Seeds: stable
+fuses, oscillators with stators, and oscillators and spaceships of indefinitely large period. In Live Free or Die, unlike Seeds, it seems that
+there is the potential to create anything that is possible in Life.</p>
+<h2>Disclaimer</h2>
+<p>I am not a mathematician. The interest I have taken in cellular automata is purely aesthetic, and I do not profess to know any of the
+complexities behind this universe. The methods I have used to find and describe objects are primitive at best, so accept my apologies if
+this site is incomplete, misleading, or confusing in places.</p>
+<p class="muted">— Luke Bradford. Text from the 2009 home page.</p>
+<h2>Contributors</h2>
+<p>Most objects were found by Luke Bradford. Major contributions came from <strong>Josh Ball</strong> (dozens of oscillators, ships, puffers and rakes, 2008–2009),
+<strong>David Eppstein</strong> (the first slower-than-light ship), <strong>Jason Summers</strong> (oscillators from his Seeds collection) and
+<strong>Brian Prentice</strong> (anchor track flotilla explorations), and, after 2012, <strong>Paul Tooke</strong>, <strong>Matthias Merzenich</strong>, <strong>Arie Paap</strong> (wildmyron), <strong>Michael Simkin</strong>, <strong>Nico Brown</strong> (glider_rider), and many others on the ConwayLife forums, including <strong>Game of Life Fun</strong>, praosylen, AforAmpere, confocaloid and FWKnightship. The Glider Database credits earlier finds of the key ship to Peter Naszvadi (2001) and the robot ship to Alex Fink (2000).</p>
+</div>
+
+</main>
+<footer class="site-footer"><div class="inner">
+Objects found and named by Luke Bradford unless otherwise credited. Originally published at
+mysite.verizon.net/live_free (2007–2012) and lfod.wikispaces.com (2013–2018); restored 2026.
+Patterns run live in your browser — click any pattern to pause or play.
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,1500 @@
+[
+ {
+  "name": "Cecil B. DeMille",
+  "captured": "2018-03-25",
+  "paras": [
+   "Any p2 oscillator of the following form, in which a wick of dominoes is stabilized by checkers or dots. The smallest iteration, shown below, has a population of 12 cells, and is the smallest known p2 oscillator other than the checker."
+  ],
+  "desc": "Any p2 oscillator of the following form, in which a wick of dominoes is stabilized by checkers or dots. The smallest iteration, shown below, has a population of 12 cells, and is the smallest known p2 oscillator other than the checker.",
+  "rle": "x = 8, y = 8, rule = s0/b2\n4bo$bo2bobo2$6b2o$2o2$bobo2bo$3bo!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "Challenges",
+  "captured": "2015-04-22",
+  "paras": [
+   "This is a list of undiscovered objects in Live Free or Die. To anyone who discovers them, I can guarantee eternal gratitude, naming rights, and a place of honor on this wiki. (Note that any discoveries will be gladly accepted - these are just the more significant objects that are missing.)",
+   "Prizes",
+   "I am offering cash rewards for certain significant discoveries. Specifically:",
+   "$25.00 for any spaceship of an undiscovered speed. Currently known speeds are c, c/2, 2c/5, c/3, c/4, and c/5 orthogonal, and c/4 diagonal.",
+   "$25.00 for any moon reflector, that is, a stable or oscillating pattern that reflects a moon without suffering damage.",
+   "$50.00 for any stable moon reflector.",
+   "To collect a reward, please contact lukebradford01@gmail.com.",
+   "Other patterns",
+   "Objects of undiscovered periods",
+   "Live Free or Die has no known objects of period 11, 13, 14, 15, and all higher periods except multiples of discovered periods and the possible periods of anchor tracks, anchor eater ships, anchor nibbler puffers, and freedom fighter flotillas. In addition, there are no known p7 or p9 oscillators or spaceships, and no known p10 oscillators or puffers.",
+   "Objects of undiscovered speeds",
+   "As mentioned above, the only known speeds of spaceships in Live Free or Die are c, c/2, 2c/5, c/3, c/4, and c/5 orthogonal, and c/4 diagonal. There are no known puffers that travel slower than c other than c/2 and c/5 rakes. There are also no known spaceships or puffers that travel in an oblique direction (knightships).",
+   "Spacefillers",
+   "There are no known spacefillers in Live Free or Die except for the typical expansion of chaos at light speed.",
+   "Replicators",
+   "There are no known replicators in Live Free or Die.",
+   "Stable technology",
+   "Live Free or Die would benefit from new technology constructed from dots or oscillators. This category includes signal circuitry analogous to Herschel conduits in Life, which are useful for a number of reasons. Technology for manipulating spaceships (especially moons) would also be useful. There are no known reflectors in Live Free or Die, and no known stable eaters. As mentioned above, I am offering prizes for the first moon reflector and the first stable moon reflector. In addition, moon syntheses (analogous to glider syntheses in Life) would allow for creation of complex machinery, especially if guns with a larger period than the moon laser are found.",
+   "Objects adapted from the Seeds rule",
+   "Seeds (rule: b2) is a Life-like cellular automaton similar to Live Free or Die. Any pattern which has no isolated living cells at any time behaves the same way in Live Free or Die and in Seeds (for example, the moon or radar). This means that there are a number of wicks and oscillator components in Seeds that would work in Live Free or Die if a way to stabilize them was discovered. See Jason Summers' Seeds collection for examples."
+  ],
+  "desc": "This is a list of undiscovered objects in Live Free or Die. To anyone who discovers them, I can guarantee eternal gratitude, naming rights, and a place of honor on this wiki. (Note that any discoveries will be gladly accepted - these are just the more significant objects that are missing.) Prizes I am offering cash rewards for certain significant discoveries. Specifically: $25.00 for any spaceship of an undiscovered speed. Currently known speeds are c, c/2, 2c/5, c/3, c/4, and c/5 orthogonal, and c/4 diagonal. $25.00 for any moon reflector, that is, a stable or oscillating pattern that reflects a moon without suffering damage. $50.00 for any stable moon reflector. To collect a reward, please contact lukebradford01@gmail.com. Other patterns Objects of undiscovered periods Live Free or Die has no known objects of period 11, 13, 14, 15, and all higher periods except multiples of discovered periods and the possible periods of anchor tracks, anchor eater ships, anchor nibbler puffers, and freedom fighter flotillas. In addition, there are no known p7 or p9 oscillators or spaceships, and no known p10 oscillators or puffers. Objects of undiscovered speeds As mentioned above, the only known speeds of spaceships in Live Free or Die are c, c/2, 2c/5, c/3, c/4, and c/5 orthogonal, and c/4 diagonal. There are no known puffers that travel slower than c other than c/2 and c/5 rakes. There are also no known spaceships or puffers that travel in an oblique direction (knightships). Spacefillers There are no known spacefillers in Live Free or Die except for the typical expansion of chaos at light speed. Replicators There are no known replicators in Live Free or Die. Stable technology Live Free or Die would benefit from new technology constructed from dots or oscillators. This category includes signal circuitry analogous to Herschel conduits in Life, which are useful for a number of reasons. Technology for manipulating spaceships (especially moons) would also be useful. There are no known reflectors in Live Free or Die, and no known stable eaters. As mentioned above, I am offering prizes for the first moon reflector and the first stable moon reflector. In addition, moon syntheses (analogous to glider syntheses in Life) would allow for creation of complex machinery, especially if guns with a larger period than the moon laser are found. Objects adapted from the Seeds rule Seeds (rule: b2) is a Life-like cellular automaton similar to Live Free or Die. Any pattern which has no isolated living cells at any time behaves the same way in Live Free or Die and in Seeds (for example, the moon or radar). This means that there are a number of wicks and oscillator components in Seeds that would work in Live Free or Die if a way to stabilize them was discovered. See Jason Summers' Seeds collection for examples.",
+  "rle": "",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "Home",
+  "captured": "2015-04-22",
+  "paras": [
+   "Live Free or Die is a Life-like cellular automaton with the rule s0/b2.",
+   "In other words, it's an infinite grid of cells which can either be alive or dead. Given an initial pattern of cells, the grid evolves through successive generations by applying simple rules: a live cell survives only if it has no living neighbors, and a dead cell comes to life if it has exactly two living neighbors. All the cells apply these rules at the same instant. As the pattern changes over time, it exhibits emergent and often beautiful behavior.",
+   "Unlike Conway's Game of Life (rule s23/b3), Live Free or Die is extremely explosive. Almost all patterns of cells will expand at the speed of light, filling the grid with chaos as they go. But the patterns that don't explode have the same amazing variety and complexity as those in Life. Some are oscillators, which return to their initial state after some number of generations. Some are spaceships, which travel across the grid. Others leave trails or launch projectiles: there are puffers and rakes, which produce oscillators or spaceships as they move, and guns, which emit spaceships as they oscillate. Like Life, Live Free or Die is home to objects of a variety of periods, and some, like the anchor track, that can have arbitrarily high periods. Its spaceships and puffers travel at a variety of speeds and look wildly unalike — some seem mechanical, some organic; some, like the moon, are extremely small, and others, like the beachcomber ship, are very large. And, like Life, Live Free or Die has stable patterns — in this case, consisting only of arrangements of isolated cells, or dots — which can burn away, shrink and capture spaceships, and maybe someday, like Life, calculate anything that is calculable.",
+   "New objects are frequently being found. Some recent discoveries include the fruit fly ship, crossroads, and freedom collider. To observe or participate in exploration of the rule as it unfolds, I recommend following the Live Free or Die forum thread on the ConwayLife.com forums.",
+   "Live Free or Die is the state motto of New Hampshire, from a toast by the Revolutionary War general John Stark. It was chosen as the name of this cellular automaton because the only cells that survive are those that are free of neighbors.",
+   "The following is a collection of patterns in Live Free or Die, including all known objects as of October 14th, 2013:",
+   "To run these patterns, I recommend the program Golly, which can run any Life-like cellular automaton. In addition to the collection, articles in this wiki about specific patterns end with a block of text that encode the pattern in a Golly-compatible run-length encoding (RLE) format. You can copy this text and paste it directly into Golly to run or manipulate the pattern.",
+   "If you're excited to explore the rule and find new patterns, the Challenges page is a good place to start. You can even win cash prizes for certain significant discoveries.",
+   "For questions, comments, or new discoveries, please contact lukebradford01@gmail.com. All patterns were discovered by Luke Bradford unless otherwise specified.",
+   "(Above: an anchor track flotilla produces a trail of monsters using the Liberty Bell reaction. Spaceships and puffers involved include an octopus ship, a revolver puffer, two 2-2 dot puffers, and seven free ships.)"
+  ],
+  "desc": "Live Free or Die is a Life-like cellular automaton with the rule s0/b2. In other words, it's an infinite grid of cells which can either be alive or dead. Given an initial pattern of cells, the grid evolves through successive generations by applying simple rules: a live cell survives only if it has no living neighbors, and a dead cell comes to life if it has exactly two living neighbors. All the cells apply these rules at the same instant. As the pattern changes over time, it exhibits emergent and often beautiful behavior. Unlike Conway's Game of Life (rule s23/b3), Live Free or Die is extremely explosive. Almost all patterns of cells will expand at the speed of light, filling the grid with chaos as they go. But the patterns that don't explode have the same amazing variety and complexity as those in Life. Some are oscillators, which return to their initial state after some number of generations. Some are spaceships, which travel across the grid. Others leave trails or launch projectiles: there are puffers and rakes, which produce oscillators or spaceships as they move, and guns, which emit spaceships as they oscillate. Like Life, Live Free or Die is home to objects of a variety of periods, and some, like the anchor track, that can have arbitrarily high periods. Its spaceships and puffers travel at a variety of speeds and look wildly unalike — some seem mechanical, some organic; some, like the moon, are extremely small, and others, like the beachcomber ship, are very large. And, like Life, Live Free or Die has stable patterns — in this case, consisting only of arrangements of isolated cells, or dots — which can burn away, shrink and capture spaceships, and maybe someday, like Life, calculate anything that is calculable. New objects are frequently being found. Some recent discoveries include the fruit fly ship, crossroads, and freedom collider. To observe or participate in exploration of the rule as it unfolds, I recommend following the Live Free or Die forum thread on the ConwayLife.com forums. Live Free or Die is the state motto of New Hampshire, from a toast by the Revolutionary War general John Stark. It was chosen as the name of this cellular automaton because the only cells that survive are those that are free of neighbors. The following is a collection of patterns in Live Free or Die, including all known objects as of October 14th, 2013: To run these patterns, I recommend the program Golly, which can run any Life-like cellular automaton. In addition to the collection, articles in this wiki about specific patterns end with a block of text that encode the pattern in a Golly-compatible run-length encoding (RLE) format. You can copy this text and paste it directly into Golly to run or manipulate the pattern. If you're excited to explore the rule and find new patterns, the Challenges page is a good place to start. You can even win cash prizes for certain significant discoveries. For questions, comments, or new discoveries, please contact lukebradford01@gmail.com. All patterns were discovered by Luke Bradford unless otherwise specified. (Above: an anchor track flotilla produces a trail of monsters using the Liberty Bell reaction. Spaceships and puffers involved include an octopus ship, a revolver puffer, two 2-2 dot puffers, and seven free ships.)",
+  "rle": "",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "Liberty Bell reaction",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following reaction between a spark such as a donut, plus, or crosshairs and an anchor, which produces a rectangular pattern of four dots. Notable because a pair of free ships can convert the pattern of dots into a trail of monsters at any period 6n for n greater than 3, which has enabled the creation of the first monster puffer. Named for the appearance of the seventh generation."
+  ],
+  "desc": "The following reaction between a spark such as a donut, plus, or crosshairs and an anchor, which produces a rectangular pattern of four dots. Notable because a pair of free ships can convert the pattern of dots into a trail of monsters at any period 6n for n greater than 3, which has enabled the creation of the first monster puffer. Named for the appearance of the seventh generation.",
+  "rle": "x = 5, y = 9, rule = s0/b2\n2bo$b3o$2ob2o$b3o$2bo2$2bo$obobo$b3o!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "R ship",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p4 c spaceship with a minimum population of ten cells and a large flame, named for its shape in the boxy phase. This is the smallest known spaceship with no attached wings. In proportion to its minimum population, it has the largest fluctuation in population of any known spaceship (including flotillas), with ten cells in its empty phase and 46 cells in its heavy phase."
+  ],
+  "desc": "The following p4 c spaceship with a minimum population of ten cells and a large flame, named for its shape in the boxy phase. This is the smallest known spaceship with no attached wings. In proportion to its minimum population, it has the largest fluctuation in population of any known spaceship (including flotillas), with ten cells in its empty phase and 46 cells in its heavy phase.",
+  "rle": "x = 4, y = 11, rule = s0/b2\no$bo$3bo$o2bo4$o2bo$3bo$bo$o!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "accidental puffer",
+  "captured": "2018-03-25",
+  "paras": [
+   "A p4 c puffer of the following form. The smallest iteration, shown below, has an initial population of 25 cells. For a full list of possible iterations, see Iteration guides. Compare accidental ship."
+  ],
+  "desc": "A p4 c puffer of the following form. The smallest iteration, shown below, has an initial population of 25 cells. For a full list of possible iterations, see Iteration guides. Compare accidental ship.",
+  "rle": "x = 9, y = 13, rule = s0/b2\nbo$2bo4bo$3bo4bo$4bo3bo$6bo$o4bo$b3o$b3o$o4bo$6bo$4bo3bo$3bo4bo$2bo4bo!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "accidental ship",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p4 c spaceship with a minimum population of 28 cells. Compare accidental puffer."
+  ],
+  "desc": "The following p4 c spaceship with a minimum population of 28 cells. Compare accidental puffer.",
+  "rle": "x = 13, y = 12, rule = s0/b2\n6bo4bo$o6bo4bo$8bo3bo$o9bo$4bo4bo$5b3o$5b3o$4bo4bo$o9bo$8bo3bo$o6bo4bo$6bo4bo!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "anchor",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p4 oscillator with a minimum population of four cells, which is a component of many other oscillators, such as the anchor track, anchor stack, buoy, and flotsam. In terms of minimum population, it ties with the lever and radar as the smallest p4 oscillator, but the lever has a smaller bounding box and average population. The only naturally occurring puffer that generates anchors is the ferry puffer, but anchors can be produced by flotillas in various ways."
+  ],
+  "desc": "The following p4 oscillator with a minimum population of four cells, which is a component of many other oscillators, such as the anchor track, anchor stack, buoy, and flotsam. In terms of minimum population, it ties with the lever and radar as the smallest p4 oscillator, but the lever has a smaller bounding box and average population. The only naturally occurring puffer that generates anchors is the ferry puffer, but anchors can be produced by flotillas in various ways.",
+  "rle": "x = 2, y = 5, rule = s0/b2\nbo$o2$o$bo!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "anchor biter",
+  "captured": "2018-03-25",
+  "paras": [
+   "A c trailer of infinitely extensible size and period, formed from two tippy trailers which convert an anchor track left by a puffer into a sparse trail of checkers, which is one of few known methods of creating puffers of arbitrarily large period. The same reaction with only one tippy trailer is called a half anchor biter. The following is referred to as a six-slot anchor biter and is extended by inserting four more pairs of dots into the anchor track before the tippy trailer. Compare anchor eater."
+  ],
+  "desc": "A c trailer of infinitely extensible size and period, formed from two tippy trailers which convert an anchor track left by a puffer into a sparse trail of checkers, which is one of few known methods of creating puffers of arbitrarily large period. The same reaction with only one tippy trailer is called a half anchor biter. The following is referred to as a six-slot anchor biter and is extended by inserting four more pairs of dots into the anchor track before the tippy trailer. Compare anchor eater.",
+  "rle": "x = 40, y = 23, rule = s0/b2\n19bo4bo$18bobo4bo$19bobo3bo$8bo11bo2bo$12bo9bo$9bo3bo2bo19bo$2bo5bo28bo$38bo$o38bo$3bo4bo3bo3bo3bo3bo3bo3bo6bo$29bo2$29bo$3bo4bo3bo3bo3bo3bo3bo3bo6bo$o38bo$38bo$2bo5bo28bo$9bo3bo2bo19bo$12bo9bo$8bo11bo2bo$19bobo3bo$18bobo4bo$19bo4bo!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "anchor eater",
+  "captured": "2018-03-25",
+  "paras": [
+   "A c trailer of infinitely extensible size and period, formed from two tippy trailers consuming an anchor track left by a puffer. The same reaction with only one tippy trailer is called a half anchor eater or anchor nibbler. The following is referred to as a six-slot anchor eater and is extended by inserting four more pairs of dots into the anchor track before the tippy trailer. Any spaceship formed from a flotilla of puffers and an anchor eater is called an anchor eater ship. The smallest currently known consists of two 3-2 dot puffers and a 3-3 sun puffer, as shown below. Compare anchor biter."
+  ],
+  "desc": "A c trailer of infinitely extensible size and period, formed from two tippy trailers consuming an anchor track left by a puffer. The same reaction with only one tippy trailer is called a half anchor eater or anchor nibbler. The following is referred to as a six-slot anchor eater and is extended by inserting four more pairs of dots into the anchor track before the tippy trailer. Any spaceship formed from a flotilla of puffers and an anchor eater is called an anchor eater ship. The smallest currently known consists of two 3-2 dot puffers and a 3-3 sun puffer, as shown below. Compare anchor biter.",
+  "rle": "x = 32, y = 23, rule = s0/b2\n15bo4bo$14bobo4bo$15bobo3bo$4bo11bo2bo$8bo9bo$5bo3bo2bo15bo$4bo24bo$o29bo$31bo$o3bo3bo3bo3bo3bo3bo6bo$21bo2$21bo$o3bo3bo3bo3bo3bo3bo6bo$31bo$o29bo$4bo24bo$5bo3bo2bo15bo$8bo9bo$4bo11bo2bo$15bobo3bo$14bobo4bo$15bo4bo!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "anchor stack",
+  "captured": "2018-03-25",
+  "paras": [
+   "An infinitely extensible p4 oscillator formed from two or more interacting anchors. There are three basic types: rusty anchor stack, shiny anchor stack, and wavy anchor stack. Compare ant stack.",
+   "rusty anchor stack",
+   "The following p4 oscillator with a minimum population of 8 cells, which can be incorporated into larger anchor stacks. So named because it is “darker” than other anchor stacks, i.e. has a higher average population.",
+   "shiny anchor stack",
+   "The following p4 oscillator with a minimum population of 8 cells, which, unlike other anchor stacks, can be incorporated into larger anchor stacks vertically but not horizontally. So named because it is “lighter” than other anchor stacks, i.e. has a lower average population.",
+   "wavy anchor stack",
+   "The following p4 oscillator with a minimum population of 8 cells, which can be incorporated into larger anchor stacks, and is necessary to incorporate rusty anchor stacks into larger stacks horizontally."
+  ],
+  "desc": "An infinitely extensible p4 oscillator formed from two or more interacting anchors. There are three basic types: rusty anchor stack, shiny anchor stack, and wavy anchor stack. Compare ant stack. rusty anchor stack The following p4 oscillator with a minimum population of 8 cells, which can be incorporated into larger anchor stacks. So named because it is “darker” than other anchor stacks, i.e. has a higher average population. shiny anchor stack The following p4 oscillator with a minimum population of 8 cells, which, unlike other anchor stacks, can be incorporated into larger anchor stacks vertically but not horizontally. So named because it is “lighter” than other anchor stacks, i.e. has a lower average population. wavy anchor stack The following p4 oscillator with a minimum population of 8 cells, which can be incorporated into larger anchor stacks, and is necessary to incorporate rusty anchor stacks into larger stacks horizontally.",
+  "rle": "x = 8, y = 5, rule = s0/b2\n3bo3bo$4bobo2$bobo$o3bo!",
+  "extra_rles": [
+   "x = 7, y = 5, rule = s0/b2\n2bo3bo$3bobo2$bobo$o3bo!",
+   "x = 9, y = 5, rule = s0/b2\n4bo3bo$5bobo2$bobo$o3bo!"
+  ],
+  "credit": ""
+ },
+ {
+  "name": "anchor track",
+  "captured": "2018-03-25",
+  "paras": [
+   "An oscillator of infinitely extensible size and period in which patterns like anchors travel along a track built of two evenly spaced lines of dots. The term can also refer to a component of a spaceship or puffer with the same mechanism. The first few iterations have periods, respectively, of 12, 28, 28, 124, 252 and 60. All iterations have a period of the form 4 × 2n - 4, as described below. Larger anchor tracks have increasingly low temperature because of the empty areas of the track, making them the coldest known oscillators other than the dot. Because their periods can in some cases increase proportionally to 2n, where n is the number of slots, anchor tracks can have an arbitrarily high ratio of period to minimum population: for example, a 39-slot anchor track has a minimum population of 80 and a period of 2,199,023,255,548. Anchor tracks are the only known oscillators with arbitrarily high period. With the exception of p12, no other oscillators are known for any period that an anchor track can have.",
+   "The following is referred to as a two-slot anchor track and is extended by placing another pair of dots four cells to the right of the first. With a minimum population of six cells, the two-slot anchor track is the smallest oscillator that is not a phoenix, in terms of bounding box, and ties with the ant and monster in terms of minimum population. It is also the smallest oscillator that doesn't consist of a single polyplet in any phase.",
+   "Uses",
+   "Anchor tracks are extremely useful in flotillas. They allow the creation of spaceships and puffers of arbitrarily high periods of the form 8 × 2n, using anchor eaters, anchor biters, and anchor nibblers. The infinite anchor track allows a puffer to leave a trail which is aperiodic, by constantly increasing the size of the track. In these cases, an anchor track is created parallel to the flotilla's direction of travel.",
+   "The term anchor track flotilla refers to a flotilla in which a combination of puffers and spaceships create anchor tracks (or just anchors) perpendicular to the flotilla's direction of travel. Anchor track flotilla technology allows the creation of puffers and rakes that leave behind objects other puffers can't produce, including monsters, radar, and free ships. Large freedom fighter flotillas, which may have any period of the form 6 × 2n through successive doubling of their period, also use anchor track flotilla technology.",
+   "Period",
+   "Effectively, an infinitely long anchor track implements a one-dimensional elementary cellular automaton (Rule 90); four generations in Live Free or Die correspond to one generation in the anchor track's automaton, and the presence or absence of anchors in slots corresponds to cells being on and off. The edges of an anchor track exhibit different properties: if we consider the space beyond the track to be a dead cell, the last slot's behavior is described by Rule 6, or a wide variety of other rules (because four states cannot occur.) The combination of the two rules generates complex behavior.",
+   "Multiple unique anchor tracks exist with the same number of slots if each one's oscillation doesn't include every possible pattern of anchors. For a track with a number of slots s that begins with a single anchor at one end, the period is 4 × 2n - 4 where n is the multiplicative suborder of 2 (mod 2s+1), or sord(2, 2s+1). In other words, it is the smallest value of 4 × 2n - 4 such that 2n == +- 1 (mod 2s + 1). (1)"
+  ],
+  "desc": "An oscillator of infinitely extensible size and period in which patterns like anchors travel along a track built of two evenly spaced lines of dots. The term can also refer to a component of a spaceship or puffer with the same mechanism. The first few iterations have periods, respectively, of 12, 28, 28, 124, 252 and 60. All iterations have a period of the form 4 × 2n - 4, as described below. Larger anchor tracks have increasingly low temperature because of the empty areas of the track, making them the coldest known oscillators other than the dot. Because their periods can in some cases increase proportionally to 2n, where n is the number of slots, anchor tracks can have an arbitrarily high ratio of period to minimum population: for example, a 39-slot anchor track has a minimum population of 80 and a period of 2,199,023,255,548. Anchor tracks are the only known oscillators with arbitrarily high period. With the exception of p12, no other oscillators are known for any period that an anchor track can have. The following is referred to as a two-slot anchor track and is extended by placing another pair of dots four cells to the right of the first. With a minimum population of six cells, the two-slot anchor track is the smallest oscillator that is not a phoenix, in terms of bounding box, and ties with the ant and monster in terms of minimum population. It is also the smallest oscillator that doesn't consist of a single polyplet in any phase. Uses Anchor tracks are extremely useful in flotillas. They allow the creation of spaceships and puffers of arbitrarily high periods of the form 8 × 2n, using anchor eaters, anchor biters, and anchor nibblers. The infinite anchor track allows a puffer to leave a trail which is aperiodic, by constantly increasing the size of the track. In these cases, an anchor track is created parallel to the flotilla's direction of travel. The term anchor track flotilla refers to a flotilla in which a combination of puffers and spaceships create anchor tracks (or just anchors) perpendicular to the flotilla's direction of travel. Anchor track flotilla technology allows the creation of puffers and rakes that leave behind objects other puffers can't produce, including monsters, radar, and free ships. Large freedom fighter flotillas, which may have any period of the form 6 × 2n through successive doubling of their period, also use anchor track flotilla technology. Period Effectively, an infinitely long anchor track implements a one-dimensional elementary cellular automaton (Rule 90); four generations in Live Free or Die correspond to one generation in the anchor track's automaton, and the presence or absence of anchors in slots corresponds to cells being on and off. The edges of an anchor track exhibit different properties: if we consider the space beyond the track to be a dead cell, the last slot's behavior is described by Rule 6, or a wide variety of other rules (because four states cannot occur.) The combination of the two rules generates complex behavior. Multiple unique anchor tracks exist with the same number of slots if each one's oscillation doesn't include every possible pattern of anchors. For a track with a number of slots s that begins with a single anchor at one end, the period is 4 × 2n - 4 where n is the multiplicative suborder of 2 (mod 2s+1), or sord(2, 2s+1). In other words, it is the smallest value of 4 × 2n - 4 such that 2n == +- 1 (mod 2s + 1). (1)",
+  "rle": "x = 6, y = 5, rule = s0/b2\nbo3bo$o2$o$bo3bo!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "anchored",
+  "captured": "2018-03-25",
+  "paras": [
+   "Describes a p4 or p8 c puffer whose wings are modified as below, so named because of the resemblance to an anchor these additions have during the puffer’s empty and boxy phases. Puffers can be non-anchored, bi-anchored, left-anchored, or right-anchored. Below is a bi-anchored 5-4 robot puffer. For a list of the puffers that can be anchored, see Iteration guides."
+  ],
+  "desc": "Describes a p4 or p8 c puffer whose wings are modified as below, so named because of the resemblance to an anchor these additions have during the puffer’s empty and boxy phases. Puffers can be non-anchored, bi-anchored, left-anchored, or right-anchored. Below is a bi-anchored 5-4 robot puffer. For a list of the puffers that can be anchored, see Iteration guides.",
+  "rle": "x = 9, y = 11, rule = s0/b2\nbobo$o3bo$5bo$6bo$7bo$8bo$8bo$6bo$5bo$o3bo$bobo!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "ant",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p6 oscillator with a minimum population of six cells, which is the smallest known p6 object in both minimum population and bounding box. In terms of minimum population, it ties with the monster and two-slot anchor track as the smallest oscillator that is not a phoenix, but the anchor track has a smaller bounding box. Discovered by Josh Ball."
+  ],
+  "desc": "The following p6 oscillator with a minimum population of six cells, which is the smallest known p6 object in both minimum population and bounding box. In terms of minimum population, it ties with the monster and two-slot anchor track as the smallest oscillator that is not a phoenix, but the anchor track has a smaller bounding box. Discovered by Josh Ball.",
+  "rle": "x = 8, y = 4, rule = s0/b2\nbobo$o$7bo$4bobo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "ant stack",
+  "captured": "2018-03-25",
+  "paras": [
+   "An infinitely extensible p6 oscillator formed from two or more interacting ants. There are three basic types: the rusty ant stack, the shiny ant stack, and the wavy ant stack. Compare anchor stack.",
+   "rusty ant stack",
+   "The following p6 oscillator, which has a minimum population of 12 cells, and can be incorporated into larger ant stacks. So named because it is “darker” than other ant stacks, i.e. has a higher average population.",
+   "shiny ant stack",
+   "The following p6 oscillator with a minimum population of 12 cells, which can be incorporated into larger ant stacks. So named because it is “lighter” than other ant stacks, i.e. has a lower average population.",
+   "wavy ant stack",
+   "The following p6 oscillator with a minimum population of 12 cells, which can be incorporated into larger ant stacks."
+  ],
+  "desc": "An infinitely extensible p6 oscillator formed from two or more interacting ants. There are three basic types: the rusty ant stack, the shiny ant stack, and the wavy ant stack. Compare anchor stack. rusty ant stack The following p6 oscillator, which has a minimum population of 12 cells, and can be incorporated into larger ant stacks. So named because it is “darker” than other ant stacks, i.e. has a higher average population. shiny ant stack The following p6 oscillator with a minimum population of 12 cells, which can be incorporated into larger ant stacks. So named because it is “lighter” than other ant stacks, i.e. has a lower average population. wavy ant stack The following p6 oscillator with a minimum population of 12 cells, which can be incorporated into larger ant stacks.",
+  "rle": "x = 14, y = 9, rule = s0/b2\n10bobo$13bo$6bo$7bobo2$4bobo$7bo$o$bobo!",
+  "extra_rles": [
+   "x = 13, y = 9, rule = s0/b2\n9bobo$12bo$5bo$6bobo2$4bobo$7bo$o$bobo!",
+   "x = 15, y = 9, rule = s0/b2\n11bobo$14bo$7bo$8bobo2$4bobo$7bo$o$bobo!"
+  ],
+  "credit": ""
+ },
+ {
+  "name": "anthill",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p6 oscillator with a minimum population of 23 cells, which can be incorporated into ant stacks. Discovered by Josh Ball."
+  ],
+  "desc": "The following p6 oscillator with a minimum population of 23 cells, which can be incorporated into ant stacks. Discovered by Josh Ball.",
+  "rle": "x = 13, y = 7, rule = s0/b2\no4b3o4bo$bo9bo$4bo3bo2$2bobo3bobo$obo7bobo$b3o5b3o!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "arrow puffer",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p9 c puffer with an initial population of 18 cells. It and the nearly identical long arrow puffer are the only known p9 objects."
+  ],
+  "desc": "The following p9 c puffer with an initial population of 18 cells. It and the nearly identical long arrow puffer are the only known p9 objects.",
+  "rle": "x = 8, y = 8, rule = s0/b2\n4bo$3bobo$4o2bo$7bo$7bo$4o2bo$3bobo$4bo!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "asterisk",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following small p4 c tagalong for a moon, which produces a double row of checkers. Compare heckler."
+  ],
+  "desc": "The following small p4 c tagalong for a moon, which produces a double row of checkers. Compare heckler.",
+  "rle": "x = 4, y = 10, rule = s0/b2\n2bo$3bo$3bo$2bo2$bo$o2bo$3bo$2bo$bo!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "backflip",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p4 c trailer for a flip-flop rake, which converts moons into a quadruple trail of checkers. Discovered by Josh Ball."
+  ],
+  "desc": "The following p4 c trailer for a flip-flop rake, which converts moons into a quadruple trail of checkers. Discovered by Josh Ball.",
+  "rle": "x = 56, y = 21, rule = s0/b2\n54bo$7bo34bo5bobo4bo$8bo32bob2o6bo3bo$10bo30bo11bo$8bobo5bobo4bo7bo2bo4bobo3bo6bo$5bo13bo2b3o2bo3bo19bo$4bo11bo3b2ob3obo23bo$5b2o5bo6bo4bobo4bo3bo6b2o3bo2bo2bo$2bo8bo14bo24bobo$3bo7bo5bo7bobobo5bo2bo2bo9bo$8bo3bo3b2o5bo3b3o9b3o8bo$6bo8bobo3bobo5bo9bobo9bo$7bo7bobob2o2bo2bo24bobo$o3bo3bo7b2o3bo3b2o4bo7bo2bo2bo5bobo$3bo4bo8bob2o4bo5bo7bo$2bo3bobo16bo11bo4bo6b2o$10bo21bo5b2obo2bo7bo$4bo5bo18bobo5b4o3bo2bo5bo$4bo3bo30b3obo7bo3bo$5bobo30bo3bo7bo4bo$54bo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "ball pit",
+  "captured": "2018-03-25",
+  "paras": [
+   "A large, infinitely extensible p2 oscillator of the following form. Because it is a phoenix, it behaves identically in the Seeds rule (b2). (Courtesy of Jason Summers’ Seeds collection.)"
+  ],
+  "desc": "A large, infinitely extensible p2 oscillator of the following form. Because it is a phoenix, it behaves identically in the Seeds rule (b2). (Courtesy of Jason Summers’ Seeds collection.)",
+  "rle": "x = 13, y = 13, rule = s0/b2\n4bo3bo$2bo2b3o2bo$b2o7b2o2$o4b3o4bo$bo2bo3bo2bo$bo2bo3bo2bo$bo2bo3bo2bo$o4b3o4bo2$b2o7b2o$2bo2b3o2bo$4bo3bo!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "beachcomber ship",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p4 c/4 spaceship with a minimum population of 396 cells, which is the only known c/4 orthogonal spaceship. Discovered by Josh Ball."
+  ],
+  "desc": "The following p4 c/4 spaceship with a minimum population of 396 cells, which is the only known c/4 orthogonal spaceship. Discovered by Josh Ball.",
+  "rle": "x = 85, y = 36, rule = s0/b2\n58bo$3bo17bo7bo7bo$13bo31bo8bo$5bo3bo14bo9bo25bo$2bo2bo9bo4bo9bobob3o2bo8bo7bo3bo11bo$3bo11bo9bo4bo3b3o17bo6bo$6bo3bo7bo10bob4ob2o11bo3bo5bo4bo4bo5bo3bo$3b2obo2bo8bo2bo5bo14bo12bobo2bo$obob2o6bobo2bo18bo8bo5bo3bob2o5bo11bo$17b2o2bobo3bo2bo7bo4bo12b3ob3obobo3bo7bo$5bo2bo8bo29bo2bo3bo3bo8bo2bo4b5obobo$5b2o5bobo11bo9bo4bobo5bo3b5o4bobo15b2o$5bo19bo2bo2bo9b4o2b3o3bo3bo16bo5b2o$44bo2bo5bo19b2o6bo2bo$28bo17bo8b2obo16bo2bo$31b2o8bo2b2o6bobobo13bo3bo3bo2bo$31bo4bo4bo5bo6b4o3bo3bo4bo2bobo2bob2o$35bo4bo15bobobo3bo4bobo9bo$35bo4bo15bobobo3bo4bobo9bo$31bo4bo4bo5bo6b4o3bo3bo4bo2bobo2bob2o$31b2o8bo2b2o6bobobo13bo3bo3bo2bo$28bo17bo8b2obo16bo2bo$44bo2bo5bo19b2o6bo2bo$5bo19bo2bo2bo9b4o2b3o3bo3bo16bo5b2o$5b2o5bobo11bo9bo4bobo5bo3b5o4bobo15b2o$5bo2bo8bo29bo2bo3bo3bo8bo2bo4b5obobo$17b2o2bobo3bo2bo7bo4bo12b3ob3obobo3bo7bo$obob2o6bobo2bo18bo8bo5bo3bob2o5bo11bo$3b2obo2bo8bo2bo5bo14bo12bobo2bo$6bo3bo7bo10bob4ob2o11bo3bo5bo4bo4bo5bo3bo$3bo11bo9bo4bo3b3o17bo6bo$2bo2bo9bo4bo9bobob3o2bo8bo7bo3bo11bo$5bo3bo14bo9bo25bo$13bo31bo8bo$3bo17bo7bo7bo$58bo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "beacon",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p4 oscillator with a minimum population of 52 cells. Discovered by Josh Ball."
+  ],
+  "desc": "The following p4 oscillator with a minimum population of 52 cells. Discovered by Josh Ball.",
+  "rle": "x = 20, y = 20, rule = s0/b2\n6bo6bo$5bo8bo$8bo2bo$7bo4bo2$2bo6b2o6bo$3bo4bo2bo4bo$o6bo4bo6bo$bo4b2o4b2o4bo3$bo4b2o4b2o4bo$o6bo4bo6bo$3bo4bo2bo4bo$2bo6b2o6bo2$7bo4bo$8bo2bo$5bo8bo$6bo6bo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "belly flop",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p4 c trailer for a flip-flop rake, which converts the moons into a double trail of dots. Discovered by Josh Ball."
+  ],
+  "desc": "The following p4 c trailer for a flip-flop rake, which converts the moons into a double trail of dots. Discovered by Josh Ball.",
+  "rle": "x = 54, y = 21, rule = s0/b2\n52bo$3bo36bo5bobo4bo$4bo34bob2o6bo3bo$6bo32bo11bo$3bo2bo7bobo4bo7bo2bo4bobo3bo6bo$17bo2b3o2bo3bo19bo$14bo3b2ob3obo23bo$4bo5bo6bo4bobo4bo3bo6b2o3bo2bo2bo$3bo5bo14bo24bobo$2b2o5bo5bo7bobobo5bo2bo2bo9bo$3bo2bo3bo3b2o5bo3b3o9b3o8bo$5bo7bobo3bobo5bo9bobo9bo$5bo7bobob2o2bo2bo24bobo$bo4bo7b2o3bo3b2o4bo7bo2bo2bo5bobo$15bob2o4bo5bo7bo$2bobo18bo11bo4bo6b2o$o5bo23bo5b2obo2bo7bo$6bo20bobo5b4o3bo2bo5bo$o3bo32b3obo7bo3bo$bobo32bo3bo7bo4bo$52bo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "bent tricycle puffer",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p3 c puffer with an initial population of 33 cells, which is the smallest known p3 puffer. Discovered by Arie Paap. Compare tricycle puffer."
+  ],
+  "desc": "The following p3 c puffer with an initial population of 33 cells, which is the smallest known p3 puffer. Discovered by Arie Paap. Compare tricycle puffer.",
+  "rle": "x = 8, y = 17, rule = s0/b2\n2bo$b2obo$bo3bo$b2o4bo$7bo2$b2o$o2b2o2bo$3b2o2bo$b2o2$3b2o2bo$4bo2bo$2bo3bo$2bo2bo$2bobo$3bo!",
+  "extra_rles": [],
+  "credit": "Arie Paap"
+ },
+ {
+  "name": "big six shooter",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p6 oscillator with a minimum population of 27 cells, which can be combined into big six shooter stacks. Discovered by Josh Ball."
+  ],
+  "desc": "The following p6 oscillator with a minimum population of 27 cells, which can be combined into big six shooter stacks. Discovered by Josh Ball.",
+  "rle": "x = 11, y = 13, rule = s0/b2\nbo7bo$bo7bo$bo7bo2$2bo5bo$o3b3o3bo$5bo$o3b3o3bo$2bo5bo2$bo7bo$bo7bo$bo7bo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "black widow",
+  "captured": "2018-03-25",
+  "paras": [
+   "Any large p8 oscillator with a mechanism such as the following, which supports a few variations. The smallest iteration, shown below, has a minimum population of 86 cells. Discovered by Josh Ball."
+  ],
+  "desc": "Any large p8 oscillator with a mechanism such as the following, which supports a few variations. The smallest iteration, shown below, has a minimum population of 86 cells. Discovered by Josh Ball.",
+  "rle": "x = 41, y = 15, rule = s0/b2\n12bo3bo7bo3bo$11bo8bo8bo$5bo13b3o13bo$5b4o8bo5bo8b4o$bo3bobo25bobo3bo$o3bobo8bo9bo8bobo3bo$3bo2bo4bo4b2obobob2o4bo4bo2bo$6bo3bo5bo7bo5bo3bo$7bo10bo3bo10bo$o5bo3b2o2bo11bo2b2o3bo5bo$bo12bo5bo5bo12bo2$5bo2bo23bo2bo$11bo3bo4bo4bo3bo$12bo3bo7bo3bo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "buoy",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p4 oscillator with a minimum population of 21 cells. Can be incorporated into anchor stacks. Discovered by Josh Ball."
+  ],
+  "desc": "The following p4 oscillator with a minimum population of 21 cells. Can be incorporated into anchor stacks. Discovered by Josh Ball.",
+  "rle": "x = 11, y = 13, rule = s0/b2\n6bo3bo$7bobo2$3bobo$6bo$3bob3o$4o$bo3bo4$6bo3bo$7bobo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "chaos",
+  "captured": "2018-03-25",
+  "paras": [
+   "Chaos refers to the unpredictable patterns that result from the light-speed expansion of typical initial patterns in Live Free or Die. Cellular automata that exhibit this type of explosive behavior fall into Wolfram's Class 3. Because nearly all patterns explode at the speed of light, the only natural objects in Live Free or Die are c spaceships and puffers that emerge from the leading edge of chaos."
+  ],
+  "desc": "Chaos refers to the unpredictable patterns that result from the light-speed expansion of typical initial patterns in Live Free or Die. Cellular automata that exhibit this type of explosive behavior fall into Wolfram's Class 3. Because nearly all patterns explode at the speed of light, the only natural objects in Live Free or Die are c spaceships and puffers that emerge from the leading edge of chaos.",
+  "rle": "",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "checker",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p2 oscillator, which is an extremely common puffer output and the smallest oscillator other than the p1 dot, with only two live cells in every generation and a 2×2 bounding box."
+  ],
+  "desc": "The following p2 oscillator, which is an extremely common puffer output and the smallest oscillator other than the p1 dot, with only two live cells in every generation and a 2×2 bounding box.",
+  "rle": "x = 2, y = 2, rule = s0/b2\nbo$o!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "control tower",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following infinitely extensible p4 oscillator with a minimum population of 16 cells, which can be incorporated into wavy anchor stacks. (Courtesy of Jason Summers’ Seeds collection.)"
+  ],
+  "desc": "The following infinitely extensible p4 oscillator with a minimum population of 16 cells, which can be incorporated into wavy anchor stacks. (Courtesy of Jason Summers’ Seeds collection.)",
+  "rle": "x = 15, y = 10, rule = s0/b2\n7bo$8bo2$bo6bo3bo$o7bo2bo$3bo2bo7bo$2bo3bo6bo2$6bo$7bo!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "crab ship",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p4 c/2 spaceship with a minimum population of 70 cells. Discovered by Josh Ball."
+  ],
+  "desc": "The following p4 c/2 spaceship with a minimum population of 70 cells. Discovered by Josh Ball.",
+  "rle": "x = 10, y = 50, rule = s0/b2\n3bo$8bo$7bo$5bo$7bo$3bobo$8bo$5bo2bo$2bo5bo$bo4bobo$o5b2o$5bo$5bo$6bobo$bo5bobo$9bo$6bo2bo$9bo$6bo$8bo2$8bo$7bobo$6bo3$6bo$7bobo$8bo2$8bo$6bo$9bo$6bo2bo$9bo$bo5bobo$6bobo$5bo$5bo$o5b2o$bo4bobo$2bo5bo$5bo2bo$8bo$3bobo$7bo$5bo$7bo$8bo$3bo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "crossroads",
+  "captured": "2015-04-22",
+  "paras": [
+   "The following p5 oscillator with a minimum population of 196 cells, which is the only known p5 oscillator other than the starfish. Discovered by Josh Ball."
+  ],
+  "desc": "The following p5 oscillator with a minimum population of 196 cells, which is the only known p5 oscillator other than the starfish. Discovered by Josh Ball.",
+  "rle": "x = 48, y = 48, rule = s0/b2\n21b6o3$21b2o2b2o$22b4o$22bo2bo2$18bobo2b2o2bobo$19bo8bo$19bo2bo2bo2bo3$17bo4bo2bo4bo2$21bo4bo2$21bo4bo$12bo4bo12bo4bo$7bo12bobo2bobo12bo$8b2o12b4o12b2o$7bo10bobobo2bobobo10bo$o2bo10bobo14bobo10bo2bo$o2b3o3bo2bo5b3obo2bob3o5bo2bo3b3o2bo$o3bo2bo11bo8bo11bo2bo3bo$o3bo2bo11bo8bo11bo2bo3bo$o2b3o3bo2bo5b3obo2bob3o5bo2bo3b3o2bo$o2bo10bobo14bobo10bo2bo$7bo10bobobo2bobobo10bo$8b2o12b4o12b2o$7bo12bobo2bobo12bo$12bo4bo12bo4bo$21bo4bo2$21bo4bo2$17bo4bo2bo4bo3$19bo2bo2bo2bo$19bo8bo$18bobo2b2o2bobo2$22bo2bo$22b4o$21b2o2b2o3$21b6o!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "decade ship",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p10 c/5 spaceship with a minimum population of 114 cells, which is the only known p10 object and the smallest known c/5 spaceship. The quintessential ships and the decade ship are the only known non-monotonic spaceships in Live Free or Die: the leading edge of the ship falls back two cells from generation 1 to 2. Discovered by Paul Tooke."
+  ],
+  "desc": "The following p10 c/5 spaceship with a minimum population of 114 cells, which is the only known p10 object and the smallest known c/5 spaceship. The quintessential ships and the decade ship are the only known non-monotonic spaceships in Live Free or Die: the leading edge of the ship falls back two cells from generation 1 to 2. Discovered by Paul Tooke.",
+  "rle": "x = 49, y = 18, rule = s0/b2\n34bo$35bo$23bo23bo$3bo9bo15bobo16bo$6bo9bo7bob2obo6bo$obo6bo3bo9bo3bo3bo13bo2bo$4b2o3bo3b2o5bo2b2o7b2o2b2o6b2obo$3bo2bo3b3obob3o8bobo6bo6bo$2bo24bo3bo7bo$2bo24bo3bo7bo$3bo2bo3b3obob3o8bobo6bo6bo$4b2o3bo3b2o5bo2b2o7b2o2b2o6b2obo$obo6bo3bo9bo3bo3bo13bo2bo$6bo9bo7bob2obo6bo$3bo9bo15bobo16bo$23bo23bo$35bo$34bo!",
+  "extra_rles": [],
+  "credit": "Paul Tooke"
+ },
+ {
+  "name": "dot",
+  "captured": "2018-03-25",
+  "paras": [
+   "A single, isolated live cell, the only still life (a stable pattern, or p1 oscillator) in Live Free or Die. It is the smallest oscillator and the only known oscillator that is one cell thick in any phase. The next smallest oscillator is the p2 checker."
+  ],
+  "desc": "A single, isolated live cell, the only still life (a stable pattern, or p1 oscillator) in Live Free or Die. It is the smallest oscillator and the only known oscillator that is one cell thick in any phase. The next smallest oscillator is the p2 checker.",
+  "rle": "x = 1, y = 1, rule = s0/b2\no!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "dot puffer",
+  "captured": "2018-03-25",
+  "paras": [
+   "A p4 c puffer of the following form, which can be anchored on either side. Named for the output of its smallest iteration, the 2-2 dot puffer (shown below), which has an initial population of seven cells. The 2-2 dot puffer is the second most common naturally occurring puffer after the double dot puffer, followed by the 3-3 dot puffer. For a full list of possible iterations, see Iteration guides. Compare dot ship and key ship."
+  ],
+  "desc": "A p4 c puffer of the following form, which can be anchored on either side. Named for the output of its smallest iteration, the 2-2 dot puffer (shown below), which has an initial population of seven cells. The 2-2 dot puffer is the second most common naturally occurring puffer after the double dot puffer, followed by the 3-3 dot puffer. For a full list of possible iterations, see Iteration guides. Compare dot ship and key ship.",
+  "rle": "x = 6, y = 5, rule = s0/b2\n4bo$o4bo$bo3bo$3bo$2bo!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "dust mite ship",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p8 c/2 spaceship with a minimum population of 36 cells, which is the smallest known p8 c/2 spaceship. In terms of minimum population, it is tied with the fruit fly ship as the smallest spaceship that travels slower than c, but it has a smaller bounding box. Nearly all its active cells repeat at p4 rather than p8: the front part of the object produces a dot every four generations, but they are so close together that they form snake eyes and die as a plus every eight generations. Discovered by Josh Ball. Compare rhino ship, wide rhino ship, and elephant ship."
+  ],
+  "desc": "The following p8 c/2 spaceship with a minimum population of 36 cells, which is the smallest known p8 c/2 spaceship. In terms of minimum population, it is tied with the fruit fly ship as the smallest spaceship that travels slower than c, but it has a smaller bounding box. Nearly all its active cells repeat at p4 rather than p8: the front part of the object produces a dot every four generations, but they are so close together that they form snake eyes and die as a plus every eight generations. Discovered by Josh Ball. Compare rhino ship, wide rhino ship, and elephant ship.",
+  "rle": "x = 15, y = 12, rule = s0/b2\n7bo3bo$6bo4bobo$5bo5bo2bo$10bo$bo7bo$12bobo$o4bo3b5o$bobo3bo4bo$12b2o$4bob2obobobo$12bo$4bobo2bo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "engine",
+  "captured": "2018-03-25",
+  "paras": [
+   "In a c spaceship or puffer, the pattern of live cells that remains unchanged in every successive generation. In some cases, the empty phase of a spaceship or puffer is the engine alone (as in the sun ship, robot ship, and dot ship), and in the case of the moon, the engine is the entire spaceship. All known c spaceships and puffers have an engine with at least one nose and at least two wings. Below is a 3-3 robot ship in its heavy phase with the engine highlighted."
+  ],
+  "desc": "In a c spaceship or puffer, the pattern of live cells that remains unchanged in every successive generation. In some cases, the empty phase of a spaceship or puffer is the engine alone (as in the sun ship, robot ship, and dot ship), and in the case of the moon, the engine is the entire spaceship. All known c spaceships and puffers have an engine with at least one nose and at least two wings. Below is a 3-3 robot ship in its heavy phase with the engine highlighted.",
+  "rle": "x = 9, y = 10, rule = s0/b2\n3bo$2b2obo$b2obobo$2b3o2bo$2bo2bo2bo$2bo2bo2bo$b3o2bo$2obobo$b2obo$2bo!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "flicker ship",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p2 c spaceship with a minimum population of 54 cells, which is one of two known p2 spaceships, along with the flutter ship, and the smallest known p2 spaceship. Discovered by Josh Ball."
+  ],
+  "desc": "The following p2 c spaceship with a minimum population of 54 cells, which is one of two known p2 spaceships, along with the flutter ship, and the smallest known p2 spaceship. Discovered by Josh Ball.",
+  "rle": "x = 10, y = 28, rule = s0/b2\n6bo$7bo$2bo4bo$6bo$4b2o$3bo2bobo$2bo6bo$6bo2bo$bo6bo$2o4bo$b2o$2bo2bo$4b2o$4bobo$4bobo$4b2o$2bo2bo$b2o$2o4bo$bo6bo$6bo2bo$2bo6bo$3bo2bobo$4b2o$6bo$2bo4bo$7bo$6bo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "flotilla",
+  "captured": "2018-03-25",
+  "paras": [
+   "A flotilla is a collection of two or more mobile objects, such as spaceships, puffers, trailers, and tagalongs, that travel together. In Live Free or Die, complex flotillas using c spaceships and puffers are possible. Some, like anchor eater ships, anchor nibbler puffers, and freedom fighter ships, can have arbitrarily high period. Others (anchor track flotillas) use anchor tracks to produce various objects, such as monsters, radar, and free ships, none of which can be produced by a puffer or rake acting alone. For examples of flotillas, download the Live Free or Die collection."
+  ],
+  "desc": "A flotilla is a collection of two or more mobile objects, such as spaceships, puffers, trailers, and tagalongs, that travel together. In Live Free or Die, complex flotillas using c spaceships and puffers are possible. Some, like anchor eater ships, anchor nibbler puffers, and freedom fighter ships, can have arbitrarily high period. Others (anchor track flotillas) use anchor tracks to produce various objects, such as monsters, radar, and free ships, none of which can be produced by a puffer or rake acting alone. For examples of flotillas, download the Live Free or Die collection.",
+  "rle": "",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "flotsam",
+  "captured": "2018-03-25",
+  "paras": [
+   "Any p4 oscillator with a mechanism similar to the following, which can be incorporated into anchor stacks and is a major component of the moon laser, the only known gun in Live Free or Die. The smallest iteration, shown below, has a minimum population of 116 cells."
+  ],
+  "desc": "Any p4 oscillator with a mechanism similar to the following, which can be incorporated into anchor stacks and is a major component of the moon laser, the only known gun in Live Free or Die. The smallest iteration, shown below, has a minimum population of 116 cells.",
+  "rle": "x = 74, y = 15, rule = s0/b2\n63bo4bo$48bobo11bo$3bo2bo29bo3bo6bo3bo13bo$24bo3bo10bo18bo5bobo$12bo3bo12bo13bo13bo$bob2ob2o9bo9b3o9bobobo9bo13bo$o20bo4b2obo5bo7bobo8bo4bo7bo$5bo11bo15bo2bo21bo2b2o4bo2bobo$4b2ob2obo5bo4bobobobobobo9b2obo3b2obo2bo9bo4bo3bo$11bobo6bo7b2o6bobo3b3o13bo6bo$5bo8bo14bo14bo12bo3bo$10bo4bo7bobo10bo6bo5bo$7bo3bo10bo3bo6bo3bo29bo2bo$6bo$5bo3bo!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "flutter ship",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p2 c spaceship with a minimum population of 60 cells, which is one of two known p2 spaceships, along with the flicker ship. Discovered by Josh Ball."
+  ],
+  "desc": "The following p2 c spaceship with a minimum population of 60 cells, which is one of two known p2 spaceships, along with the flicker ship. Discovered by Josh Ball.",
+  "rle": "x = 15, y = 24, rule = s0/b2\n11bo$12bo$7bo4bo$11bo$9b2o$7bo2b2obo$14bo$bo9bo2bo$4o2b2o5bo$11bo$bo8bo$2b3obobo$2b3obobo$bo8bo$11bo$4o2b2o5bo$bo9bo2bo$14bo$7bo2b2obo$9b2o$11bo$7bo4bo$12bo$11bo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "free ship",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p6 c spaceship with a minimum population of 12 cells. Despite its relatively large size, it is by far the most common naturally occurring spaceship, occurring several times more frequently than the moon. Much of this prevalence can be explained by the fact that an isolated domino will give rise to two free ships. Because of its large spark (a connected pair of donuts) it is useful in a variety of flotillas. Its name is derived from the name of the rule because it is so common. The short free ship, which is much less common, is identical except that its nose is shifted back one cell. In terms of minimum population, the two are tied as the smallest known p6 spaceship, but the short free ship has a smaller bounding box."
+  ],
+  "desc": "The following p6 c spaceship with a minimum population of 12 cells. Despite its relatively large size, it is by far the most common naturally occurring spaceship, occurring several times more frequently than the moon. Much of this prevalence can be explained by the fact that an isolated domino will give rise to two free ships. Because of its large spark (a connected pair of donuts) it is useful in a variety of flotillas. Its name is derived from the name of the rule because it is so common. The short free ship, which is much less common, is identical except that its nose is shifted back one cell. In terms of minimum population, the two are tied as the smallest known p6 spaceship, but the short free ship has a smaller bounding box.",
+  "rle": "x = 9, y = 6, rule = s0/b2\no4bo$3b2obo$8bo$8bo$3b2obo$o4bo!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "freedom collider",
+  "captured": "2015-04-22",
+  "paras": [
+   "The following p8 c clean backward short free ship rake with an initial population of 36 cells, which is the only known short free ship rake, and, apart from flotillas, the only known rake that produces any spaceship other than the moon. It can be anchored if the wings are extended by one cell. Discovered by Arie Paap. Compare collider ship."
+  ],
+  "desc": "The following p8 c clean backward short free ship rake with an initial population of 36 cells, which is the only known short free ship rake, and, apart from flotillas, the only known rake that produces any spaceship other than the moon. It can be anchored if the wings are extended by one cell. Discovered by Arie Paap. Compare collider ship.",
+  "rle": "x = 10, y = 20, rule = s0/b2\n6bo$7bo$9bo$9bo2$6b2o$7bobo$2bo6bo$bobo4bo$o2b4o$o2b4o$bobo4bo$2bo6bo$7bobo$6b2o2$9bo$9bo$7bo$6bo!",
+  "extra_rles": [],
+  "credit": "Arie Paap"
+ },
+ {
+  "name": "freedom fighter",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following c tagalong based on the moonlighter, which can be supported by any pair of spaceships or puffers with sufficiently isolated sparks (such as the eclipse puffer, free ship, or pinwheel ship), doubling their original period. The p16 puffer below formed by a pair of eclipse puffers and a freedom fighter is the smallest known p16 object. Freedom fighters can also be incorporated successively into anchor track flotillas, using each to produce an increasingly sparse trail of dots which can later trigger another freedom fighter, doubling the period of the resulting spaceship or puffer. This allows the creation of spaceships and puffers of any period of the form 6 × 2n."
+  ],
+  "desc": "The following c tagalong based on the moonlighter, which can be supported by any pair of spaceships or puffers with sufficiently isolated sparks (such as the eclipse puffer, free ship, or pinwheel ship), doubling their original period. The p16 puffer below formed by a pair of eclipse puffers and a freedom fighter is the smallest known p16 object. Freedom fighters can also be incorporated successively into anchor track flotillas, using each to produce an increasingly sparse trail of dots which can later trigger another freedom fighter, doubling the period of the resulting spaceship or puffer. This allows the creation of spaceships and puffers of any period of the form 6 × 2n.",
+  "rle": "x = 22, y = 28, rule = s0/b2\n18bo$19bo$20bo$21bo$21bo$20bo2$13bo$13bo7bo$13bo7bo$20bo$o18bo$5bo5bo$6bo5bo$6bo5bo$5bo5bo$o18bo$20bo$13bo7bo$13bo7bo$13bo2$20bo$21bo$21bo$20bo$19bo$18bo!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "fruit fly ship",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p4 c/2 spaceship with a minimum population of 36 cells, which is the smallest known p4 c/2 spaceship. In terms of minimum population, it is tied with the dust mite ship as the smallest known spaceship that travels slower than c, although the dust mite ship has a smaller bounding box. Discovered by glider_rider."
+  ],
+  "desc": "The following p4 c/2 spaceship with a minimum population of 36 cells, which is the smallest known p4 c/2 spaceship. In terms of minimum population, it is tied with the dust mite ship as the smallest known spaceship that travels slower than c, although the dust mite ship has a smaller bounding box. Discovered by glider_rider.",
+  "rle": "x = 10, y = 24, rule = s0/b2\n3bo$8bo$7bo$5bo$7bo$3bobo$8bo$5bo2bo$2bo5bo$bo4bobo$o5b2o$5bo$5bo$6bobo$bo5bobo$9bo$6bo2bo$9bo$4bobo$8bo$6bo$8bo$9bo$4bo!",
+  "extra_rles": [],
+  "credit": "glider_rider"
+ },
+ {
+  "name": "giraffe ship",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p4 c/4 diagonal spaceship with a minimum population of 220 cells. Discovered by Josh Ball."
+  ],
+  "desc": "The following p4 c/4 diagonal spaceship with a minimum population of 220 cells. Discovered by Josh Ball.",
+  "rle": "x = 59, y = 61, rule = s0/b2\n9bobo$8bo3bo2$8bo$9bo3bo$12bo$18bo$17bo$15bo$3bo13bo2bo$2bo13bo$bo13bo4bo$o3bo14bo$3bo11bo4bo$7bobo6bo$6bo16b3o$5bo7bo8b2ob2o$12bo9b2o$5bo5bo7bo2bobo$6bo4b2o3bo2bo10bo$12bo11bo4bobo$11bo3bo7bo2bo2b3o$10bobobobobo9bo3bo$13bo4bobo7bo2bo$12b3o2bo3bo5bo5bo$13bo16bob2obo$16b3o17bo$21bo$18bob2o2bo14bo$19bo13bo$17b3o15bo3bo$19bo6bo2bo2bo5bo$18bo4bo12bo2b2obo$22bo4bo5bo2bo2bo3bo$27bo5bo4b3o$26bo6bo6bo$25bo7bo6bo$28bo2bo2bo5bo2bobo$30bo2bo6b3o3bo$40bo$30b3o7b3o7bo$29bo10bobo6bobo$33bo3bo7bo9bo$32bo2bo7bo2bo3bob3o$46bo9bo$38bobo14b3o$37bo7b2o3bobo4b2o$41bo6bo9bo$40b2o4bo2bo8bo$39b2obobo2b2o$38b2o14b3o$39bobo5bo7bo2$44bo$48bo$45bob3o$42bo3bo2bo$49bo2$45b3o$46bo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "gun",
+  "captured": "2018-03-25",
+  "paras": [
+   "A gun is a static object that periodically emits spaceships. For general information about guns in cellular automata, see Gun on LifeWiki.",
+   "The only known gun in Live Free or Die is the moon laser."
+  ],
+  "desc": "A gun is a static object that periodically emits spaceships. For general information about guns in cellular automata, see Gun on LifeWiki. The only known gun in Live Free or Die is the moon laser.",
+  "rle": "",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "half plus ship",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p4 c spaceship with a minimum population of 14. Named for the spark it produces. Compare anchored dot puffer."
+  ],
+  "desc": "The following p4 c spaceship with a minimum population of 14. Named for the spark it produces. Compare anchored dot puffer.",
+  "rle": "x = 13, y = 7, rule = s0/b2\n5bo$6bo4bo$7bo4bo$o7bo3bo$10bo$o4bo3bo$6bobo!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "hammerhead ship",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p5 c/5 spaceship with a minimum population of 294 cells. It is the only known c/5 object with a front end mechanism different from the one employed by the quintessential ships, the quintessential rake, and the decade ship. Discovered by Josh Ball."
+  ],
+  "desc": "The following p5 c/5 spaceship with a minimum population of 294 cells. It is the only known c/5 object with a front end mechanism different from the one employed by the quintessential ships, the quintessential rake, and the decade ship. Discovered by Josh Ball.",
+  "rle": "x = 71, y = 27, rule = s0/b2\n34bo24bo$10bo24bo26bo4bo$9bo39bo16bo$2bo6bo23bo16bo9bo$9bo4bo8bo10bo23b3o2bo2bo2bo$4bo5bo9bo13bo8b3o15b3o$2bo2bo4bo12bo8bo9bo2bo5bo10b2o5bo$6bo3bo5bobob3o3bo3bobo2bobo5b3o4b2o15b2o$2bobobo3b2o6bo2bo6bob3o2b2o5bo4bobo2b3obobo6b4o$6bo6bobo15bo3b2o12bo3bobo4bo4b3o$7bo5bo17bobo2bo3b2o6b2o4b2o2bo2bo7bo$3bobob2o21bo6bo9bobo5b2o5bo2bo$bo8bo3bo13b2o7bo3bo12b3o5b2obo3bo$2o8bo2bo14bo21bo4bo6bo6b2o$bo8bo3bo13b2o7bo3bo12b3o5b2obo3bo$3bobob2o21bo6bo9bobo5b2o5bo2bo$7bo5bo17bobo2bo3b2o6b2o4b2o2bo2bo7bo$6bo6bobo15bo3b2o12bo3bobo4bo4b3o$2bobobo3b2o6bo2bo6bob3o2b2o5bo4bobo2b3obobo6b4o$6bo3bo5bobob3o3bo3bobo2bobo5b3o4b2o15b2o$2bo2bo4bo12bo8bo9bo2bo5bo10b2o5bo$4bo5bo9bo13bo8b3o15b3o$9bo4bo8bo10bo23b3o2bo2bo2bo$2bo6bo23bo16bo9bo$9bo39bo16bo$10bo24bo26bo4bo$34bo24bo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "home",
+  "captured": "2018-03-25",
+  "paras": [
+   "Live Free or Die is a Life-like cellular automaton with the rule s0/b2.",
+   "In other words, it's an infinite grid of cells which can either be alive or dead. Given an initial pattern of cells, the grid evolves through successive generations by applying simple rules: a live cell survives only if it has no living neighbors, and a dead cell comes to life if it has exactly two living neighbors. All the cells apply these rules at the same instant. As the pattern changes over time, it exhibits emergent and often beautiful behavior.",
+   "Unlike Conway's Game of Life (rule s23/b3), Live Free or Die is extremely explosive. Almost all patterns of cells will expand at the speed of light, filling the grid with chaos as they go. But the patterns that don't explode have the same amazing variety and complexity as those in Life. Some are oscillators, which return to their initial state after some number of generations. Some are spaceships, which travel across the grid. Others leave trails or launch projectiles: there are puffers and rakes, which produce oscillators or spaceships as they move, and guns, which emit spaceships as they oscillate. Like Life, Live Free or Die is home to objects of a variety of periods, and some, like the anchor track, that can have arbitrarily high periods. Its spaceships and puffers travel at a variety of speeds and look wildly unalike — some seem mechanical, some organic; some, like the moon, are extremely small, and others, like the beachcomber ship, are very large. And, like Life, Live Free or Die has stable patterns — in this case, consisting only of arrangements of isolated cells, or dots — which can burn away, shrink and capture spaceships, and maybe someday, like Life, calculate anything that is calculable.",
+   "New objects are frequently being found. Some recent discoveries include the fruit fly ship, crossroads, and freedom collider. To observe or participate in exploration of the rule as it unfolds, I recommend following the Live Free or Die forum thread on the ConwayLife.com forums.",
+   "Live Free or Die is the state motto of New Hampshire, from a toast by the Revolutionary War general John Stark. It was chosen as the name of this cellular automaton because the only cells that survive are those that are free of neighbors.",
+   "The following is a collection of patterns in Live Free or Die, including all known objects as of October 14th, 2013:",
+   "To run these patterns, I recommend the program Golly, which can run any Life-like cellular automaton. In addition to the collection, articles in this wiki about specific patterns end with a block of text that encode the pattern in a Golly-compatible run-length encoding (RLE) format. You can copy this text and paste it directly into Golly to run or manipulate the pattern.",
+   "If you're excited to explore the rule and find new patterns, the Challenges page is a good place to start. You can even win cash prizes for certain significant discoveries.",
+   "For questions, comments, or new discoveries, please contact lukebradford01@gmail.com. All patterns were discovered by Luke Bradford unless otherwise specified.",
+   "(Above: an anchor track flotilla produces a trail of monsters using the Liberty Bell reaction. Spaceships and puffers involved include an octopus ship, a revolver puffer, two 2-2 dot puffers, and seven free ships.)"
+  ],
+  "desc": "Live Free or Die is a Life-like cellular automaton with the rule s0/b2. In other words, it's an infinite grid of cells which can either be alive or dead. Given an initial pattern of cells, the grid evolves through successive generations by applying simple rules: a live cell survives only if it has no living neighbors, and a dead cell comes to life if it has exactly two living neighbors. All the cells apply these rules at the same instant. As the pattern changes over time, it exhibits emergent and often beautiful behavior. Unlike Conway's Game of Life (rule s23/b3), Live Free or Die is extremely explosive. Almost all patterns of cells will expand at the speed of light, filling the grid with chaos as they go. But the patterns that don't explode have the same amazing variety and complexity as those in Life. Some are oscillators, which return to their initial state after some number of generations. Some are spaceships, which travel across the grid. Others leave trails or launch projectiles: there are puffers and rakes, which produce oscillators or spaceships as they move, and guns, which emit spaceships as they oscillate. Like Life, Live Free or Die is home to objects of a variety of periods, and some, like the anchor track, that can have arbitrarily high periods. Its spaceships and puffers travel at a variety of speeds and look wildly unalike — some seem mechanical, some organic; some, like the moon, are extremely small, and others, like the beachcomber ship, are very large. And, like Life, Live Free or Die has stable patterns — in this case, consisting only of arrangements of isolated cells, or dots — which can burn away, shrink and capture spaceships, and maybe someday, like Life, calculate anything that is calculable. New objects are frequently being found. Some recent discoveries include the fruit fly ship, crossroads, and freedom collider. To observe or participate in exploration of the rule as it unfolds, I recommend following the Live Free or Die forum thread on the ConwayLife.com forums. Live Free or Die is the state motto of New Hampshire, from a toast by the Revolutionary War general John Stark. It was chosen as the name of this cellular automaton because the only cells that survive are those that are free of neighbors. The following is a collection of patterns in Live Free or Die, including all known objects as of October 14th, 2013: To run these patterns, I recommend the program Golly, which can run any Life-like cellular automaton. In addition to the collection, articles in this wiki about specific patterns end with a block of text that encode the pattern in a Golly-compatible run-length encoding (RLE) format. You can copy this text and paste it directly into Golly to run or manipulate the pattern. If you're excited to explore the rule and find new patterns, the Challenges page is a good place to start. You can even win cash prizes for certain significant discoveries. For questions, comments, or new discoveries, please contact lukebradford01@gmail.com. All patterns were discovered by Luke Bradford unless otherwise specified. (Above: an anchor track flotilla produces a trail of monsters using the Liberty Bell reaction. Spaceships and puffers involved include an octopus ship, a revolver puffer, two 2-2 dot puffers, and seven free ships.)",
+  "rle": "",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "key ship",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following common p4 c spaceship with a minimum population of eight cells, which, along with the sun ship and 3-3 robot ship, has the smallest minimum population of any known p4 spaceship. In terms of bounding box, it is the second smallest spaceship after the moon and the smallest p4 spaceship. It is also the smallest spaceship whose empty phase doesn't consist only of an engine, the smallest spaceship with more than two wings, and the smallest spaceship in which no phase consists of a single polyplet. Compare dot puffer."
+  ],
+  "desc": "The following common p4 c spaceship with a minimum population of eight cells, which, along with the sun ship and 3-3 robot ship, has the smallest minimum population of any known p4 spaceship. In terms of bounding box, it is the second smallest spaceship after the moon and the smallest p4 spaceship. It is also the smallest spaceship whose empty phase doesn't consist only of an engine, the smallest spaceship with more than two wings, and the smallest spaceship in which no phase consists of a single polyplet. Compare dot puffer.",
+  "rle": "x = 6, y = 5, rule = s0/b2\n4bo$o4bo$bo3bo$3bo$obo!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "lever",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p4 oscillator with a minimum population of four cells, which is the smallest known p4 object in terms of bounding box and average population, tying with the anchor and radar in terms of minimum population. This also makes it the third-smallest oscillator, after the dot and checker."
+  ],
+  "desc": "The following p4 oscillator with a minimum population of four cells, which is the smallest known p4 object in terms of bounding box and average population, tying with the anchor and radar in terms of minimum population. This also makes it the third-smallest oscillator, after the dot and checker.",
+  "rle": "x = 5, y = 3, rule = s0/b2\nbo$o3bo$3bo!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "longwave",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following infinitely extensible p4 oscillator, which stabilizes a diagonal wick. The smallest iteration, shown below, has a minimum population of 48 cells. Discovered by Josh Ball. Compare shortwave."
+  ],
+  "desc": "The following infinitely extensible p4 oscillator, which stabilizes a diagonal wick. The smallest iteration, shown below, has a minimum population of 48 cells. Discovered by Josh Ball. Compare shortwave.",
+  "rle": "x = 21, y = 21, rule = s0/b2\nbo9bo$o6bo$3bo$2bo3bo5bo$5bobobo$4bo2bobo$3bo$bo2b2obo$17bo$4b2o5bo8bo2$o8bo5b2o$3bo$13bob2o2bo$17bo$11bobo2bo$11bobobo$8bo5bo3bo$17bo$13bo6bo$9bo9bo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "mantis",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p6 oscillator with a minimum population of 15 cells, which can be incorporated into ant stacks. Discovered by Josh Ball."
+  ],
+  "desc": "The following p6 oscillator with a minimum population of 15 cells, which can be incorporated into ant stacks. Discovered by Josh Ball.",
+  "rle": "x = 9, y = 9, rule = s0/b2\nbobo$o6bo$4bo3bo$4bo$4bo$4bo$o3bo$bo6bo$5bobo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "monster",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p19 oscillator with a minimum population of six cells. It is the only known p19 object other than monster stacks, which are built by combining monsters. Despite its small minimum population, it has 120 active cells, with a population that ranges from six to 40 cells and an average population of 21.26. It is the only known oscillator other than the dot that consists of a single polyomino in any phase: generations 2 and 6 are both polyominoes. In terms of minimum population, it ties with the ant and two-slot anchor track as the smallest oscillator that is not a phoenix, but the anchor track has a smaller bounding box. Monster puffers can be constructed using anchor track flotilla technology. The partial evolution of a monster is the mechanism for the monster toaster, the smallest known pre-spark that dies in 28 or more generations."
+  ],
+  "desc": "The following p19 oscillator with a minimum population of six cells. It is the only known p19 object other than monster stacks, which are built by combining monsters. Despite its small minimum population, it has 120 active cells, with a population that ranges from six to 40 cells and an average population of 21.26. It is the only known oscillator other than the dot that consists of a single polyomino in any phase: generations 2 and 6 are both polyominoes. In terms of minimum population, it ties with the ant and two-slot anchor track as the smallest oscillator that is not a phoenix, but the anchor track has a smaller bounding box. Monster puffers can be constructed using anchor track flotilla technology. The partial evolution of a monster is the mechanism for the monster toaster, the smallest known pre-spark that dies in 28 or more generations.",
+  "rle": "x = 4, y = 3, rule = s0/b2\no2bo$o2bo$o2bo!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "moon",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p1 c spaceship, which is the smallest spaceship (with only four cells), the only p1 spaceship (consisting only of an engine), and, along with the dot, one of only two p1 objects in Live Free or Die. It is the second most common spaceship after the free ship, occurring about one fifth as frequently in random explosions. Moons are a common component of other spaceships, puffers, and flotillas, such as metronome ships and metronome puffers, the tricycle ship, and various anchor track flotillas including the known free ship rakes. Apart from flotillas, the only known rakes are backward and sideways moon rakes. The moon is the only known spaceship that is a phoenix. Like all phoenixes in Live Free or Die, it behaves identically in the Seeds rule (b2), in which it is known as a photon."
+  ],
+  "desc": "The following p1 c spaceship, which is the smallest spaceship (with only four cells), the only p1 spaceship (consisting only of an engine), and, along with the dot, one of only two p1 objects in Live Free or Die. It is the second most common spaceship after the free ship, occurring about one fifth as frequently in random explosions. Moons are a common component of other spaceships, puffers, and flotillas, such as metronome ships and metronome puffers, the tricycle ship, and various anchor track flotillas including the known free ship rakes. Apart from flotillas, the only known rakes are backward and sideways moon rakes. The moon is the only known spaceship that is a phoenix. Like all phoenixes in Live Free or Die, it behaves identically in the Seeds rule (b2), in which it is known as a photon.",
+  "rle": "x = 2, y = 4, rule = s0/b2\no$bo$bo$o!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "moon laser",
+  "captured": "2015-04-22",
+  "paras": [
+   "The following p4 double-barreled moon gun with an initial population of 700 cells, which is the only known gun in Live Free or Die. Discovered by Matthias Merzenich."
+  ],
+  "desc": "The following p4 double-barreled moon gun with an initial population of 700 cells, which is the only known gun in Live Free or Die. Discovered by Matthias Merzenich.",
+  "rle": "x = 170, y = 31, rule = s0/b2\n3bo2bo29bo3bo88bo3bo29bo2bo$24bo5bo6bo8bo12bo19bo10bo19bo12bo8bo6bo5bo$12bo3bo12bo20bo9bo17bo12bo17bo9bo20bo12bo3bo$8bo6bo13b3o3bobo12b2o12bo13bo12bo13bo12b2o12bobo3b3o13bo6bo$o3bo4bo9bo2bob2o3bob2o9bobo5bo9bo15bo2bo10bo2bo15bo9bo5bobo9b2obo3b2obo2bo9bo4bo3bo$bobo2bo4b2o2bo21bo2bo4bobob2o2bo6b2obo15b2o8b2o15bob2o6bo2b2obobo4bo2bo21bo2b2o4bo2bobo$6bo7bo4bo8bobo7bo12bo2bo4b4ob2o5bo8bo3b2o3bo8bo5b2ob4o4bo2bo12bo7bobo8bo4bo7bo$6bo13bo9bobobo12bobo6b2o2bo3bobo3bo3b2o7bo2bo7b2o3bo3bobo3bo2b2o6bobo12bobobo9bo13bo$16bo13bo11bo4b3o9bo14b3o3bo8bo3b3o14bo9b3o4bo11bo13bo$7bobo5bo18bo12bo4bo14bo2b2o3bo4bo8bo4bo3b2o2bo14bo4bo12bo18bo5bobo$8bo13bo3bo6bo3bo10bo9b2o2bo8bo6b2o4b2o4b2o6bo8bo2b2o9bo10bo3bo6bo3bo13bo$11bo11bobo34bobo3bo6bo3bo14bo3bo6bo3bobo34bobo11bo$5bo4bo42bobo2bobobo2bo3bo3bo3b2o4bo2bo4b2o3bo3bo3bo2bobobo2bobo42bo4bo$50bo3bo5bo5bobobo2bob3obo2bo4bo2bob3obo2bobobo5bo5bo3bo$49bo8b2o6b2o3b2o7b2o2b2o2b2o7b2o3b2o6b2o8bo$56b5o2bo42bo2b5o$49bo8b2o6b2o3b2o7b2o2b2o2b2o7b2o3b2o6b2o8bo$50bo3bo5bo5bobobo2bob3obo2bo4bo2bob3obo2bobobo5bo5bo3bo$5bo4bo42bobo2bobobo2bo3bo3bo3b2o4bo2bo4b2o3bo3bo3bo2bobobo2bobo42bo4bo$11bo11bobo34bobo3bo6bo3bo14bo3bo6bo3bobo34bobo11bo$8bo13bo3bo6bo3bo10bo9b2o2bo8bo6b2o4b2o4b2o6bo8bo2b2o9bo10bo3bo6bo3bo13bo$7bobo5bo18bo12bo4bo14bo2b2o3bo4bo8bo4bo3b2o2bo14bo4bo12bo18bo5bobo$16bo13bo11bo4b3o9bo14b3o3bo8bo3b3o14bo9b3o4bo11bo13bo$6bo13bo9bobobo12bobo6b2o2bo3bobo3bo3b2o7bo2bo7b2o3bo3bobo3bo2b2o6bobo12bobobo9bo13bo$6bo7bo4bo8bobo7bo12bo2bo4b4ob2o5bo8bo3b2o3bo8bo5b2ob4o4bo2bo12bo7bobo8bo4bo7bo$bobo2bo4b2o2bo21bo2bo4bobob2o2bo6b2obo15b2o8b2o15bob2o6bo2b2obobo4bo2bo21bo2b2o4bo2bobo$o3bo4bo9bo2bob2o3bob2o9bobo5bo9bo15bo2bo10bo2bo15bo9bo5bobo9b2obo3b2obo2bo9bo4bo3bo$8bo6bo13b3o3bobo12b2o12bo13bo12bo13bo12b2o12bobo3b3o13bo6bo$12bo3bo12bo20bo9bo17bo12bo17bo9bo20bo12bo3bo$24bo5bo6bo8bo12bo19bo10bo19bo12bo8bo6bo5bo$3bo2bo29bo3bo88bo3bo29bo2bo!",
+  "extra_rles": [],
+  "credit": "Matthias Merzenich"
+ },
+ {
+  "name": "mouse ship",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p4 c/2 spaceship with a minimum population of 46 cells. Discovered by Josh Ball."
+  ],
+  "desc": "The following p4 c/2 spaceship with a minimum population of 46 cells. Discovered by Josh Ball.",
+  "rle": "x = 17, y = 15, rule = s0/b2\nbo$13bo$3bo$o2bo11bo$4bo2bo7bo$bo14bo$b2o2bobo4bo$o2bobo5bo4bo$10bo4bo$15bo$bo3b2o$bobobo2b2o3bo$b2obo4b2obo$2b2o5bo$3b3o3bo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "natural",
+  "captured": "2018-03-25",
+  "paras": [
+   "A pattern is said to occur naturally if it arises independently from a random initial pattern (known as soup). All other patterns are artificial: they are deliberately engineered or discovered algorithmically. Unlike Life, Live Free or Die is explosive, so all random initial patterns except for those that are astronomically rare or very small will expand at light speed, filling the grid with chaos as they go. In Life, random initial patterns will lead to collections of still lifes and other oscillators, with occasional spaceships and very rare puffers that emerge from their boundaries. In Live Free or Die, any object that travels slower than light speed will be consumed by chaos. Therefore the only naturally occurring objects in Live Free or Die are c spaceships and puffers and the debris that natural puffers leave behind. An object is said to be common if it occurs often naturally.",
+   "The most common naturally occurring spaceship by far in Live Free or Die is the p6 free ship, followed by the p1 moon and the p4 key ship. Other fairly common spaceships include the robot ship, plus ship, dot ship, and R ship. The most common naturally occurring puffer is the double dot puffer, followed by the 2-2 dot puffer, and then other dot puffers and robot puffers. Objects that have been known to occur naturally more rarely include the rake and bake puffer and a wide variety of p4, p6, and p8 spaceships and puffers, such as the dotset ship, dotset puffer, ferry puffer, hook puffer, oof puffer, revolver puffer, and shrapnel puffer. The dot, checker, and anchor are the only oscillators that are known to occur naturally, because they're produced by natural puffers."
+  ],
+  "desc": "A pattern is said to occur naturally if it arises independently from a random initial pattern (known as soup). All other patterns are artificial: they are deliberately engineered or discovered algorithmically. Unlike Life, Live Free or Die is explosive, so all random initial patterns except for those that are astronomically rare or very small will expand at light speed, filling the grid with chaos as they go. In Life, random initial patterns will lead to collections of still lifes and other oscillators, with occasional spaceships and very rare puffers that emerge from their boundaries. In Live Free or Die, any object that travels slower than light speed will be consumed by chaos. Therefore the only naturally occurring objects in Live Free or Die are c spaceships and puffers and the debris that natural puffers leave behind. An object is said to be common if it occurs often naturally. The most common naturally occurring spaceship by far in Live Free or Die is the p6 free ship, followed by the p1 moon and the p4 key ship. Other fairly common spaceships include the robot ship, plus ship, dot ship, and R ship. The most common naturally occurring puffer is the double dot puffer, followed by the 2-2 dot puffer, and then other dot puffers and robot puffers. Objects that have been known to occur naturally more rarely include the rake and bake puffer and a wide variety of p4, p6, and p8 spaceships and puffers, such as the dotset ship, dotset puffer, ferry puffer, hook puffer, oof puffer, revolver puffer, and shrapnel puffer. The dot, checker, and anchor are the only oscillators that are known to occur naturally, because they're produced by natural puffers.",
+  "rle": "",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "nickel ship",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p5 c spaceship with a minimum population of 98 cells, which is the only known p5 c spaceship. Discovered by Josh Ball."
+  ],
+  "desc": "The following p5 c spaceship with a minimum population of 98 cells, which is the only known p5 c spaceship. Discovered by Josh Ball.",
+  "rle": "x = 38, y = 28, rule = s0/b2\n21bo$22bo$22bo$21bo6bo$29bo$17bo11bo$bo3bo20bobo$9bo15b2o9bo$8b2o4bo8bo13bo$obo5bo10bo3b2o5bo3bo2bo$15bobo10b2o6bo$obo6b3o12bo$25b3obo3bo$25bobo8bo$25bobo8bo$25b3obo3bo$obo6b3o12bo$15bobo10b2o6bo$obo5bo10bo3b2o5bo3bo2bo$8b2o4bo8bo13bo$9bo15b2o9bo$bo3bo20bobo$17bo11bo$29bo$21bo6bo$22bo$22bo$21bo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "nose",
+  "captured": "2018-03-25",
+  "paras": [
+   "A vertical domino at the front of the engine of a c spaceship or puffer. Every known object that travels at c has at least one nose. Below is a 3-3 robot ship with the nose highlighted."
+  ],
+  "desc": "A vertical domino at the front of the engine of a c spaceship or puffer. Every known object that travels at c has at least one nose. Below is a 3-3 robot ship with the nose highlighted.",
+  "rle": "x = 5, y = 8, rule = s0/b2\nbo$2bo$3bo$4bo$4bo$2bo$bo$o!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "octopus ship",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p8 c spaceship with a minimum population of 32 cells, whose horns make it useful in flotillas. It is the second smallest known p8 spaceship after the squid ship."
+  ],
+  "desc": "The following p8 c spaceship with a minimum population of 32 cells, whose horns make it useful in flotillas. It is the second smallest known p8 spaceship after the squid ship.",
+  "rle": "x = 11, y = 13, rule = s0/b2\n6bo$bo5bo$bo6bo$2o3bobo2bo$6bo3bo$bobo$b3o4bo$bobo$6bo3bo$2o3bobo2bo$bo6bo$bo5bo$6bo!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "oscillator",
+  "captured": "2018-03-25",
+  "paras": [
+   "An oscillator is a pattern which reappears in the same position and orientation after a number of generations. For general information about oscillators in cellular automata, see Oscillator on LifeWiki.",
+   "Like Life, Live Free or Die is home to a variety of oscillators. Because the rule is explosive, the only oscillators that occur naturally are the debris left behind by naturally occurring puffers: the p1 dot (the rule's only still life), the p2 checker, and the p4 anchor. Other small oscillators include the p4 lever and radar, the p6 ant, the p12 two-slot anchor track, and the p19 monster. Other oscillators have been discovered at p3 (the sandbar, trilogy and rotunda), p5 (the starfish and crossroads), and p8 (the sparkler and black widow), along with larger oscillators at p2 (the Cecil B. DeMille and ball pit), p4 (the control tower, buoy, shortwave, longwave, beacon, and flotsam), and p6 (the anthill, mantis, six shooter, and big six shooter). Many oscillators are extensible in various ways, and anchor tracks can have any period of the form 4 × 2n - 4."
+  ],
+  "desc": "An oscillator is a pattern which reappears in the same position and orientation after a number of generations. For general information about oscillators in cellular automata, see Oscillator on LifeWiki. Like Life, Live Free or Die is home to a variety of oscillators. Because the rule is explosive, the only oscillators that occur naturally are the debris left behind by naturally occurring puffers: the p1 dot (the rule's only still life), the p2 checker, and the p4 anchor. Other small oscillators include the p4 lever and radar, the p6 ant, the p12 two-slot anchor track, and the p19 monster. Other oscillators have been discovered at p3 (the sandbar, trilogy and rotunda), p5 (the starfish and crossroads), and p8 (the sparkler and black widow), along with larger oscillators at p2 (the Cecil B. DeMille and ball pit), p4 (the control tower, buoy, shortwave, longwave, beacon, and flotsam), and p6 (the anthill, mantis, six shooter, and big six shooter). Many oscillators are extensible in various ways, and anchor tracks can have any period of the form 4 × 2n - 4.",
+  "rle": "",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "period",
+  "captured": "2018-03-25",
+  "paras": [
+   "The period of an oscillator, spaceship, or puffer is the number of generations it takes to reappear in its original form. For a puffer, the trail of debris is ignored. For general information about periods in cellular automata see Period on LifeWiki.",
+   "Live Free or Die is home to objects of a variety of periods and objects with arbitrarily high periods. It is unknown whether Live Free or Die is omniperiodic.",
+   "A table of the smallest objects for each known period is at the end of this article. The rest is a summary of the known objects for each period and how common they are.",
+   "P1",
+   "There are only two p1 objects in Live Free or Die: the dot, a stable pattern (a p1 oscillator, or still life) consisting of a single, isolated live cell, and the moon, a p1 c spaceship with only four cells, which is the smallest spaceship. Both are extremely common naturally, and the dot is the most common puffer output. There is no such thing as a p1 puffer.",
+   "P2",
+   "The only small, natural p2 object in Live Free or Die is the checker, a p2 oscillator and a very common puffer output. Larger oscillators include the Cecil B. DeMille and the ball pit, both of which are extensible in size. There are two known p2 spaceships: the flicker ship and the flutter ship. The only known p2 puffer is the flicker rake.",
+   "P3",
+   "There are no natural p3 objects in Live Free or Die, but p3 oscillators, spaceships, and puffers have all been discovered. Oscillators include the sandbar, rotunda and trilogy. Spaceships include the tricycle ship and wide tricycle ship. Puffers include the bent tricycle puffer, tricycle puffer, wide tricycle puffer, ellipsis puffer, and a puffer formed from the tricycle ship. There is also a p3 clean backward moon rake, the tricycle rake, making p3 the shortest period with known puffers and rakes.",
+   "P4",
+   "By the total number of objects discovered, p4 is by far the most common period in Live Free or Die. P4 objects include small oscillators such as the lever, radar, and the anchor, the last of which is useful in anchor track technology. Larger p4 oscillators include the control tower, buoy, shortwave, longwave, beacon, and flotsam. There are a huge number of p4 c spaceships and puffers, along with a number of trailers and tagalongs. Small, natural p4 spaceships include the key ship, plus ship, robot ship, and sun ship, and small, natural p4 puffers include the dot puffer, double dot puffer, robot puffer, and sun puffer. Many p4 c spaceships and puffers appear with various wing lengths (see Iteration guides) and can be anchored. Others, like the metronome puffer, can be extended infinitely in other ways. There are also two p4 c clean backward moon rakes, the pocket rake and the flip-flop rake, and a p4 c sideways moon rake, the zipper rake. Rakes can also be formed using the p4 c plow trailer. Arbitrarily large p4 c spaceships can be built by combining spaceships, puffers, trailers, and tagalongs.",
+   "P4 is also the shortest period with known spaceships that travel slower than light and the only known period with spaceships that travel diagonally. P4 c/2 spaceships, all of which are large and artificial, include the crab ship, rhino ship, wide rhino ship, elephant ship, Eppstein's slow ship, and the fox ship, along with many unicorn ships, buffalo ships, hippo ships, and horned ships. There are also p4 c/2 backward moon rakes, the buffalo rake, hippo rake, and horned rake. P4 c/4 diagonal spaceships include the giraffe ship, ram ship, and slanted ship.",
+   "The only known gun in Live Free or Die is the p4 moon laser.",
+   "P5",
+   "There are no natural p5 objects in Live Free or Die, but p5 oscillators, spaceships, puffers, and rakes have all been discovered. The only known p5 oscillators are the starfish and crossroads. There are known p5 spaceships that travel at c (the nickel ship), 2c/5 (the zirconium ship), and c/5 (the quintessential ships and the hammerhead ship). There is also a p5 c/5 backward moon rake, the quintessential rake. There is also a p5 c puffer, the nickel puffer, and a p5 c backward moon rake, the nickel rake.",
+   "P6",
+   "Objects at p6 are fairly common. P6 oscillators include the ant, anthill, mantis, six shooter, big six shooter, and big six shooter stacks. Three known p6 spaceships travel at c and occur naturally: the extremely common free ship, the hex ship, and the short free ship. P6 puffers include the revolver puffer and the trombone puffer, which is infinitely extensible. There is also a p6 sideways moon rake, the hex rake. The only known c/3 object is the p6 wasp ship.",
+   "P7",
+   "There are no known p7 oscillators or spaceships. The only known p7 puffer is the rake and bake puffer, which has been known to occur naturally.",
+   "P8",
+   "P8 objects are fairly common. P8 oscillators include the sparkler and the different variations of the black widow. P8 spaceships include the octopus ship, squid ship, and pinwheel ship, which travel at c, and many c/2 spaceships, including the dust mite ship and many unicorn ships, buffalo ships, hippo ships, and horned ships. There are a large number of p8 c puffers, including the eclipse puffer, forge puffer, occidental puffer, scale puffer, scorpion puffer, and tick puffer, many of which have variations with different wing lengths (see Iteration guides). Arbitrarily large p8 c spaceships can be built by combining spaceships, puffers, trailers, and tagalongs.",
+   "P9",
+   "There are no known p9 oscillators or spaceships. The only known p9 puffers are the arrow puffer and the nearly identical long arrow puffer.",
+   "P10",
+   "There are no natural p10 objects in Live Free or Die. The only known p10 object is the c/5 decade ship, making it the only period with a known spaceship that travels slower than c but no known c spaceship.",
+   "P12",
+   "No p12 objects occur naturally, but p12 oscillators, spaceships, and puffers have all been discovered or constructed. Oscillators include the two-slot anchor track and new wave. There are no known indivisible spaceships, but p4 and p6 c spaceships and puffers can be used to build p12 flotillas, including anchor track flotillas, that are spaceships, puffers, or rakes. For example, a free ship can partially consume the trail of a dot puffer to form a p12 puffer, and two free ships can consume the trail completely to form a p12 spaceship. The only known indivisible p12 puffer is the zodiac puffer, which has the highest period of any known indivisible spaceship or puffer.",
+   "P19",
+   "There are no known p19 spaceships or puffers. The only known p19 oscillators are the monster and monster stacks built from monsters whose sparks interact.",
+   "Other periods",
+   "Many spaceships and puffers of higher periods can be formed by flotillas with interacting spaceships and puffers of different periods. Flotillas of period 16 and 6 × 2n can be built using freedom fighters. Some objects based on anchor tracks have infinitely extensible period. Anchor tracks of different sizes can have any period 4 × 2n - 4, and spaceships and puffers created using anchor nibblers and anchor eaters can have any period 8 × 2n.",
+   "Smallest known objects for each period",
+   "Period",
+   "| Smallest known oscillator",
+   "| Minimum population",
+   "|",
+   "1",
+   "| dot",
+   "| 1",
+   "|",
+   "2",
+   "| checker",
+   "| 2",
+   "|",
+   "3",
+   "| sandbar",
+   "| 32",
+   "|",
+   "4",
+   "| lever",
+   "| 4",
+   "|",
+   "5",
+   "| starfish",
+   "| 64",
+   "|",
+   "6",
+   "| ant",
+   "| 6",
+   "|",
+   "8",
+   "| sparkler",
+   "| 12",
+   "|",
+   "12",
+   "| two-slot anchor track",
+   "| 6",
+   "|",
+   "19",
+   "| monster",
+   "| 6",
+   "|",
+   "28",
+   "| three-slot anchor track",
+   "| 8",
+   "|",
+   "60",
+   "| seven-slot anchor track",
+   "| 16",
+   "|",
+   "124",
+   "| five-slot anchor track",
+   "| 12",
+   "|",
+   "252",
+   "| six-slot anchor track",
+   "| 14",
+   "|",
+   "4 × 2n - 4",
+   "| (2n - 1)-slot anchor track",
+   "| 2n+1",
+   "|",
+   "Period",
+   "| Smallest known spaceship",
+   "| Minimum population",
+   "|",
+   "1",
+   "| moon",
+   "| 4",
+   "|",
+   "2",
+   "| flicker ship",
+   "| 54",
+   "|",
+   "3",
+   "| wide tricycle ship",
+   "| 108",
+   "|",
+   "4",
+   "| key ship",
+   "| 8",
+   "|",
+   "5",
+   "| nickel ship",
+   "| 98",
+   "|",
+   "6",
+   "| free ship",
+   "| 12",
+   "|",
+   "8",
+   "| squid ship",
+   "| 20",
+   "|",
+   "10",
+   "| decade ship",
+   "| 114",
+   "|",
+   "12",
+   "| (free ships and dot puffer)",
+   "| 42",
+   "|",
+   "16",
+   "| six-slot anchor eater ship",
+   "| 70",
+   "|",
+   "24",
+   "| (free ships and octopus ship)",
+   "| 60",
+   "|",
+   "32",
+   "| ten-slot anchor eater ship",
+   "| 70",
+   "|",
+   "48",
+   "| (freedom fighter flotilla)",
+   "| 411",
+   "|",
+   "64",
+   "| 18-slot anchor eater ship",
+   "| 86",
+   "|",
+   "96",
+   "| (freedom fighter flotilla)",
+   "| 1476",
+   "|",
+   "128",
+   "| 34-slot anchor eater ship",
+   "| 118",
+   "|",
+   "256",
+   "| 66-slot anchor eater ship",
+   "| 180",
+   "|",
+   "8 × 2n",
+   "| (2 × 2n + 2)-slot anchor eater ship",
+   "| 4 × 2n + 60",
+   "|",
+   "6 × 2n",
+   "| (freedom fighter flotilla)",
+   "| ?",
+   "|",
+   "Period",
+   "| Smallest known puffer",
+   "| Initial population",
+   "|",
+   "2",
+   "| flicker rake",
+   "| 82",
+   "|",
+   "3",
+   "| tricycle puffer",
+   "| 34",
+   "|",
+   "4",
+   "| double dot puffer",
+   "| 6",
+   "|",
+   "5",
+   "| nickel rake",
+   "| 98",
+   "|",
+   "6",
+   "| (two free ships)",
+   "| 24",
+   "|",
+   "7",
+   "| rake and bake puffer",
+   "| 12",
+   "|",
+   "8",
+   "| eclipse puffer",
+   "| 13",
+   "|",
+   "9",
+   "| arrow puffer",
+   "| 18",
+   "|",
+   "12",
+   "| (free ship and dot puffer)",
+   "| 19",
+   "|",
+   "16",
+   "| (eclipse puffers and freedom fighter)",
+   "| 36",
+   "|",
+   "18",
+   "| (free ship and arrow puffer)",
+   "| 30",
+   "|",
+   "20",
+   "| (2-3 robot puffer and nickel puffer)",
+   "| 157",
+   "|",
+   "24",
+   "| (free ship and eclipse puffer)",
+   "| 25",
+   "|",
+   "30",
+   "| (hex ship and nickel rake)",
+   "| 114",
+   "|",
+   "32",
+   "| ten-slot anchor nibbler puffer",
+   "| 49",
+   "|",
+   "48",
+   "| (hex ship and six-slot half anchor biter puffer)",
+   "| 59",
+   "|",
+   "64",
+   "| 18-slot anchor nibbler puffer",
+   "| 65",
+   "|",
+   "96",
+   "| (hex ship and ten-slot half anchor biter buffer)",
+   "| 67",
+   "|",
+   "128",
+   "| 34-slot anchor nibbler puffer",
+   "| 97",
+   "|",
+   "256",
+   "| 66-slot anchor nibbler puffer",
+   "| 161",
+   "|",
+   "8 × 2n",
+   "| (2 × 2n + 2)-slot anchor nibbler puffer",
+   "| 4 × 2n + 35",
+   "|",
+   "24 × 2n",
+   "| (hex ship and (2 × 2n + 2)-slot half anchor biter puffer)",
+   "| 4 × 2n + 51",
+   "|",
+   "Period",
+   "| Smallest known rake",
+   "| Initial population",
+   "|",
+   "3",
+   "| tricycle rake",
+   "| 130",
+   "|",
+   "4",
+   "| pocket rake",
+   "| 32",
+   "|",
+   "5",
+   "| nickel rake",
+   "| 98",
+   "|",
+   "12 × 2n",
+   "| (anchor track / freedom figher flotilla)",
+   "| ?",
+   "|"
+  ],
+  "desc": "The period of an oscillator, spaceship, or puffer is the number of generations it takes to reappear in its original form. For a puffer, the trail of debris is ignored. For general information about periods in cellular automata see Period on LifeWiki. Live Free or Die is home to objects of a variety of periods and objects with arbitrarily high periods. It is unknown whether Live Free or Die is omniperiodic. A table of the smallest objects for each known period is at the end of this article. The rest is a summary of the known objects for each period and how common they are. P1 There are only two p1 objects in Live Free or Die: the dot, a stable pattern (a p1 oscillator, or still life) consisting of a single, isolated live cell, and the moon, a p1 c spaceship with only four cells, which is the smallest spaceship. Both are extremely common naturally, and the dot is the most common puffer output. There is no such thing as a p1 puffer. P2 The only small, natural p2 object in Live Free or Die is the checker, a p2 oscillator and a very common puffer output. Larger oscillators include the Cecil B. DeMille and the ball pit, both of which are extensible in size. There are two known p2 spaceships: the flicker ship and the flutter ship. The only known p2 puffer is the flicker rake. P3 There are no natural p3 objects in Live Free or Die, but p3 oscillators, spaceships, and puffers have all been discovered. Oscillators include the sandbar, rotunda and trilogy. Spaceships include the tricycle ship and wide tricycle ship. Puffers include the bent tricycle puffer, tricycle puffer, wide tricycle puffer, ellipsis puffer, and a puffer formed from the tricycle ship. There is also a p3 clean backward moon rake, the tricycle rake, making p3 the shortest period with known puffers and rakes. P4 By the total number of objects discovered, p4 is by far the most common period in Live Free or Die. P4 objects include small oscillators such as the lever, radar, and the anchor, the last of which is useful in anchor track technology. Larger p4 oscillators include the control tower, buoy, shortwave, longwave, beacon, and flotsam. There are a huge number of p4 c spaceships and puffers, along with a number of trailers and tagalongs. Small, natural p4 spaceships include the key ship, plus ship, robot ship, and sun ship, and small, natural p4 puffers include the dot puffer, double dot puffer, robot puffer, and sun puffer. Many p4 c spaceships and puffers appear with various wing lengths (see Iteration guides) and can be anchored. Others, like the metronome puffer, can be extended infinitely in other ways. There are also two p4 c clean backward moon rakes, the pocket rake and the flip-flop rake, and a p4 c sideways moon rake, the zipper rake. Rakes can also be formed using the p4 c plow trailer. Arbitrarily large p4 c spaceships can be built by combining spaceships, puffers, trailers, and tagalongs. P4 is also the shortest period with known spaceships that travel slower than light and the only known period with spaceships that travel diagonally. P4 c/2 spaceships, all of which are large and artificial, include the crab ship, rhino ship, wide rhino ship, elephant ship, Eppstein's slow ship, and the fox ship, along with many unicorn ships, buffalo ships, hippo ships, and horned ships. There are also p4 c/2 backward moon rakes, the buffalo rake, hippo rake, and horned rake. P4 c/4 diagonal spaceships include the giraffe ship, ram ship, and slanted ship. The only known gun in Live Free or Die is the p4 moon laser. P5 There are no natural p5 objects in Live Free or Die, but p5 oscillators, spaceships, puffers, and rakes have all been discovered. The only known p5 oscillators are the starfish and crossroads. There are known p5 spaceships that travel at c (the nickel ship), 2c/5 (the zirconium ship), and c/5 (the quintessential ships and the hammerhead ship). There is also a p5 c/5 backward moon rake, the quintessential rake. There is also a p5 c puffer, the nickel puffer, and a p5 c backward moon rake, the nickel rake. P6 Objects at p6 are fairly common. P6 oscillators include the ant, anthill, mantis, six shooter, big six shooter, and big six shooter stacks. Three known p6 spaceships travel at c and occur naturally: the extremely common free ship, the hex ship, and the short free ship. P6 puffers include the revolver puffer and the trombone puffer, which is infinitely extensible. There is also a p6 sideways moon rake, the hex rake. The only known c/3 object is the p6 wasp ship. P7 There are no known p7 oscillators or spaceships. The only known p7 puffer is the rake and bake puffer, which has been known to occur naturally. P8 P8 objects are fairly common. P8 oscillators include the sparkler and the different variations of the black widow. P8 spaceships include the octopus ship, squid ship, and pinwheel ship, which travel at c, and many c/2 spaceships, including the dust mite ship and many unicorn ships, buffalo ships, hippo ships, and horned ships. There are a large number of p8 c puffers, including the eclipse puffer, forge puffer, occidental puffer, scale puffer, scorpion puffer, and tick puffer, many of which have variations with different wing lengths (see Iteration guides). Arbitrarily large p8 c spaceships can be built by combining spaceships, puffers, trailers, and tagalongs. P9 There are no known p9 oscillators or spaceships. The only known p9 puffers are the arrow puffer and the nearly identical long arrow puffer. P10 There are no natural p10 objects in Live Free or Die. The only known p10 object is the c/5 decade ship, making it the only period with a known spaceship that travels slower than c but no known c spaceship. P12 No p12 objects occur naturally, but p12 oscillators, spaceships, and puffers have all been discovered or constructed. Oscillators include the two-slot anchor track and new wave. There are no known indivisible spaceships, but p4 and p6 c spaceships and puffers can be used to build p12 flotillas, including anchor track flotillas, that are spaceships, puffers, or rakes. For example, a free ship can partially consume the trail of a dot puffer to form a p12 puffer, and two free ships can consume the trail completely to form a p12 spaceship. The only known indivisible p12 puffer is the zodiac puffer, which has the highest period of any known indivisible spaceship or puffer. P19 There are no known p19 spaceships or puffers. The only known p19 oscillators are the monster and monster stacks built from monsters whose sparks interact. Other periods Many spaceships and puffers of higher periods can be formed by flotillas with interacting spaceships and puffers of different periods. Flotillas of period 16 and 6 × 2n can be built using freedom fighters. Some objects based on anchor tracks have infinitely extensible period. Anchor tracks of different sizes can have any period 4 × 2n - 4, and spaceships and puffers created using anchor nibblers and anchor eaters can have any period 8 × 2n. Smallest known objects for each period Period | Smallest known oscillator | Minimum population | 1 | dot | 1 | 2 | checker | 2 | 3 | sandbar | 32 | 4 | lever | 4 | 5 | starfish | 64 | 6 | ant | 6 | 8 | sparkler | 12 | 12 | two-slot anchor track | 6 | 19 | monster | 6 | 28 | three-slot anchor track | 8 | 60 | seven-slot anchor track | 16 | 124 | five-slot anchor track | 12 | 252 | six-slot anchor track | 14 | 4 × 2n - 4 | (2n - 1)-slot anchor track | 2n+1 | Period | Smallest known spaceship | Minimum population | 1 | moon | 4 | 2 | flicker ship | 54 | 3 | wide tricycle ship | 108 | 4 | key ship | 8 | 5 | nickel ship | 98 | 6 | free ship | 12 | 8 | squid ship | 20 | 10 | decade ship | 114 | 12 | (free ships and dot puffer) | 42 | 16 | six-slot anchor eater ship | 70 | 24 | (free ships and octopus ship) | 60 | 32 | ten-slot anchor eater ship | 70 | 48 | (freedom fighter flotilla) | 411 | 64 | 18-slot anchor eater ship | 86 | 96 | (freedom fighter flotilla) | 1476 | 128 | 34-slot anchor eater ship | 118 | 256 | 66-slot anchor eater ship | 180 | 8 × 2n | (2 × 2n + 2)-slot anchor eater ship | 4 × 2n + 60 | 6 × 2n | (freedom fighter flotilla) | ? | Period | Smallest known puffer | Initial population | 2 | flicker rake | 82 | 3 | tricycle puffer | 34 | 4 | double dot puffer | 6 | 5 | nickel rake | 98 | 6 | (two free ships) | 24 | 7 | rake and bake puffer | 12 | 8 | eclipse puffer | 13 | 9 | arrow puffer | 18 | 12 | (free ship and dot puffer) | 19 | 16 | (eclipse puffers and freedom fighter) | 36 | 18 | (free ship and arrow puffer) | 30 | 20 | (2-3 robot puffer and nickel puffer) | 157 | 24 | (free ship and eclipse puffer) | 25 | 30 | (hex ship and nickel rake) | 114 | 32 | ten-slot anchor nibbler puffer | 49 | 48 | (hex ship and six-slot half anchor biter puffer) | 59 | 64 | 18-slot anchor nibbler puffer | 65 | 96 | (hex ship and ten-slot half anchor biter buffer) | 67 | 128 | 34-slot anchor nibbler puffer | 97 | 256 | 66-slot anchor nibbler puffer | 161 | 8 × 2n | (2 × 2n + 2)-slot anchor nibbler puffer | 4 × 2n + 35 | 24 × 2n | (hex ship and (2 × 2n + 2)-slot half anchor biter puffer) | 4 × 2n + 51 | Period | Smallest known rake | Initial population | 3 | tricycle rake | 130 | 4 | pocket rake | 32 | 5 | nickel rake | 98 | 12 × 2n | (anchor track / freedom figher flotilla) | ? |",
+  "rle": "",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "pinwheel ship",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p8 c spaceship with a minimum population of 43 cells. Discovered by Josh Ball."
+  ],
+  "desc": "The following p8 c spaceship with a minimum population of 43 cells. Discovered by Josh Ball.",
+  "rle": "x = 20, y = 15, rule = s0/b2\n11bo$10bo6bo$8bobo5bobo$13bob2o2bo$4bo2bo11bo$o3bobo3bo6bo$13bo$o2bo12bo$13bo$6bo3bo6bo$7bo11bo$13bob2o2bo$3o5bobo5bobo$10bo6bo$11bo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "plus ship",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following fairly common p4 c spaceship with a minimum population of 16 cells, named for the sparks it produces."
+  ],
+  "desc": "The following fairly common p4 c spaceship with a minimum population of 16 cells, named for the sparks it produces.",
+  "rle": "x = 9, y = 12, rule = s0/b2\n5bo$6bo$o7bo$8bo$o3bobo3$o3bobo$8bo$o7bo$6bo$5bo!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "puffer",
+  "captured": "2018-03-25",
+  "paras": [
+   "A puffer is any pattern which moves like a spaceship but leaves a trail of debris behind it, usually a collection of oscillators. A puffer that leaves behind spaceships is called a rake. For general information about puffers in cellular automata, see Puffer on LifeWiki.",
+   "Like Life, Live Free or Die is home to a variety of puffers. Because Live Free or Die is explosive, all naturally occurring puffers travel at c. Since any static object will inevitably be consumed by chaos, the only natural oscillators are those produced by natural puffers. Nearly all puffers output some combination of dots and checkers, and all known rakes output moons or free ships. The ferry puffer produces anchors along with a pattern of dots or checkers.",
+   "Many small p4 c puffers occur very commonly naturally, including the double dot puffer, dot puffer, and robot puffer. Rare natural puffers include those at p6 (the revolver puffer), p7 (the rake and bake puffer), and p9 (the arrow puffer and long arrow puffer), a large group of p4 puffers such as the shrapnel puffer, swamp puffer, twin puffer, and ugly puffer, and nearly as many p8 puffers, such as the eclipse puffer, scale puffer, scorpion puffer, and tick puffer. Other c puffers have also been discovered at p3 (the bent tricycle puffer, tricycle puffer, wide tricycle puffer, and tricycle rake) and p5 (the nickel puffer and nickel rake).",
+   "In addition, puffers can be built by combining spaceships and puffers into flotillas in various ways. Some, like anchor biter puffers and anchor nibbler puffers, can have any period 8 × 2n, and freedom fighter flotillas can have any period 6 × 2n. Flotillas that use anchor track technology can produce a much larger range of outputs than single puffers, including monsters, radar, anchor tracks, and anchor stacks. Anchor track flotillas are also the only known sideways and backward free ship rakes, and the only known sideways moon rakes.",
+   "The only known puffers that travel slower than c are backward moon rakes such as the p5 c/5 quintessential rake and the p4 c/2 buffalo rake, hippo rake, and horned rake."
+  ],
+  "desc": "A puffer is any pattern which moves like a spaceship but leaves a trail of debris behind it, usually a collection of oscillators. A puffer that leaves behind spaceships is called a rake. For general information about puffers in cellular automata, see Puffer on LifeWiki. Like Life, Live Free or Die is home to a variety of puffers. Because Live Free or Die is explosive, all naturally occurring puffers travel at c. Since any static object will inevitably be consumed by chaos, the only natural oscillators are those produced by natural puffers. Nearly all puffers output some combination of dots and checkers, and all known rakes output moons or free ships. The ferry puffer produces anchors along with a pattern of dots or checkers. Many small p4 c puffers occur very commonly naturally, including the double dot puffer, dot puffer, and robot puffer. Rare natural puffers include those at p6 (the revolver puffer), p7 (the rake and bake puffer), and p9 (the arrow puffer and long arrow puffer), a large group of p4 puffers such as the shrapnel puffer, swamp puffer, twin puffer, and ugly puffer, and nearly as many p8 puffers, such as the eclipse puffer, scale puffer, scorpion puffer, and tick puffer. Other c puffers have also been discovered at p3 (the bent tricycle puffer, tricycle puffer, wide tricycle puffer, and tricycle rake) and p5 (the nickel puffer and nickel rake). In addition, puffers can be built by combining spaceships and puffers into flotillas in various ways. Some, like anchor biter puffers and anchor nibbler puffers, can have any period 8 × 2n, and freedom fighter flotillas can have any period 6 × 2n. Flotillas that use anchor track technology can produce a much larger range of outputs than single puffers, including monsters, radar, anchor tracks, and anchor stacks. Anchor track flotillas are also the only known sideways and backward free ship rakes, and the only known sideways moon rakes. The only known puffers that travel slower than c are backward moon rakes such as the p5 c/5 quintessential rake and the p4 c/2 buffalo rake, hippo rake, and horned rake.",
+  "rle": "",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "quintessential ship",
+  "captured": "2018-03-25",
+  "paras": [
+   "Any of several p5 c/5 spaceships with the same front-end mechanism. The quintessential ships and the decade ship are the only known non-monotonic spaceships in Live Free or Die: the leading edge of the ship falls back two cells from generation 1 to 2. The smallest quintessential ship, shown below, has a minimum population of 126 cells. Discovered by Josh Ball. Compare quintessential rake."
+  ],
+  "desc": "Any of several p5 c/5 spaceships with the same front-end mechanism. The quintessential ships and the decade ship are the only known non-monotonic spaceships in Live Free or Die: the leading edge of the ship falls back two cells from generation 1 to 2. The smallest quintessential ship, shown below, has a minimum population of 126 cells. Discovered by Josh Ball. Compare quintessential rake.",
+  "rle": "x = 50, y = 18, rule = s0/b2\n35bo$o5bo29bo$9bo3bobo3bo4bo23bo$2bo13bobo11bobo16bo$2bo4bo17bob2obo6bo$4b2o2bo4bo10bo3bo3bo13bo2bo$o5bob2o8bo2bo2b2o7b2o2b2o6b2obo$4bo2bobo5b3obo8bobo6bo6bo$5bo8bo13bo3bo7bo$5bo8bo13bo3bo7bo$4bo2bobo5b3obo8bobo6bo6bo$o5bob2o8bo2bo2b2o7b2o2b2o6b2obo$4b2o2bo4bo10bo3bo3bo13bo2bo$2bo4bo17bob2obo6bo$2bo13bobo11bobo16bo$9bo3bobo3bo4bo23bo$o5bo29bo$35bo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "radar",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p4 oscillator with a minimum population of four cells. It is tied with the lever and anchor as the smallest p4 oscillator in terms of minimum population, but the lever has a smaller bounding box and average population."
+  ],
+  "desc": "The following p4 oscillator with a minimum population of four cells. It is tied with the lever and anchor as the smallest p4 oscillator in terms of minimum population, but the lever has a smaller bounding box and average population.",
+  "rle": "x = 4, y = 4, rule = s0/b2\nbo$o$3bo$2bo!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "rake",
+  "captured": "2018-03-25",
+  "paras": [
+   "Any puffer that produces spaceships. A rake is said to be forwards, backwards or sideways according to the direction of the spaceships relative to the direction of the rake. For general information about rakes in cellular automata, see Rake on LifeWiki.",
+   "There are no natural rakes in Live Free or Die, but rakes have been discovered and engineered in various ways. The first known rakes in Live Free or Die were anchor track flotillas (such as the free rake), which can use various reactions to produce moons and free ships traveling sideways relative to the rake or (with freedom fighters) free ships traveling backward. Anchor track flotillas remain the only known free ship rakes. Some are very large; the smallest known backward free ship rake is p192 and has an initial population of about 30,000 cells, with hundreds of component puffers and spaceships. The known rakes that aren't flotillas are almost all backward and sideways moon rakes, and most travel at c: the p2 flicker rake, the p3 tricycle rake, the p4 pocket rake, flip-flop rake, and zipper rake, the p5 nickel rake, and the p6 hex rake. The only known puffers that travel slower than c are rakes: the p4 c/2 buffalo rake, hippo rake, and horned rake, and the p5 c/5 quintessential rake. The freedom collider is a p8 c backward short free ship rake."
+  ],
+  "desc": "Any puffer that produces spaceships. A rake is said to be forwards, backwards or sideways according to the direction of the spaceships relative to the direction of the rake. For general information about rakes in cellular automata, see Rake on LifeWiki. There are no natural rakes in Live Free or Die, but rakes have been discovered and engineered in various ways. The first known rakes in Live Free or Die were anchor track flotillas (such as the free rake), which can use various reactions to produce moons and free ships traveling sideways relative to the rake or (with freedom fighters) free ships traveling backward. Anchor track flotillas remain the only known free ship rakes. Some are very large; the smallest known backward free ship rake is p192 and has an initial population of about 30,000 cells, with hundreds of component puffers and spaceships. The known rakes that aren't flotillas are almost all backward and sideways moon rakes, and most travel at c: the p2 flicker rake, the p3 tricycle rake, the p4 pocket rake, flip-flop rake, and zipper rake, the p5 nickel rake, and the p6 hex rake. The only known puffers that travel slower than c are rakes: the p4 c/2 buffalo rake, hippo rake, and horned rake, and the p5 c/5 quintessential rake. The freedom collider is a p8 c backward short free ship rake.",
+  "rle": "",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "rake and bake puffer",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p7 c puffer with an initial population of 12 cells, which is the only known p7 object. It is also the only object with odd period (other than the p1 moon and dot) which has been known to occur naturally. So named because it nearly acts as a rake, sending a moon backwards to alter its trail every period."
+  ],
+  "desc": "The following p7 c puffer with an initial population of 12 cells, which is the only known p7 object. It is also the only object with odd period (other than the p1 moon and dot) which has been known to occur naturally. So named because it nearly acts as a rake, sending a moon backwards to alter its trail every period.",
+  "rle": "x = 4, y = 10, rule = s0/b2\n2bo$3bo$o2bo$bo$o$o$bo$o2bo$3bo$2bo!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "ram ship",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p4 c/4 diagonal spaceship with a minimum population of 37 cells, which is the smallest known diagonal spaceship. Discovered by Josh Ball."
+  ],
+  "desc": "The following p4 c/4 diagonal spaceship with a minimum population of 37 cells, which is the smallest known diagonal spaceship. Discovered by Josh Ball.",
+  "rle": "x = 16, y = 16, rule = s0/b2\n3b3o$4bo$4b2o2bo$o2bo$3o4bo$obo4bo5bobo2$4b2o9bo$2bo5b2o4b2o$8b2o$12bobo2$10bo$5bo$8bobo$5bob2o!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "revolver puffer",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p6 c puffer with an initial population of 38 cells, which is the smallest known p6 puffer that isn't divisible into component puffers or spaceships. It is useful in anchor track flotillas such as the monster puffer."
+  ],
+  "desc": "The following p6 c puffer with an initial population of 38 cells, which is the smallest known p6 puffer that isn't divisible into component puffers or spaceships. It is useful in anchor track flotillas such as the monster puffer.",
+  "rle": "x = 20, y = 14, rule = s0/b2\n14bo$10b4obo$16bo$17bo$13b2obo2bo$obo3bo3bo5bo2bo$17bo$17bo$obo3bo3bo5bo2bo$13b2obo2bo$17bo$16bo$10b4obo$14bo!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "robot ship",
+  "captured": "2018-03-25",
+  "paras": [
+   "A p4 c spaceship of the following form. The smallest iteration, the 3-3 robot ship, shown below, has the smallest minimum population of any known p4 spaceship at eight cells, tying with the key ship and sun ship. For a full list of possible iterations, see Iteration guides. Compare robot puffer."
+  ],
+  "desc": "A p4 c spaceship of the following form. The smallest iteration, the 3-3 robot ship, shown below, has the smallest minimum population of any known p4 spaceship at eight cells, tying with the key ship and sun ship. For a full list of possible iterations, see Iteration guides. Compare robot puffer.",
+  "rle": "x = 5, y = 8, rule = s0/b2\nbo$2bo$3bo$4bo$4bo$2bo$bo$o!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "rotunda",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p3 oscillator with a minimum population of 84 cells. Discovered by Josh Ball."
+  ],
+  "desc": "The following p3 oscillator with a minimum population of 84 cells. Discovered by Josh Ball.",
+  "rle": "x = 22, y = 22, rule = s0/b2\n7bo6bo$8bo4bo$10b2o$5bo10bo$6bo2bo2bo2bo$3bobobo2b2o2bobobo$4bo5b2o5bo$o4bo4b2o4bo4bo$bo18bo$4bo12bo$2bo2b3o6b3o2bo$2bo2b3o6b3o2bo$4bo12bo$bo18bo$o4bo4b2o4bo4bo$4bo5b2o5bo$3bobobo2b2o2bobobo$6bo2bo2bo2bo$5bo10bo$10b2o$8bo4bo$7bo6bo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "sandbar",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p3 oscillator with a minimum population of 32 cells, which is the smallest known p3 oscillator. Discovered by Josh Ball."
+  ],
+  "desc": "The following p3 oscillator with a minimum population of 32 cells, which is the smallest known p3 oscillator. Discovered by Josh Ball.",
+  "rle": "x = 17, y = 13, rule = s0/b2\nbo10bo$7bo$4bo7b2o$o5bo6bobo$2bo7b2o$o9b2o2$5b2o9bo$5b2o7bo$bobo6bo5bo$3b2o7bo$9bo$4bo10bo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "shortwave",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p4 oscillator with a minimum population of 27 cells. Discovered by Josh Ball. Compare longwave."
+  ],
+  "desc": "The following p4 oscillator with a minimum population of 27 cells. Discovered by Josh Ball. Compare longwave.",
+  "rle": "x = 13, y = 13, rule = s0/b2\nbo9bo$o6bo$3bo$2bo3bo5bo$5bobobo$4bo2bobo$3bo$bo2b2obo2$4b2o5bo$12bo$o8bo$3bo6bo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "six shooter",
+  "captured": "2018-03-25",
+  "paras": [
+   "An infinitely extensible p6 oscillator of the following form. The smallest iteration, shown below, has a minimum population of 16 cells. Discovered by Josh Ball."
+  ],
+  "desc": "An infinitely extensible p6 oscillator of the following form. The smallest iteration, shown below, has a minimum population of 16 cells. Discovered by Josh Ball.",
+  "rle": "x = 6, y = 10, rule = s0/b2\no4bo$o4bo$o4bo2$bo2bo$bo2bo2$o4bo$o4bo$o4bo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "slanted ship",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p4 c/4 diagonal spaceship with a minimum population of 135 cells. Discovered by Josh Ball."
+  ],
+  "desc": "The following p4 c/4 diagonal spaceship with a minimum population of 135 cells. Discovered by Josh Ball.",
+  "rle": "x = 35, y = 35, rule = s0/b2\n4bobo4$o4bo$4bo2b2o$o6bo4bo$5b2obobo2bo3bo3bo$5bobo2bo2b2o$12b2o5bobo$7b2o7bob2o$26bo$6bo2bo4bo$7b3o12bo4bo$8bo3bo2bo7bo3bobo$14bo12b2o$10bo8bob3o2bo$7bo15b2obo$10bo13b2o3bo$9b2o5bo6bo$23b2o$7bobo6bo8bob2o$13bo2bo9bob2o3bo$14bob2ob2o5bobobo2b2o$17b2obo3bobob2o3bo$18bo2bo5bobo$11bo4b2o4b3o4b3o$13b3o5bo3bo$15bo5b4o$14bo3bo3bob3o$23bo2bo$26bo2$22b3o$23bo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "spaceship",
+  "captured": "2018-03-25",
+  "paras": [
+   "A spaceship is any pattern which reappears after a number of generations at a different position. For general information about spaceships in cellular automata, see Spaceship on LifeWiki.",
+   "Like Life, Live Free or Die is home to a wide variety of spaceships. But because the birth of cells in Live Free or Die requires only two live neighbors, where Life requires three, spaceships in Live Free or Die can travel at the speed of light (c). And because Live Free or Die is explosive, any spaceship that travels slower than c will be consumed by chaos, so all naturally occurring spaceships travel at c. Natural spaceships include the p6 free ship, the p1 moon, and the p4 key ship, robot ship, plus ship, half plus ship, R ship, and sun ship. Artificial c spaceships have been discovered or engineered at various periods, including p2 (the flicker ship and flutter ship), p3 (the wide tricycle ship and tricycle ship), p5 (the nickel ship), and p8 (the squid ship, octopus ship, and pinwheel ship), along with some, like anchor eater ships and freedom fighter ships, of arbitrarily large size and period. All c spaceships have an unchanging engine with at least one nose and two or more wings.",
+   "Larger artificial spaceships have been discovered at various speeds. Known orthogonal speeds include c, c/2 (a wide variety of ships including the fruit fly ship, mouse ship, and crab ship at p4, the dust mite ship at p8, collections of related p4 and p8 ships like the unicorn ships, and many others), 2c/5 (the zirconium ship), c/3 (the wasp ship) c/4 (the beachcomber ship), and c/5 (the quintessential ships, the hammerhead ship, and the decade ship). There are also spaceships that travel diagonally at c/4 (the ram ship, slanted ship, and giraffe ship)."
+  ],
+  "desc": "A spaceship is any pattern which reappears after a number of generations at a different position. For general information about spaceships in cellular automata, see Spaceship on LifeWiki. Like Life, Live Free or Die is home to a wide variety of spaceships. But because the birth of cells in Live Free or Die requires only two live neighbors, where Life requires three, spaceships in Live Free or Die can travel at the speed of light (c). And because Live Free or Die is explosive, any spaceship that travels slower than c will be consumed by chaos, so all naturally occurring spaceships travel at c. Natural spaceships include the p6 free ship, the p1 moon, and the p4 key ship, robot ship, plus ship, half plus ship, R ship, and sun ship. Artificial c spaceships have been discovered or engineered at various periods, including p2 (the flicker ship and flutter ship), p3 (the wide tricycle ship and tricycle ship), p5 (the nickel ship), and p8 (the squid ship, octopus ship, and pinwheel ship), along with some, like anchor eater ships and freedom fighter ships, of arbitrarily large size and period. All c spaceships have an unchanging engine with at least one nose and two or more wings. Larger artificial spaceships have been discovered at various speeds. Known orthogonal speeds include c, c/2 (a wide variety of ships including the fruit fly ship, mouse ship, and crab ship at p4, the dust mite ship at p8, collections of related p4 and p8 ships like the unicorn ships, and many others), 2c/5 (the zirconium ship), c/3 (the wasp ship) c/4 (the beachcomber ship), and c/5 (the quintessential ships, the hammerhead ship, and the decade ship). There are also spaceships that travel diagonally at c/4 (the ram ship, slanted ship, and giraffe ship).",
+  "rle": "",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "sparkler",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p8 oscillator with a minimum population of 12 cells, which is the smallest known p8 oscillator. Discovered by Josh Ball."
+  ],
+  "desc": "The following p8 oscillator with a minimum population of 12 cells, which is the smallest known p8 oscillator. Discovered by Josh Ball.",
+  "rle": "x = 10, y = 10, rule = s0/b2\n2bo$bo$o$4bo$3bobo$4bo$9bo$8bo$7b2o$6bo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "speed of light",
+  "captured": "2018-03-25",
+  "paras": [
+   "For general information about speed in cellular automata, see Speed on LifeWiki.",
+   "The speed of light or c refers to a speed of one cell per generation, the fastest that any object or signal can travel in a cellular automaton. In Live Free or Die, most spaceships and puffers travel at the speed of light orthogonally, as does the chaotic expansion of nearly all random patterns. Because spaceships and puffers travel a whole number of cells in a whole number of generations, every possible speed they travel can be represented as a fraction of c.",
+   "A table of the smallest spaceships and puffers for each known speed is at the end of this article. The rest is a summary of the known spaceships and puffers for each speed.",
+   "c",
+   "In Live Free or Die, most spaceships and puffers, including all naturally occurring spaceships and puffers, travel orthogonally at c. All c spaceships and puffers have an engine with at least one nose and at least two wings. They occur in a wide variety of periods, including spaceships at p1, p2, p3, p4, p5, p6, and p8, and puffers at p2, p3, p4, p5, p6, p7, p8, p9, and p12, along with higher periods formed by interacting spaceships and puffers. Puffer and spaceship flotillas can also be built with arbitrarily high period 6 × 2n and 8 × 2n using freedom fighters and anchor tracks. The smallest spaceship in Live Free or Die is the p1 moon, with only four cells. Other naturally occurring c spaceships include the p4 key ship, plus ship, robot ship, and sun ship, the p6 free ship and hex ship, and the p8 octopus ship. Naturally occurring c puffers include the p4 dot puffer, double dot puffer, robot puffer, and sun puffer.",
+   "c/2",
+   "A wide variety of c/2 orthogonal spaceships have been discovered: the fruit fly ship, mouse ship, crab ship, zebra ship, rhino ship, wide rhino ship, fox ship, elephant ship, and Eppstein's slow ship at p4, the dust mite ship at p8, and the various unicorn ships, buffalo ships, hippo ships, and horned ships, all of which occur at both p4 and p8. The only known c/2 puffers are the buffalo rake, hippo rake, and horned rake, which are p4 clean backward moon rakes and can all be converted to spaceships using trailers. The buffalo bird is a small tagalong for a majority of the known c/2 spaceships and rakes.",
+   "2c/5",
+   "One 2c/5 orthogonal spaceship has been discovered: the p5 zirconium ship.",
+   "c/3",
+   "One c/3 orthogonal spaceship has been discovered: the p6 wasp ship.",
+   "c/4",
+   "One c/4 orthogonal spaceship has been discovered: the p4 beachcomber ship.",
+   "c/4 diagonal",
+   "The only known diagonal spaceships in Live Free or Die travel at c/4: the p4 giraffe ship, ram ship, and slanted ship.",
+   "c/5",
+   "Several c/5 orthogonal spaceships have been discovered, including the various p5 quintessential ships, the p5 hammerhead ship and the p10 decade ship, which is the only known p10 object. The only known c/5 rake or puffer is the p5 quintessential rake.",
+   "Smallest known spaceships, puffers, and rakes for each speed",
+   "Speed",
+   "| Smallest known spaceship",
+   "| Period",
+   "| Minimum population",
+   "|",
+   "c",
+   "| moon",
+   "| 1",
+   "| 4",
+   "|",
+   "c/2",
+   "| dust mite ship",
+   "| 8",
+   "| 36",
+   "|",
+   "2c/5",
+   "| zirconium ship",
+   "| 5",
+   "| 268",
+   "|",
+   "c/3",
+   "| wasp ship",
+   "| 6",
+   "| 428",
+   "|",
+   "c/4",
+   "| beachcomber ship",
+   "| 4",
+   "| 396",
+   "|",
+   "c/4 diagonal",
+   "| ram ship",
+   "| 4",
+   "| 37",
+   "|",
+   "c/5",
+   "| decade ship",
+   "| 10",
+   "| 114",
+   "|",
+   "Speed",
+   "| Smallest known puffer",
+   "| Period",
+   "| Initial population",
+   "|",
+   "c",
+   "| double dot puffer",
+   "| 4",
+   "| 5",
+   "|",
+   "c/2",
+   "| buffalo rake",
+   "| 4",
+   "| 88",
+   "|",
+   "c/5",
+   "| quintessential rake",
+   "| 5",
+   "| 130",
+   "|",
+   "Speed",
+   "| Smallest known rake",
+   "| Period",
+   "| Initial population",
+   "|",
+   "c",
+   "| pocket rake",
+   "| 4",
+   "| 32",
+   "|",
+   "c/2",
+   "| buffalo rake",
+   "| 4",
+   "| 88",
+   "|",
+   "c/5",
+   "| quintessential rake",
+   "| 5",
+   "| 130",
+   "|"
+  ],
+  "desc": "For general information about speed in cellular automata, see Speed on LifeWiki. The speed of light or c refers to a speed of one cell per generation, the fastest that any object or signal can travel in a cellular automaton. In Live Free or Die, most spaceships and puffers travel at the speed of light orthogonally, as does the chaotic expansion of nearly all random patterns. Because spaceships and puffers travel a whole number of cells in a whole number of generations, every possible speed they travel can be represented as a fraction of c. A table of the smallest spaceships and puffers for each known speed is at the end of this article. The rest is a summary of the known spaceships and puffers for each speed. c In Live Free or Die, most spaceships and puffers, including all naturally occurring spaceships and puffers, travel orthogonally at c. All c spaceships and puffers have an engine with at least one nose and at least two wings. They occur in a wide variety of periods, including spaceships at p1, p2, p3, p4, p5, p6, and p8, and puffers at p2, p3, p4, p5, p6, p7, p8, p9, and p12, along with higher periods formed by interacting spaceships and puffers. Puffer and spaceship flotillas can also be built with arbitrarily high period 6 × 2n and 8 × 2n using freedom fighters and anchor tracks. The smallest spaceship in Live Free or Die is the p1 moon, with only four cells. Other naturally occurring c spaceships include the p4 key ship, plus ship, robot ship, and sun ship, the p6 free ship and hex ship, and the p8 octopus ship. Naturally occurring c puffers include the p4 dot puffer, double dot puffer, robot puffer, and sun puffer. c/2 A wide variety of c/2 orthogonal spaceships have been discovered: the fruit fly ship, mouse ship, crab ship, zebra ship, rhino ship, wide rhino ship, fox ship, elephant ship, and Eppstein's slow ship at p4, the dust mite ship at p8, and the various unicorn ships, buffalo ships, hippo ships, and horned ships, all of which occur at both p4 and p8. The only known c/2 puffers are the buffalo rake, hippo rake, and horned rake, which are p4 clean backward moon rakes and can all be converted to spaceships using trailers. The buffalo bird is a small tagalong for a majority of the known c/2 spaceships and rakes. 2c/5 One 2c/5 orthogonal spaceship has been discovered: the p5 zirconium ship. c/3 One c/3 orthogonal spaceship has been discovered: the p6 wasp ship. c/4 One c/4 orthogonal spaceship has been discovered: the p4 beachcomber ship. c/4 diagonal The only known diagonal spaceships in Live Free or Die travel at c/4: the p4 giraffe ship, ram ship, and slanted ship. c/5 Several c/5 orthogonal spaceships have been discovered, including the various p5 quintessential ships, the p5 hammerhead ship and the p10 decade ship, which is the only known p10 object. The only known c/5 rake or puffer is the p5 quintessential rake. Smallest known spaceships, puffers, and rakes for each speed Speed | Smallest known spaceship | Period | Minimum population | c | moon | 1 | 4 | c/2 | dust mite ship | 8 | 36 | 2c/5 | zirconium ship | 5 | 268 | c/3 | wasp ship | 6 | 428 | c/4 | beachcomber ship | 4 | 396 | c/4 diagonal | ram ship | 4 | 37 | c/5 | decade ship | 10 | 114 | Speed | Smallest known puffer | Period | Initial population | c | double dot puffer | 4 | 5 | c/2 | buffalo rake | 4 | 88 | c/5 | quintessential rake | 5 | 130 | Speed | Smallest known rake | Period | Initial population | c | pocket rake | 4 | 32 | c/2 | buffalo rake | 4 | 88 | c/5 | quintessential rake | 5 | 130 |",
+  "rle": "",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "squid ship",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p8 c spaceship with a minimum population of 20 cells, which is the smallest known p8 spaceship. Discovered by Josh Ball."
+  ],
+  "desc": "The following p8 c spaceship with a minimum population of 20 cells, which is the smallest known p8 spaceship. Discovered by Josh Ball.",
+  "rle": "x = 8, y = 13, rule = s0/b2\n6bo$7bo$4bo2bo$3bo2bo$o$5bo$bob3o$5bo$o$3bo2bo$4bo2bo$7bo$6bo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "starfish",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p5 oscillator with a minimum population of 64 cells, which is the smallest known p5 oscillator and the only known p5 oscillator other than the crossroads. Discovered by Josh Ball."
+  ],
+  "desc": "The following p5 oscillator with a minimum population of 64 cells, which is the smallest known p5 oscillator and the only known p5 oscillator other than the crossroads. Discovered by Josh Ball.",
+  "rle": "x = 28, y = 16, rule = s0/b2\n12bo2bo2$12b4o$11b2o2b2o$11bo4bo$ob2o5bob2o2b2obo5b2obo$3bo3bo4b4o4bo3bo3$3bo3bo4b4o4bo3bo$ob2o5bob2o2b2obo5b2obo$11bo4bo$11b2o2b2o$12b4o2$12bo2bo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "still life",
+  "captured": "2018-03-25",
+  "paras": [
+   "Any pattern which remains unchanged to the next generation (a p1 oscillator.) The only example in Live Free or Die is the dot.",
+   "For more information see Still life on LifeWiki."
+  ],
+  "desc": "Any pattern which remains unchanged to the next generation (a p1 oscillator.) The only example in Live Free or Die is the dot. For more information see Still life on LifeWiki.",
+  "rle": "",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "sun ship",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p4 c spaceship. Along with the key ship and 3-3 robot ship, it has the smallest minimum population of any known p4 spaceship at eight cells, and is the smallest known spaceship with more than one nose. It is also the smallest W-winged spaceship and the smallest spaceship that is bilaterally symmetric with odd width. Compare sun puffer."
+  ],
+  "desc": "The following p4 c spaceship. Along with the key ship and 3-3 robot ship, it has the smallest minimum population of any known p4 spaceship at eight cells, and is the smallest known spaceship with more than one nose. It is also the smallest W-winged spaceship and the smallest spaceship that is bilaterally symmetric with odd width. Compare sun puffer.",
+  "rle": "x = 3, y = 11, rule = s0/b2\no$bo$2bo$2bo4$2bo$2bo$bo$o!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "tippy trailer",
+  "captured": "2015-04-22",
+  "paras": [
+   "The following small p4 c trailer, which converts a p4 trail of checkers into a p4 trail of dots, and is useful in flotillas."
+  ],
+  "desc": "The following small p4 c trailer, which converts a p4 trail of checkers into a p4 trail of dots, and is useful in flotillas.",
+  "rle": "x = 17, y = 7, rule = s0/b2\n10bo4bo$11bo4bo$12bo3bo$o13bo$bo3bo7bo$4bo3bo$o!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "tricycle ship",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p3 c spaceship with a minimum population of 126 cells, which is one of only two known p3 spaceships, along with the wide tricycle ship. The nose at the front can be shifted back one cell for a smaller variation. The moons and the column of four cells at the back can be removed to create a puffer. Discovered by Josh Ball."
+  ],
+  "desc": "The following p3 c spaceship with a minimum population of 126 cells, which is one of only two known p3 spaceships, along with the wide tricycle ship. The nose at the front can be shifted back one cell for a smaller variation. The moons and the column of four cells at the back can be removed to create a puffer. Discovered by Josh Ball.",
+  "rle": "x = 37, y = 26, rule = s0/b2\n24bo$23b2obo$17bo9bo$16bobo5bo4bo$16bo2bo7bobo$o8bo6bo4bo2bobo$bo18bobo2bob2o$bo7bo4bobo8bo4bo$o10bobobobo7bo3bobo$14bo7bo2bo3bo2bo$5bo19bo7bo$bo2b2obo16bo2bo4bobo$bo2bobo2b2o2bo22bo$bo2bobo2b2o2bo22bo$bo2b2obo16bo2bo4bobo$5bo19bo7bo$14bo7bo2bo3bo2bo$o10bobobobo7bo3bobo$bo7bo4bobo8bo4bo$bo18bobo2bob2o$o8bo6bo4bo2bobo$16bo2bo7bobo$16bobo5bo4bo$17bo9bo$23b2obo$24bo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "trilogy",
+  "captured": "2018-03-25",
+  "paras": [
+   "Any of several p3 oscillators with a mechanism similar to the following. The smallest iteration, shown below, has a minimum population of 62 cells. Discovered by Josh Ball."
+  ],
+  "desc": "Any of several p3 oscillators with a mechanism similar to the following. The smallest iteration, shown below, has a minimum population of 62 cells. Discovered by Josh Ball.",
+  "rle": "x = 25, y = 25, rule = s0/b2\n16bo4bo$17bo2bo$19bo$18bo5bo$13bobo7bo$12bo9bo$11b2obo6bo$13b2o2bo5bo$8bo4bo10bo$9bo10bo$17b2o$10bo2bo2b2o2bo$5bo2bo9b2o$4bo13bo$6b2o5bo$4bo10bo$o11bo3bo$bo8bo$3bo6bo$2bo9bo$bo7bobo$o5bo$5bo$4bo2bo$3bo4bo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "unicorn ship",
+  "captured": "2018-03-25",
+  "paras": [
+   "Any of several p4 and p8 c/2 spaceships with the same front-end mechanism. The smallest, shown below, has a minimum population of 78 cells. Discovered by glider_rider. (Note that the dust mite ship, rhino ship, wide rhino ship, elephant ship, and Eppstein's slow ship also share this mechanism but are named separately because they were discovered sooner.)"
+  ],
+  "desc": "Any of several p4 and p8 c/2 spaceships with the same front-end mechanism. The smallest, shown below, has a minimum population of 78 cells. Discovered by glider_rider. (Note that the dust mite ship, rhino ship, wide rhino ship, elephant ship, and Eppstein's slow ship also share this mechanism but are named separately because they were discovered sooner.)",
+  "rle": "x = 33, y = 14, rule = s0/b2\n23bobo$15bo12bo$7bo11bo5bo6bo$10bobo5bo4bo7bo$bobo5bo5b4o3bo4bobo$o8bo11bo6b2obo$6bo6bo5bo9bo$2bo4bo2bobo19bo$2bo3bo15bo3bo5bo$4bo2bobo3b3obo5b3ob2o3bo$o2bo3bo5bo5b2o5b3o3bo$7bo4bo5bo8bobobo$26b2o$3bo8bobo11bo!",
+  "extra_rles": [],
+  "credit": "glider_rider"
+ },
+ {
+  "name": "wasp ship",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following infinitely extensible p6 c/3 spaceship, which is the only known c/3 object. The smallest iteration, shown below, has a minimum population of 428 cells. Discovered by Michael Simkin."
+  ],
+  "desc": "The following infinitely extensible p6 c/3 spaceship, which is the only known c/3 object. The smallest iteration, shown below, has a minimum population of 428 cells. Discovered by Michael Simkin.",
+  "rle": "x = 102, y = 29, rule = s0/b2\n23bo34bo34bo$17bobo2bo38bobo3bo24bo$60bo11bo7bobo2bo3bo$25bo33bo3bo5bo2bobo4bo3bobob3obo$15bo4bo3bobo23bo7bo3b2o5bo16bobo$10bo4bo9b2o22b3o9b2o6bo5bo7bobo2bo2b3o3bo2bo$2b3o4b2o4bobob2o2b2o2b2o19b2o5bo2bob2o7bo10bo2bo2b3ob2o7bobo$3bobo4bo4bo3b3o6bo16b2o3bo2bo2bo9bob2o10bo5bo4bo2bo$4bo4bobo8bo8bo17bo3b2o3bo12bo4bo6b2o3bo7bo$10bobo8bo7bo2bo3bo5b2o2bo10bo11bob4o5bo9bo3bo6bo$3bo7bo3b2obo4bo5bo3b2ob2o3bo7bo12bo5bo4bo7b3o11bo4bo$obo9bo6bo9bo11bo3b2obo9bo3bobo3bo4b2o2bo16bo2bo$13bo23bo17b2obo2b3o18b2o2bo2bo5bo$33bobo2bobo2bo18b3o20bo2bo4bo$12bo20b3ob3o3bo8b2o7b2obo14b2o3b2o7bo$33bobo2bobo2bo18b3o20bo2bo4bo$13bo23bo17b2obo2b3o18b2o2bo2bo5bo$obo9bo6bo9bo11bo3b2obo9bo3bobo3bo4b2o2bo16bo2bo$3bo7bo3b2obo4bo5bo3b2ob2o3bo7bo12bo5bo4bo7b3o11bo4bo$10bobo8bo7bo2bo3bo5b2o2bo10bo11bob4o5bo9bo3bo6bo$4bo4bobo8bo8bo17bo3b2o3bo12bo4bo6b2o3bo7bo$3bobo4bo4bo3b3o6bo16b2o3bo2bo2bo9bob2o10bo5bo4bo2bo$2b3o4b2o4bobob2o2b2o2b2o19b2o5bo2bob2o7bo10bo2bo2b3ob2o7bobo$10bo4bo9b2o22b3o9b2o6bo5bo7bobo2bo2b3o3bo2bo$15bo4bo3bobo23bo7bo3b2o5bo16bobo$25bo33bo3bo5bo2bobo4bo3bobob3obo$60bo11bo7bobo2bo3bo$17bobo2bo38bobo3bo24bo$23bo34bo34bo!",
+  "extra_rles": [],
+  "credit": "Michael Simkin"
+ },
+ {
+  "name": "wide tricycle ship",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p3 c spaceship with a minimum population of 108 cells, which is one of only two known p3 spaceships, along with the tricycle ship, and is the smallest known p3 spaceship. Discovered by Josh Ball."
+  ],
+  "desc": "The following p3 c spaceship with a minimum population of 108 cells, which is one of only two known p3 spaceships, along with the tricycle ship, and is the smallest known p3 spaceship. Discovered by Josh Ball.",
+  "rle": "x = 13, y = 48, rule = s0/b2\n6bobo$5bo3bo$8bobo$5bo2bo2bo$bo4bo5bo$3o6b2obo$bo3bo2bo$8bo$9b2obo$9b2obo2$4b3o$8bobobo$8bobobo$7bo2$9b2obo$12bo$8bo2bo$8bobo$4bo4bo$4bob2o$4bo$6bobo$6bobo$4bo$4bob2o$4bo4bo$8bobo$8bo2bo$12bo$9b2obo2$7bo$8bobobo$8bobobo$4b3o2$9b2obo$9b2obo$8bo$bo3bo2bo$3o6b2obo$bo4bo5bo$5bo2bo2bo$8bobo$5bo3bo$6bobo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "wing",
+  "captured": "2018-03-25",
+  "paras": [
+   "Any diagonal line of one or more cells in the engine of a c spaceship or puffer that extends backward from the nose or from another wing. Wings range in size from the single cell attached to the nose of a moon or dot puffer to the infinitely extensible wings of wave puffers and wave ships. Below is a 3-3 robot ship with the wings highlighted. An attached wing is contiguous with the nose of the object, and a floating wing is not. All known c spaceships and puffers have at least two wings."
+  ],
+  "desc": "Any diagonal line of one or more cells in the engine of a c spaceship or puffer that extends backward from the nose or from another wing. Wings range in size from the single cell attached to the nose of a moon or dot puffer to the infinitely extensible wings of wave puffers and wave ships. Below is a 3-3 robot ship with the wings highlighted. An attached wing is contiguous with the nose of the object, and a floating wing is not. All known c spaceships and puffers have at least two wings.",
+  "rle": "x = 5, y = 8, rule = s0/b2\nbo$2bo$3bo$4bo$4bo$2bo$bo$o!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "wing notation",
+  "captured": "2018-03-25",
+  "paras": [
+   "The description of a spaceship or puffer in terms of its wing length, with 'x-y' representing an object with one wing of length x and one of length y. The first number is the top wing and the second is the bottom wing in the orientation that objects are presented in this wiki. For objects like the sun car, which have only one wing, a single number is used. Because many spaceships and puffers have a large number of possible iterations with different wing lengths (see Iteration guides), wing notation is a convenient way of identifying a particular iteration. Below is a 2-3 robot puffer, as described in wing notation."
+  ],
+  "desc": "The description of a spaceship or puffer in terms of its wing length, with 'x-y' representing an object with one wing of length x and one of length y. The first number is the top wing and the second is the bottom wing in the orientation that objects are presented in this wiki. For objects like the sun car, which have only one wing, a single number is used. Because many spaceships and puffers have a large number of possible iterations with different wing lengths (see Iteration guides), wing notation is a convenient way of identifying a particular iteration. Below is a 2-3 robot puffer, as described in wing notation.",
+  "rle": "x = 5, y = 7, rule = s0/b2\n2bo$3bo$4bo$4bo$2bo$bo$o!",
+  "extra_rles": [],
+  "credit": ""
+ },
+ {
+  "name": "zirconium ship",
+  "captured": "2018-03-25",
+  "paras": [
+   "The following p5 2c/5 spaceship with a minimum population of 268 cells, which is the only known 2c/5 spaceship. Discovered by Josh Ball."
+  ],
+  "desc": "The following p5 2c/5 spaceship with a minimum population of 268 cells, which is the only known 2c/5 spaceship. Discovered by Josh Ball.",
+  "rle": "x = 85, y = 28, rule = s0/b2\n22bo2$26bo2bo$22b3o9b3o$32bo2bo21bo3bo$23bo3bo5b2o2bo2bo26bo$23bo2bo4bo4bo3bo2bo5bo7bo8bo6bo$8bo14bo8bo3bo15bo8bo4bo2bo$13bo3bo2b2o15b2o20bobo8b2o5bo$12bo6b2o9b5obo2b2o3b3o2bo5bobob3o2bo6bo3b2o$5bo5bo4bo3bo3bo8bo4bo13bo5bo2bo7b2o3bo4bo$o10bo2bo6bobobo4bobo7bo2bo2bo11b4o5bo4bo10bo$15bo9bo3b3o7bo3bo10bo4bobo2bo13b2obob2o$2bo5bo15bobo8bobo3bo2b2o9bobo18bo7bo$2bo5bo15bobo8bobo3bo2b2o9bobo18bo7bo$15bo9bo3b3o7bo3bo10bo4bobo2bo13b2obob2o$o10bo2bo6bobobo4bobo7bo2bo2bo11b4o5bo4bo10bo$5bo5bo4bo3bo3bo8bo4bo13bo5bo2bo7b2o3bo4bo$12bo6b2o9b5obo2b2o3b3o2bo5bobob3o2bo6bo3b2o$13bo3bo2b2o15b2o20bobo8b2o5bo$8bo14bo8bo3bo15bo8bo4bo2bo$23bo2bo4bo4bo3bo2bo5bo7bo8bo6bo$23bo3bo5b2o2bo2bo26bo$32bo2bo21bo3bo$22b3o9b3o$26bo2bo2$22bo!",
+  "extra_rles": [],
+  "credit": "Josh Ball"
+ }
+]

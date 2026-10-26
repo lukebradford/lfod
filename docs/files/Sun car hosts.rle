@@ -1,0 +1,14 @@
+#CXRLE Pos=1255,-81 Gen=202
+x = 13, y = 256, rule = s0/b2
+8bo$9bo$10bo$10bo3$9bo$10bo$11bo$12bo$12bo$10bo$9bo$8bo3$9bo$9bo$8bo$
+7bo8$9bo$10bo$11bo$11bo3$10bo$11bo$12bo$12bo4$12bo$12bo$11bo$10bo3$11b
+o$11bo$10bo$9bo6$8bo$9bo$10bo$10bo3$9bo$10bo$11bo$12bo$12bo3$11bo$11bo
+$10bo$9bo3$10bo$10bo$9bo$8bo4$4bo$5bo$6bo$6bo3$5bo$6bo4bo$7bo4bo$8bo3b
+o$10bo$9bo$8bo$7bo$6bo$5bo3$6bo$6bo$5bo$4bo7$4bo$5bo$6bo$6bo3$5bo$6bo
+4bo$7bo4bo$o7bo3bo$10bo$o4bo3bo$6bobo16$7bo$8bo$9bo$9bo3$8bo$9bo$2bo7b
+o$bobo8bo$3o3bo5bo$b3o2b3obo$2obo2bob3o$b3o2b3obo$3o3bo5bo$bobo8bo$2bo
+7bo$9bo$8bo3$9bo$9bo$8bo$7bo10$5bo$6bo$7bo$7bo3$6bo4bo$o6bo4bo$8bo3bo$
+o9bo$4bo4bo$5b3o$5b3o$4bo4bo$o9bo$8bo3bo$o6bo4bo$6bo4bo3$7bo$7bo$6bo$
+5bo12$2bobo$5bo$2bo3bo$3bo2bo$4bo2$3bobo$6bo4bo$3bo3bo4bo$4bo3bo3bo$
+10bo$9bo$8bo$7bo$6bo$5bo3$6bo$6bo$5bo$4bo16$7bo$8bo$9bo$9bo3$8bo$9bo$
+10bo$10bo$8bo$7bo$6bo!

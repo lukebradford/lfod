@@ -1,0 +1,12 @@
+{
+ "_note": "RLE for glossary entries that only had an image in 2009. Decoded from the original glossary images (8 px per cell).",
+ "butterfly": "x = 6, y = 6, rule = B2/S0\n2bo$b2obo$2obo$2bob2o$bob2o$3bo!",
+ "crosshairs": "x = 7, y = 7, rule = B2/S0\n3bo$bobobo$2b3o$3ob3o$2b3o$bobobo$3bo!",
+ "donut": "x = 5, y = 5, rule = B2/S0\n2bo$b3o$2ob2o$b3o$2bo!",
+ "evil eyes": "x = 3, y = 2, rule = B2/S0\n2bo$o!",
+ "checker": "x = 2, y = 2, rule = B2/S0\nbo$o!",
+ "plus": "x = 3, y = 3, rule = B2/S0\nbo$3o$bo!",
+ "snake eyes": "x = 3, y = 1, rule = B2/S0\nobo!",
+ "T-tetromino": "x = 3, y = 2, rule = B2/S0\n3o$bo!",
+ "dot": "x = 1, y = 1, rule = B2/S0\no!"
+}

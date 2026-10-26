@@ -1,0 +1,23 @@
+#CXRLE Pos=12,-140
+x = 99, y = 302, rule = s0/b2
+28bo4bo$31b2obo$36bo$36bo$31b2obo$28bo4bo4$32bo$28bo4bo$29bo3bo$31bo$
+30bo$25bo4$26bo4bo$10bo18b2obo$9bobo22bo$13bo20bo$13bo15b2obo$9bobo14b
+o4bo$10bo18$13bo4bo$16b2obo12bo4bo$21bo13b2obo$21bo18bo$16b2obo20bo$
+13bo4bo16b2obo$32bo4bo4$36bo$32bo4bo$33bo3bo$35bo$34bo$29bo4$30bo4bo$
+14bo18b2obo$13bobo22bo$17bo20bo$17bo15b2obo$13bobo14bo4bo$14bo22$12bo$
+8bo4bo$9bo3bo$11bo$10bo$5bo4$6bo4bo$9b2obo$14bo$14bo$9b2obo$6bo4bo10$
+90bo4bo$93b2obo$98bo$98bo$93b2obo$90bo4bo3$38bo11bo11bo11bo11bo$94bo$
+90bo4bo$91bo3bo$38bo54bo$43bo20bobo9bobo13bo$44bo18bo3bo7bo3bo3bo3bo$
+42bo3bo35b3o$21bo4bo14bo4bo$3o5bo15b2obo17bo$7bobo19bo58bo4bo$11bo17bo
+34b3o5bo18b2obo$11bo12b2obo43bobo22bo$7bobo11bo4bo48bo20bo$3o5bo66bo
+15b2obo$71bobo14bo4bo$64b3o5bo15$6bo4bo$9b2obo$14bo$14bo$9b2obo11bo$6b
+o4bo8bo4bo$21bo3bo$23bo$22bo$17bo4$14bo$19bo$20bo$18bo3bo$3bo4bo8bo4bo
+$6b2obo11bo$11bo$11bo$6b2obo$3bo4bo17$4bo4bo$7b2obo$12bo$12bo$7b2obo
+11bo$4bo4bo8bo4bo$19bo3bo$21bo$20bo$15bo4$13bo$18bo$19bo$17bo3bo$2bo4b
+o8bo4bo$5b2obo11bo$10bo$10bo$5b2obo$2bo4bo24$6bo4bo$9b2obo$14bo$14bo$
+9b2obo11bo14bobo$6bo4bo8bo4bo16bo$21bo3bo14bo3bo$23bo16bo3bo$22bo19bo
+13bo$17bo21bobo10bo4bo$53bo3bo$55bo$54bo$13bo3bo7bo3bo7bo3bo3bo3bo4$2b
+o4bo30bo4bo$5b2obo32b2obo$10bo35bo$10bo35bo$5b2obo32b2obo$2bo4bo30bo4b
+o20$26bo4bo$29b2obo$34bo$34bo$29b2obo17bo$26bo4bo14bo4bo$47bo3bo$49bo$
+48bo$43bo4$43bo$48bo$49bo$47bo3bo$8bo4bo18bo4bo8bo4bo$11b2obo20b2obo
+11bo$16bo23bo$16bo23bo$11b2obo20b2obo$8bo4bo18bo4bo!

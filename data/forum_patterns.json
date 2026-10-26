@@ -1,0 +1,545 @@
+[
+ {
+  "title": "c/4 diagonal ship",
+  "by": "Paul Tooke",
+  "date": "2012-07-28",
+  "post": "p6863",
+  "note": "A c/4 diagonal spaceship, posted while the forum was trying to recover the Verizon site.",
+  "rle": "x = 18, y = 18, rule = B2/S0\n11bo$10b3o2$8bo$8bo2bo$8b3obo$10b2o$9bobo$3b3o4bobo$5bobo4b2o2bo$bo3b2\nobo7b2o$2o2bob2o8bo$bo3bo2b2o6bo$9bo$14bo2bo2$9b4o$10bo3bo!",
+  "pop": 51,
+  "kind": "spaceship",
+  "period": 4,
+  "disp": [
+   -1,
+   -1
+  ]
+ },
+ {
+  "title": "p10 c/5 ship (decade ship)",
+  "by": "Paul Tooke",
+  "date": "2012-07-29",
+  "post": "p6883",
+  "note": "The first p10 object in the rule; named the decade ship on the wiki.",
+  "rle": "x = 18, y = 50, rule = B2/S0\n4bo8bo$2bobobo4bobobo$3b3o6b3o$7bo2bo$7bo2bo2$6bo4bo3$8b2o2$7b4o2$4bo8\nbo$o4b3o2b3o4bo$bo14bo$5bobo2bobo$4bo3b2o3bo$3b2ob2o2b2ob2o$2bo2b3o2b3\no2bo$7bo2bo2$3bo2bo4bo2bo$3bo2b2o2b2o2bo$3b2o8b2o$3bo3bo2bo3bo$2b3o2bo\n2bo2b3o$5b2o4b2o2$6bo4bo$6b2o2b2o$6bob2obo2$4bobob2obobo$5bo2b2o2bo$4b\no8bo$3b2o3b2o3b2o$4b2o2b2o2b2o2$5bo2b2o2bo$7bo2bo$5b2o4b2o2$4b3o4b3o2$\n5bo6bo$3b3o6b3o$4b4o2b4o$4b3ob2ob3o$5bo6bo!",
+  "pop": 170,
+  "kind": "spaceship",
+  "period": 10,
+  "disp": [
+   0,
+   -2
+  ]
+ },
+ {
+  "title": "p4 moon gun (moon laser)",
+  "by": "Sokwe",
+  "date": "2012-08-01",
+  "post": "p6893",
+  "note": "The first gun in Live Free or Die, a double-barreled p4 moon gun. Named the moon laser on the wiki.",
+  "rle": "x = 170, y = 34, rule = B2/S0\n3bo2bo29bo3bo43b2o43bo3bo29bo2bo$24bo3bo10bo6bo12bo17bo5bo2bo5bo17bo12\nbo6bo10bo3bo$12bo3bo12bo19bo8bo19bo12bo19bo8bo19bo12bo3bo$bob2ob2o9bo9\nb3o9bobo3b5o15bo12bo12bo12bo15b5o3bobo9b3o9bo9b2ob2obo$o20bo4b2obo5bo1\n3bobo6bo19bo5b2o5bo19bo6bobo13bo5bob2o4bo20bo$5bo11bo15bo2bo12bo9bo2bo\n3bo7bo5bo2bo2bo2bo5bo7bo3bo2bo9bo12bo2bo15bo11bo$4b2ob2obo5bo4bobobobo\nbobo9b4o6bo13bo5b3o4bo12bo4b3o5bo13bo6b4o9bobobobobobo4bo5bob2ob2o$11b\nobo6bo7b2o6bobo8bo3b3o7b2o5b2o5bo2bo12bo2bo5b2o5b2o7b3o3bo8bobo6b2o7bo\n6bobo$5bo8bo14bo12bo2b3o2b2o3bo13b3o2bo2bo6b2o6bo2bo2b3o13bo3b2o2b3o2b\no12bo14bo8bo$10bo4bo7bobo10bo10bo3b2o3bobo5bo9b2o6bo4bo6b2o9bo5bobo3b2\no3bo10bo10bobo7bo4bo$7bo3bo10bo3bo6bo3bo8bo6bo5bobob3o2bo2bo7bob3o2b3o\nbo7bo2bo2b3obobo5bo6bo8bo3bo6bo3bo10bo3bo$6bo47bo3b2o2b2o4bo2bobo4b5o4\nb5o4bobo2bo4b2o2b2o3bo47bo$5bo3bo43bobo7b2o3bo2bo2bobo2bo3bo2bo3bo2bob\no2bo2bo3b2o7bobo43bo3bo$50bo2bo4bo3bobo2bo3bobo3bo2b2o6b2o2bo3bobo3bo2\nbobo3bo4bo2bo$51bo5bo3b2o3b2o3b2o3bo3b2o2b2o2b2o3bo3b2o3b2o3b2o3bo5bo$\n54bo2bo2b2obo42bob2o2bo2bo$51bo5bo3b2o3b2o3b2o3bo3b2o2b2o2b2o3bo3b2o3b\n2o3b2o3bo5bo$50bo2bo4bo3bobo2bo3bobo3bo2b2o6b2o2bo3bobo3bo2bobo3bo4bo2\nbo$5bo3bo43bobo7b2o3bo2bo2bobo2bo3bo2bo3bo2bobo2bo2bo3b2o7bobo43bo3bo$\n6bo47bo3b2o2b2o4bo2bobo4b5o4b5o4bobo2bo4b2o2b2o3bo47bo$7bo3bo10bo3bo6b\no3bo8bo6bo5bobob3o2bo2bo7bob3o2b3obo7bo2bo2b3obobo5bo6bo8bo3bo6bo3bo10\nbo3bo$10bo4bo7bobo10bo10bo3b2o3bobo5bo9b2o6bo4bo6b2o9bo5bobo3b2o3bo10b\no10bobo7bo4bo$5bo8bo14bo12bo2b3o2b2o3bo13b3o2bo2bo6b2o6bo2bo2b3o13bo3b\n2o2b3o2bo12bo14bo8bo$11bobo6bo7b2o6bobo8bo3b3o7b2o5b2o5bo2bo12bo2bo5b2\no5b2o7b3o3bo8bobo6b2o7bo6bobo$4b2ob2obo5bo4bobobobobobo9b4o6bo13bo5b3o\n4bo12bo4b3o5bo13bo6b4o9bobobobobobo4bo5bob2ob2o$5bo11bo15bo2bo12bo9bo2\nbo3bo7bo5bo2bo2bo2bo5bo7bo3bo2bo9bo12bo2bo15bo11bo$o20bo4b2obo5bo13bob\no6bo19bo5b2o5bo19bo6bobo13bo5bob2o4bo20bo$bob2ob2o9bo9b3o9bobo3b5o15bo\n12bo12bo12bo15b5o3bobo9b3o9bo9b2ob2obo$12bo3bo12bo19bo8bo19bo12bo19bo8\nbo19bo12bo3bo$24bo3bo10bo6bo12bo17bo5bo2bo5bo17bo12bo6bo10bo3bo$3bo2bo\n29bo3bo43b2o43bo3bo29bo2bo2$80bobo4bobo$79bo3bo2bo3bo!",
+  "pop": 798,
+  "kind": "other",
+  "period": null,
+  "disp": null
+ },
+ {
+  "title": "Two growing spaceships",
+  "by": "velcrorex",
+  "date": "2012-08-01",
+  "post": "p6895",
+  "note": "Spaceships that grow as they travel.",
+  "rle": "x = 51, y = 33, rule = B2/S0\n37bo2bo$34bo3b2o3bo$35bo6bo3$35bo6bo$36bo4bo3$29bobo14bobo$28bo20bo$34\nbo3b2o3bo$28bo8bo2bo8bo$5bo6bo16bo2bo2bo6bo2bo2bo$6bo4bo20bo12bo$7bo2b\no21bo4b4o4bo$30b2o14b2o$28bo3b2o10b2o3bo$8b2o17b3ob2o2bo6bo2b2ob3o$7bo\n2bo17b3obo2bobo2bobo2bob3o$30b2o3bo6bo3b2o$38b2o$29bo2bo12bo2bo$29bo18\nbo$bobo10bobo12bo2b2o2b2o2b2o2b2o2bo$o16bo10b3o2bo2b2o2b2o2bo2b3o$8b2o\n17b2obo2bobo2b2o2bobo2bob2o$o5b2o2b2o5bo16bo8bo$bo4b2o2b2o4bo11bo5b2o2\nb2o2b2o5bo$2bo3b2o2b2o3bo13bo18bo2$3b2o2bo2bo2b2o15b2o2b2o2b2o2b2o2b2o\n$8b2o!",
+  "pop": 188,
+  "kind": "other",
+  "period": null,
+  "disp": null
+ },
+ {
+  "title": "p12 anchor track flotillas",
+  "by": "bprentice",
+  "date": "2013-10-14",
+  "post": "p9424",
+  "note": "Two p12 ships built from anchor tracks; the second contains several p252 oscillators.",
+  "rle": "x = 707, y = 31, rule = B2/S0\n7bo11bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo\n3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3\nbo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3b\no3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo\n3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3\nbo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3b\no3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo\n3bo3bo3bo3bo3bo3bo3bo3bo3bo4bo$24bobo9bobo9bobo9bobo9bobo9bobo9bobo9bo\nbo21bobo33bobo21bobo69bobo9bobo21bobo9bobo9bobo21bobo21bobo9bobo9bobo9\nbobo57bobo21bobo9bobo9bobo21bobo21bobo21bobo9bobo102bo$706bo$706bo$3o5\nbo46bo11bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo\n3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3\nbo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3b\no3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo\n3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3\nbo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3b\no3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo4bo11bo$7bobo14\nbo2bo2bo113bobo9bobo9bobo45bobo9bobo21bobo57bobo33bobo33bobo33bobo21bo\nbo69bobo9bobo21bobo33bobo9bobo90bo9bo$11bo19bo662bo7bo$11bo15b3o3bo660\nbo$7bobo17b3o3bo14b3o5bo46bo11bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3b\no3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo\n3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3\nbo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3b\no3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo\n3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3\nbo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo4bo11bo$3o5bo22bo23bobo14bo2bo2bo41bob\no21bobo57bobo21bobo21bobo21bobo57bobo33bobo21bobo9bobo21bobo9bobo9bobo\n9bobo57bobo21bobo9bobo9bobo21bobo78bo9bo$24bo2bo2bo28bo19bo602bo7bo$59\nbo15b3o3bo39bo560bo$55bobo17b3o3bo14b3o5bo15b3o5bo34bo11bo3bo3bo3bo3bo\n3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3\nbo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3b\no3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo\n3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3\nbo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3b\no3bo4bo11bo$48b3o5bo22bo23bobo13b2ob2o3b2obo49bobo21bobo69bobo9bobo21b\nobo9bobo9bobo21bobo21bobo9bobo9bobo9bobo57bobo21bobo9bobo9bobo21bobo21\nbobo21bobo9bobo54bo9bo$72bo2bo2bo28bo12b3o4bo3bo538bo7bo$107bo13bo5bo5\nbo47bo488bo$103bobo15bo5bo5bo28bo2bo2bo11b3o5bo34bo11bo3bo3bo3bo3bo3bo\n3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3\nbo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3b\no3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo\n3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3bo3\nbo3bo3bo3bo3bo3bo4bo11bo$96b3o5bo15b3o4bo3bo37bo9b2ob2o3b2obo49bobo9bo\nbo9bobo9bobo45bobo9bobo21bobo9bobo33bobo33bobo21bobo69bobo9bobo21bobo3\n3bobo42bo9bo$119b2ob2o3b2obo34b3o3bo8b3o4bo3bo466bo7bo$120b3o5bo36b3o3\nbo9bo5bo5bo47bo416bo$121bo47bo11bo5bo5bo28bo2bo2bo11b3o5bo122bo3bo7bo3\nbo7bo3bo7bo3bo7bo3bo7bo3bo7bo3bo7bo3bo7bo3bo7bo3bo7bo3bo7bo3bo7bo3bo7b\no3bo7bo3bo7bo3bo7bo3bo7bo3bo7bo3bo7bo3bo7bo3bo7bo3bo3bo3bo3bo4bo11bo$1\n62bo2bo2bo11b3o4bo3bo37bo9b2ob2o3b2obo133bobo9bobo21bobo33bobo9bobo33b\nobo33bobo21bobo52bo25bo9bo$179b2ob2o3b2obo34b3o3bo8b3o4bo3bo366b3o25bo\n7bo$180b3o5bo36b3o3bo9bo5bo5bo365bo26bo$181bo47bo11bo5bo5bo370bo2bo3bo\n12bo$222bo2bo2bo11b3o4bo3bo120bo2bo2bo247bo5bo10bo$239b2ob2o3b2obo128b\no246bo7bo7bo$240b3o5bo126b3o3bo244bo7bo$241bo133b3o3bo244bo5bo$379bo24\n4bo2bo3bo$372bo2bo2bo!",
+  "pop": 1265,
+  "kind": "spaceship",
+  "period": 12,
+  "disp": [
+   12,
+   0
+  ]
+ },
+ {
+  "title": "p8 c/2 ship",
+  "by": "velcrorex",
+  "date": "2014-03-19",
+  "post": "p11308",
+  "note": "A new p8 c/2 spaceship that deletes its trails of dots like the dust mite ship.",
+  "rle": "x = 51, y = 25, rule = B2/S0\n3bo31bo$36bo$bo4bo$bo3b3o10bo17bo$o3bob3o4bo3b2o$5bo6b3ob2o6bo10bo4bo3\nbo$o3bo3bo3bo2bo2bo5bo10bo4bo2b3o$bo6bo3b3o9bo6bo3bo3bo2b2obo$bo3bo7b2\no7bo7b3o2bo6b2ob2o3bo$5bo2bobo5b2o9bo3bo4bo$3b4o11b3ob3o2bo2b3o3bo$4bo\n3b2o6bo5b2ob2o4b2obo4bo$9bo4b3o4b3o8b2o5bo$4bo3b2o6bo5b2ob2o4b2obo4bo$\n3b4o11b3ob3o2bo2b3o3bo$5bo2bobo5b2o9bo3bo4bo$bo3bo7b2o7bo7b3o2bo6b2ob2\no3bo$bo6bo3b3o9bo6bo3bo3bo2b2obo$o3bo3bo3bo2bo2bo5bo10bo4bo2b3o$5bo6b3\nob2o6bo10bo4bo3bo$o3bob3o4bo3b2o$bo3b3o10bo17bo$bo4bo$36bo$3bo31bo!",
+  "pop": 214,
+  "kind": "spaceship",
+  "period": 8,
+  "disp": [
+   -4,
+   0
+  ]
+ },
+ {
+  "title": "c/2 p4 spaceship and backrake",
+  "by": "velcrorex",
+  "date": "2014-07-08",
+  "post": "p12570",
+  "note": "Only the second known rake or puffer slower than c. Catalogued on the wiki (probably as the hippo rake).",
+  "rle": "x = 63, y = 28, rule = B2/S0\n4bo$3bo$bobo$3bo$2bo$2o19bo$2bo3bo2bo10bo$3bob2ob2o10b3o2bo9bo2b3o$o2b\nobo4bo2bo7b3obo2bob2o4b2obo2bo$3bo16b2o16b4o$2bo6bo3bo5bobo16bo$3bo6b2\nob4o4b2o11bo2bo24bo$4b2o2bobo5b2o2bo5bo4bob2o2bo2bobo5bo5bo5b2o$13b2o2\nbo13bo2bobo6bo5bo5bo5bo$13b2o2bo13bo2bobo6bo5bo5bo5bo$4b2o2bobo5b2o2bo\n5bo4bob2o2bo2bobo5bo5bo5b2o$3bo6b2ob4o4b2o11bo2bo24bo$2bo6bo3bo5bobo16\nbo$3bo16b2o16b4o$o2bobo4bo2bo7b3obo2bob2o4b2obo2bo$3bob2ob2o10b3o2bo9b\no2b3o$2bo3bo2bo10bo$2o19bo$2bo$3bo$bobo$3bo$4bo!",
+  "pop": 190,
+  "kind": "spaceship",
+  "period": 4,
+  "disp": [
+   -2,
+   0
+  ]
+ },
+ {
+  "title": "c p4 side rake",
+  "by": "velcrorex",
+  "date": "2014-07-08",
+  "post": "p12571",
+  "note": "The smallest-period side rake, and the first sideways rake that isn’t a flotilla.",
+  "rle": "x = 19, y = 29, rule = B2/S0\n2bo$bo$bo$2bo6b2o$3b2o3bo2bo$3bobo$16bobo$bo4bobo6bo$bo2bo3b2o4bo3bo$2\nb3o3b3o3bo2bo$2bo4bo2b2o4bo$9b2o$bo8bo4bo2bo$o2b2o$o2b2o$bo8bo4bo2bo$9\nb2o$2bo4bo2b2o4bo$2b3o3b3o3bo2bo$bo2bo3b2o4bo3bo$bo4bobo6bo$16bobo$3bo\nbo$3b2o3bo2bo$2bo6b2o$bo$bo15bo$2bo9bo$13bo3bo!",
+  "pop": 96,
+  "kind": "other",
+  "period": null,
+  "disp": null
+ },
+ {
+  "title": "c p2 backrake",
+  "by": "velcrorex",
+  "date": "2014-07-09",
+  "post": "p12574",
+  "note": "Luke: “the first known rake or puffer at p2.”",
+  "rle": "x = 14, y = 34, rule = B2/S0\n3bo$2bo$2bo4bo$3bo$4b2o$bob2o2bo$o7bo$o2bo4bo$bo$3b2o2bo$4b2o$bob2o$o5\nbo5bo$o2bo6b4o$bo5bo4bo$2bo$4b3o$4b3o$2bo$bo5bo4bo$o2bo6b4o$o5bo5bo$bo\nb2o$4b2o$3b2o2bo$bo$o2bo4bo$o7bo$bob2o2bo$4b2o$3bo$2bo4bo$2bo$3bo!",
+  "pop": 82,
+  "kind": "other",
+  "period": null,
+  "disp": null
+ },
+ {
+  "title": "c p6 side rake",
+  "by": "velcrorex",
+  "date": "2014-07-09",
+  "post": "p12574",
+  "note": "A p6 side rake with a cleanup flotilla (probably the hex rake on the wiki).",
+  "rle": "x = 73, y = 66, rule = B2/S0\n22bo5b3o$21bobo$19bo$19bo28bo5b3o$21bobo23bobo$22bo5b3o14bo$45bo$47bob\no$48bo5b3o$29bo$24bo$23bo$23bo7bo5bo5bo5bo5bo$25bo$25bo$25bo4$37bo14bo\nbo$20b2o8bo5b3o$19bo2bo5bob2o3b2ob2o12bo$27bo3bo4b3o9bobo$25bo5bo5bo9b\no5bo$25bo5bo5bo9bob2o$27bo3bo4b3o13bo$14b2o12bob2o3b2ob2o12bo11bo5b3o$\n3bo9bo2bo13bo5b3o8bob2o12bobo$2bo34bo9bo5bo7bo$2bo45bobo10bo$3bo2bo12b\no5bo5bo5bo14bo10bobo$7bo2bo2bo50bo5b3o$7bo44bobo$2bo$bo3bo3b2o7bo5bo5b\no5bo5bo5bo5bo$bo6b2o7bo5bo5bo5bo5bo5bo5bo5bo5bo5bo$9bo$3b3o7bo$bobob3o\n3b2o$o7bo3bo$o7bo3bo$bobob3o3b2o$3b3o7bo$9bo$bo6b2o7bo5bo5bo5bo5bo5bo5\nbo5bo5bo5bo$bo3bo3b2o7bo5bo5bo5bo5bo5bo5bo$2bo$7bo44bobo$7bo2bo2bo50bo\n5b3o$3bo2bo12bo5bo5bo5bo14bo10bobo$2bo45bobo10bo$2bo34bo9bo5bo7bo$3bo9\nbo2bo13bo5b3o8bob2o12bobo$14b2o12bob2o3b2ob2o12bo11bo5b3o$27bo3bo4b3o1\n3bo$25bo5bo5bo9bob2o$25bo5bo5bo9bo5bo$27bo3bo4b3o9bobo$19bo2bo5bob2o3b\n2ob2o12bo$20b2o8bo5b3o$37bo14bobo4$25bo2bo$26b2o!",
+  "pop": 318,
+  "kind": "other",
+  "period": null,
+  "disp": null
+ },
+ {
+  "title": "New p4 oscillators and a big six shooter stack",
+  "by": "velcrorex",
+  "date": "2014-07-10",
+  "post": "p12592",
+  "note": "Includes the oscillators catalogued as shortwave and longwave, and a new way to connect big six shooters.",
+  "rle": "x = 113, y = 36, rule = B2/S0\n78bo9bo$77bo6bo$80bo$5bobo71bo3bo5bo$3o7b3o69bobobo$4bo3bo72bo2bobo$80\nbo$5bobo70bo2b2obo$5b3o$5bobo73b2o5bo$12bo$4bo3bo2b3o39bo7bo15bo8bo$3o\n6bo3bo2bo34b2o5bo21bo10bo$5bo2bo3bo6b3o29b2o5b5o$8b3o2bo3bo32bo6bo2bo2\n8bo$9bo46bo37bo$14bobo38bo4b2o$14b3o37bobo3bo31bo$14bobo36bo5bo37bo$21\nbo29b2o5b2o$13bo3bo2b3o29bo4b3o35bo$9b3o6bo3bo2bo26b2ob2o3b2o38bo$14bo\n2bo3bo6b3o19bobo2bo4b2o$17b3o2bo3bo25bo9bo35bo10bo$18bo84bo8bo$23bobo$\n23b3o75bo5b2o$23bobo$105bob2o2bo$22bo3bo82bo$18b3o7b3o72bobo2bo$23bobo\n77bobobo$100bo5bo3bo$109bo$105bo6bo$101bo9bo!",
+  "pop": 192,
+  "kind": "oscillator",
+  "period": 12,
+  "disp": [
+   0,
+   0
+  ]
+ },
+ {
+  "title": "Buffalo ships",
+  "by": "wildmyron",
+  "date": "2014-08-18",
+  "post": "p12932",
+  "note": "A family of p4 c/2 ships with even bilateral symmetry, found with gfind and WLS. Catalogued as the buffalo ships.",
+  "rle": "x = 100, y = 416, rule = B2/S0\n88bo$89bo8bo$99bo$99bo$75bo8bo2bobo3bo5bo$84b5o3b3o4bo$58bo14bo3bo7b3o\n5b2o$57b2obo11b2obo8bob3o4bobo2bo$58bo2bo13b2o8bo4bo2bo2bo$58bo6b3o6bo\n6b2o4bo3b2o5bo$57bo9b5o2b3o2bob3obo5bo7bo$60b5o8bo4bo8bo2bobobo$69bo2b\no$69bo2bo$60b5o8bo4bo8bo2bobobo$57bo9b5o2b3o2bob3obo5bo7bo$58bo6b3o6bo\n6b2o4bo3b2o5bo$58bo2bo13b2o8bo4bo2bo2bo$57b2obo11b2obo8bob3o4bobo2bo$5\n8bo14bo3bo7b3o5b2o$84b5o3b3o4bo$75bo8bo2bobo3bo5bo$99bo$99bo$89bo8bo$8\n8bo15$55bo32bo$56bo32bo8bo$99bo$99bo$54bobo18bo8bo2bobo3bo5bo$53b3o28b\n5o3b3o4bo$52b3o3bo14bo3bo7b3o5b2o$53bo3b2obo11b2obo8bob3o4bobo2bo$58bo\n2bo13b2o8bo4bo2bo2bo$58bo6b3o6bo6b2o4bo3b2o5bo$57bo9b5o2b3o2bob3obo5bo\n7bo$60b5o8bo4bo8bo2bobobo$69bo2bo$69bo2bo$60b5o8bo4bo8bo2bobobo$57bo9b\n5o2b3o2bob3obo5bo7bo$58bo6b3o6bo6b2o4bo3b2o5bo$58bo2bo13b2o8bo4bo2bo2b\no$53bo3b2obo11b2obo8bob3o4bobo2bo$52b3o3bo14bo3bo7b3o5b2o$53b3o28b5o3b\n3o4bo$54bobo18bo8bo2bobo3bo5bo$99bo$99bo$56bo32bo8bo$55bo32bo25$43bo14\nbo$44bo14bo38bo$42b3o14bobo27bo9bo$38bo4bo15bo8bo15bo3bo10bo$37b2o4b2o\n15bo8bo13bo9bo5bo$36b3o2bobobo15b2o6bobo10bo5bo3b3o4bo$60bo10bo2bobo2b\no4bo8b2o$39b2o7bo2bo3bo3bo10bo7bo4bo5bo3bobo2bo$35bo4b2o17b2o9bo5bobo2\nb2o6bo3bo2bo$36bo6bo2bo11bo3b4o5b4o4b2o7bob3o5bo$36bo10bo4b2o11bo7b2o1\n0bo3b3o7bo$36bo8bobo3bobo6b2o3bo7bo6bo9bobobo$58bo11bobo$58bo11bobo$36\nbo8bobo3bobo6b2o3bo7bo6bo9bobobo$36bo10bo4b2o11bo7b2o10bo3b3o7bo$36bo6\nbo2bo11bo3b4o5b4o4b2o7bob3o5bo$35bo4b2o17b2o9bo5bobo2b2o6bo3bo2bo$39b2\no7bo2bo3bo3bo10bo7bo4bo5bo3bobo2bo$60bo10bo2bobo2bo4bo8b2o$36b3o2bobob\no15b2o6bobo10bo5bo3b3o4bo$37b2o4b2o15bo8bo13bo9bo5bo$38bo4bo15bo8bo15b\no3bo10bo$42b3o14bobo27bo9bo$44bo14bo38bo$43bo14bo15$43bo14bo$44bo14bo3\n8bo$42b3o14bobo27bo9bo$38bo4bo15bo8bo15bo3bo10bo$37b2o4b2o15bo8bo13bo9\nbo5bo$36b3o2bobobo15b2o6bobo10bo5bo3b3o4bo$29bo30bo10bo2bobo2bo4bo8b2o\n$28bo10b2o7bo2bo3bo3bo10bo7bo4bo5bo3bobo2bo$23bo11bo4b2o17b2o9bo5bobo2\nb2o6bo3bo2bo$22b2obo2bo7bo6bo2bo11bo3b4o5b4o4b2o7bob3o5bo$23bo12bo10bo\n4b2o11bo7b2o10bo3b3o7bo$28b4o4bo8bobo3bobo6b2o3bo7bo6bo9bobobo$29bo2bo\n25bo11bobo$29bo2bo25bo11bobo$28b4o4bo8bobo3bobo6b2o3bo7bo6bo9bobobo$23\nbo12bo10bo4b2o11bo7b2o10bo3b3o7bo$22b2obo2bo7bo6bo2bo11bo3b4o5b4o4b2o7\nbob3o5bo$23bo11bo4b2o17b2o9bo5bobo2b2o6bo3bo2bo$28bo10b2o7bo2bo3bo3bo1\n0bo7bo4bo5bo3bobo2bo$29bo30bo10bo2bobo2bo4bo8b2o$36b3o2bobobo15b2o6bob\no10bo5bo3b3o4bo$37b2o4b2o15bo8bo13bo9bo5bo$38bo4bo15bo8bo15bo3bo10bo$4\n2b3o14bobo27bo9bo$44bo14bo38bo$43bo14bo15$43bo14bo$44bo14bo38bo$20bo21\nb3o14bobo27bo9bo$21bo16bo4bo15bo8bo15bo3bo10bo$37b2o4b2o15bo8bo13bo9bo\n5bo$36b3o2bobobo15b2o6bobo10bo5bo3b3o4bo$19bobo7bo30bo10bo2bobo2bo4bo8\nb2o$18b3o7bo10b2o7bo2bo3bo3bo10bo7bo4bo5bo3bobo2bo$17b3o3bo11bo4b2o17b\n2o9bo5bobo2b2o6bo3bo2bo$18bo3b2obo2bo7bo6bo2bo11bo3b4o5b4o4b2o7bob3o5b\no$23bo12bo10bo4b2o11bo7b2o10bo3b3o7bo$28b4o4bo8bobo3bobo6b2o3bo7bo6bo9\nbobobo$29bo2bo25bo11bobo$29bo2bo25bo11bobo$28b4o4bo8bobo3bobo6b2o3bo7b\no6bo9bobobo$23bo12bo10bo4b2o11bo7b2o10bo3b3o7bo$18bo3b2obo2bo7bo6bo2bo\n11bo3b4o5b4o4b2o7bob3o5bo$17b3o3bo11bo4b2o17b2o9bo5bobo2b2o6bo3bo2bo$1\n8b3o7bo10b2o7bo2bo3bo3bo10bo7bo4bo5bo3bobo2bo$19bobo7bo30bo10bo2bobo2b\no4bo8b2o$36b3o2bobobo15b2o6bobo10bo5bo3b3o4bo$37b2o4b2o15bo8bo13bo9bo5\nbo$21bo16bo4bo15bo8bo15bo3bo10bo$20bo21b3o14bobo27bo9bo$44bo14bo38bo$4\n3bo14bo15$43bo14bo$44bo14bo38bo$42b3o14bobo27bo9bo$25bo12bo4bo15bo8bo1\n5bo3bo10bo$21bo2b3o10b2o4b2o15bo8bo13bo9bo5bo$20b2obo3bo8b3o2bobobo15b\n2o6bobo10bo5bo3b3o4bo$21b5o34bo10bo2bobo2bo4bo8b2o$22b2o5bo9b2o7bo2bo3\nbo3bo10bo7bo4bo5bo3bobo2bo$27bo7bo4b2o17b2o9bo5bobo2b2o6bo3bo2bo$21bo6\nbo7bo6bo2bo11bo3b4o5b4o4b2o7bob3o5bo$20bo4b3o8bo10bo4b2o11bo7b2o10bo3b\n3o7bo$29b3o4bo8bobo3bobo6b2o3bo7bo6bo9bobobo$29bo2bo25bo11bobo$29bo2bo\n25bo11bobo$29b3o4bo8bobo3bobo6b2o3bo7bo6bo9bobobo$20bo4b3o8bo10bo4b2o1\n1bo7b2o10bo3b3o7bo$21bo6bo7bo6bo2bo11bo3b4o5b4o4b2o7bob3o5bo$27bo7bo4b\n2o17b2o9bo5bobo2b2o6bo3bo2bo$22b2o5bo9b2o7bo2bo3bo3bo10bo7bo4bo5bo3bob\no2bo$21b5o34bo10bo2bobo2bo4bo8b2o$20b2obo3bo8b3o2bobobo15b2o6bobo10bo5\nbo3b3o4bo$21bo2b3o10b2o4b2o15bo8bo13bo9bo5bo$25bo12bo4bo15bo8bo15bo3bo\n10bo$42b3o14bobo27bo9bo$44bo14bo38bo$43bo14bo15$43bo14bo$44bo14bo38bo$\n16bo25b3o14bobo27bo9bo$15bo9bo12bo4bo15bo8bo15bo3bo10bo$21bo2b3o10b2o4\nb2o15bo8bo13bo9bo5bo$15bo4b2obo3bo8b3o2bobobo15b2o6bobo10bo5bo3b3o4bo$\n21b5o34bo10bo2bobo2bo4bo8b2o$16b2o4b2o5bo9b2o7bo2bo3bo3bo10bo7bo4bo5bo\n3bobo2bo$16bo10bo7bo4b2o17b2o9bo5bobo2b2o6bo3bo2bo$21bo6bo7bo6bo2bo11b\no3b4o5b4o4b2o7bob3o5bo$20bo4b3o8bo10bo4b2o11bo7b2o10bo3b3o7bo$29b3o4bo\n8bobo3bobo6b2o3bo7bo6bo9bobobo$29bo2bo25bo11bobo$29bo2bo25bo11bobo$29b\n3o4bo8bobo3bobo6b2o3bo7bo6bo9bobobo$20bo4b3o8bo10bo4b2o11bo7b2o10bo3b3\no7bo$21bo6bo7bo6bo2bo11bo3b4o5b4o4b2o7bob3o5bo$16bo10bo7bo4b2o17b2o9bo\n5bobo2b2o6bo3bo2bo$16b2o4b2o5bo9b2o7bo2bo3bo3bo10bo7bo4bo5bo3bobo2bo$2\n1b5o34bo10bo2bobo2bo4bo8b2o$15bo4b2obo3bo8b3o2bobobo15b2o6bobo10bo5bo3\nb3o4bo$21bo2b3o10b2o4b2o15bo8bo13bo9bo5bo$15bo9bo12bo4bo15bo8bo15bo3bo\n10bo$16bo25b3o14bobo27bo9bo$44bo14bo38bo$43bo14bo25$57bo30bo$56b2obobo\n27bo8bo$34bo10bo11b2o3bo36bo$33b2obo9bo4bobo4bo3bo36bo$34b2o14bo3bo7bo\n12bo8bo2bobo3bo5bo$54bobo5bo21b5o3b3o4bo$26bobo7b3o5bobo2bo4b2o17bo3bo\n7b3o5b2o$17bo4bo9b3o4bob2o2bo4bo2b2o6bo10b2obo8bob3o4bobo2bo$18bo2b3o1\n8b2o6b2obo3bo17b2o8bo4bo2bo2bo$18bo4bo2bo4bo2bo7bo3bo2bo3bo4bo6b3o6bo6\nb2o4bo3b2o5bo$17bo3bo2bobo6b2o6bo7bo3bo7b2o4b5o2b3o2bob3obo5bo7bo$16bo\n2bobo2bo2bo4bo2bo4bo5bo4b3obo2bo4b2o8bo4bo8bo2bobobo$36bo8bo6bo2bo2bo2\nb2o6bo2bo$36bo8bo6bo2bo2bo2b2o6bo2bo$16bo2bobo2bo2bo4bo2bo4bo5bo4b3obo\n2bo4b2o8bo4bo8bo2bobobo$17bo3bo2bobo6b2o6bo7bo3bo7b2o4b5o2b3o2bob3obo5\nbo7bo$18bo4bo2bo4bo2bo7bo3bo2bo3bo4bo6b3o6bo6b2o4bo3b2o5bo$18bo2b3o18b\n2o6b2obo3bo17b2o8bo4bo2bo2bo$17bo4bo9b3o4bob2o2bo4bo2b2o6bo10b2obo8bob\n3o4bobo2bo$26bobo7b3o5bobo2bo4b2o17bo3bo7b3o5b2o$54bobo5bo21b5o3b3o4bo\n$34b2o14bo3bo7bo12bo8bo2bobo3bo5bo$33b2obo9bo4bobo4bo3bo36bo$34bo10bo1\n1b2o3bo36bo$56b2obobo27bo8bo$57bo30bo25$57bo30bo$10bo45b2obobo27bo8bo$\n11bo22bo10bo11b2o3bo36bo$15bo17b2obo9bo4bobo4bo3bo36bo$16bo17b2o14bo3b\no7bo12bo8bo2bobo3bo5bo$6bo2bobo42bobo5bo21b5o3b3o4bo$7b2obo15bobo7b3o5\nbobo2bo4b2o17bo3bo7b3o5b2o$14bobo5bo9b3o4bob2o2bo4bo2b2o6bo10b2obo8bob\n3o4bobo2bo$7b3o4b2o5b3o18b2o6b2obo3bo17b2o8bo4bo2bo2bo$6bo4bo11bo2bo4b\no2bo7bo3bo2bo3bo4bo6b3o6bo6b2o4bo3b2o5bo$15bo2bo2bo2bobo6b2o6bo7bo3bo7\nb2o4b5o2b3o2bob3obo5bo7bo$11bo6b2obo2bo2bo4bo2bo4bo5bo4b3obo2bo4b2o8bo\n4bo8bo2bobobo$18bobo15bo8bo6bo2bo2bo2b2o6bo2bo$18bobo15bo8bo6bo2bo2bo2\nb2o6bo2bo$11bo6b2obo2bo2bo4bo2bo4bo5bo4b3obo2bo4b2o8bo4bo8bo2bobobo$15\nbo2bo2bo2bobo6b2o6bo7bo3bo7b2o4b5o2b3o2bob3obo5bo7bo$6bo4bo11bo2bo4bo2\nbo7bo3bo2bo3bo4bo6b3o6bo6b2o4bo3b2o5bo$7b3o4b2o5b3o18b2o6b2obo3bo17b2o\n8bo4bo2bo2bo$14bobo5bo9b3o4bob2o2bo4bo2b2o6bo10b2obo8bob3o4bobo2bo$7b2\nobo15bobo7b3o5bobo2bo4b2o17bo3bo7b3o5b2o$6bo2bobo42bobo5bo21b5o3b3o4bo\n$16bo17b2o14bo3bo7bo12bo8bo2bobo3bo5bo$15bo17b2obo9bo4bobo4bo3bo36bo$1\n1bo22bo10bo11b2o3bo36bo$10bo45b2obobo27bo8bo$57bo30bo15$bo55bo30bo$o9b\no45b2obobo27bo8bo$11bo22bo10bo11b2o3bo36bo$o14bo17b2obo9bo4bobo4bo3bo3\n6bo$16bo17b2o14bo3bo7bo12bo8bo2bobo3bo5bo$b2o3bo2bobo42bobo5bo21b5o3b3\no4bo$bo5b2obo15bobo7b3o5bobo2bo4b2o17bo3bo7b3o5b2o$14bobo5bo9b3o4bob2o\n2bo4bo2b2o6bo10b2obo8bob3o4bobo2bo$7b3o4b2o5b3o18b2o6b2obo3bo17b2o8bo4\nbo2bo2bo$6bo4bo11bo2bo4bo2bo7bo3bo2bo3bo4bo6b3o6bo6b2o4bo3b2o5bo$15bo2\nbo2bo2bobo6b2o6bo7bo3bo7b2o4b5o2b3o2bob3obo5bo7bo$11bo6b2obo2bo2bo4bo2\nbo4bo5bo4b3obo2bo4b2o8bo4bo8bo2bobobo$18bobo15bo8bo6bo2bo2bo2b2o6bo2bo\n$18bobo15bo8bo6bo2bo2bo2b2o6bo2bo$11bo6b2obo2bo2bo4bo2bo4bo5bo4b3obo2b\no4b2o8bo4bo8bo2bobobo$15bo2bo2bo2bobo6b2o6bo7bo3bo7b2o4b5o2b3o2bob3obo\n5bo7bo$6bo4bo11bo2bo4bo2bo7bo3bo2bo3bo4bo6b3o6bo6b2o4bo3b2o5bo$7b3o4b2\no5b3o18b2o6b2obo3bo17b2o8bo4bo2bo2bo$14bobo5bo9b3o4bob2o2bo4bo2b2o6bo1\n0b2obo8bob3o4bobo2bo$bo5b2obo15bobo7b3o5bobo2bo4b2o17bo3bo7b3o5b2o$b2o\n3bo2bobo42bobo5bo21b5o3b3o4bo$16bo17b2o14bo3bo7bo12bo8bo2bobo3bo5bo$o1\n4bo17b2obo9bo4bobo4bo3bo36bo$11bo22bo10bo11b2o3bo36bo$o9bo45b2obobo27b\no8bo$bo55bo30bo!",
+  "pop": 3000,
+  "kind": "other",
+  "period": null,
+  "disp": null
+ },
+ {
+  "title": "Buffalo rake and ship",
+  "by": "wildmyron",
+  "date": "2014-08-19",
+  "post": "p12938",
+  "note": "A p4 c/2 back rake; catalogued as the buffalo rake, then the smallest known c/2 puffer or rake.",
+  "rle": "x = 21, y = 82, rule = B2/S0\n4bo$5bo$3b3o$bo2bo$3bo3bo11bo$20bo$20bo$9bo4bo5bo$7bo5b3o4bo$4b4o2bo3b\n2o$6bo7bobo2bo$6bo4bo2bo2bo$12b2o5bo$12bo7bo$5bo5bobobo$4bo5bo$4bo5bo$\n5bo5bobobo$12bo7bo$12b2o5bo$6bo4bo2bo2bo$6bo7bobo2bo$4b4o2bo3b2o$7bo5b\n3o4bo$9bo4bo5bo$20bo$20bo$3bo3bo11bo$bo2bo$3b3o$5bo$4bo19$4bo$5bo$3b3o\n$bo2bo$3bo3bo11bo$20bo$20bo$9bo4bo5bo$7bo5b3o4bo$4b4o2bo3b2o$6bo7bobo2\nbo$6bo4bo2bo2bo$12b2o5bo$o11bo7bo$5bo5bobobo$4bo5bo$4bo5bo$5bo5bobobo$\no11bo7bo$12b2o5bo$6bo4bo2bo2bo$6bo7bobo2bo$4b4o2bo3b2o$7bo5b3o4bo$9bo4\nbo5bo$20bo$20bo$3bo3bo11bo$bo2bo$3b3o$5bo$4bo!",
+  "pop": 186,
+  "kind": "other",
+  "period": null,
+  "disp": null
+ },
+ {
+  "title": "Buffalo bird",
+  "by": "wildmyron",
+  "date": "2014-08-22",
+  "post": "p12956",
+  "note": "A tagalong that can hop onto most known c/2 ships; it only needs two diagonally adjacent cells in its third generation.",
+  "rle": "x = 44, y = 20, rule = B2/S0\n5bo$bo2b3o$2obo3bo$b5o20bo$2b2o5bo17bo5bobo2bo$7bo33bo$bo6bo12bo11bob2\nobobobo$o4b3o14bo2bobo13b2o$9b3o4bo3bobo2b2o3bo5bo4bo$9bo2bo3bo2b3o9b2\nobo3b5o$9bo2bo3bo6b3o15bobo$9b3o6bo8bo10bo$o4b3o15bo3bobo9bo$bo6bo7bo8\nbo8bo5bo2bo$7bo5bobo10b3o6bo4bobo$2b2o5bo13bo4bo7bo3bo$b5o21bo$2obo3bo\n$bo2b3o$5bo!",
+  "pop": 127,
+  "kind": "spaceship",
+  "period": 4,
+  "disp": [
+   2,
+   0
+  ]
+ },
+ {
+  "title": "p3 puffers (bent tricycle puffer)",
+  "by": "wildmyron",
+  "date": "2014-08-22",
+  "post": "p12956",
+  "note": "A variation of the tricycle puffer and a single dot puffer.",
+  "rle": "x = 29, y = 49, rule = B2/S0\n23bo$22b2obo$22bo3bo$22b2o4bo$28bo2$22b2o$21bo2b2o2bo$24b2o2bo$22b2o2$\n24b2o2bo$25bo2bo$23bo3bo$23bo2bo$23bobo$24bo14$21bobo$o2bo4bobo9bo3bo$\n7bo3bo3bo7bobo$6bo4bo7b2o2bo2bo$10b2o3bo7bo4bo$6bo3b2o4bobo4bo4bo$11b2\no8bobo$12bo7b4o$16bobobo7bo$19bobobo4bo$7bo4bobo8bo2bo$bo5bo4bo9b2obo$\n3o4bo3b3ob2o$5obo13b2o$o5bo14bo2bo$6bo3bo3bo6bo2bo$15bo6bo$15bo3bobo$1\n4bo!",
+  "pop": 124,
+  "kind": "other",
+  "period": null,
+  "disp": null
+ },
+ {
+  "title": "Wave-riding ship",
+  "by": "velcrorex",
+  "date": "2014-10-02",
+  "post": "p13595",
+  "note": "A p6 ship carrying an infinitely growing wave, found with WinLifeSearch using “don’t care” cells.",
+  "rle": "x = 224, y = 224, rule = B2/S0\n105b2o10b2o$104bo2bo8bo2bo$103bo7b2o7bo$102bo4b3o4b3o4bo$101bo6bo6bo6b\no$100bo7bo6bo7bo$99bo3bo2bob3o2b3obo2bo3bo$98bo3bo4bo8bo4bo3bo$97bo28b\no$96bo7bo14bo7bo$95bo8bo3bobo2bobo3bo8bo$94bo10bobo3b2o3bobo10bo$93bo3\nbo11bo4bo11bo3bo$92bo3bo10bo8bo10bo3bo$91bo10bo2bobo2bo2bo2bobo2bo10bo\n$90bo15b4o4b4o15bo$89bo12bo4bo8bo4bo12bo$88bo46bo$87bo3bo13bo2bo6bo2bo\n13bo3bo$86bo3bo19b4o19bo3bo$85bo16bo4bobo4bobo4bo16bo$84bo26b2o26bo$83\nbo56bo$82bo18bo4b2o8b2o4bo18bo$81bo3bo21bobo4bobo21bo3bo$80bo3bo16bo3b\nob2o6b2obo3bo16bo3bo$79bo22bo3b3o6b3o3bo22bo$78bo66bo$77bo28b2o8b2o28b\no$76bo33bo2bo33bo$75bo3bo22bo2bo12bo2bo22bo3bo$74bo3bo25b3o10b3o25bo3b\no$73bo31bo12bo31bo$72bo33b2o2bo2bo2b2o33bo$71bo34bo10bo34bo$70bo25b2o7\nb3o8b3o7b2o25bo$69bo3bo21bo2bo6b2o3bo2bo3b2o6bo2bo21bo3bo$68bo3bo26bo6\nbo3bo2bo3bo6bo26bo3bo$67bo30bo3bob2o12b2obo3bo30bo$66bo33b2o2b2o2bobo2\nbobo2b2o2b2o33bo$65bo37bo4bobo2bobo4bo37bo$64bo36b2o2bo12bo2b2o36bo$63\nbo3bo39bobo4bobo39bo3bo$62bo3bo34bo9b2o9bo34bo3bo$61bo38b3o3bo4b2o4bo3\nb3o38bo$60bo36bo3bo6b2o4b2o6bo3bo36bo$59bo43b2o14b2o43bo$58bo43b2o3bo8\nbo3b2o43bo$57bo3bo39bobobo12bobobo39bo3bo$56bo3bo36bo5bobo12bobo5bo36b\no3bo$55bo46bo18bo46bo$54bo42bo2b2o4bo10bo4b2o2bo42bo$53bo45bo3bo16bo3b\no45bo$52bo45b3o22b3o45bo$51bo3bo43bo24bo43bo3bo$50bo3bo114bo3bo$49bo54\nbo14bo54bo$48bo50bo5bo12bo5bo50bo$47bo48bo30bo48bo$46bo56bo16bo56bo$45\nbo3bo54bo6b2o6bo54bo3bo$44bo3bo55bo5bo2bo5bo55bo3bo$43bo59bo5bo4bo5bo5\n9bo$42bo56bo10bo2bo10bo56bo$41bo47b2o5bo8b2o2bo4bo2b2o8bo5b2o47bo$40bo\n64b4o6b4o64bo$39bo3bo44bo2bo14bo4b2o4bo14bo2bo44bo3bo$38bo3bo44bo4bo9b\no4b2o6b2o4bo9bo4bo44bo3bo$37bo61bobo4bob2o4b2obo4bobo61bo$36bo49b2o4b2\no16b4o16b2o4b2o49bo$35bo51b6o3bo11b2o4b2o11bo3b6o51bo$34bo154bo$33bo3b\no65bo16bo65bo3bo$32bo3bo63b5o14b5o63bo3bo$31bo55bo4bo10bo2bo10bo2bo10b\no4bo55bo$30bo55b3o2b3o12bo10bo12b3o2b3o55bo$29bo55b2ob4ob2obo12bo4bo12\nbob2ob4ob2o55bo$28bo57b3o2b3o36b3o2b3o57bo$27bo3bo55bo4bo38bo4bo55bo3b\no$26bo3bo76bo8bo76bo3bo$25bo172bo$24bo174bo$23bo82bobo6bobo82bo$22bo82\nbo12bo82bo$21bo3bo79bo12bo79bo3bo$20bo3bo51bo27bob2obo4bob2obo27bo51bo\n3bo$19bo49bo5b3o27bo12bo27b3o5bo49bo$18bo48bob2o3b2ob2o26bo12bo26b2ob2\no3b2obo48bo$17bo48bo3bo4b3o28bo2bob2obo2bo28b3o4bo3bo48bo$16bo47bo5bo5\nbo28bo3bob2obo3bo28bo5bo5bo47bo$15bo3bo44bo5bo5bo27bo14bo27bo5bo5bo44b\no3bo$14bo3bo47bo3bo4b3o30bo6bo30b3o4bo3bo47bo3bo$13bo53bob2o3b2ob2o28b\no8bo28b2ob2o3b2obo53bo$12bo56bo5b3o31bo4bo31b3o5bo56bo$11bo64bo33bo2bo\n33bo64bo$10bo25bo68bo12bo68bo25bo$9bo3bo21bo22bo5bo5bo5bo70bo5bo5bo5bo\n22bo21bo3bo$8bo3bo22bo9bo3bobo120bobo3bo9bo22bo3bo$7bo28bobo14bo53bo8b\no53bo14bobo28bo$6bo30bo14b3o2bo5bo4bo39bo6bo39bo4bo5bo2b3o14bo30bo$5bo\n33bo4bo6bobo19bo34bo6bo34bo19bobo6bo4bo33bo$4bo18bobo13bobob3o2bo2bo16\nbo4bo33bo8bo33bo4bo16bo2bo2b3obobo13bobo18bo$3bo3bo6bobo3bo5bo3bo7bo2b\no2bo2bo2bo16bo5bo76bo5bo16bo2bo2bo2bo2bo7bo3bo5bo3bobo6bo3bo$2bo3bo33b\no5b4o2bo6bo2bo9b3o74b3o9bo2bo6bo2b4o5bo33bo3bo$bo7b2o20bo6b2o6bo9bo3b2\no11bo11bo4bo42bo4bo11bo11b2o3bo9bo6b2o6bo20b2o7bo$o10bo2bo3bo6bo4b3o2b\n2ob2obo6b2o7bo6b2o17b2ob2obo5bo32bo5bob2ob2o17b2o6bo7b2o6bob2ob2o2b3o4\nbo6bo3bo2bo10bo$o5bo8bo7bo2bobo2bob5o6bo6bo12b3obo5b2o6bo2bo2bo46bo2bo\n2bo6b2o5bob3o12bo6bo6b5obo2bobo2bo7bo8bo5bo$bobo3bo3bob4o3bo2b4obo4bob\no6bo4bo17bobo11bo5bo6bo5bo2bo20bo2bo5bo6bo5bo11bobo17bo4bo6bobo4bob4o2\nbo3b4obo3bo3bobo$3b4o3bo4bo2bo6b2o12b2o4bo19bob2obo11bo8bo7b2o22b2o7bo\n8bo11bob2obo19bo4b2o12b2o6bo2bo4bo3b4o$3bo2bo5bo2bo4bo3bo17bo2bo16bobo\n3bobo5bo8bo2b2o3bo36bo3b2o2bo8bo5bobo3bobo16bo2bo17bo3bo4bo2bo5bo2bo$6\nbo3bo3bo4bo9bo3bo2b2ob2o20bobo5bo24bo34bo24bo5bobo20b2ob2o2bo3bo9bo4bo\n3bo3bo$2bo8bo7bobo21b2o15bo5bo2bo18b2o44b2o18bo2bo5bo15b2o21bobo7bo8bo\n$2bo8bo7bobo21b2o15bo5bo2bo18b2o44b2o18bo2bo5bo15b2o21bobo7bo8bo$6bo3b\no3bo4bo9bo3bo2b2ob2o20bobo5bo24bo34bo24bo5bobo20b2ob2o2bo3bo9bo4bo3bo3\nbo$3bo2bo5bo2bo4bo3bo17bo2bo16bobo3bobo5bo8bo2b2o3bo36bo3b2o2bo8bo5bob\no3bobo16bo2bo17bo3bo4bo2bo5bo2bo$3b4o3bo4bo2bo6b2o12b2o4bo19bob2obo11b\no8bo7b2o22b2o7bo8bo11bob2obo19bo4b2o12b2o6bo2bo4bo3b4o$bobo3bo3bob4o3b\no2b4obo4bobo6bo4bo17bobo11bo5bo6bo5bo2bo20bo2bo5bo6bo5bo11bobo17bo4bo6\nbobo4bob4o2bo3b4obo3bo3bobo$o5bo8bo7bo2bobo2bob5o6bo6bo12b3obo5b2o6bo2\nbo2bo46bo2bo2bo6b2o5bob3o12bo6bo6b5obo2bobo2bo7bo8bo5bo$o10bo2bo3bo6bo\n4b3o2b2ob2obo6b2o7bo6b2o17b2ob2obo5bo32bo5bob2ob2o17b2o6bo7b2o6bob2ob2\no2b3o4bo6bo3bo2bo10bo$bo7b2o20bo6b2o6bo9bo3b2o11bo11bo4bo42bo4bo11bo11\nb2o3bo9bo6b2o6bo20b2o7bo$2bo3bo33bo5b4o2bo6bo2bo9b3o74b3o9bo2bo6bo2b4o\n5bo33bo3bo$3bo3bo6bobo3bo5bo3bo7bo2bo2bo2bo2bo16bo5bo76bo5bo16bo2bo2bo\n2bo2bo7bo3bo5bo3bobo6bo3bo$4bo18bobo13bobob3o2bo2bo16bo4bo33bo8bo33bo4\nbo16bo2bo2b3obobo13bobo18bo$5bo33bo4bo6bobo19bo34bo6bo34bo19bobo6bo4bo\n33bo$6bo30bo14b3o2bo5bo4bo39bo6bo39bo4bo5bo2b3o14bo30bo$7bo28bobo14bo5\n3bo8bo53bo14bobo28bo$8bo3bo22bo9bo3bobo120bobo3bo9bo22bo3bo$9bo3bo21bo\n22bo5bo5bo5bo70bo5bo5bo5bo22bo21bo3bo$10bo25bo68bo12bo68bo25bo$11bo64b\no33bo2bo33bo64bo$12bo56bo5b3o31bo4bo31b3o5bo56bo$13bo53bob2o3b2ob2o28b\no8bo28b2ob2o3b2obo53bo$14bo3bo47bo3bo4b3o30bo6bo30b3o4bo3bo47bo3bo$15b\no3bo44bo5bo5bo27bo14bo27bo5bo5bo44bo3bo$16bo47bo5bo5bo28bo3bob2obo3bo2\n8bo5bo5bo47bo$17bo48bo3bo4b3o28bo2bob2obo2bo28b3o4bo3bo48bo$18bo48bob2\no3b2ob2o26bo12bo26b2ob2o3b2obo48bo$19bo49bo5b3o27bo12bo27b3o5bo49bo$20\nbo3bo51bo27bob2obo4bob2obo27bo51bo3bo$21bo3bo79bo12bo79bo3bo$22bo82bo1\n2bo82bo$23bo82bobo6bobo82bo$24bo174bo$25bo172bo$26bo3bo76bo8bo76bo3bo$\n27bo3bo55bo4bo38bo4bo55bo3bo$28bo57b3o2b3o36b3o2b3o57bo$29bo55b2ob4ob2\nobo12bo4bo12bob2ob4ob2o55bo$30bo55b3o2b3o12bo10bo12b3o2b3o55bo$31bo55b\no4bo10bo2bo10bo2bo10bo4bo55bo$32bo3bo63b5o14b5o63bo3bo$33bo3bo65bo16bo\n65bo3bo$34bo154bo$35bo51b6o3bo11b2o4b2o11bo3b6o51bo$36bo49b2o4b2o16b4o\n16b2o4b2o49bo$37bo61bobo4bob2o4b2obo4bobo61bo$38bo3bo44bo4bo9bo4b2o6b2\no4bo9bo4bo44bo3bo$39bo3bo44bo2bo14bo4b2o4bo14bo2bo44bo3bo$40bo64b4o6b4\no64bo$41bo47b2o5bo8b2o2bo4bo2b2o8bo5b2o47bo$42bo56bo10bo2bo10bo56bo$43\nbo59bo5bo4bo5bo59bo$44bo3bo55bo5bo2bo5bo55bo3bo$45bo3bo54bo6b2o6bo54bo\n3bo$46bo56bo16bo56bo$47bo48bo30bo48bo$48bo50bo5bo12bo5bo50bo$49bo54bo1\n4bo54bo$50bo3bo114bo3bo$51bo3bo43bo24bo43bo3bo$52bo45b3o22b3o45bo$53bo\n45bo3bo16bo3bo45bo$54bo42bo2b2o4bo10bo4b2o2bo42bo$55bo46bo18bo46bo$56b\no3bo36bo5bobo12bobo5bo36bo3bo$57bo3bo39bobobo12bobobo39bo3bo$58bo43b2o\n3bo8bo3b2o43bo$59bo43b2o14b2o43bo$60bo36bo3bo6b2o4b2o6bo3bo36bo$61bo38\nb3o3bo4b2o4bo3b3o38bo$62bo3bo34bo9b2o9bo34bo3bo$63bo3bo39bobo4bobo39bo\n3bo$64bo36b2o2bo12bo2b2o36bo$65bo37bo4bobo2bobo4bo37bo$66bo33b2o2b2o2b\nobo2bobo2b2o2b2o33bo$67bo30bo3bob2o12b2obo3bo30bo$68bo3bo26bo6bo3bo2bo\n3bo6bo26bo3bo$69bo3bo21bo2bo6b2o3bo2bo3b2o6bo2bo21bo3bo$70bo25b2o7b3o8\nb3o7b2o25bo$71bo34bo10bo34bo$72bo33b2o2bo2bo2b2o33bo$73bo31bo12bo31bo$\n74bo3bo25b3o10b3o25bo3bo$75bo3bo22bo2bo12bo2bo22bo3bo$76bo33bo2bo33bo$\n77bo28b2o8b2o28bo$78bo66bo$79bo22bo3b3o6b3o3bo22bo$80bo3bo16bo3bob2o6b\n2obo3bo16bo3bo$81bo3bo21bobo4bobo21bo3bo$82bo18bo4b2o8b2o4bo18bo$83bo5\n6bo$84bo26b2o26bo$85bo16bo4bobo4bobo4bo16bo$86bo3bo19b4o19bo3bo$87bo3b\no13bo2bo6bo2bo13bo3bo$88bo46bo$89bo12bo4bo8bo4bo12bo$90bo15b4o4b4o15bo\n$91bo10bo2bobo2bo2bo2bobo2bo10bo$92bo3bo10bo8bo10bo3bo$93bo3bo11bo4bo1\n1bo3bo$94bo10bobo3b2o3bobo10bo$95bo8bo3bobo2bobo3bo8bo$96bo7bo14bo7bo$\n97bo28bo$98bo3bo4bo8bo4bo3bo$99bo3bo2bob3o2b3obo2bo3bo$100bo7bo6bo7bo$\n101bo6bo6bo6bo$102bo4b3o4b3o4bo$103bo7b2o7bo$104bo2bo8bo2bo$105b2o10b2\no!",
+  "pop": 2512,
+  "kind": "other",
+  "period": null,
+  "disp": null
+ },
+ {
+  "title": "c/3 ship (wasp ship)",
+  "by": "simsim314",
+  "date": "2014-10-05",
+  "post": "p13652",
+  "note": "The first c/3 spaceship, which won one of Luke’s cash prizes. Named the wasp ship.",
+  "rle": "x = 118, y = 29, rule = B2/S0\n9bo32bo37bo$8b3o23bo42bo$8bob2obobo14bo3b4o42bo3bobo15bo$2b3o8bo4bo3bo\n6bo3b3obo36bo5bo18bo7bo$4b2o5bo9bo3bobobo4bob4o8bo7bo16bo5b2o24bo2bo$o\n3b2o5bob2o6bo5bo6bo3bobo6b2obo4b3o20b2o11bo12bo2bo5b3o$o15b2o3b5o8bo6b\no6bo5b2o19bo2b2ob2o2b2o2b2o4bo16bobo$o3bob2o5bo5bo2bobo2bo5b3o4b2o7bo6\nbo4bo9bo2bo2b3o2bo4bo12bo12bo$o3bo9bo4bo5b6o2bo2bo4b2ob2o5bo8bobo5b3o7\nbo19bo2bo$o3bo2bo5bobo2bo5b2o2bo3bo4bo2bo4b2o3bo3bo6bo11bo8bo2bobo9bo2\nbo13bo$bo3b2o4bobo3bo3bo2b2o5bo5bo6bo2bo9bo9b2o10bo2bo5bo26bobo$4b2o7b\no6b3o5bob2ob3obo3bobo5b3o14bo2bo13bo7bobo$5b3o4bo21b2o3bo3b2o5bo13bo2b\n2o10bo2b3o$8bo4bo11bo4bo10bo3bo4b2o3b4o7b2o$13bo2bo7bo2bo2bo20bo2b2o7b\no3bo20bo$8bo4bo11bo4bo10bo3bo4b2o3b4o7b2o$5b3o4bo21b2o3bo3b2o5bo13bo2b\n2o10bo2b3o$4b2o7bo6b3o5bob2ob3obo3bobo5b3o14bo2bo13bo7bobo$bo3b2o4bobo\n3bo3bo2b2o5bo5bo6bo2bo9bo9b2o10bo2bo5bo26bobo$o3bo2bo5bobo2bo5b2o2bo3b\no4bo2bo4b2o3bo3bo6bo11bo8bo2bobo9bo2bo13bo$o3bo9bo4bo5b6o2bo2bo4b2ob2o\n5bo8bobo5b3o7bo19bo2bo$o3bob2o5bo5bo2bobo2bo5b3o4b2o7bo6bo4bo9bo2bo2b3\no2bo4bo12bo12bo$o15b2o3b5o8bo6bo6bo5b2o19bo2b2ob2o2b2o2b2o4bo16bobo$o3\nb2o5bob2o6bo5bo6bo3bobo6b2obo4b3o20b2o11bo12bo2bo5b3o$4b2o5bo9bo3bobob\no4bob4o8bo7bo16bo5b2o24bo2bo$2b3o8bo4bo3bo6bo3b3obo36bo5bo18bo7bo$8bob\n2obobo14bo3b4o42bo3bobo15bo$8b3o23bo42bo$9bo32bo37bo!",
+  "pop": 523,
+  "kind": "spaceship",
+  "period": 6,
+  "disp": [
+   -2,
+   0
+  ]
+ },
+ {
+  "title": "Extended wasp ships",
+  "by": "lukebradford",
+  "date": "2014-10-17",
+  "post": "p13882",
+  "note": "The wasp ship is extensible.",
+  "rle": "x = 208, y = 73, rule = B2/S0\n203b3o$199bo2bobo$203bo2$196b3o5bo$178bo13bo2bobo7bobo$175bo7bo12bo$18\n1bo2bo$180bo2bo5b3o5bo$171bo16bobo7bobo$157b3o8bo7bo12bo$153bo2bobo15b\no2bo$157bo15bo2bo13bo$164bo26bobo$150b3o5bo10bo$132bo13bo2bobo7bobo5bo\n2bo$129bo7bo12bo15bo2bo$135bo2bo$134bo2bo5b3o5bo$125bo16bobo7bobo$111b\n3o8bo7bo12bo$107bo2bobo15bo2bo$8bo34bo34bo32bo15bo2bo13bo$9bo24bo3bobo\n38bo2bobo33bo26bobo$12bo3bo2bobo7bo11bo62b3o5bo10bo$10bob3obobo3bo4bob\no2bo5bo3bo33bo23bo2bobo7bobo5bo2bo$13bobo16bo5b2o3bo7bo23bobo3bo4bo17b\no15bo2bo$bo2bo3b3o2bo2bobo7bo5bo6b2o9b3o22b2o9bo4bo$obo7b2ob3o2bo2bo10\nbo7b2obo2bo5b2o19b2o2b2o2b2obobo4b2o4b3o5bo$7bo2bo4bo5bo10b2obo9bo2bo2\nbo3b2o16bo6b3o3bo4bo4bobo7bobo$7bo7bo3b2o6bo4bo12bo3b2o3bo17bo8bo8bobo\n4bo$o6bo3bo9bo5b4obo11bo10bo2b2o5bo3bo2bo7bo8bobo$bo4bo11b3o7bo4bo5bo1\n2bo7bo3b2ob2o3bo5bo4bob2o3bo7bo$4bo2bo16bo2b2o4bo3bobo3bo9bob2o3bo11bo\n9bo6bo9bobo$6bo5bo2bo2b2o18b3o2bob2o17bo23bo$8bo4bo2bo20b3o18bo2bobo2b\nobo$8bo7b2o3b2o14bob2o7b2o8bo3b3ob3o20bo$8bo4bo2bo20b3o18bo2bobo2bobo$\n6bo5bo2bo2b2o18b3o2bob2o17bo23bo$4bo2bo16bo2b2o4bo3bobo3bo9bob2o3bo11b\no9bo6bo9bobo$bo4bo11b3o7bo4bo5bo12bo7bo3b2ob2o3bo5bo4bob2o3bo7bo$o6bo3\nbo9bo5b4obo11bo10bo2b2o5bo3bo2bo7bo8bobo$7bo7bo3b2o6bo4bo12bo3b2o3bo17\nbo8bo8bobo4bo$7bo2bo4bo5bo10b2obo9bo2bo2bo3b2o16bo6b3o3bo4bo4bobo7bobo\n$obo7b2ob3o2bo2bo10bo7b2obo2bo5b2o19b2o2b2o2b2obobo4b2o4b3o5bo$bo2bo3b\n3o2bo2bobo7bo5bo6b2o9b3o22b2o9bo4bo$13bobo16bo5b2o3bo7bo23bobo3bo4bo17\nbo15bo2bo$10bob3obobo3bo4bobo2bo5bo3bo33bo23bo2bobo7bobo5bo2bo$12bo3bo\n2bobo7bo11bo62b3o5bo10bo$9bo24bo3bobo38bo2bobo33bo26bobo$8bo34bo34bo32\nbo15bo2bo13bo$107bo2bobo15bo2bo$111b3o8bo7bo12bo$125bo16bobo7bobo$134b\no2bo5b3o5bo$135bo2bo$129bo7bo12bo15bo2bo$132bo13bo2bobo7bobo5bo2bo$150\nb3o5bo10bo$164bo26bobo$157bo15bo2bo13bo$153bo2bobo15bo2bo$157b3o8bo7bo\n12bo$171bo16bobo7bobo$180bo2bo5b3o5bo$181bo2bo$175bo7bo12bo$178bo13bo2\nbobo7bobo$196b3o5bo2$203bo$199bo2bobo$203b3o!",
+  "pop": 664,
+  "kind": "spaceship",
+  "period": 6,
+  "disp": [
+   -2,
+   0
+  ]
+ },
+ {
+  "title": "c/2 backrake",
+  "by": "glider_rider",
+  "date": "2014-12-17",
+  "post": "p15077",
+  "note": "A c/2 backrake.",
+  "rle": "x = 25, y = 51, rule = B2/S0\n9b2o$8bo2bo2$7b6o2b2o6bo$12bobo2bo4b3o$2bo5bo3bo10bo$bobo5bob3o4b4o$2b\no12b2obo$3o10b4ob2o2b2o$bo3b2o6bobobo6bo$2b2o2b3o3bo2b2ob3ob2o$3b2obo3\nbo3bobo$8bobo2bo8bo$11bo3bo$6bo4bo2b2o$11bo3b2o2bo$8b2o4b2o$7bob2o3bo$\n8b2o3b3o2bo$8b3o3bo$5bob3o4b2o$10bo3bo5bo$11b3obo3bo$5bo8bo3bo$4b2o7bo\n2bo$5bobo4bo5bo2bo$5bo2bo6b2o5bo$8bo$10bo11bo$4b2o2bo2bo5bo$16bo$11bo4\nbo4bo$10bo8bo$bo2bob4o6bo$6bo5b4o2b2o4bo$3bo2bobo4bob2o2bo$2bo6bo2bo8b\no2$2bo17bobo$3b4obo9bo4bo$8b2o7bo$8bo4bo$12bo$5bo2b2o5b2o$4b2o2bo7bo$5\nbo3bo7b4o$6bo$20bo2$bo5bobo5bo5bobo$2b4o4bo5b4o4bo!",
+  "pop": 226,
+  "kind": "other",
+  "period": null,
+  "disp": null
+ },
+ {
+  "title": "c/2 backrake stabilized into a ship",
+  "by": "glider_rider",
+  "date": "2014-12-17",
+  "post": "p15077",
+  "note": "The backrake with a component that eats the moons.",
+  "rle": "x = 24, y = 201, rule = B2/S0\n10bo$13bo$6bo3bobo$11bo5bo$8b2o$7bo2bo2$14b2o$13bo2bo2$8b2o$7bo2bo2$14\nb2o$13bo2bo2$8b2o$7bo2bo2$14b2o$13bo2bo2$8b2o$7bo2bo2$14b2o$13bo2bo2$8\nb2o$7bo2bo2$14b2o$13bo2bo2$8b2o$7bo2bo2$14b2o$13bo2bo2$8b2o$7bo2bo2$14\nb2o$13bo2bo2$8b2o$7bo2bo2$14b2o$13bo2bo2$8b2o$7bo2bo2$14b2o$13bo2bo2$8\nb2o$7bo2bo2$14b2o$13bo2bo2$8b2o$7bo2bo2$14b2o$13bo2bo2$8b2o$7bo2bo2$14\nb2o$13bo2bo2$8b2o$7bo2bo2$14b2o$13bo2bo2$8b2o$7bo2bo2$14b2o$13bo2bo2$8\nb2o$7bo2bo2$14b2o$13bo2bo2$8b2o$7bo2bo2$14b2o$13bo2bo2$8b2o$7bo2bo2$14\nb2o$13bo2bo2$8b2o$7bo2bo2$14b2o$13bo2bo2$8b2o$7bo2bo2$14b2o$13bo2bo2$8\nb2o$7bo2bo2$14b2o$13bo2bo2$8b2o$7bo2bo2$14b2o$13bo2bo2$8b2o$7bo2bo2$14\nb2o$13bo2bo2$8b2o$7bo2bo2$14b2o$13bo2bo2$8b2o$7bo2bo2$14b2o$13bo2bo2$8\nb2o$7bo2bo2$14b2o$13bo2bo2$obo5b2o3bo2bo$7bobo3b3o5bo$9b2o11bo$2bob2o5\nbo11bo$3bo3bo$o7bobo9bo2bo$11bo5bobo$2b3ob2o3bo3bo5bo$6bobo3bo2bo$5bo$\n6b3o2b2o5bo$6bo3bobo$15bo$10bo6bo$5bo9bo$4b2o4bo$5b2o8bo2bo$9bo7bobo$5\nbo4bo4b2obo$11bob3ob2o$7bo4b2o3bo3bo$3bo4bo7bo3bo$6bo7b2o4b3o$3b2ob2o2\nbo10bo$7b3o5bo$3b2o4b3o2bo$9bo4bobo2b2o$4b2o4bo3b3ob2o$o2bo5b3o4bo2bo$\nb3o15bo3bo$bo2bo3bobo5bo$2bo3b2o4b4o3b2o$3o16bobo$5b2o11b3obo$bo14bobo\nb2o$2bo2bo11bo$6bo4bo$6bo5b4o$5b2o9bo$6bo2bo9bo$6b2o7bo$4bo11bo3bo$19b\no$7bo11b3o$4b4obo8b4obo$o4bob2o5bo4bob2o$bo2bo10bo2bo!",
+  "pop": 420,
+  "kind": "spaceship",
+  "period": 4,
+  "disp": [
+   0,
+   2
+  ]
+ },
+ {
+  "title": "Sawtooth",
+  "by": "glider_rider",
+  "date": "2014-12-20",
+  "post": "p15146",
+  "note": "A sawtooth: a c/2 ship adds a moon eater to a stream of moons, which a pair of monsters then destroys.",
+  "rle": "x = 99, y = 170, rule = B2/S0\n8bo21bo$9bo19bo2$4bo4bo19bo4bo$8bo21bo$16bo5bo$4bo4b3o15b3o4bo$13bo11b\no$7bo6bo9bo6bo$8bo4bo11bo4bo$16bo5bo$9bo5bo7bo5bo$6bo2bo19bo2bo2$10bo1\n7bo$7bobo3bo11bo3bobo$6bo5bo13bo5bo3$8bobo17bobo$11bo15bo2$8bo5bo9bo5b\no$15bo7bo$5bo2bo21bo2bo$8bo6bo7bo6bo$14bo9bo2$10bo17bo$6b3o21b3o$5bobo\n2b3o13b3o2bobo$7b2o21b2o$8bo2bo15bo2bo$14bo9bo$11bobo11bobo$7bo23bo$4b\no29bo$5bobobo4bo9bo4bobobo$10bo17bo2$4bo4bo19bo4bo2$8bo3bo13bo3bo2$8bo\n21bo$9bo19bo$5bo27bo$9bob3o11b3obo$12bobo9bobo$9bob2o5bobo5b2obo$6b4o7\nbo3bo7b4o$7bo2bo17bo2bo$13bo11bo$9bo6bo5bo6bo$10bo6bo3bo6bo$16bo5bo$11\nbo7bo7bo$11bo7bo7bo$14bobob3obobo$5bo4bobobo3b3o3bobobo4bo$6bob4o3b3ob\nob3o3b4obo$9b2o17b2o$10bo3b3o5b3o3bo$9bo9bo9bo$7bo2b2o15b2o2bo$10bo5bo\n5bo5bo$11bo3bob2ob2obo3bo$13bo4bobo4bo39bo3bo$17bo3bo38bo3b5obo11bo$16\nbo5bo40b3obo2bo15bo$11bobo3bo3bo3bobo34bobo3bo4bo11bo$10bo2b2o3bobo3b2\no2bo13bo5bo7bo3bo20bobo$18bobo24bo14b2o14bobo3b2obo$15b3o3b3o21bo10bo7\nbo5bo3b2o4bo$11b2o13b2o14bo5bo20bobo2bo4b2o5bo6bo$11b3o3bo3bo3b3o43bo9\nbo14bo$8bo3bo4bo3bo4bo3bo25bo3b2o10bobo5bo2bo2b2obo3bobobo$15b3o3b3o40\nbo3bo3bo5bob2o14b2o$6b2o6bobo5bobo6b2o23bo2bo4bo10bobo14bo3bo$bo3bo2b2\no4bo2bo3bo2bo4b2o2bo31bo14bo9bo5b2o$o8b2ob2o4bobo4b2ob2o36bo11bobo3bo1\n1bobo$18bobo44b2o11bob2o3bob2o4bo$o16bo3bo38bo3bo2bo2bobo4bo4bo6bo4bo$\nbo9bo4bo5bo4bo29b2o4bo12bo3bo2b2o5bo4bo2bo$10bo3bo3bobo3bo3bo42bo10b2o\nbo9bobo$10bo3bo3bobo3bo3bo29bo2bo7b2o6bo2bo14bo$bo9bo4bo5bo4bo29b2o4bo\n4b2o4bo4b2o5bo$o16bo3bo41bo5bob2obo5b2o4bo$18bobo39bo4b3o4b2obo3b2obo3\nbo$o8b2ob2o4bobo4b2ob2o37b3ob2o8b2o3bo$bo3bo2b2o4bo2bo3bo2bo4b2o2bo31b\n3o12b2obobo$6b2o6bobo5bobo6b2o28bo9bo9bo$15b3o3b3o46bo$8bo3bo4bo3bo4bo\n3bo$11b3o3bo3bo3b3o$11b2o13b2o14bo5bo$15b3o3b3o21bo$18bobo24bo$10bo2b2\no3bobo3b2o2bo13bo5bo$11bobo3bo3bo3bobo$16bo5bo$17bo3bo$13bo4bobo4bo$11\nbo3bob2ob2obo3bo$10bo5bo5bo5bo$7bo2b2o15b2o2bo$9bo9bo9bo$10bo3b3o5b3o3\nbo$9b2o17b2o$6bob4o3b3obob3o3b4obo$5bo4bobobo3b3o3bobobo4bo$14bobob3ob\nobo$11bo7bo7bo$11bo7bo7bo$16bo5bo$10bo6bo3bo6bo$9bo6bo5bo6bo$13bo11bo$\n7bo2bo17bo2bo$6b4o7bo3bo7b4o$9bob2o5bobo5b2obo$12bobo9bobo$9bob3o11b3o\nbo$5bo27bo$9bo19bo$8bo21bo2$8bo3bo13bo3bo2$4bo4bo19bo4bo2$10bo17bo$5bo\nbobo4bo9bo4bobobo$4bo29bo$7bo23bo$11bobo11bobo$14bo9bo$8bo2bo15bo2bo$7\nb2o21b2o$5bobo2b3o13b3o2bobo$6b3o21b3o$10bo17bo2$14bo9bo$8bo6bo7bo6bo$\n5bo2bo21bo2bo$15bo7bo$8bo5bo9bo5bo2$11bo15bo$8bobo17bobo3$6bo5bo13bo5b\no$7bobo3bo11bo3bobo$10bo17bo2$6bo2bo19bo2bo$9bo5bo7bo5bo$16bo5bo$8bo4b\no11bo4bo$7bo6bo9bo6bo$13bo11bo$4bo4b3o15b3o4bo$16bo5bo$8bo21bo$4bo4bo1\n9bo4bo2$9bo19bo$8bo21bo!",
+  "pop": 895,
+  "kind": "other",
+  "period": null,
+  "disp": null
+ },
+ {
+  "title": "p5 oscillator (crossroads)",
+  "by": "velcrorex",
+  "date": "2015-01-13",
+  "post": "p16001",
+  "note": "The second p5 oscillator after the starfish. Named crossroads.",
+  "rle": "x = 48, y = 48, rule = B2/S0\n21b6o3$21b2o2b2o$22b4o$22bo2bo2$18bobo2b2o2bobo$19bo8bo$19bo2bo2bo2bo3\n$17bo4bo2bo4bo2$21bo4bo2$21bo4bo$12bo4bo12bo4bo$7bo12bobo2bobo12bo$8b2\no12b4o12b2o$7bo10bobobo2bobobo10bo$o2bo10bobo14bobo10bo2bo$o2b3o3bo2bo\n5b3obo2bob3o5bo2bo3b3o2bo$o3bo2bo11bo8bo11bo2bo3bo$o3bo2bo11bo8bo11bo2\nbo3bo$o2b3o3bo2bo5b3obo2bob3o5bo2bo3b3o2bo$o2bo10bobo14bobo10bo2bo$7bo\n10bobobo2bobobo10bo$8b2o12b4o12b2o$7bo12bobo2bobo12bo$12bo4bo12bo4bo$2\n1bo4bo2$21bo4bo2$17bo4bo2bo4bo3$19bo2bo2bo2bo$19bo8bo$18bobo2b2o2bobo2\n$22bo2bo$22b4o$21b2o2b2o3$21b6o!",
+  "pop": 196,
+  "kind": "oscillator",
+  "period": 5,
+  "disp": [
+   0,
+   0
+  ]
+ },
+ {
+  "title": "Short free ship rake (freedom collider)",
+  "by": "wildmyron",
+  "date": "2015-01-20",
+  "post": "p16119",
+  "note": "A p8 backward short free ship rake: apart from flotillas, the first rake that emits anything other than moons.",
+  "rle": "x = 8, y = 22, rule = B2/S0\n2bo$b2obo$5bo$2bobo2bo$b2o2bobo$2ob3o$b2o$2bo4bo$4bo2bo$bob2obo$o$o$bo\nb2obo$4bo2bo$2bo4bo$b2o$2ob3o$b2o2bobo$2bobo2bo$5bo$b2obo$2bo!",
+  "pop": 56,
+  "kind": "other",
+  "period": null,
+  "disp": null
+ },
+ {
+  "title": "Anchored freedom collider",
+  "by": "lukebradford",
+  "date": "2015-01-20",
+  "post": "p16127",
+  "note": "The freedom collider can be anchored.",
+  "rle": "x = 6, y = 22, rule = B2/S0\nbo$2bo$3bo$2bo2bo$o4bo2$ob2o$3bobo$5bo$4bo$3o$3o$4bo$5bo$3bobo$ob2o2$o\n4bo$2bo2bo$3bo$2bo$bo!",
+  "pop": 34,
+  "kind": "other",
+  "period": null,
+  "disp": null
+ },
+ {
+  "title": "Tiny c/2 ships (fruit fly ship)",
+  "by": "glider_rider",
+  "date": "2015-01-23",
+  "post": "p16168",
+  "note": "The one on the left, with a minimum population of 36, tied the dust mite ship as the smallest c/2 ship. Named the fruit fly ship.",
+  "rle": "x = 72, y = 37, rule = B2/S0\n69bobo2$63bobo$68bo2bo$35bo4bo22bo4b2o$33bobo5bo24bo$34b2o5bo22bobo$34\nbo2bob3o14bobo3bo3b2obo$38b2o26bob2obo$40bo23bo5bo$39bo16bo2bo3bo$38bo\n5bo13b2o9bo$35b2o26bo5bobo$36bo20bo2bo8b2o$41b2o13bo5bo4bo$39b2o2bo17b\no$34bo23bo2bobo$34bo6b2o13bob2o$34b3obo2bo15b2o6bo$35bo3b2o4bo$39bobo1\n8bo4bo5bo$38bo2bo25b4o$35bo2bobo$38b2o2bobo18bo$37bo4bo16bo4bo$36bobo3\nbo17bo2bobo$33bo3bo5bo14bobo$13bo18b2ob2o20bob4o$9bo4bo18b3o8b3o11b2ob\no$15bo18bobo25bo4bo$18bo4bo14bo26b2o2bo$o4bo28bobo4bo24bo3bo$11b2o3bob\nobo21bo24bo$3bobobo2bo2b2o21bo6b3o$9bo3bo5bobo13bob4o$2bobo5bo3b4o4bo1\n3b2obo4bo17bo5bobo$bo4b4o30bo2bo19b4o4bo!",
+  "pop": 216,
+  "kind": "spaceship",
+  "period": 4,
+  "disp": [
+   0,
+   2
+  ]
+ },
+ {
+  "title": "Small c/2 ships",
+  "by": "velcrorex",
+  "date": "2015-01-23",
+  "post": "p16169",
+  "note": "Small c/2 ships.",
+  "rle": "x = 26, y = 97, rule = B2/S0\n6bo$5bo$5b3o$6bo$5b2o13bo$4bobobobo$18bo4bo$8bobo7bo3b3o$3bo10bo2bo4bo\nb2o$bobo3bo12bob3o$o2bo7b2obobo6bo$4bo4bo6bobobo$5bo7bo$obo9b2o5b2o$b2\no9bo5b2o$2bo3bo3bo2bo$b2o6bo3bo$bobobob2o8bo$2bo4bo14bo$5bobo5bo3bo4bo\n$5b3o10bo3bo$6bo11bo$5b2obo$4bobo13bo3$4bo$5bo11$15bo$14bo$4bo5bo3b3o$\n3bo5bo5bo$3b3o3b3o2b2o$4bo5b2obobo2bobo$3b2o4b3o4bo$2bobo3bo2bo6bobo$1\n2bo$7bo$2bo7bo$3bo6bo3bobo$8bobo3$12bo$11bo$11bo$9bobo$10b3o$4bo4b2ob2\no$3bo5b2o2bo$3b3obo2bo$4b2o5bobo4bo$3b5o2bo4b3o$2bobo3bobo$14bob2o$13b\nobo2bo$2bo5bo$3bo5bo$13bo$14bo11$16bo$4bo$14bo$2bo11bo4bo$2bo2bo7bo$bo\n17bo$6bob2o3bo2bo$bo3bo8b2o$2bo3bobo3bo$2bo5b2o4bo$6b3o4bo4bo$4bo4bo7b\n3o$12b2o4bo$9bo$7bob2o3bo$9bo3b3o$14bo!",
+  "pop": 246,
+  "kind": "spaceship",
+  "period": 4,
+  "disp": [
+   -2,
+   0
+  ]
+ },
+ {
+  "title": "p9 dot puffer",
+  "by": "wildmyron",
+  "date": "2015-02-23",
+  "post": "p17132",
+  "note": "The only known p9 object other than the arrow puffer.",
+  "rle": "x = 87, y = 28, rule = B2/S0\n67bobo$52bo3bo13bo$51b3o5bo2bo6bo2bo$52bo4bo11bo2bo$56bo11b2o$16bo38b3\no7b2obo$15b3o3bo4bo3bo7bo4bo5bo2bo5b2obobo2b4o3bo$16bo16bo3b3o3b2o17bo\n4bo2bo3bobo6bo$21bo5bobo3b4obo3b3o24bo5bo6bobo$18bo8b2o14bo4bo2bo3bo13\nbo6bo9bo$o8bo7b3o2bo5bo3b2o8bo2bo2bo6b2o2bo9bo7b2obo3bobo$4bo8bo4bo4bo\n2bo6bo14bo6bo5bo12b3o3bo$24bo8bo21bo3bobo20bo$23bo7bo21b2o23bo4b2obo$2\n3bo7bo21b2o23bo4b2obo$24bo8bo21bo3bobo20bo$4bo8bo4bo4bo2bo6bo14bo6bo5b\no12b3o3bo$o8bo7b3o2bo5bo3b2o8bo2bo2bo6b2o2bo9bo7b2obo3bobo$18bo8b2o14b\no4bo2bo3bo13bo6bo9bo$21bo5bobo3b4obo3b3o24bo5bo6bobo$16bo16bo3b3o3b2o1\n7bo4bo2bo3bobo6bo$15b3o3bo4bo3bo7bo4bo5bo2bo5b2obobo2b4o3bo$16bo38b3o7\nb2obo$56bo11b2o$52bo4bo11bo2bo$51b3o5bo2bo6bo2bo$52bo3bo13bo$67bobo!",
+  "pop": 262,
+  "kind": "other",
+  "period": null,
+  "disp": null
+ },
+ {
+  "title": "p10 puffers",
+  "by": "wildmyron",
+  "date": "2015-02-23",
+  "post": "p17134",
+  "note": "The first p10 puffers, and the only p10 craft that travel at c.",
+  "rle": "x = 71, y = 79, rule = B2/S0\n48bo$14bo4bo4bo4bo4bo14bo13bo$40bobo6bo14bo$38bo4bo4bo8bo6bo$17bo4bo4b\no4bo4bo18bo4bobo$41b2o12bobobob2o$41bo5bobo11bo$43bo5bo5bo5b2o$40bobo3\nb2o13bo5bo$18bo9bo19bo7bo5bo2bo2bo$38b4o3bo5bob2o6b2obo2bo2bo$37b2o3bo\nbo2b2o4bo3bo3bo8bo$17bo9bo6bob3o3bo4bo3b5o2bo10bo$38bo4bo15b3o$14bo5bo\n3bo5bo11bo10bo6b3o4bo$38bo4bo15b3o$17bo9bo6bob3o3bo4bo3b5o2bo10bo$37b2\no3bobo2b2o4bo3bo3bo8bo$38b4o3bo5bob2o6b2obo2bo2bo$18bo9bo19bo7bo5bo2bo\n2bo$40bobo3b2o13bo5bo$43bo5bo5bo5b2o$41bo5bobo11bo$41b2o12bobobob2o$17\nbo4bo4bo4bo4bo18bo4bobo$38bo4bo4bo8bo6bo$40bobo6bo14bo$14bo4bo4bo4bo4b\no14bo13bo$48bo22$48bo$2bo5bo3bo5bo3bo5bo3bo16bo13bo$3bo3bo5bo3bo5bo3bo\n5bo15bo14bo$41bo2bo3bo8bo6bo$38bo2bo14bo4bobo$o4bo4bo4bo4bo4bo4bo6bo2b\no14bobobob2o$bo9bo25bo3b2o6bo11bo$45b3obo5bo5b2o$21bobo11bo5bo4b2o13bo\n5bo$37bo10bo7bo5bo2bo2bo$4bo9bo6bobo2bo4bo2bo10bo5bob2o6b2obo2bo2bo$7b\no9bo12b3o2bo6bobo2b2o4bo3bo3bo8bo$23bo6b3o3bo5bo4bo3b5o2bo10bo$21bo2bo\nbo6b2o8bo15b3o$25b4o13bo10bo6b3o4bo$21bo2bobo6b2o8bo15b3o$23bo6b3o3bo5\nbo4bo3b5o2bo10bo$7bo9bo12b3o2bo6bobo2b2o4bo3bo3bo8bo$4bo9bo6bobo2bo4bo\n2bo10bo5bob2o6b2obo2bo2bo$37bo10bo7bo5bo2bo2bo$21bobo11bo5bo4b2o13bo5b\no$45b3obo5bo5b2o$bo9bo25bo3b2o6bo11bo$o4bo4bo4bo4bo4bo4bo6bo2bo14bobob\nob2o$38bo2bo14bo4bobo$41bo2bo3bo8bo6bo$3bo3bo5bo3bo5bo3bo5bo15bo14bo$2\nbo5bo3bo5bo3bo5bo3bo16bo13bo$48bo!",
+  "pop": 462,
+  "kind": "other",
+  "period": null,
+  "disp": null
+ },
+ {
+  "title": "MMS breeder",
+  "by": "wildmyron",
+  "date": "2015-03-05",
+  "post": "p17412",
+  "note": "The first breeder in Live Free or Die.",
+  "rle": "x = 796, y = 443, rule = B2/S0\n499bo4bo$502b2obo$507bo11bo4bo$507bo14b2obo$502b2obo21bo$499bo4bo22bo$\n522b2obo$519bo4bo5$518b2o$499bo4bo12bo2bo$502b2obo$507bo$507bo$502b2ob\no$499bo4bo12$447b3o5bo$402bo51bobo14bo4bo237bo$319bo81b3o54bo15b2obo22\n9bobo3bobo$318b3o81bo4b3obo13bo4bo27bo20bo236bo$319bo4b3obo83bo15b2obo\n22bobo22bo229bo5bo2bo$329bo79b2obo20bo13b3o5bo18b2obo13bo20b3o5bo190b2\nobobobo$326b2obo103bo37bo4bo10bo4bo26bobo20b2o102bobo58bo3bo2bobo$390b\no4bo32b2obo56bo3bo30bo17bo2bo108bobo59bo$393b2obo12b2obo12bo4bo59bo32b\no65bo56bobo7bo50bo3bo2bobo$326b2obo68bo13bo40bobo9bobo21bo29bobo132bo3\nbo52b2obobobo$329bo11bo4bo20bo4bo25bo3bo4b3obo40bo3bo7bo3bo3bo3bo3bo3b\no27b3o5bo68bo7bo14bo4bo36bo3bo50bo5bo2bo$319bo4b3obo15b2obo22b2obo19b2\nobo4b3o190b2o2bo16b2obo27bobo7bo59bo$318b3o28bo25bo14bo4bo6bo29bo162bo\n2bo21bo32bobo51bobo3bobo$319bo29bo25bo90bo23bo129bo25bobo65bo$344b2obo\n22b2obo69bo76bo94b2obo64bo$341bo4bo20bo4bo11b3o22bo34bo70bo5bo73bo2bo1\n3bo4bo$385bo22bo35bo70bo6bo71b2o2bo106bobo$314bo116bo2bo2bo5bo70b2o3bo\nbo2bo64bo7bo48b3o21b3o4bo3bo3bo3bo22bobo$361b3o67bo88bo3bo120bobobo19b\nobobo21bo9bobo7bo$362bo23bo23bo20b2o4b2o76bobo71bo35bo21bo23bo21bo2bo1\n6bo3bo$515b3o4bo169bobo3bo14bo3bo$313bo4bo113bo4bo77bobo112bo12bo32bo2\nbo2bo10bo4bo6bobo7bo$316b2obo18b2o93bo2bo83bo3bo76bo26bob2o12bo38bo13b\no14bobo$321bo15bo2bo19bo4bo18bo4bo18bo4bo100b2o3bobo2bo53bo23bo23b2ob2\no13bo34b3o3bo19bobo$321bo112b2o79bo6bo54b3o45bobo15bo35b3o3bo$316b2obo\n195bo5bo105bobo53bo$313bo4bo201bo82bo24b3o45bo2bo2bo$337bo2bo242bo4bo4\n0bo$338b2o246b2obo$338b2o251bo$566b2o23bo10bo4bo17bo4bo$434b2o129bo2bo\n17b2obo15b2obo$409bo4bo168bo4bo21bo$412b2obo17bo2bo173bo15bo2bo$417bo1\n4bo4bo82bo84b2obo17bo2bo$417bo16b2o79bo5bo80bo4bo17bo4bo$412b2obo16bo4\nbo77bo6bo103bo2bo$409bo4bo99b2o3bobo2bo$520bo3bo102b2o$515bobo$515b3o4\nbo$410bo25bo78bobo$362b2o72bo83bo3bo$432bo3bo11bo65b2o3bobo2bo$361bo2b\no20bo23bo23bo2bobo10bo65bo6bo$360bo4bo18b3o50bo11bo65bo5bo$361bo2bo83b\no71bo$361bo2bo125bo$390bo4bo12bo23bo$393b2obo$360bo4bo32bo9bo7bo36b3o2\n0bo3bo3bo3bo3bo3bo15b3o5bo196bobo$398bo14b2o2bo34bobobo44bo17bobo202bo\nbo$313bo2bo76b2obo17bo2bo13bo4bo17bo47bo20bo193bobo7bo13bo2bo2bo$314b2\no74bo4bo38b2obo62bo3bo18bo153bob2o44bo3bo18bo$439bo37b3o5bo13bo4bo14bo\nbo68b2o9bo4bo73bobo12bo2bo2bo23bo3bo14b3o3bo$414bo2bo21bo13bo2bo3bo23b\nobo16bo8b3o5bo68bo2bo84bo5bo18bo14bobo7bo16b3o3bo31bobo$413b2o2bo16b2o\nbo17bo5bo26bo194bo14b3o3bo19bobo21bo7bo5bo26bobo$408bo7bo14bo4bo18bo7b\no24bo113bo2bo73b3o16b3o3bo12bobo21bo2bo2bo7b2obo4bo18bobo7bo$455bo7bo2\n0bobo115bo2bo54bo2bo2bo12b3o20bo51b2obobo3bo26bo3bo$408bo46bo5bo15b3o5\nbo115bo4bo60bo15bo11bo2bo2bo33bobo17b3o3bo28bo3bo$453bo2bo3bo141bo2bo5\n7b3o3bo7bo5bo72b3obo21bobo7bo$637bo2bo2bo19b3o3bo10bobo46b3o8bo3bo3bo3\nbo5bo30bobo$603b2o39bo22bo9bob2o47bobobo49bobo$349bo4bo285b3o3bo13bo2b\no2bo42b3o18bo$352b2obo284b3o3bo60bobo32bo23bo22bo$357bo114bo171bo63bo5\nbo73b2obo$357bo28b2o79bo5bo163bo2bo2bo40bo30bo73b2obo$352b2obo111bo6bo\n186bo23bo29bo66bo6b3obo$349bo4bo30bo2bo77b2o3bobo2bo237bo80bo$384bo4bo\n82bo3bo305bo6bo3bobo$385bo2bo78bobo168bo23bo23bo23b2o76bo4bo$385bo2bo7\n8b3o4bo317bo$362bo19bo84bobo318bo4bo$385bo2bo83bo3bo305bo6bo3bobo$382b\nobobo2bo6bo69b2o3bobo2bo159bo4bo18bo4bo18bo4bo105bo$337bo23bo35bo69bo6\nbo137bo4bo164bo6b3obo$289bo2bo67bo36bo69bo5bo138bo4bo171b2obo$290b2o10\n4bo75bo139bo4bo170b2obo$442bo134bo4bo31b2o173bo$336bo4bo12bo29bo229b2o\n$339b2obo269bob2obo$344bo9bo7bo42b3o20bo3bo3bo3bo3bo3bo15b3o5bo105bo2b\no$344bo14b2o2bo40bobobo44bo17bobo104bo2bo$339b2obo17bo2bo13bo4bo23bo47\nbo20bo101bo4bo29bo4bo61bo2bo2bo$336bo4bo38b2obo68bo3bo18bo102bo2bo104b\no102bo$385bo13bobo27b3o5bo13bo4bo14bobo208b3o3bo99b2obo$360bo2bo21bo20\nbobo27bobo16bo8b3o5bo106b2o101b3o3bo100b2obo$359b2o2bo16b2obo15bobo7bo\n30bo245bo23b2o70bo6b3obo$354bo7bo14bo4bo24bo3bo28bo238bo2bo2bo109bo$40\n7bo3bo24bobo270bo2bo69bo6bo3bobo$354bo44bobo7bo19b3o5bo270bo4bo74bo4bo\n$406bobo383bo$399bobo284bo20b2o4b2o73bo4bo$707bo74bo6bo3bobo$518bo188b\no2bo2bo5bo75bo$517bobo141bo22bo35bo61bo6b3obo$512bobo5bo164bo34bo68b2o\nbo$519bo2bo196bo68b2obo$512bo2b2obobobo66bo2bo45b2o101bobo22bo22bo$515\nbo2bobo69b2o68bo2bo2bo11bo29bo31bo3bo$265bo2bo185bo4bo59bo117bo2bo26bo\n9b3o102bobo$266b2o189b2obo54bo2bobo115bo4bo21b3o3bo8bo4b3obo40bo3bo7bo\n3bo3bo3bo3bo3bo3bo5bo18bobo$396bob2o62bo49bo2b2obobobo30bo4bo79b2o23b3\no3bo18bo40bobo9bobo24b3obo9bobo7bo$399bobo12bo2bo3bo40bo56bo2bo115b2o2\n7bo17b2obo12bo2bo2bo59b3o3bo16bo3bo$396bo5bo13bo5bo34b2obo51bobo5bo115\nbob2obo18bo2bo2bo41bo38bobo16b2obobo3bo14bo3bo$402bo13bo7bo29bo4bo57bo\nbo34bo2bo146b3o3bo43bobo10b2obo4bo6bobo7bo$398b3o15bo7bo93bo35bo2bo127\nb2obo15b3o3bo12b3o5bo15bobo7bo10bo5bo14bobo$398b3o15bo5bo68bo61bo4bo77\nbo4bo46bo19bo21bobo22bo3bo22bobo$402bo11bo2bo3bo132bo2bo120bo4b3obo13b\no2bo2bo26bo20bo3bo$396bo5bo6bo267b3o54bo12bobo7bo$399bobo6b3o43b3o20bo\n3bo3bo3bo3bo19bo4bo36b2o121bo51bobo21bobo$396bob2o9bo43bobobo41bo16b2o\nbo203b3o5bo15bobo$433bo21bo41bo2bo20bo$496bobo3bo18bo$447bo30b3o5bo10b\no4bo13b2obo99bo2bo2bo$409bo23bo14bo36bobo13bo11bo4bo107bo114bo$386bo23\nbo23b4o10bo40bo132b3o3bo111b2obo$438bo8bo41bo132b3o3bo112b2obo$439bo45\nbobo138bo107bo6b3obo$411bo66b3o5bo132bo2bo2bo121bo$385bo2bo3bo46bo294b\no6bo3bobo$387bo5bo219bobo124bo4bo$387bo7bo169bo2bo93b2o80bo$387bo7bo8b\no2bo3bo154b2o70bo101bo4bo$241bo2bo142bo5bo12bo5bo20bo4bo223b2o70bo6bo3\nbobo$242b2o141bo2bo3bo13bo7bo19bo2bo229bo79bo$406bo7bo114bo4bo78bo22bo\n31bo65bo6b3obo$406bo5bo22b2o200bo30bo72b2obo$404bo2bo3bo247bobo5bo72b2\nobo$530bo2bo129bo29bobo22bo22bo$530bo2bo72bo2bo2bo11bo67bo3bo$529bo4bo\n78bo9b3o35bobo70bobo$530bo2bo75b3o3bo8bo4b3obo46bo3bo7bo3bo3bo3bo3bo3b\no3bo5bo18bobo$609b3o3bo18bo46bobo9bobo24b3obo9bobo7bo$531b2o80bo17b2ob\no12bo2bo2bo65b3o3bo16bo3bo$606bo2bo2bo41bo15bo28bobo16b2obobo3bo14bo3b\no$650b3o3bo12b3o5bo28bobo10b2obo4bo6bobo7bo$631b2obo15b3o3bo11b2ob2o3b\n2obo19bobo7bo10bo5bo14bobo$634bo19bo14b3o4bo3bo26bo3bo22bobo$624bo4b3o\nbo13bo2bo2bo16bo5bo5bo24bo3bo$623b3o44bo5bo5bo16bobo7bo$409bo4bo209bo4\n4b3o4bo3bo25bobo$668b2ob2o3b2obo19bobo$410b4o255b3o5bo$409bo4bo255bo2$\n541bo2bo$542b2o$217bo2bo188bo4bo$218b2o189bo4bo$bo2bo20bo2bo20bo2bo20b\no2bo20bo2bo20bo2bo20bo2bo20bo2bo20bo2bo212bo4bo$433bo4bo18bo4bo18bo4bo\n18bo4bo2$72bo4bo18bo4bo18bo4bo18bo4bo18bo4bo18bo4bo$216bo4bo18bo4bo18b\no4bo18bo4bo18bo4bo18bo4bo18bo4bo18bo4bo18bo4bo18bo4bo18bo4bo18bo4bo18b\no4bo$o4bo18bo4bo18bo4bo163bo2bo20bo2bo20bo2bo20bo2bo20bo2bo20bo2bo20bo\n2bo20bo2bo20bo2bo20bo2bo20bo2bo20bo2bo20bo2bo2$541bo4bo$8bo10bo12bo10b\no12bo10bo12bo10bo12bo10bo12bo10bo12bo10bo12bo10bo12bo10bo12bo10bo12bo1\n0bo12bo10bo12bo10bo12bo10bo12bo10bo12bo10bo12bo10bo12bo10bo12bo10bo12b\no10bo12bo10bo12bo10bo20b2obo$4b2o543bo$549bo$3bo2bo12bo23bo23bo23bo23b\no23bo23bo23bo23bo23bo23bo23bo23bo23bo23bo23bo23bo23bo23bo23bo23bo23bo2\n0b2obo$2bo4bo48bo23bo23bo23bo23bo23bo23bo23bo23bo23bo23bo23bo23bo23bo2\n3bo23bo23bo23bo23bo23bo28bo4bo$3bo2bo$3bo2bo$74b2o$49bo4bo18bo2bo$2bo4\nbo44b2obo$57bo$57bo$52b2obo$49bo4bo475b2o$218b2o322b2o$217bo2bo308bo2b\no8bo2bo$528bo4bo$530b2o138bo$530b2o137b3o5bo$528bob2obo134b2ob2o3b2obo\n19bobo$624bo44b3o4bo3bo25bobo$623b3o44bo5bo5bo16bobo7bo$528bo4bo90bo4b\n3obo13bo2bo2bo16bo5bo5bo24bo3bo$351bobo280bo19bo14b3o4bo3bo26bo3bo22bo\nbo$358bobo270b2obo15b3o3bo11b2ob2o3b2obo19bobo7bo10bo5bo14bobo$28b2o27\n6bo44bobo7bo19b3o5bo260b3o3bo12b3o5bo28bobo10b2obo4bo6bobo7bo$359bo3bo\n24bobo215bo2bo2bo41bo15bo28bobo16b2obobo3bo14bo3bo$27bo2bo275bo7bo14bo\n4bo24bo3bo28bo220bo17b2obo12bo2bo2bo65b3o3bo16bo3bo$26bo4bo279b2o2bo16\nb2obo15bobo7bo30bo216b3o3bo18bo46bobo9bobo24b3obo9bobo7bo$27bo2bo281bo\n2bo21bo20bobo27bobo16bo8b3o5bo184b3o3bo8bo4b3obo46bo3bo7bo3bo3bo3bo3bo\n3bo3bo5bo18bobo$27bo2bo306bo13bobo27b3o5bo13bo4bo14bobo187bo9b3o35bobo\n70bobo$98b2o188bo4bo38b2obo68bo3bo18bo178bo2bo2bo11bo67bo3bo$97bo2bo19\n0b2obo17bo2bo13bo4bo23bo47bo20bo235bo29bobo22bo22bo$26bo4bo264bo14b2o2\nbo40bobobo44bo17bobo233bobo5bo72b2obo$296bo9bo7bo42b3o20bo3bo3bo3bo3bo\n3bo15b3o5bo212bo30bo72b2obo$291b2obo318bo22bo31bo65bo6b3obo$288bo4bo12\nbo29bo330bo79bo$394bo159b2o106b2o70bo6bo3bobo$242b2o104bo75bo141b2o70b\no101bo4bo$241bo2bo67bo36bo69bo5bo127bo2bo8bo2bo93b2o80bo$289bo23bo35bo\n69bo6bo125bo4bo55bobo124bo4bo$334bobobo2bo6bo69b2o3bobo2bo125b2o178bo6\nbo3bobo$337bo2bo83bo3bo125b2o63bo2bo2bo121bo$314bo19bo84bobo130bob2obo\n68bo107bo6b3obo$337bo2bo78b3o4bo195b3o3bo112b2obo$337bo2bo78bobo200b3o\n3bo111b2obo$336bo4bo82bo3bo123bo4bo68bo114bo$301bo4bo30bo2bo77b2o3bobo\n2bo190bo2bo2bo$304b2obo111bo6bo$52b2o255bo28b2o79bo5bo$309bo114bo298b3\no5bo15bobo$51bo2bo249b2obo370bo51bobo21bobo$50bo4bo245bo4bo370b3o54bo1\n2bobo7bo$51bo2bo623bo4b3obo13bo2bo2bo26bo20bo3bo$51bo2bo581bo4bo46bo19\nbo21bobo22bo3bo22bobo$122b2o281bo2bo3bo272b2obo15b3o3bo12b3o5bo15bobo7\nbo10bo5bo14bobo$121bo2bo235bo46bo5bo15b3o5bo266b3o3bo43bobo10b2obo4bo6\nbobo7bo$50bo4bo351bo7bo20bobo197bob2obo18bo2bo2bo41bo38bobo16b2obobo3b\no14bo3bo$360bo7bo14bo4bo18bo7bo24bo197b2o27bo17b2obo12bo2bo2bo59b3o3bo\n16bo3bo$365b2o2bo16b2obo17bo5bo26bo197b2o23b3o3bo18bo40bobo9bobo24b3ob\no9bobo7bo$366bo2bo21bo13bo2bo3bo23bobo16bo8b3o5bo163bo4bo21b3o3bo8bo4b\n3obo40bo3bo7bo3bo3bo3bo3bo3bo3bo5bo18bobo$391bo37b3o5bo13bo4bo14bobo10\n4b2o57bo2bo26bo9b3o102bobo$266b2o74bo4bo38b2obo62bo3bo18bo114b2o68bo2b\no2bo11bo29bo31bo3bo$265bo2bo76b2obo17bo2bo13bo4bo17bo47bo20bo101bo2bo8\nbo2bo45b2o101bobo22bo22bo$350bo14b2o2bo34bobobo44bo17bobo102bo4bo137bo\n68b2obo$312bo4bo32bo9bo7bo36b3o20bo3bo3bo3bo3bo3bo15b3o5bo105b2o105bo3\n4bo68b2obo$345b2obo229b2o81bo22bo35bo61bo6b3obo$342bo4bo12bo23bo191bob\n2obo125bo2bo2bo5bo75bo$313bo2bo125bo264bo74bo6bo3bobo$313bo2bo83bo71bo\n213bo20b2o4b2o73bo4bo$312bo4bo18b3o50bo11bo65bo5bo102bo4bo210bo$313bo2\nbo20bo23bo23bo2bobo10bo65bo6bo233bo4bo74bo4bo$384bo3bo11bo65b2o3bobo2b\no232bo2bo69bo6bo3bobo$76b2o236b2o72bo83bo3bo202bo2bo2bo109bo$362bo25bo\n78bobo216bo23b2o70bo6b3obo$75bo2bo388b3o4bo207b3o3bo100b2obo$74bo4bo38\n7bobo212b3o3bo99b2obo$75bo2bo393bo3bo209bo102bo$75bo2bo282bo4bo99b2o3b\nobo2bo135bo4bo61bo2bo2bo$146b2o216b2obo16bo4bo77bo6bo$145bo2bo220bo16b\n2o79bo5bo$74bo4bo289bo14bo4bo82bo139bob2obo$364b2obo17bo2bo225b2o$361b\no4bo247b2o173bo$386b2o224bo4bo170b2obo$602b2o8bo4bo171b2obo$290b2o320b\no4bo164bo6b3obo$290b2o309bo2bo31bo4bo18bo4bo18bo4bo105bo$289bo2bo307bo\n4bo176bo6bo3bobo$265bo4bo201bo129b2o184bo4bo$268b2obo195bo5bo128b2o188\nbo$273bo112b2o79bo6bo125bob2obo32bo23bo23bo23b2o76bo4bo$273bo15bo2bo19\nbo4bo18bo4bo18bo4bo100b2o3bobo2bo305bo6bo3bobo$268b2obo18b2o93bo2bo83b\no3bo237bo80bo$265bo4bo113bo4bo77bobo130bo4bo55bo23bo29bo66bo6b3obo$467\nb3o4bo162bo2bo2bo40bo30bo73b2obo$314bo23bo23bo20b2o4b2o76bobo174bo63bo\n5bo73b2obo$100b2o211b3o67bo88bo3bo163b3o3bo60bobo32bo23bo22bo$266bo116\nbo2bo2bo5bo70b2o3bobo2bo163b3o3bo13bo2bo2bo42b3o18bo$99bo2bo234bo22bo3\n5bo70bo6bo169bo22bo9bob2o47bobobo49bobo$98bo4bo189bo4bo20bo4bo11b3o22b\no34bo70bo5bo163bo2bo2bo19b3o3bo10bobo46b3o8bo3bo3bo3bo5bo30bobo$99bo2b\no193b2obo22b2obo69bo76bo190b3o3bo7bo5bo72b3obo21bobo7bo$99bo2bo168bo29\nbo25bo90bo23bo224bo15bo11bo2bo2bo33bobo17b3o3bo28bo3bo$170b2o98b3o28bo\n25bo14bo4bo6bo29bo275bo2bo2bo12b3o20bo51b2obobo3bo26bo3bo$169bo2bo98bo\n4b3obo15b2obo22b2obo19b2obo4b3o323b3o16b3o3bo12bobo21bo2bo2bo7b2obo4bo\n18bobo7bo$98bo4bo177bo11bo4bo20bo4bo25bo3bo4b3obo40bo3bo7bo3bo3bo3bo3b\no3bo27b3o5bo210bo14b3o3bo19bobo21bo7bo5bo26bobo$278b2obo68bo13bo40bobo\n9bobo21bo29bobo115bo2bo84bo5bo18bo14bobo7bo16b3o3bo31bobo$345b2obo12b2\nobo12bo4bo59bo32bo114b2o88bobo12bo2bo2bo23bo3bo14b3o3bo$342bo4bo32b2ob\no56bo3bo30bo201bob2o44bo3bo18bo$278b2obo103bo37bo4bo10bo4bo26bobo152b2\no89bobo7bo13bo2bo2bo$281bo79b2obo20bo13b3o5bo18b2obo13bo20b3o5bo251bob\no$271bo4b3obo83bo15b2obo22bobo22bo193bo2bo88bobo$270b3o81bo4b3obo13bo4\nbo27bo20bo192bo4bo$271bo81b3o54bo15b2obo99bo2bo2bo90b2o$354bo51bobo14b\no4bo107bo89b2o$399b3o5bo124b3o3bo85bob2obo$510bo2bo2bo15b3o3bo$517bo18\nbo$513b3o3bo9bo2bo2bo88bo4bo$513b3o3bo$517bo$124b2o384bo2bo2bo$530bo23\nbo23bo23bo23bo48bo2bo3bo$123bo2bo377bobo170bo5bo$122bo4bo515bo33bo7bo1\n9bo$123bo2bo401bo23bo23bo23bo23bo19bo32bo7bo18b3o5bo$123bo2bo402bo23bo\n23bo23bo23bo18bo32bo5bo13bo5b2ob2o3b2obo$194b2o447bo31bo2bo3bo8bobo4bo\n5b3o4bo3bo$193bo2bo497bo3bo6bo5bo5bo$122bo4bo388bo35bo23bo23bo23bo66bo\n4bo8bo5bo5bo$515b3o47bo2bo124bobo8b3o4bo3bo$516bo4b3obo40b2o76bo3bo19b\no3bo3bo3bo3bo3bo14b2ob2o3b2obo$526bo118bobo21bobo32b3o5bo$523b2obo12bo\n2bo2bo159bo$546bo99bo35bo$542b3o3bo96b3o5bo53bo4bobo$327bobo193b2obo15\nb3o3bo95b2ob2o3b2obo50b3o6bo$334bobo189bo19bo98b3o4bo3bo51b2o6bo$282bo\n44bobo7bo19b3o5bo150bo4b3obo13bo2bo2bo100bo5bo5bo49b6o4bo$335bo3bo24bo\nbo148b3o128bo5bo5bo48bo10bo$282bo7bo14bo4bo24bo3bo28bo147bo128b3o4bo3b\no49bo2bo$287b2o2bo16b2obo15bobo7bo30bo275b2ob2o3b2obo49b3ob4o3bo$288bo\n2bo21bo20bobo27bobo16bo8b3o5bo244b3o5bo52bo2bo$313bo13bobo27b3o5bo13bo\n4bo14bobo244bo60bo10bo$264bo4bo38b2obo68bo3bo18bo304b6o4bo$148b2o117b2\nobo17bo2bo13bo4bo23bo47bo20bo304b2o6bo$272bo14b2o2bo40bobobo44bo17bobo\n304b3o6bo$147bo2bo121bo9bo7bo42b3o20bo3bo3bo3bo3bo3bo15b3o5bo306bo4bob\no$146bo4bo115b2obo$147bo2bo113bo4bo12bo29bo210bo4bo$147bo2bo219bo155b2\nobo$218b2o104bo75bo130bo$217bo2bo67bo36bo69bo5bo129bo$146bo4bo113bo23b\no35bo69bo6bo123b2obo$310bobobo2bo6bo69b2o3bobo2bo118bo4bo12bo2bo$313bo\n2bo83bo3bo137b2o$290bo19bo84bobo$313bo2bo78b3o4bo$313bo2bo78bobo$312bo\n4bo82bo3bo$277bo4bo30bo2bo77b2o3bobo2bo138bo4bo$280b2obo111bo6bo143b2o\nbo$285bo28b2o79bo5bo121bo4bo22bo$285bo114bo125b2obo21bo$280b2obo247bo1\n4b2obo$277bo4bo248bo11bo4bo$526b2obo$523bo4bo$381bo2bo3bo$172b2o162bo4\n6bo5bo15b3o5bo$383bo7bo20bobo$171bo2bo161bo7bo14bo4bo18bo7bo24bo$170bo\n4bo165b2o2bo16b2obo17bo5bo26bo$171bo2bo167bo2bo21bo13bo2bo3bo23bobo16b\no8b3o5bo$171bo2bo192bo37b3o5bo13bo4bo14bobo$242b2o74bo4bo38b2obo62bo3b\no18bo$241bo2bo76b2obo17bo2bo13bo4bo17bo47bo20bo$170bo4bo150bo14b2o2bo3\n4bobobo44bo17bobo$288bo4bo32bo9bo7bo36b3o20bo3bo3bo3bo3bo3bo15b3o5bo$3\n21b2obo$318bo4bo12bo23bo$289bo2bo125bo$289bo2bo83bo71bo$288bo4bo18b3o5\n0bo11bo65bo5bo$289bo2bo20bo23bo23bo2bobo10bo65bo6bo$360bo3bo11bo65b2o3\nbobo2bo$290b2o72bo83bo3bo$338bo25bo78bobo$443b3o4bo$443bobo$448bo3bo$3\n37bo4bo99b2o3bobo2bo$340b2obo16bo4bo77bo6bo$196b2o147bo16b2o79bo5bo$34\n5bo14bo4bo82bo$195bo2bo141b2obo17bo2bo$194bo4bo137bo4bo$195bo2bo163b2o\n$195bo2bo$266b2o$266b2o$194bo4bo65bo2bo$241bo4bo201bo$244b2obo195bo5bo\n$249bo112b2o79bo6bo$249bo15bo2bo19bo4bo18bo4bo18bo4bo100b2o3bobo2bo$24\n4b2obo18b2o93bo2bo83bo3bo$241bo4bo113bo4bo77bobo$443b3o4bo$290bo23bo23\nbo20b2o4b2o76bobo$289b3o67bo88bo3bo$242bo116bo2bo2bo5bo70b2o3bobo2bo$3\n13bo22bo35bo70bo6bo$269bo4bo20bo4bo11b3o22bo34bo70bo5bo$272b2obo22b2ob\no69bo76bo$247bo29bo25bo90bo23bo$246b3o28bo25bo14bo4bo6bo29bo$220b2o25b\no4b3obo15b2obo22b2obo19b2obo4b3o$257bo11bo4bo20bo4bo25bo3bo4b3obo40bo3\nbo7bo3bo3bo3bo3bo3bo27b3o5bo$219bo2bo31b2obo68bo13bo40bobo9bobo21bo29b\nobo$195bo4bo17bo4bo97b2obo12b2obo12bo4bo59bo32bo$198b2obo17bo2bo95bo4b\no32b2obo56bo3bo30bo$203bo15bo2bo31b2obo103bo37bo4bo10bo4bo26bobo$176bo\n4bo21bo53bo79b2obo20bo13b3o5bo18b2obo13bo20b3o5bo$179b2obo15b2obo45bo4\nb3obo83bo15b2obo22bobo22bo$184bo10bo4bo17bo4bo22b3o81bo4b3obo13bo4bo27\nbo20bo$184bo62bo81b3o54bo15b2obo$179b2obo147bo51bobo14bo4bo$176bo4bo40\nbo152b3o5bo$196bo24b3o45bo2bo2bo$220bobo53bo$170b3o45bobo15bo35b3o3bo$\n171bo23bo23b2ob2o13bo34b3o3bo19bobo$194bo26bob2o12bo38bo13bo14bobo$223\nbo12bo32bo2bo2bo10bo4bo6bobo7bo$285bobo3bo14bo3bo$182bo35bo21bo23bo21b\no2bo16bo3bo$238bobobo19bobobo21bo9bobo7bo$182bo7bo48b3o21b3o4bo3bo3bo3\nbo22bobo$187b2o2bo106bobo$188bo2bo13bo4bo$208b2obo64bo$213bo25bobo65bo\n$188bo2bo21bo32bobo51bobo3bobo$187b2o2bo16b2obo27bobo7bo59bo$182bo7bo1\n4bo4bo36bo3bo50bo5bo2bo$247bo3bo52b2obobobo$182bo56bobo7bo50bo3bo2bobo\n$246bobo59bo$239bobo58bo3bo2bobo$304b2obobobo$302bo5bo2bo$309bo$300bob\no3bobo$307bo!",
+  "pop": 4813,
+  "kind": "other",
+  "period": null,
+  "disp": null
+ },
+ {
+  "title": "p5 c spaceship",
+  "by": "glider_rider",
+  "date": "2015-03-07",
+  "post": "p17535",
+  "note": "A p5 c spaceship.",
+  "rle": "x = 33, y = 58, rule = B2/S0\n6bo19bo$5b2obo15bob2o$6b2o17b2o$7b3o13b3o$7bo17bo$6bobo15bobo$bo5bo17b\no5bo$3o4bo8bo8bo4b3o$3b2o2bob3o3b3o3b3obo2b2o$bo2bo5b3o3bo3b3o5bo2bo$2\nb2obo4bo5bo5bo4bob2o$5bo5bo3b3o3bo5bo$11b2o3bo3b2o$8bob2o9b2obo$8b2o13\nb2o$6bobo3bo7bo3bobo$5b3o3bobo5bobo3b3o$12bob2ob2obo$4bo2bo3bo9bo3bo2b\no$5b2o3bo11bo3b2o$10bo11bo3$12bo7bo$15bobo$10bo11bo$6bo3b5o3b5o3bo$5b3\no2bo11bo2b3o$6bo3bo11bo3bo3$7bo6bo3bo6bo2$9bo3bo5bo3bo$6bo4bobo5bobo4b\no$3bo2bo2bo13bo2bo2bo$13bo5bo$3bobo4bo11bo4bobo$10bo2b3ob3o2bo$6bob2o2\nb2ob3ob2o2b2obo$12b4ob4o2$4bo23bo$4bo9bo3bo9bo$4bo23bo$4bobo19bobo$bo2\nbob3obo3bo3bo3bob3obo2bo$2bo8bo9bo8bo$3bo2bo19bo2bo$4b2o21b2o$10bobo7b\nobo$11b3o5b3o$9b3o2b2ob2o2b3o$11bo9bo$10bo3bo3bo3bo$11bo9bo$14bo3bo$12\nb2o5b2o!",
+  "pop": 289,
+  "kind": "spaceship",
+  "period": 5,
+  "disp": [
+   0,
+   5
+  ]
+ },
+ {
+  "title": "p2 rake (flicker rake)",
+  "by": "glider_rider",
+  "date": "2015-03-07",
+  "post": "p17535",
+  "note": "The first p2 rake, catalogued as the flicker rake.",
+  "rle": "x = 50, y = 80, rule = B2/S0\n6bobo3bobo20bobo3bobo2$8b2o30b2o$6bo3b4o2bo16bo2b4o3bo$obo3bo7b2o18b2o\n7bo3bobo$3bo7b2o2bo18bo2b2o7bo$2b2o6bo3bo3bo12bo3bo3bo6b2o$2bo4bo7b3o1\n4b3o7bo4bo$5bo3bo7bo14bo7bo3bo$o7bo32bo7bo$5b4o4bo22bo4b4o$2bo4bobobob\nobobo2bo8bo2bobobobobobo4bo$2bo2bo12b2o10b2o12bo2bo$2bo3bo2bo2bo2bo18b\no2bo2bo2bo3bo$bo5b2o4b2o20b2o4b2o5bo$2bo44bo$2bobo40bobo$4bobo2bo30bo2\nbobo$4bo2b2o32b2o2bo2$2bo44bo2$4bo2bo2bo28bo2bo2bo$4bo3b2o30b2o3bo$3bo\n42bo$4bo40bo$4bobo36bobo$6bobo2bo26bo2bobo$6bo2b2o28b2o2bo2$4bo40bo2$6\nbo2bo2bo24bo2bo2bo$6bo3b2o26b2o3bo$5bo38bo$6bo36bo$6bobo32bobo$8bobo2b\no22bo2bobo$8bo2b2o24b2o2bo2$6bo36bo2$8bo2bo2bo20bo2bo2bo$8bo3b2o22b2o3\nbo$7bo34bo$8bo32bo$8bobo28bobo$10bobo2bo18bo2bobo$10bo2b2o20b2o2bo2$8b\no32bo2$10bo2bo2bo16bo2bo2bo$10bo3b2o18b2o3bo$9bo30bo$10bo28bo$10bobo24\nbobo$12bobo2bo14bo2bobo$12bo2b2o16b2o2bo2$10bo28bo2$12bo2bo2bo12bo2bo2\nbo$12bo3b2o14b2o3bo$11bo26bo$12bo24bo$12bobo20bobo$14bobo2bo10bo2bobo$\n14bo2b2o12b2o2bo2$9bo2bo24bo2bo$24b2o$11bobo5bo3bo2bo3bo5bobo$11b4o3b2\nobobo2bobob2o3b4o$7bo2bobobobo3bob2o2b2obo3bobobobo2bo$8b2o11bo6bo11b2\no$12bo2bo7bo2bo7bo2bo$13b2o7bo4bo7b2o$19bo10bo$20b2o6b2o!",
+  "pop": 384,
+  "kind": "other",
+  "period": null,
+  "disp": null
+ },
+ {
+  "title": "p2 wick puffer, stabilized",
+  "by": "wildmyron",
+  "date": "2015-03-31",
+  "post": "p18392",
+  "note": "A p2 puffer whose wick is stabilized at the end.",
+  "rle": "x = 220, y = 32, rule = B2/S0\n114bo3bo6bo7bo5bo$3bo4bo98bo2bo3b2o16b2o2bo2b2o75bo$4bo2bo87bo9bobo3bo\n4b4o2bo8bo10bo74bo$5bo64bo8bo22bo9bo9b2ob2ob2o4bo7bobo67bo4bo$o5bo17bo\n30bobo8bo2bob2o4b2obo2bo10b2o10bo5bo2bo9bo3b2o11bo73bo$bo7bobo8bo7bo2b\no20bo8bo3bo5b2o4b2o5bo7bobo6bo8bo4b3o8bo3bo5b2o76b2o$2bo9bo5bobo4bo30b\no9bobo2bo6bo2bobo11b3o10bo8bo11bobo2b4o2b4o4bo5bo5bo5bo5bo5bo5bo5bo5bo\n5bo5bo4bo2bobo$3bo6b3obo3bo2bo6b3o2bo27b4o6bo6bo6b4o6bo3bo2b3o3bo2b2o2\nbo10bo3b3o3bo3bo5b2o4b2o4b2o4b2o4b2o4b2o4b2o4b2o4b2o4b2o4b2o4bo6bo$bo8\nbo3bo4bo2bo8b3o3bo4bo6bo6b2o2b3o2b3ob2o2bo2bo2b2ob3o2b3o9b2obo5b2o2b2o\n7b2o4bo2bo13bo4b2o4b2o4b2o4b2o4b2o4b2o4b2o4b2o4b2o4b2o4b2o5bo2bo$o11bo\n2bo4bobo3b3o8b2o14bob4o10b2o8b2o10b3obo6bo2b2o2bo2b2o7bo2bo2bo5bo10b2o\n5bo5bo5bo5bo5bo5bo5bo5bo5bo5bo6b2o3bo$4bo15bo5bo2b3o8bob5o8b2o6bo2bo16\nbo2bo6b2o3b2obo4bo2bo7bo3bo3b2o2bo3b2o9bo66bo4bo$6b2o3b2o21bo5bo4bobob\n2o4bo16bob2obo20b2o7bobo9bo12b2o9bo66b2o$4bo23bo2bo7bo8bob2o3bobo2b2o2\nb2o2b2o2bob2obo2b2o2b2o2b2o2bo2b4obo2b2o2bo8bo3bo2bo12bo4bo69b2o2bo$5b\no2bo2bo23bo5bo2bo4b2o4bo3bo10bo8bo10bo11bo3b2o23bobobobo2bo70bo2b2o$38\nbo3b2o9bo46bo3b2obo2bo2bo5bo6b2o7b4obo73bobo$46bobo3bo9bo4bo4bob2obo4b\no4bo9bo10bobo2b2ob2o2b3o13bo3bo71bo4bo$46bobo3bo9bo4bo4bob2obo4bo4bo9b\no10bobo2b2ob2o2b3o13bo3bo71bo4bo$38bo3b2o9bo46bo3b2obo2bo2bo5bo6b2o7b4\nobo73bobo$5bo2bo2bo23bo5bo2bo4b2o4bo3bo10bo8bo10bo11bo3b2o23bobobobo2b\no70bo2b2o$4bo23bo2bo7bo8bob2o3bobo2b2o2b2o2b2o2bob2obo2b2o2b2o2b2o2bo2\nb4obo2b2o2bo8bo3bo2bo12bo4bo69b2o2bo$6b2o3b2o21bo5bo4bobob2o4bo16bob2o\nbo20b2o7bobo9bo12b2o9bo66b2o$4bo15bo5bo2b3o8bob5o8b2o6bo2bo16bo2bo6b2o\n3b2obo4bo2bo7bo3bo3b2o2bo3b2o9bo66bo4bo$o11bo2bo4bobo3b3o8b2o14bob4o10\nb2o8b2o10b3obo6bo2b2o2bo2b2o7bo2bo2bo5bo10b2o5bo5bo5bo5bo5bo5bo5bo5bo5\nbo5bo6b2o3bo$bo8bo3bo4bo2bo8b3o3bo4bo6bo6b2o2b3o2b3ob2o2bo2bo2b2ob3o2b\n3o9b2obo5b2o2b2o7b2o4bo2bo13bo4b2o4b2o4b2o4b2o4b2o4b2o4b2o4b2o4b2o4b2o\n4b2o5bo2bo$3bo6b3obo3bo2bo6b3o2bo27b4o6bo6bo6b4o6bo3bo2b3o3bo2b2o2bo10\nbo3b3o3bo3bo5b2o4b2o4b2o4b2o4b2o4b2o4b2o4b2o4b2o4b2o4b2o4bo6bo$2bo9bo5\nbobo4bo30bo9bobo2bo6bo2bobo11b3o10bo8bo11bobo2b4o2b4o4bo5bo5bo5bo5bo5b\no5bo5bo5bo5bo5bo4bo2bobo$bo7bobo8bo7bo2bo20bo8bo3bo5b2o4b2o5bo7bobo6bo\n8bo4b3o8bo3bo5b2o76b2o$o5bo17bo30bobo8bo2bob2o4b2obo2bo10b2o10bo5bo2bo\n9bo3b2o11bo73bo$5bo64bo8bo22bo9bo9b2ob2ob2o4bo7bobo67bo4bo$4bo2bo87bo9\nbobo3bo4b4o2bo8bo10bo74bo$3bo4bo98bo2bo3b2o16b2o2bo2b2o75bo$114bo3bo6b\no7bo5bo!",
+  "pop": 968,
+  "kind": "other",
+  "period": null,
+  "disp": null
+ },
+ {
+  "title": "p5 moon gun",
+  "by": "wildmyron",
+  "date": "2016-08-09",
+  "post": "p34047",
+  "note": "A surprisingly small p5 moon gun: the second gun ever, at a new period.",
+  "rle": "x = 19, y = 46, rule = B2/S0\n7bo3bo$6b3ob3o$2bo2bo7bo2bo2$bo5bo3bo5bo$2o2bo2bobobo2bo2b2o$3bo4b3o4b\no$bobo4bobo4bobo$4bo9bo2$o17bo$2bo13bo$3b2o3bobo3b2o$4bo9bo$2bo2bo7bo2\nbo$b2o4b5o4b2o$2b3o9b3o2$7b5o$9bo2$4bo4bo4bo$3bo4b3o4bo$3bo4b3o4bo$4bo\n4bo4bo2$9bo$7b5o2$2b3o9b3o$b2o4b5o4b2o$2bo2bo7bo2bo$4bo9bo$3b2o3bobo3b\n2o$2bo13bo$o17bo2$4bo9bo$bobo4bobo4bobo$3bo4b3o4bo$2o2bo2bobobo2bo2b2o\n$bo5bo3bo5bo2$2bo2bo7bo2bo$6b3ob3o$7bo3bo!",
+  "pop": 166,
+  "kind": "other",
+  "period": null,
+  "disp": null
+ },
+ {
+  "title": "Bow tie",
+  "by": "wildmyron",
+  "date": "2016-08-09",
+  "post": "p34047",
+  "note": "A p5 oscillator.",
+  "rle": "x = 43, y = 19, rule = B2/S0\n10bo21bo$3bo3bo2b2o19b2o2bo3bo$2b3o3bo3b2o3bo7bo3b2o3bo3b3o$5bo2bo25bo\n2bo$11bo2bo2bo7bo2bo2bo$bo10bo2bo11bo2bo10bo$3b3o8b2o11b2o8b3o$7bo6bob\n2obo3bob2obo6bo$2bo9bo7bobo7bo9bo$3o5bo2b3o6b3o6b3o2bo5b3o$2bo9bo7bobo\n7bo9bo$7bo6bob2obo3bob2obo6bo$3b3o8b2o11b2o8b3o$bo10bo2bo11bo2bo10bo$1\n1bo2bo2bo7bo2bo2bo$5bo2bo25bo2bo$2b3o3bo3b2o3bo7bo3b2o3bo3b3o$3bo3bo2b\n2o19b2o2bo3bo$10bo21bo!",
+  "pop": 149,
+  "kind": "oscillator",
+  "period": 5,
+  "disp": [
+   0,
+   0
+  ]
+ },
+ {
+  "title": "Short-necked giraffe",
+  "by": "wildmyron",
+  "date": "2016-10-19",
+  "post": "p36652",
+  "note": "A smaller relative of the c/4 diagonal giraffe ship.",
+  "rle": "x = 50, y = 51, rule = B2/S0\n14bo$13bo$12bo$11bo2bo$15bo3$12bob2obo2$11bo$bobo6b2o3bo$o3bo11bo$10bo\n7b2o$o16b4o$bo2bo5bo4bo2b2o$5bo12bo2b2o$9bo4b3o4bo$15bo4b3o2bo$10bobo6\nbo$16b2o6bo6bobo$24bo$14b2o17bo$15b2o5bo9b2o$16bo10bo$25bo2bo3bo$17bo2\nbo7bo$22bo9b2o$28b2obo$23bo4bo$23bo9bo$20bo20bo$23bo5b2o9bobo$22b2o9b2\no11bo$28bo3bob4o3bob3o$20bobo12bobo9bo$46b3o$36b2o3bobo4b2o$32bo6bo9bo\n$31b2o4bo2bo8bo$30b2obobo2b2o$29b2o14b3o$30bobo5bo7bo2$35bo$39bo$36bob\n3o$33bo3bo2bo$40bo2$36b3o$37bo!",
+  "pop": 155,
+  "kind": "spaceship",
+  "period": 4,
+  "disp": [
+   1,
+   1
+  ]
+ },
+ {
+  "title": "5-dot seed for infinite growth",
+  "by": "praosylen",
+  "date": "2018-02-07",
+  "post": "p56284",
+  "note": "A five-dot seed for infinite growth.",
+  "rle": "x = 10, y = 9, rule = B2/S0\n8bo2$3bo$6bo$9bo$3bo2$b2o$o2bo!",
+  "pop": 9,
+  "kind": "other",
+  "period": null,
+  "disp": null
+ },
+ {
+  "title": "Completed almost-rake",
+  "by": "praosylen",
+  "date": "2019-11-07",
+  "post": "p84985",
+  "note": "Luke’s old near-rake, completed four years later.",
+  "rle": "x = 34, y = 32, rule = B2/S0\n24bo2bo2bo$31bo$27b3o3bo$27b3o3bo$31bo$24bo2bo2bo4$23bo5bo$30bo$31bo$3\n2bo$21bobob2o5bo$bo22bo4bobo$o$o$bo22bo4bobo$21bobob2o5bo$32bo$31bo$30\nbo$23bo5bo4$24bo2bo2bo$31bo$27b3o3bo$27b3o3bo$31bo$24bo2bo2bo!",
+  "pop": 62,
+  "kind": "other",
+  "period": null,
+  "disp": null
+ },
+ {
+  "title": "p9 puffer",
+  "by": "AforAmpere",
+  "date": "2021-05-22",
+  "post": "p130650",
+  "note": "A p9 puffer.",
+  "rle": "x = 46, y = 50, rule = B2/S0\n2b2o2b2o2b2o2b2o2b2o2b2o2b2o2b2o2b2o2b2o2b2o2$bo2b2o2b2o2b2o2b2o2b2o2b\n2o2b2o2b2o2b2o2b2o2bo$ob2obo2b2o2b2o2b2o2b2o2b2o2b2o2b2o2b2o2bob2obo$4\nbo3b2o2b2o2b2o10b2o2b2o2b2o3bo$o44bo$2b2obo9bo2bob2o2b2obo2bo9bob2o$8b\n2o2b2obo2bo3b2o3bo2bob2o2b2o$2bo2b3o2b2o4b2o3bo2bo3b2o4b2o2b3o2bo$2bob\no10b2obo8bob2o10bobo$bo3b2o6bo5b3o2b3o5bo6b2o3bo$5bo2bo4bo2bo4bo2bo4bo\n2bo4bo2bo$obo2bo2b3o2bo2b2o10b2o2bo2b3o2bo2bobo$o4bo6bo3bo2bob4obo2bo3\nbo6bo4bo$o17bo8bo17bo$15bo14bo$14bob2o2bo4bo2b2obo$7bo30bo$6bob2o3bo18\nbo3b2obo$11b2o5bobo4bobo5b2o$6bo6bo18bo6bo$18bobo4bobo$11bo2bo16bo2bo$\n8bo4bo18bo4bo6$13bo18bo$9bo26bo$8bo3bo20bo3bo$13bobo14bobo6$10bo3bo16b\no3bo2$7bo30bo7$10bo3bo16bo3bo2$7bo30bo!",
+  "pop": 268,
+  "kind": "other",
+  "period": null,
+  "disp": null
+ },
+ {
+  "title": "Small periodic MMS breeder",
+  "by": "Game of Life Fun",
+  "date": "2025-04-26",
+  "post": "p210707",
+  "note": "A much smaller periodic breeder, part of a large 2025 survey of rakes and breeders.",
+  "rle": "x = 51, y = 70, rule = B2/S0\n27b2o5b2o$26bo9bo$25bo3bo3bo3bo$26b2o3bo3b2o$27bo7bo2$27bo2bobo2bo2$24\nbo13bo$25b2o2bo3bo2b2o2$26bo9bo$28bo5bo8b2o$29bo3bo8bo2bo$41bo4bo$33b2\no$31bo8b2o4b2o$41b6o2$31bobo10$45b2o$26b2o2b2o12bo2bo$25bo6bo10bo4bo$2\n7bo2bo$25bobo2bobo9b2o4b2o$25bo6bo10b6o$25bo6bo13$3b2o5b2o$2bo9bo$bo3b\no3bo3bo$4b3ob3o$bo4b3o4bo$4bo5bo$2b3o2bo2b3o$3bo2b3o2bo$7bo$2bo9bo$o4b\no3bo4bo11b2o2b2o12b2o2b2o$3bo7bo13bo6bo10bo6bo$2b2o7b2o$3bobo3bobo14b2\no2b2o12b2o2b2o$4bo5bo15bo4bo12bo4bo$6bo$6bo$4b4o2$6bo$5b3o$6bo!",
+  "pop": 177,
+  "kind": "other",
+  "period": null,
+  "disp": null
+ },
+ {
+  "title": "Tiny p12 and p24 free ship rakes",
+  "by": "Game of Life Fun",
+  "date": "2025-04-29",
+  "post": "p210851",
+  "note": "Very small free ship rakes, from the same series.",
+  "rle": "x = 117, y = 44, rule = B2/S0\n102b2o3b2o$3b2o$2bo2bo86b2o7bo3bo3bo$bo4bo4b2o78bo2bo5bobo5bobo$2bo2bo\n4bo79bo4bo3bo3bo3bo3bo$13bo77bo2bo7bo5bo$14bo$12bo91b3o$11bo2b2o89bo$b\no4bo5b3o85b3ob3ob3o$bo4bo83bo4bo6bo5bo$bo4bo83bo4bo$90bo4bo5$2b2o10b2o\n$bo2bo8bo2bo74b2o10b2o$o4bo6bo4bo72bo2bo8bo2bo$bo2bo84bo4bo6bo4bo$bo2b\no85bo2bo$90bo2bo$12bo4bo$o4bo7b4o84bo4bo$89bo4bo7b4o$12bo4bo$101bo4bo8\n$24b2o$23bo2bo86b2o$22bo4bo84bo2bo$23bo2bo84bo4bo$23bo2bo85bo2bo$112bo\n2bo2$22bo4bo$111bo4bo!",
+  "pop": 148,
+  "kind": "other",
+  "period": null,
+  "disp": null
+ },
+ {
+  "title": "c/5 spaceship collection",
+  "by": "confocaloid",
+  "date": "2025-04-21",
+  "post": "p210405",
+  "note": "Three p5 c/5 ships that together exhibit all 102 isotropic neighborhood conditions.",
+  "rle": "x = 141, y = 74, rule = B2/S0\n28bo7bo5bo37bo4bo$3bo18bo6bo4bob6obo20bo14bo$23bo11b2obo6b2o2bo15bo22b\no39bo$o32b2o3bo3bobo3b3o9bo18bo7bo39bo$3bo8bo15bo3bo5bo4bo3bo8bo24bo3b\n2o7bo20bo4bo3bo14bo$2bo10bo13bo5b2o9bo2bo14b3o22bo7bo12bo10b3o3b2obo11\nbo$o18b3o6bo7bo4bo2b2o5bo9b2obo3bo5bo2bo15b3o7bo8bo4b2o19b3o$3bo4bo2bo\n2bo7b2o3bo9b4o3bo4b2obo3b3o2bobo9b3o2b2o7bob5o15b2ob2o2bo8bo2bo7bo$obo\nb2ob3obo4bo10bo26b3ob2o9bo3bo3bo18bo3b2o7bob3obo3bo6bo2b2o9bo$4b3ob4ob\no2bo6bo8bo4bo7bo2bo14bo5bo4bo3bobo2bo6bo6bo10b2o10bo5b3o6bo$4bo12bo14b\no32bob2o14bo4bo11b4o3bo6bo4bo3bo2bo2b2o2bobo$4bo12bo14bo32bob2o14bo4bo\n11b4o3bo6bo4bo3bo2bo2b2o2bobo$4b3ob4obo2bo6bo8bo4bo7bo2bo14bo5bo4bo3bo\nbo2bo6bo6bo10b2o10bo5b3o6bo$obob2ob3obo4bo10bo26b3ob2o9bo3bo3bo18bo3b2\no7bob3obo3bo6bo2b2o9bo$3bo4bo2bo2bo7b2o3bo9b4o3bo4b2obo3b3o2bobo9b3o2b\n2o7bob5o15b2ob2o2bo8bo2bo7bo$o18b3o6bo7bo4bo2b2o5bo9b2obo3bo5bo2bo15b3\no7bo8bo4b2o19b3o$2bo10bo13bo5b2o9bo2bo14b3o22bo7bo12bo10b3o3b2obo11bo$\n3bo8bo15bo3bo5bo4bo3bo8bo24bo3b2o7bo20bo4bo3bo14bo$o32b2o3bo3bobo3b3o9\nbo18bo7bo39bo$23bo11b2obo6b2o2bo15bo22bo39bo$3bo18bo6bo4bob6obo20bo14b\no$28bo7bo5bo37bo4bo3$96bo24bo$72bo24bo26bo4bo$71bo39bo16bo$64bo6bo23bo\n16bo9bo$71bo4bo8bo10bo23b3o2bo2bo2bo$66bo5bo9bo13bo8b3o15b3o$64bo2bo4b\no12bo8bo9bo2bo5bo10b2o5bo$68bo3bo5bobob3o3bo3bobo2bobo5b3o4b2o15b2o$64\nbobobo3b2o6bo2bo6bob3o2b2o5bo4bobo2b3obobo6b4o$68bo6bobo15bo3b2o12bo3b\nobo4bo4b3o$69bo5bo17bobo2bo3b2o6b2o4b2o2bo2bo7bo$65bobob2o21bo6bo9bobo\n5b2o5bo2bo$63bo8bo3bo13b2o7bo3bo12b3o5b2obo3bo$62b2o8bo2bo14bo21bo4bo6\nbo6b2o$63bo8bo3bo13b2o7bo3bo12b3o5b2obo3bo$65bobob2o21bo6bo9bobo5b2o5b\no2bo$69bo5bo17bobo2bo3b2o6b2o4b2o2bo2bo7bo$68bo6bobo15bo3b2o12bo3bobo4\nbo4b3o$64bobobo3b2o6bo2bo6bob3o2b2o5bo4bobo2b3obobo6b4o$68bo3bo5bobob3\no3bo3bobo2bobo5b3o4b2o15b2o$64bo2bo4bo12bo8bo9bo2bo5bo10b2o5bo$66bo5bo\n9bo13bo8b3o15b3o$71bo4bo8bo10bo23b3o2bo2bo2bo$64bo6bo23bo16bo9bo$71bo3\n9bo16bo$72bo24bo26bo4bo$96bo24bo4$33bo6bo8bo9bo$30bo3bo4bo22bo33bo$25b\nobo18bo8bo39bo$28b2o2bo3b2o2bo10bo8bo4bob2o14bo4bo3bo14bo$31bo17b3o6b2\nobo4bo9bo10b3o3b2obo11bo$35b3o2bo2bo4bo2bo5bobo4b2o14bo4b2o19b3o$25bo4\nbo3bobo7bo3bo2bo5b2o13bo4b2ob2o2bo8bo2bo7bo$25bo4bo2bob2o5b3o3bo6bo3bo\n3bobo11bob3obo3bo6bo2b2o9bo$24b2o5b2ob2o8bo8bo2bobo3bo7bo5b2o10bo5b3o6\nbo$25bobo17bo4b3o17b2o3bo6bo4bo3bo2bo2b2o2bobo$25bobo17bo4b3o17b2o3bo6\nbo4bo3bo2bo2b2o2bobo$24b2o5b2ob2o8bo8bo2bobo3bo7bo5b2o10bo5b3o6bo$25bo\n4bo2bob2o5b3o3bo6bo3bo3bobo11bob3obo3bo6bo2b2o9bo$25bo4bo3bobo7bo3bo2b\no5b2o13bo4b2ob2o2bo8bo2bo7bo$35b3o2bo2bo4bo2bo5bobo4b2o14bo4b2o19b3o$3\n1bo17b3o6b2obo4bo9bo10b3o3b2obo11bo$28b2o2bo3b2o2bo10bo8bo4bob2o14bo4b\no3bo14bo$25bobo18bo8bo39bo$30bo3bo4bo22bo33bo$33bo6bo8bo9bo!",
+  "pop": 1018,
+  "kind": "spaceship",
+  "period": 5,
+  "disp": [
+   1,
+   0
+  ]
+ }
+]

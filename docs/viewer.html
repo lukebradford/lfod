@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Viewer · Live Free or Die Universe</title>
+<meta name="description" content="An exploration of the Live Free or Die (B2/S0) cellular automaton.">
+<link rel="icon" href="img/icon.png">
+<link rel="stylesheet" href="assets/style.css?v=59a6faff">
+<script src="assets/lfod.js?v=59a6faff" defer></script>
+</head>
+<body>
+<header class="site-header"><div class="inner">
+<a class="brand" href="index.html">Live Free or Die Universe<small>B2/S0</small></a>
+<nav class="main" aria-label="Main"><a href="index.html">Home</a><a href="news.html">News</a><a href="glossary.html">Glossary</a><a href="tables.html">Object tables</a><a href="periods.html">Periods</a><a href="iterations.html">Iterations</a><a href="challenges.html">Challenges</a><a href="files.html">Files</a><a href="restoration.html">About this restoration</a></nav>
+</div></header>
+<main>
+<h1 id="vt">Viewer</h1>
+<p class="muted" id="vs">Loading…</p>
+<div id="vp"></div>
+<p class="muted">Tip: large flotillas take many generations to show their behavior. Scroll to zoom, drag to pan, ⏭ to step. Or paste the RLE into Golly with rule B2/S0.</p>
+<script>
+(async function(){
+  const f = new URLSearchParams(location.search).get('f');
+  if(!f){ document.getElementById('vs').textContent='No file given.'; return; }
+  const name = decodeURIComponent(f);
+  document.getElementById('vt').textContent = name.replace(/\.rle$/,'');
+  document.title = name + ' · Live Free or Die Universe';
+  try {
+    const txt = await (await fetch('files/' + encodeURIComponent(name))).text();
+    const el = document.createElement('div');
+    el.className='pattern'; el.dataset.rle=txt; el.dataset.height=String(Math.min(640, Math.max(320, innerHeight-260)));
+    el.dataset.autoplay='false'; el.dataset.speed='20'; el.dataset.interactive='true';
+    document.getElementById('vp').appendChild(el);
+    new LFoD.Player(el);
+    document.getElementById('vs').innerHTML = '<a href="files/'+encodeURIComponent(name)+'" download>Download RLE</a> · <a href="files.html">All files</a>';
+  } catch(e){ document.getElementById('vs').textContent='Could not load file.'; }
+})();
+</script>
+</main>
+<footer class="site-footer"><div class="inner">
+Objects found and named by Luke Bradford unless otherwise credited. Originally published at
+mysite.verizon.net/live_free (2007–2012) and lfod.wikispaces.com (2013–2018); restored 2026.
+Patterns run live in your browser — click any pattern to pause or play.
+</div></footer>
+</body>
+</html>

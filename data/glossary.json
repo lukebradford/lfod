@@ -1,0 +1,2162 @@
+[
+ {
+  "name": "accidental puffer",
+  "desc": "A p4 c puffer of the following form, which is closely related to the accidental ship. The smallest iteration, shown below, has an initial population of 25 cells. For a full list of possible iterations, see Iteration Guides.",
+  "rle": "x = 9, y = 13, rule = s0/b2\nbo$2bo4bo$3bo4bo$4bo3bo$6bo$o4bo$b3o$b3o$o4bo$6bo$4bo3bo$3bo4bo$2bo4bo!",
+  "images": [
+   {
+    "src": "glossary_files/image002.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "accidental ship",
+  "desc": "The following p4 c spaceship with a minimum population of 28 cells, which is closely related to accidental puffers.",
+  "rle": "x = 13, y = 12, rule = s0/b2\n6bo4bo$o6bo4bo$8bo3bo$o9bo$4bo4bo$5b3o$5b3o$4bo4bo$o9bo$8bo3bo$o6bo4bo$6bo4bo!",
+  "images": [
+   {
+    "src": "glossary_files/image001.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "anchor",
+  "desc": "The following p4 oscillator with a minimum population of 4 cells, which is a primary component of many other oscillators and a fairly common puffer output.",
+  "rle": "x = 2, y = 5, rule = s0/b2\no$bo2$bo$o!",
+  "images": [
+   {
+    "src": "glossary_files/image003.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "anchor biter",
+  "desc": "A c trailer of infinitely extensible size and period, formed from two tippy trailers which convert an anchor track left by a puffer into a sparse trail of checkers, which is one of few known methods of creating puffers of arbitrarily large period. The following is referred to as a 6-slot anchor biter and is extended by inserting four more pairs of dots into the anchor track before the tippy trailer.",
+  "rle": "x = 40, y = 23, rule = s0/b2\n19bo4bo$18bobo4bo$19bobo3bo$8bo11bo2bo$12bo9bo$9bo3bo2bo19bo$2bo5bo28bo$38bo$o38bo$3bo4bo3bo3bo3bo3bo3bo3bo6bo$29bo2$29bo$3bo4bo3bo3bo3bo3bo3bo3bo6bo$o38bo$38bo$2bo5bo28bo$9bo3bo2bo19bo$12bo9bo$8bo11bo2bo$19bobo3bo$18bobo4bo$19bo4bo!",
+  "images": [
+   {
+    "src": "glossary_files/image004.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "anchor biter puffer",
+  "desc": "Any puffer formed from a flotilla of puffers and an anchor biter trailer. The smallest currently known consists of a sun puffer and two 3-2 dot puffers.",
+  "rle": "",
+  "images": [],
+  "credit": ""
+ },
+ {
+  "name": "anchor eater",
+  "desc": "A c trailer of infinitely extensible size and period, formed from two tippy trailers consuming an anchor track left by a puffer, which is the only known method of creating spaceships of arbitrarily large period. Closely related to anchor biters and anchor nibblers. The following is referred to as a 6-slot anchor eater and is extended by inserting four more pairs of dots into the anchor track before the tippy trailer.",
+  "rle": "x = 32, y = 23, rule = s0/b2\n15bo4bo$14bobo4bo$15bobo3bo$4bo11bo2bo$8bo9bo$5bo3bo2bo15bo$4bo24bo$o29bo$31bo$o3bo3bo3bo3bo3bo3bo6bo$21bo2$21bo$o3bo3bo3bo3bo3bo3bo6bo$31bo$o29bo$4bo24bo$5bo3bo2bo15bo$8bo9bo$4bo11bo2bo$15bobo3bo$14bobo4bo$15bo4bo!",
+  "images": [
+   {
+    "src": "glossary_files/image005.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "anchor eater ship",
+  "desc": "Any spaceship formed from a flotilla of puffers and an anchor eater trailer. The smallest currently known consists of a sun puffer and two 3-2 dot puffers.",
+  "rle": "",
+  "images": [],
+  "credit": ""
+ },
+ {
+  "name": "anchor stack",
+  "desc": "An infinitely extensible oscillator formed from two or more interacting anchors. See rusty anchor stack, shiny anchor stack, and wavy anchor stack.",
+  "rle": "",
+  "images": [],
+  "credit": ""
+ },
+ {
+  "name": "anchor track",
+  "desc": "An oscillator of the following form, which is of infinitely extensible size and period, in which anchors travel along a track built of two evenly spaced lines of dots. The first few iterations have periods, respectively, of 12, 28, 124, 124, 252 and 60. The following is referred to as a two-slot anchor track and is extended by placing another pair of dots shifted four cells to the right of the first. The two-slot anchor track is the smallest oscillator that is not a phoenix, in terms of bounding box, and ties with the monster in terms of minimum population.",
+  "rle": "x = 6, y = 5, rule = s0/b2\nbo3bo$o2$o$bo3bo!",
+  "images": [
+   {
+    "src": "glossary_files/image006.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "anchor track flotilla",
+  "desc": "Any flotilla of puffers or spaceships which creates and uses anchors or anchor tracks perpendicular to the direction of travel (as opposed to an object like an anchor eater, which creates an anchor track in line with the direction of travel.) These are useful for creating interesting puffers because of the reaction possibilities that anchors and anchor tracks present. For an example, see radar puffer.",
+  "rle": "",
+  "images": [],
+  "credit": ""
+ },
+ {
+  "name": "anchored",
+  "desc": "Describes a puffer whose wings have added checker-like appendages, so named because of the resemblance to an anchor these have during the puffer’s empty and boxy phases. See bi-anchored, left-anchored, and right-anchored.",
+  "rle": "",
+  "images": [],
+  "credit": ""
+ },
+ {
+  "name": "ant",
+  "desc": "The following p6 oscillator with a minimum population of 6 cells, which is the smallest known p6 oscillator. Discovered by Josh Ball.",
+  "rle": "x = 8, y = 4, rule = s0/b2\nbobo$o$7bo$4bobo!",
+  "images": [
+   {
+    "src": "glossary_files/image007.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "anthill",
+  "desc": "The following p6 oscillator with a minimum population of 23 cells. Can be incorporated into ant stacks. Discovered by Josh Ball.",
+  "rle": "x = 13, y = 7, rule = s0/b2\no4b3o4bo$bo9bo$4bo3bo2$2bobo3bobo$obo7bobo$b3o5b3o!",
+  "images": [
+   {
+    "src": "glossary_files/image154.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "arrow puffer",
+  "desc": "The following p9 c puffer with an initial population of 18 cells, which is the only known p9 object other than the functionally identical long arrow puffer.",
+  "rle": "x = 8, y = 8, rule = s0/b2\n4bo$3bobo$4o2bo$7bo$7bo$4o2bo$3bobo$4bo!",
+  "images": [
+   {
+    "src": "glossary_files/image008.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "asterisk",
+  "desc": "The following small p4 c tagalong for a moon which produces a double row of checkers, and is closely related to the heckler.",
+  "rle": "x = 4, y = 10, rule = s0/b2\n2bo$3bo$3bo$2bo2$bo$o2bo$3bo$2bo$bo!",
+  "images": [
+   {
+    "src": "glossary_files/image009.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "attached wing",
+  "desc": "Any wing contiguous with the nose of a spaceship or puffer. Below is a 3-3 robot ship with its attached wing highlighted. See also floating wing.",
+  "rle": "",
+  "images": [
+   {
+    "src": "glossary_files/image010.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "backflip",
+  "desc": "The following p4 trailer for a flip-flop rake, which converts moons into a quadruple trail of checkers. Discovered by Josh Ball.",
+  "rle": "x = 56, y = 21, rule = s0/b2\n54bo$7bo34bo5bobo4bo$8bo32bob2o6bo3bo$10bo30bo11bo$8bobo5bobo4bo7bo2bo4bobo3bo6bo$5bo13bo2b3o2bo3bo19bo$4bo11bo3b2ob3obo23bo$5b2o5bo6bo4bobo4bo3bo6b2o3bo2bo2bo$2bo8bo14bo24bobo$3bo7bo5bo7bobobo5bo2bo2bo9bo$8bo3bo3b2o5bo3b3o9b3o8bo$6bo8bobo3bobo5bo9bobo9bo$7bo7bobob2o2bo2bo24bobo$o3bo3bo7b2o3bo3b2o4bo7bo2bo2bo5bobo$3bo4bo8bob2o4bo5bo7bo$2bo3bobo16bo11bo4bo6b2o$10bo21bo5b2obo2bo7bo$4bo5bo18bobo5b4o3bo2bo5bo$4bo3bo30b3obo7bo3bo$5bobo30bo3bo7bo4bo$54bo!",
+  "images": [
+   {
+    "src": "glossary_files/image143.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "ball pit",
+  "desc": "A large, infinitely extensible p2 oscillator of the following form. (Courtesy of Jason Summers’ Seeds collection.)",
+  "rle": "x = 13, y = 13, rule = s0/b2\n4bo3bo$2bo2b3o2bo$b2o7b2o2$o4b3o4bo$bo2bo3bo2bo$bo2bo3bo2bo$bo2bo3bo2bo$o4b3o4bo2$b2o7b2o$2bo2b3o2bo$4bo3bo!",
+  "images": [
+   {
+    "src": "glossary_files/image011.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Jason Summers' Seeds collection"
+ },
+ {
+  "name": "beacon",
+  "desc": "The following p4 oscillator with a minimum population of 52 cells. Discovered by Josh Ball.",
+  "rle": "x = 20, y = 20, rule = s0/b2\n6bo6bo$5bo8bo$8bo2bo$7bo4bo2$2bo6b2o6bo$3bo4bo2bo4bo$o6bo4bo6bo$bo4b2o4b2o4bo3$bo4b2o4b2o4bo$o6bo4bo6bo$3bo4bo2bo4bo$2bo6b2o6bo2$7bo4bo$8bo2bo$5bo8bo$6bo6bo!",
+  "images": [
+   {
+    "src": "glossary_files/image160.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "belly flop",
+  "desc": "The following p4 trailer for a flip-flop puffer, which converts the moons into a double trail of dots. Discovered by Josh Ball.",
+  "rle": "x = 54, y = 21, rule = s0/b2\n52bo$3bo36bo5bobo4bo$4bo34bob2o6bo3bo$6bo32bo11bo$3bo2bo7bobo4bo7bo2bo4bobo3bo6bo$17bo2b3o2bo3bo19bo$14bo3b2ob3obo23bo$4bo5bo6bo4bobo4bo3bo6b2o3bo2bo2bo$3bo5bo14bo24bobo$2b2o5bo5bo7bobobo5bo2bo2bo9bo$3bo2bo3bo3b2o5bo3b3o9b3o8bo$5bo7bobo3bobo5bo9bobo9bo$5bo7bobob2o2bo2bo24bobo$bo4bo7b2o3bo3b2o4bo7bo2bo2bo5bobo$15bob2o4bo5bo7bo$2bobo18bo11bo4bo6b2o$o5bo23bo5b2obo2bo7bo$6bo20bobo5b4o3bo2bo5bo$o3bo32b3obo7bo3bo$bobo32bo3bo7bo4bo$52bo!",
+  "images": [
+   {
+    "src": "glossary_files/image150.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "bi-anchored",
+  "desc": "Describes a puffer which is anchored on both wings. See also left-anchored and right-anchored. Below is a bi-anchored 5-4 robot puffer.",
+  "rle": "x = 9, y = 11, rule = s0/b2\nbobo$o3bo$5bo$6bo$7bo$8bo$8bo$6bo$5bo$o3bo$bobo!",
+  "images": [
+   {
+    "src": "glossary_files/image012.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "big six shooter",
+  "desc": "The following p6 oscillator with a minimum population of 27 cells. Discovered by Josh Ball.",
+  "rle": "x = 11, y = 13, rule = s0/b2\nbo7bo$bo7bo$bo7bo2$2bo5bo$o3b3o3bo$5bo$o3b3o3bo$2bo5bo2$bo7bo$bo7bo$bo7bo!",
+  "images": [
+   {
+    "src": "glossary_files/image161.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "black widow",
+  "desc": "Any large p8 oscillator with a mechanism such as the following, which supports a few variations. For a set of possible iterations, see Oscillators in Files. The smallest iteration, shown below, has a minimum population of 86 cells. Discovered by Josh Ball.",
+  "rle": "x = 41, y = 15, rule = s0/b2\n12bo3bo7bo3bo$11bo8bo8bo$5bo13b3o13bo$5b4o8bo5bo8b4o$bo3bobo25bobo3bo$o3bobo8bo9bo8bobo3bo$3bo2bo4bo4b2obobob2o4bo4bo2bo$6bo3bo5bo7bo5bo3bo$7bo10bo3bo10bo$o5bo3b2o2bo11bo2b2o3bo5bo$bo12bo5bo5bo12bo2$5bo2bo23bo2bo$11bo3bo4bo4bo3bo$12bo3bo7bo3bo!",
+  "images": [
+   {
+    "src": "glossary_files/image127.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "blob puffer",
+  "desc": "The following p8 puffer with an initial population of 84 cells. Discovered by Josh Ball.",
+  "rle": "x = 24, y = 21, rule = s0/b2\n4bo7bo7bo$13b3o2bo2bo$4bo6bo2bo5bo2bo$11b3o2bob2o3bo$10bo6bo2bobo$5bo2bobo5bo$9bo6bo3bo$o5b2o3bo6b2o2bo$5bo5bo8bobo$5bo5bo4bo$6bo3bo$5bo8b5o$6bo6bo6bobo$o5bo2bobobo8bo$11bobo6bo2$17bo2bobo$13bo2bob2o3bo$10bo9bo2bo$6bo3bo4bo2bo2bo$10bo9bo!",
+  "images": [
+   {
+    "src": "glossary_files/image146.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "bomb",
+  "desc": "Any object which explodes after some delay. The example below, which has an initial population of only 12 cells, takes 162 generations to leave its 26x13 bounding box and is formed from an interacting two-slot anchor track and monster. (Note that if bounding box is not taken into account, bombs of arbitrary delay can be built with only 5 cells by firing a moon at a dot.)",
+  "rle": "x = 19, y = 7, rule = s0/b2\n15bo2bo$16b2o$bo3bo$o2$o$bo3bo9bo2bo!",
+  "images": [
+   {
+    "src": "glossary_files/image013.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "boxy",
+  "desc": "The phase type following empty in a p4 c spaceship or puffer, in which the wings form box-like patterns with the spark. Below is a 3-3 robot ship in its boxy phase.",
+  "rle": "",
+  "images": [
+   {
+    "src": "glossary_files/image014.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "buoy",
+  "desc": "The following p4 oscillator with a minimum population of 21 cells. Can be incorporated into anchor stacks. Discovered by Josh Ball.",
+  "rle": "x = 11, y = 13, rule = s0/b2\n6bo3bo$7bobo2$3bobo$6bo$3bob3o$4o$bo3bo4$6bo3bo$7bobo!",
+  "images": [
+   {
+    "src": "glossary_files/image155.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "butterfly",
+  "desc": "The following fairly common 14-cell spark.",
+  "rle": "",
+  "images": [
+   {
+    "src": "glossary_files/image015.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "cactus puffer",
+  "desc": "The following p8 puffer with an initial population of 39 cells. Discovered by Josh Ball.",
+  "rle": "x = 17, y = 15, rule = s0/b2\n7bo$o12bo$7bo6bo$9bo3bo2bo$3bo5bob2o3bo$4bo7bo$5bo9bo$4b3o6b3o$o4bo9bo$12bo$9bob2o3bo$9bo3bo2bo$8bo5bo$4bo8bo$8bo!",
+  "images": [
+   {
+    "src": "glossary_files/image142.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "Cecil B. DeMille",
+  "desc": "Any p2 oscillator of the following form, in which a wick of dominoes is stabilized by checkers or dots. Is infinitely extensible and the only known oscillator other than the trilogy that can have a stator. For a set of possible iterations, see Oscillators in Files.",
+  "rle": "x = 8, y = 8, rule = s0/b2\n4bo$bo2bobo2$6b2o$2o2$bobo2bo$3bo!",
+  "images": [
+   {
+    "src": "glossary_files/image016.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "cell",
+  "desc": "The fundamental unit of space in a cellular automaton.",
+  "rle": "",
+  "images": [],
+  "credit": ""
+ },
+ {
+  "name": "checker",
+  "desc": "The following p2 oscillator, which is an extremely common puffer output, one of few known p2 objects and the smallest oscillator in Live Free or Die, with only two live cells in every generation and a 2x2 bounding box.",
+  "rle": "",
+  "images": [
+   {
+    "src": "glossary_files/image017.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "control tower",
+  "desc": "The following large, infinitely extensible p4 oscillator with a minimum population of 16 cells, which can be incorporated into wavy anchor stacks. (Courtesy of Jason Summers’ Seeds collection.)",
+  "rle": "x = 15, y = 10, rule = B2/S0\n7bo$8bo2$bo6bo3bo$o7bo2bo$3bo2bo7bo$2bo3bo6bo2$6bo$7bo!",
+  "images": [
+   {
+    "src": "glossary_files/image018.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Jason Summers' Seeds collection"
+ },
+ {
+  "name": "crab ship",
+  "desc": "The following p4 c/2 spaceship with a minimum population of 70 cells. Discovered by Josh Ball.",
+  "rle": "x = 10, y = 50, rule = s0/b2\n3bo$8bo$7bo$5bo$7bo$3bobo$8bo$5bo2bo$2bo5bo$bo4bobo$o5b2o$5bo$5bo$6bobo$bo5bobo$9bo$6bo2bo$9bo$6bo$8bo2$8bo$7bobo$6bo3$6bo$7bobo$8bo2$8bo$6bo$9bo$6bo2bo$9bo$bo5bobo$6bobo$5bo$5bo$o5b2o$bo4bobo$2bo5bo$5bo2bo$8bo$3bobo$7bo$5bo$7bo$8bo$3bo!",
+  "images": [
+   {
+    "src": "glossary_files/image156.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "crosshairs",
+  "desc": "The following fairly common 20-cell spark.",
+  "rle": "",
+  "images": [
+   {
+    "src": "glossary_files/image019.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "donut",
+  "desc": "The following common 12-cell spark, which is produced by many puffers and spaceships and the final generation of many small pre-sparks.",
+  "rle": "",
+  "images": [
+   {
+    "src": "glossary_files/image020.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "dot",
+  "desc": "A single, isolated live cell, the only still life in the Live Free or Die universe.",
+  "rle": "",
+  "images": [
+   {
+    "src": "glossary_files/image021.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "dot eater",
+  "desc": "The following useful trailer that consumes a p4 double row of dots and can follow a variety of puffers.",
+  "rle": "x = 13, y = 13, rule = s0/b2\n9bo$10bo$11bo$o11bo$bo3bo6bo$2bo2$2bo$bo3bo6bo$o11bo$11bo$10bo$9bo!",
+  "images": [
+   {
+    "src": "glossary_files/image022.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "dot puffer",
+  "desc": "A p4 puffer of the following form, which can be anchored on either side. Named for the output of its smallest iteration, shown below, which has an initial population of 7 cells. For a full list of possible iterations, see Iteration Guides.",
+  "rle": "x = 6, y = 5, rule = s0/b2\n4bo$o4bo$bo3bo$3bo$2bo!",
+  "images": [
+   {
+    "src": "glossary_files/image023.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "dot ship",
+  "desc": "The following p4 c spaceship with a minimum population of 13 cells, which is closely related to dot puffers.",
+  "rle": "x = 8, y = 10, rule = s0/b2\no$bo4bo$2bo4bo$3bo3bo$5bo$4bo$3bo$2bo$bo$o!",
+  "images": [
+   {
+    "src": "glossary_files/image024.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "dotset puffer",
+  "desc": "A p4 puffer of the following form, which can be anchored on either side, which is closely related to the dotset ship. The name is a portmanteau of dot (after the dot puffer) and offset. The smallest iteration, shown below, has an initial population of 17 cells. For a full list of possible iterations, see Iteration Guides.",
+  "rle": "x = 10, y = 11, rule = s0/b2\nobo$3bo4bo$o3bo4bo$bo3bo3bo$7bo$6bo$5bo$4bo$3bo$2bo$bo!",
+  "images": [
+   {
+    "src": "glossary_files/image025.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "dotset ship",
+  "desc": "The following p4 spaceship with a minimum population of 16 cells, which is closely related to dotset puffers. The name is a portmanteau of dot (after the dot ship) and offset.",
+  "rle": "x = 10, y = 10, rule = s0/b2\nobo$3bo4bo$o3bo4bo$bo3bo3bo$7bo$6bo$5bo$4bo$3bo$2bo!",
+  "images": [
+   {
+    "src": "glossary_files/image026.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "double dot puffer",
+  "desc": "The following common p4 c puffer with an initial population of 6 cells, which is the smallest known puffer and is closely related to dot puffers.",
+  "rle": "x = 4, y = 5, rule = s0/b2\n2bo$3bo$o2bo$bo$o!",
+  "images": [
+   {
+    "src": "glossary_files/image027.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "dual infinite anchor track",
+  "desc": "The following c trailer, which converts a quadruple trail of dots into two anchor tracks that extend as the puffer travels.",
+  "rle": "x = 14, y = 15, rule = s0/b2\n10bo$bo2bo6bo$o9bo2bo$3o10bo$o11bo$3bo3bo$4bo2$4bo$3bo3bo$o11bo$3o10bo$o9bo2bo$bo2bo6bo$10bo!",
+  "images": [
+   {
+    "src": "glossary_files/image028.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "dual robot puffer",
+  "desc": "A p4 c puffer of the following form, which can be anchored on either side. The smallest iteration, shown below, has an initial population of 14 cells. For a full list of possible iterations, see Iteration Guides.",
+  "rle": "x = 5, y = 15, rule = s0/b2\no$bo$2bo$4bo$4bo$3bo$bo2$bo$3bo$4bo$4bo$2bo$bo$o!",
+  "images": [
+   {
+    "src": "glossary_files/image029.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "dual tippy trailer",
+  "desc": "The following trailer, which consumes a double row of checkers and is formed from two interacting tippy trailers.",
+  "rle": "x = 21, y = 11, rule = s0/b2\n4bo8bobo$8bo3bo3bo$5bo3bo7bo$4bo13bo$o18bo$20bo$o19bo$4bo13bo$5bo3bo7bo$8bo3bo3bo$4bo8bobo!",
+  "images": [
+   {
+    "src": "glossary_files/image030.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "dueling dominoes",
+  "desc": "The following 4-cell reaction, in which two dominoes create p6 puffers from two pairs of interacting free ships. This is the smallest pattern that exhibits infinite linear growth.",
+  "rle": "x = 13, y = 3, rule = s0/b2\n11b2o2$2o!",
+  "images": [
+   {
+    "src": "glossary_files/image031.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "dust mite ship",
+  "desc": "The following p8 c/2 spaceship with a minimum population of 36 cells, which is the smallest known c/2 spaceship. Discovered by Josh Ball.",
+  "rle": "x = 15, y = 12, rule = s0/b2\n7bo3bo$6bo4bobo$5bo5bo2bo$10bo$bo7bo$12bobo$o4bo3b5o$bobo3bo4bo$12b2o$4bob2obobobo$12bo$4bobo2bo!",
+  "images": [
+   {
+    "src": "glossary_files/image162.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "dusty",
+  "desc": "The phase type following boxy in a p4 c spaceship or puffer, in which the engine is isolated and small isolated patterns form the spark. Below is a 3-3 robot ship in its dusty phase.",
+  "rle": "",
+  "images": [
+   {
+    "src": "glossary_files/image032.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "eclipse puffer",
+  "desc": "The following p8 puffer with an initial population of 13 cells.",
+  "rle": "x = 9, y = 12, rule = s0/b2\n6bo$7bo$o7bo$o7bo$o2$7bo$8bo$8bo$7bo$6bo$5bo!",
+  "images": [
+   {
+    "src": "glossary_files/image136.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "elephant ship",
+  "desc": "The following p4 c/2 spaceship with a minimum population of 154 cells. Discovered by Josh Ball.",
+  "rle": "x = 66, y = 15, rule = s0/b2\n34bo8bo12bo$5bo2bo16bo9b2o2b5obo9b3o2bo$5b2obo16bo3bo8bo2bo4bo7b2o4bobobo$4bo5bo11bo2bo14bo2bo11b2o2b3o3bo$2bo8bo11b2o7bo10bo4bo7bo4bo3bo$9bobobo8b2o5bo8bo6bo2bo5b2ob4o4bo$2bo5bobo9bo3bobo2bo9bo8bo3bo2b3obo5bo$3bo2bo2bob2o7bo7bo6b3o2bo8bo3b3o3bo$5bo3b5obo5bo5bo10bo2b2o2bo15b2obo$4bo9bo8bo3b2o31bobo$2ob2o7b2o4bo8bobo9bo6bo10bo6bo$4bo16bobo22bo9bobo6bo$bobo4bo3bo33bo10bo3bo$29bo16bo$28bo16bo!",
+  "images": [
+   {
+    "src": "glossary_files/image164.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "empty",
+  "desc": "The smallest phase type of a p4 c spaceship or puffer, in which usually only the engine is present. Below is a 3-3 robot ship in its empty phase.",
+  "rle": "",
+  "images": [
+   {
+    "src": "glossary_files/image033.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "engine",
+  "desc": "In a c spaceship or puffer, the pattern of live cells that remains unchanged in every successive generation. Often the empty phase of a spaceship or puffer is the engine alone, and in the case of the moon the engine is the entire spaceship. Below is a 3-3 robot ship in its heavy phase with the engine highlighted.",
+  "rle": "",
+  "images": [
+   {
+    "src": "glossary_files/image034.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "engine horn",
+  "desc": "Any horn which occurs two cells backward and one cell outward from a wing of a spaceship. Engine horns occur in every known c puffer and spaceship except the moon. Below is a 3-3 robot ship in its heavy phase with both engine horns highlighted.",
+  "rle": "",
+  "images": [
+   {
+    "src": "glossary_files/image035.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "engine resultant",
+  "desc": "Describes a spaceship or puffer which will evolve from the engine alone. An object is strictly engine resultant if the engine will cleanly produce the object, and loosely engine resultant if the engine will produce the object along with some chaos.",
+  "rle": "",
+  "images": [],
+  "credit": ""
+ },
+ {
+  "name": "Eppstein’s slow ship",
+  "desc": "The following p4 c/2 spaceship with a minimum population of 187 cells. Discovered by David Eppstein.",
+  "rle": "x = 48, y = 24, rule = B2/S0\n31bo$35bo$6bo3bo2bo20bo$9bo4bo15bobo$12b3o10bobo3b2obo$3bo2bo2b2ob2o6bo3bo4bo$2b3o7b3o13b2o5bo6bo$3bo2bo5b2obo7bo6bo14bo$4bo7bo3b5o8bo2bo2b2obo3bobobo$4bo4b2o5bo2bo3bo3bob2o14b2o$3bobo2b2o6bo2bo4bobo14bo3bo$3bobo5b2ob3o2bo9bo9bo5b2o$5bobo5bo13bobo3bo11bobo$obo3b3o7b3o8bob2o3bob2o4bo$8bo5bo11bo4bo6bo4bo$10bo2bo6bo4bo3bo2b2o5bo4bo2bo$4bo5bo2b2o4b2o3bo6b2obo9bobo$7bo5bobo2b4o4bo2bo14bo$9bo9bo8b2o5bo$4b7o18b2o4bo$6b2o7bo12b2obo3bo$5bo4bo3bo15b2o3bo$29b2obobo$30bo!",
+  "images": [
+   {
+    "src": "glossary_files/image122.jpg",
+    "title": null
+   }
+  ],
+  "credit": "David Eppstein"
+ },
+ {
+  "name": "evil eyes",
+  "desc": "The following 2-cell reaction, which produces a quadratic spacefiller. This is the smallest pattern that exhibits infinite growth.",
+  "rle": "",
+  "images": [
+   {
+    "src": "glossary_files/image037.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "explosive",
+  "desc": "Refers to any pattern that becomes a quadratic spacefiller. The vast majority of random patterns in Live Free or Die are explosive. For a small example, see evil eyes.",
+  "rle": "",
+  "images": [],
+  "credit": ""
+ },
+ {
+  "name": "fake rake puffer",
+  "desc": "The following p8 puffer with an initial population of 24 cells.",
+  "rle": "x = 11, y = 20, rule = s0/b2\n7bo$8bo$9bo$9bo$2bo$bo$2o8bo$bo8bo$8bo3$8bo$bo8bo$2o8bo$bo$2bo$9bo$9bo$8bo$7bo!",
+  "images": [
+   {
+    "src": "glossary_files/image140.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "fence puffer",
+  "desc": "The following p8 puffer with an initial population of 18 cells, which requires a metronome puffer to stabilize it.",
+  "rle": "x = 16, y = 37, rule = s0/b2\n14bo$10bo4bo$11bo3bo$7bo5bo$3bo8bo$11bo$10bo$9bo$8bo$2bo4bo$bo2bobo5$2obo$4bo$4bo$3bo3$3bo$bo2bo$4bo$3bo$bo2$3bo$4bo$4bo$3bo2$bo$3bo$bo2bo$4bo$3bo!",
+  "images": [
+   {
+    "src": "glossary_files/image153.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "ferry puffer",
+  "desc": "A p8 puffer of the following form which produces anchors and a pattern of dots or checkers, which can be extended and anchored on both sides. The smallest iteration, shown below, has an initial population of 19 cells. For a full list of possible iterations, see Iteration Guides.",
+  "rle": "x = 9, y = 19, rule = s0/b2\no$bo$2bo4bo$3bo4bo$4bo3bo$6bo$3bobo2$3bo$5bo$5bo4$5bo$5bo$4bo$3bo$2bo!",
+  "images": [
+   {
+    "src": "glossary_files/image038.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "flame",
+  "desc": "The large and often very dense spark of a spaceship or puffer. Below is a 3-3 robot ship in its heavy phase with the flame highlighted.",
+  "rle": "",
+  "images": [
+   {
+    "src": "glossary_files/image039.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "flicker ship",
+  "desc": "The following p2 c spaceship with a minimum population of 54 cells, which is one of two known p2 spaceships, along with the flutter ship. Discovered by Josh Ball.",
+  "rle": "x = 10, y = 28, rule = s0/b2\n6bo$7bo$2bo4bo$6bo$4b2o$3bo2bobo$2bo6bo$6bo2bo$bo6bo$2o4bo$b2o$2bo2bo$4b2o$4bobo$4bobo$4b2o$2bo2bo$b2o$2o4bo$bo6bo$6bo2bo$2bo6bo$3bo2bobo$4b2o$6bo$2bo4bo$7bo$6bo!",
+  "images": [
+   {
+    "src": "glossary_files/image131.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "flip-flop rake",
+  "desc": "The following p4 double-barreled clean moon rake with an initial population of 131 cells, which is the only known p4 rake. Puffers can be obtained by deleting the 20 or 31 rearmost columns of cells. Discovered by Josh Ball.",
+  "rle": "x = 41, y = 21, rule = s0/b2\n39bo$27bo5bobo4bo$26bob2o6bo3bo$26bo11bo$bobo4bo7bo2bo4bobo3bo6bo$4bo2b3o2bo3bo19bo$bo3b2ob3obo23bo$4bo4bobo4bo3bo6b2o3bo2bo2bo$11bo24bobo$2bo7bobobo5bo2bo2bo9bo$b2o5bo3b3o9b3o8bo$obo3bobo5bo9bobo9bo$obob2o2bo2bo24bobo$b2o3bo3b2o4bo7bo2bo2bo5bobo$2bob2o4bo5bo7bo$10bo11bo4bo6b2o$17bo5b2obo2bo7bo$14bobo5b4o3bo2bo5bo$24b3obo7bo3bo$23bo3bo7bo4bo$39bo!",
+  "images": [
+   {
+    "src": "glossary_files/image149.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "floating wing",
+  "desc": "Any wing not contiguous with the nose of a spaceship or puffer. Below is a 3-3 robot ship with its floating wing highlighted. See also attached wing.",
+  "rle": "",
+  "images": [
+   {
+    "src": "glossary_files/image040.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "flutter ship",
+  "desc": "The following p2 c spaceship with a minimum population of 60 cells, which is one of two known p2 spaceships, along with the flicker ship. Discovered by Josh Ball.",
+  "rle": "x = 15, y = 24, rule = s0/b2\n11bo$12bo$7bo4bo$11bo$9b2o$7bo2b2obo$14bo$bo9bo2bo$4o2b2o5bo$11bo$bo8bo$2b3obobo$2b3obobo$bo8bo$11bo$4o2b2o5bo$bo9bo2bo$14bo$7bo2b2obo$9b2o$11bo$7bo4bo$12bo$11bo!",
+  "images": [
+   {
+    "src": "glossary_files/image132.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "forge puffer",
+  "desc": "Either of two p8 puffers, the smaller of which is the following, with an initial population of 37. The other is derived by extending the bottom wing by 3 cells, making that 14-cell wing the longest in any known object.",
+  "rle": "x = 18, y = 20, rule = s0/b2\n5bo$6bo$7bo$8bo$9bo$10bo$11bo4bo$4bo7bo4bo$5bo7bo3bo$2bo12bo$3bo10bo$o8bo3bo$bo6bo3bo$7bo3bo$6bo3bo$5bo3bo$4bo3bo$3bo3bo$6bo$3bobo!",
+  "images": [
+   {
+    "src": "glossary_files/image041.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "free rake",
+  "desc": "The following p12 sideways free ship rake, which is the first known rake in Live Free or Die. The same reaction with a different supporting anchor track flotilla can be used to build rakes of higher periods.",
+  "rle": "x = 37, y = 18, rule = s0/b2\no$bo$bo32bo$o29bo4bo$31bo3bo$33bo$4bobo9bobo13bo$3bo3bo7bo3bo3bo3bo$22b3o3$28bo4bo$4b3o5bo18b2obo$11bobo22bo$15bo20bo$15bo15b2obo$11bobo14bo4bo$4b3o5bo!",
+  "images": [
+   {
+    "src": "glossary_files/image042.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "free ship",
+  "desc": "The following p6 c spaceship with a minimum population of 12 cells, which occurs quite commonly in natural explosions and is useful in flotillas. So named because it is a typical symbol of the Live Free or Die universe.",
+  "rle": "x = 9, y = 6, rule = s0/b2\no4bo$3b2obo$8bo$8bo$3b2obo$o4bo!",
+  "images": [
+   {
+    "src": "glossary_files/image043.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "freedom fighter",
+  "desc": "The following large p12 tagalong for a pair of free ships based on the moonlighter.",
+  "rle": "x = 30, y = 22, rule = s0/b2\n21bo4bo$24b2obo$29bo$29bo$24b2obo$21bo4bo3$o6bobo5b3o$6bo3bo6bo$4bo2bobo2bo5bo$4bo2bobo2bo5bo$6bo3bo6bo$o6bobo5b3o3$21bo4bo$24b2obo$29bo$29bo$24b2obo$21bo4bo!",
+  "images": [
+   {
+    "src": "glossary_files/image044.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "generation",
+  "desc": "The fundamental unit of time in a cellular automaton.",
+  "rle": "",
+  "images": [],
+  "credit": ""
+ },
+ {
+  "name": "giraffe ship",
+  "desc": "The following p4 c/4 diagonal spaceship with a minimum population of 220 cells. Discovered by Josh Ball.",
+  "rle": "x = 59, y = 61, rule = s0/b2\n9bobo$8bo3bo2$8bo$9bo3bo$12bo$18bo$17bo$15bo$3bo13bo2bo$2bo13bo$bo13bo4bo$o3bo14bo$3bo11bo4bo$7bobo6bo$6bo16b3o$5bo7bo8b2ob2o$12bo9b2o$5bo5bo7bo2bobo$6bo4b2o3bo2bo10bo$12bo11bo4bobo$11bo3bo7bo2bo2b3o$10bobobobobo9bo3bo$13bo4bobo7bo2bo$12b3o2bo3bo5bo5bo$13bo16bob2obo$16b3o17bo$21bo$18bob2o2bo14bo$19bo13bo$17b3o15bo3bo$19bo6bo2bo2bo5bo$18bo4bo12bo2b2obo$22bo4bo5bo2bo2bo3bo$27bo5bo4b3o$26bo6bo6bo$25bo7bo6bo$28bo2bo2bo5bo2bobo$30bo2bo6b3o3bo$40bo$30b3o7b3o7bo$29bo10bobo6bobo$33bo3bo7bo9bo$32bo2bo7bo2bo3bob3o$46bo9bo$38bobo14b3o$37bo7b2o3bobo4b2o$41bo6bo9bo$40b2o4bo2bo8bo$39b2obobo2b2o$38b2o14b3o$39bobo5bo7bo2$44bo$48bo$45bob3o$42bo3bo2bo$49bo2$45b3o$46bo!",
+  "images": [
+   {
+    "src": "glossary_files/image159.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "half anchor eater",
+  "desc": "A c trailer of infinitely extensible size and period, formed from a tippy trailer which converts an anchor track left by a puffer into a trail of dots and checkers, which is one of few known methods of creating puffers of arbitrarily large period. The following is referred to as a 6-slot half anchor eater and is extended by inserting four more pairs of dots into the anchor track before the tippy trailer.",
+  "rle": "x = 28, y = 18, rule = s0/b2\n24bo$25bo$26bo$27bo$o3bo3bo3bo3bo3bo6bo$17bo2$17bo$o3bo3bo3bo3bo3bo6bo$27bo$26bo$o24bo$bo3bo2bo15bo$4bo9bo$o11bo2bo$11bobo3bo$10bobo4bo$11bo4bo!",
+  "images": [
+   {
+    "src": "glossary_files/image045.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "half anchor biter",
+  "desc": "A c trailer of infinitely extensible size and period, formed from a tippy trailer which converts an anchor track left by a puffer into a trail of dots and checkers, which is one of few known methods of creating puffers of arbitrarily large period. The following is referred to as a 6-slot half anchor biter and is extended by inserting four more pairs of dots into the anchor track before the tippy trailer.",
+  "rle": "x = 32, y = 18, rule = s0/b2\n11bo4bo$10bobo4bo$11bobo3bo$o11bo2bo$4bo9bo$bo3bo2bo19bo$o28bo$30bo$31bo$o3bo3bo3bo3bo3bo3bo6bo$21bo2$21bo$o3bo3bo3bo3bo3bo3bo6bo$31bo$30bo$29bo$28bo!",
+  "images": [
+   {
+    "src": "glossary_files/image046.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "half plus ship",
+  "desc": "The following p4 c spaceship with a minimum population of 14, which is closely related to anchored dot puffers. Named for the spark it produces.",
+  "rle": "x = 13, y = 7, rule = s0/b2\n6bobo$o4bo3bo$10bo$o7bo3bo$7bo4bo$6bo4bo$5bo!",
+  "images": [
+   {
+    "src": "glossary_files/image047.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "harvest moon",
+  "desc": "The following small p8 tagalong for a pair of any of several p4 c spaceships or puffers, which produces a p8 pattern of dots. Either side can be stabilized by most non-anchored dot puffers, dot ships, robot puffers, robot ships, sun puffers, sun ships, sun trailers, sunset puffers, and sunset ships.",
+  "rle": "x = 14, y = 24, rule = s0/b2\n10bo$11bo$12bo$13bo$13bo$11bo$10bo$9bo2$bo3bo$5bo$6bo$6bo$5bo$bo3bo2$9bo$10bo$11bo$12bo$12bo$10bo$9bo$8bo!",
+  "images": [
+   {
+    "src": "glossary_files/image048.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "heavy",
+  "desc": "The final phase type before empty of a p4 c spaceship or puffer, in which the spark (or ‘flame’) is large and often very dense. Below is a 3-3 robot ship in its heavy phase. Can also refer to the phase with the highest population in any period spaceship.",
+  "rle": "",
+  "images": [
+   {
+    "src": "glossary_files/image049.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "heckler",
+  "desc": "The following small p4 c trailer, which converts a p4 trail of dots into a p4 double trail of checkers. Can also be attached to a 3-2 dot puffer or a left-anchored 4-2 dot puffer, which normally produce checkers, if it is placed as shown below.",
+  "rle": "x = 12, y = 12, rule = s0/b2\n10bo$6bo4bo$7bo3bo$9bo$8bo$3bo2$bo$o2bo$3bo$2bo$bo!",
+  "images": [
+   {
+    "src": "glossary_files/image050.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "hex ship",
+  "desc": "The following p6 c spaceship with a minimum population of 16 cells and a very large flame, which is useful in flotillas and the only known p6 object other than the free ship and short free ship.",
+  "rle": "x = 10, y = 12, rule = s0/b2\no2$o7bo$5b2o2bo$6bo2bo3$6bo2bo$5b2o2bo$o7bo2$o!",
+  "images": [
+   {
+    "src": "glossary_files/image051.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "hook puffer",
+  "desc": "The following p4 puffer with an initial population of 15 cells.",
+  "rle": "x = 11, y = 11, rule = s0/b2\n8bo$9bo$10bo$10bo2$3o$bo$2bobo5bo$10bo$6bobo$7bo!",
+  "images": [
+   {
+    "src": "glossary_files/image052.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "horn",
+  "desc": "Any outward-facing single-cell point that occurs in a spark in the rear part of a spaceship or puffer. Horns are useful because two spaceships with horns sufficiently far from their engines can be placed with a one-cell diagonal gap between two horns to produce a puffer which produces dots at the least common multiple of the periods of the spaceships involved. (For an example of this interaction, see the free ship and key ship in the radar puffer.) Below is a free ship in its heavy phase with its four horns highlighted. See also engine horn.",
+  "rle": "",
+  "images": [
+   {
+    "src": "glossary_files/image053.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "hot sand",
+  "desc": "Any fuse composed of dots which burn in a reaction such as the following, which is useful for creating many small pre-sparks.",
+  "rle": "x = 11, y = 11, rule = s0/b2\n3bo$o5bo3$6bo$3bo5bo3$10bo2$8bo!",
+  "images": [
+   {
+    "src": "glossary_files/image054.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "improbable puffer",
+  "desc": "The following p8 c puffer with an initial population of 33 cells.",
+  "rle": "x = 15, y = 13, rule = s0/b2\no2$4bob2o$8b2o$o2bo5bobo$8bo3bo$4bo6bo2bo$11bo2bo$bo8bo2bo$bo4bo2b2obo$bo6b2obo$2bo5bobo$9bo!",
+  "images": [
+   {
+    "src": "glossary_files/image055.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "infinite anchor track",
+  "desc": "The following c trailer, which converts a double trail of dots into an anchor track that extends as the puffer travels.",
+  "rle": "x = 8, y = 13, rule = s0/b2\n4bo$5bo$6bo$7bo$o6bo$bo2$bo$o6bo$7bo$6bo$5bo$4bo!",
+  "images": [
+   {
+    "src": "glossary_files/image056.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "jackpot",
+  "desc": "The following 6-cell pre-spark, which dies in 26 generations. This is by far the longest-lived pre-spark of population less than 7 cells, which is the minimum necessary to create pre-sparks of arbitrary longevity. It is also unique in that the longest-lived pre-sparks of population 2 to 5 cells are simply one-cell extensions of one another, and this is the first to break the pattern. (Generation 1 of this pattern is the smallest known pre-spark to die in 25 generations, and generation 6 is the smallest to die in 20 generations.)",
+  "rle": "x = 7, y = 7, rule = s0/b2\nbo$o$4bo2$2bo$6bo$5bo!",
+  "images": [
+   {
+    "src": "glossary_files/image057.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "key ship",
+  "desc": "The following small, common p4 c spaceship with a minimum population of 8 cells, the smallest minimum population of any known p4 spaceship, which is the smallest spaceship that is not a phoenix and the smallest spaceship with more than two wings.",
+  "rle": "x = 6, y = 5, rule = s0/b2\n4bo$o4bo$bo3bo$3bo$obo!",
+  "images": [
+   {
+    "src": "glossary_files/image058.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "left-anchored",
+  "desc": "Describes a puffer which is anchored only on its left wing in traditional wing notation. See also right-anchored and bi-anchored. Below is a left-anchored 5-3 robot puffer.",
+  "rle": "x = 9, y = 10, rule = s0/b2\nbobo$o3bo$5bo$6bo$7bo$8bo$8bo$6bo$5bo$4bo!",
+  "images": [
+   {
+    "src": "glossary_files/image059.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "lever",
+  "desc": "The following p4 oscillator with a minimum population of 4 cells, which is the smallest known p4 oscillator in terms of bounding box and average population, tying with the anchor and radar in terms of minimum population.",
+  "rle": "x = 5, y = 3, rule = s0/b2\nbo$o3bo$3bo!",
+  "images": [
+   {
+    "src": "glossary_files/image060.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "Liberty Bell reaction",
+  "desc": "The following reaction between a spark such as a donut, plus, or crosshairs and an anchor, which produces a rectangular pattern of four dots. Notable because a pair of free ships can convert the pattern of dots into a trail of monsters at any period that is 24 or higher and a multiple of 6, which has enabled the creation of the first monster puffer. Named for the appearance of generation 7.",
+  "rle": "x = 5, y = 9, rule = s0/b2\n2bo$b3o$2ob2o$b3o$2bo2$2bo$obobo$b3o!",
+  "images": [
+   {
+    "src": "glossary_files/image061.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "life support puffer",
+  "desc": "The following p4 puffer with an initial population of 13 cells, which requires a metronome puffer to stabilize it.",
+  "rle": "x = 14, y = 36, rule = s0/b2\n3bo$4bo$bo2bo$3bo$bo2$3bo$4bo$4bo$3bo2$bo$3bo$4bo$bo2bo$3bo3$3bo$4bo$4bo$2obo5$bo2bobo$2bo4bo$8bo$9bo$10bo$3bo7bo$13bo$13bo$12bo$11bo!",
+  "images": [
+   {
+    "src": "glossary_files/image141.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "long arrow puffer",
+  "desc": "The following p9 c puffer with an initial population of 18 cells, which is the only known p9 object other than the functionally identical arrow puffer.",
+  "rle": "x = 9, y = 8, rule = s0/b2\n4bo$3bobo$4o2bo$8bo$8bo$4o2bo$3bobo$4bo!",
+  "images": [
+   {
+    "src": "glossary_files/image062.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "mantis",
+  "desc": "The following p6 oscillator with a minimum population of 15 cells, which is one of only two known p6 oscillators, along with the ant, and can be incorporated into ant stacks. Discovered by Josh Ball.",
+  "rle": "x = 9, y = 9, rule = s0/b2\nbobo$o6bo$4bo3bo$4bo$4bo$4bo$o3bo$bo6bo$5bobo!",
+  "images": [
+   {
+    "src": "glossary_files/image063.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "metronome puffer",
+  "desc": "Any p4 puffer with the following mechanism, in which plus-like reactions occur follow behind a moon or row of moons, sometimes with a stabilizing flotilla. The smallest known example, shown below, has an initial population of 17 cells. For a collection of examples see Metronome puffers in Files.",
+  "rle": "x = 4, y = 18, rule = s0/b2\no$bo$2bo$3bo$3bo$2bo3$obo$3bo$3bo$obo3$2bo$3bo$3bo$obo!",
+  "images": [
+   {
+    "src": "glossary_files/image138.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "metronome ship",
+  "desc": "Any p4 c spaceship with the following mechanism, in which plus-like reactions occur follow behind a moon or row of moons, sometimes with a stabilizing flotilla. The smallest known example, shown below, has a minimum population of 16 cells. For a collection of examples see Metronome puffers in Files.",
+  "rle": "x = 4, y = 16, rule = s0/b2\nobo$3bo$3bo$2bo3$obo$3bo$3bo$obo3$2bo$3bo$3bo$obo!",
+  "images": [
+   {
+    "src": "glossary_files/image064.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "monster",
+  "desc": "The following p19 oscillator with a minimum population of 6 cells, which is the only indivisible p19 object and the largest indivisible oscillator in Live Free or Die, with an average of 21.26 live cells and a 16x13 bounding box, and a population ranging from 6 to 40 cells. 19 is also the largest period for which there is a known object that cannot be separated into smaller components.",
+  "rle": "x = 4, y = 3, rule = s0/b2\no2bo$o2bo$o2bo!",
+  "images": [
+   {
+    "src": "glossary_files/image065.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "monster puffer",
+  "desc": "In general, any puffer that leaves behind monsters. One known method of constructing a monster puffer in Live Free or Die is with a very large p24 anchor track flotilla with an initial population of 231 cells, with components including free ships, an octopus ship, a revolver puffer, and 2-2 dot puffers. The flotilla utilizes the Liberty Bell reaction with a crosshairs created by an anchor reaction at p12 to create the proper frame of dots which is converted into a monster by two free ships. For a similar but smaller flotilla, see radar puffer. For the full monster puffer, see Output examples in Files.",
+  "rle": "",
+  "images": [],
+  "credit": ""
+ },
+ {
+  "name": "monster toaster",
+  "desc": "An infinitely extensible 7-cell pre-spark of the following form, which is the smallest known method of creating pre-sparks of any arbitrary longevity 28 generations or greater. So named because it uses a moon and two dots to create a pattern which goes through 11 uninterrupted generations of a monster’s oscillation before being destroyed by another dot. The smallest iteration, shown below, dies in 28 generations and is extended by shifting the moon down one cell. (Generation 1 of this pattern, not a true monster toaster, is also the smallest known pre-spark that dies in 27 generations.)",
+  "rle": "x = 11, y = 4, rule = s0/b2\no2bo$10bo$b2o$o2bo!",
+  "images": [
+   {
+    "src": "glossary_files/image066.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "monster stack",
+  "desc": "An infinitely extensible p19 oscillator formed from two or more monsters whose sparks interact. The smallest iteration is the two-monster stack, shown below. For other possible interactions, see Oscillators in Files.",
+  "rle": "x = 21, y = 7, rule = s0/b2\no2bo13bo2bo3$b2o15b2o3$o2bo13bo2bo!",
+  "images": [
+   {
+    "src": "glossary_files/image067.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "moon",
+  "desc": "The following p1 c spaceship, which is the smallest spaceship with only 4 cells, the only p1 spaceship, and one of only two p1 objects in Live Free or Die.",
+  "rle": "x = 2, y = 4, rule = s0/b2\no$bo$bo$o!",
+  "images": [
+   {
+    "src": "glossary_files/image068.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "moonlighter",
+  "desc": "The following small p6 c tagalong for a pair of free ships, which in two phases consists only of a moon. The name refers to the fact that the free ships provide the moon with a flame which would otherwise not exist.",
+  "rle": "x = 15, y = 22, rule = s0/b2\n6bo4bo$9b2obo$14bo$14bo$9b2obo$6bo4bo3$3o$2bo$3bo$3bo$2bo$3o3$6bo4bo$9b2obo$14bo$14bo$9b2obo$6bo4bo!",
+  "images": [
+   {
+    "src": "glossary_files/image069.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "nervous puffer",
+  "desc": "The following p8 puffer with an initial population of 24 cells. Discovered by Josh Ball.",
+  "rle": "x = 12, y = 13, rule = s0/b2\n5bobo$8bo$5bo3bo$3b2obo4bo$8bo2bo2$3b2o$2bo$bo6bo2bo$11bo$5bo3bo$o7bo$5bobo!",
+  "images": [
+   {
+    "src": "glossary_files/image147.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "nervous trailer",
+  "desc": "The following p8 trailer which converts the trailer of checkers left by a nervous puffer into a double trail of dots. Discovered by Josh Ball.",
+  "rle": "x = 18, y = 13, rule = s0/b2\n11bobo$6bo7bo$o2bo7bo3bo$2bo14bo$7bo6bo2bo$8bo$9b2o2$14bo2bo$9b2obo4bo$3bo7bo3bo$2bo11bo$11bobo!",
+  "images": [
+   {
+    "src": "glossary_files/image152.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "new wave",
+  "desc": "The following p12 oscillator formed from an interacting ant and anchor. So named because the one true p12 cell is formed when the two interact as if they are part of a wavy ant or anchor stack. The same interaction can take place if a mantis replaces the ant, a control tower replaces the anchor, or both.",
+  "rle": "x = 12, y = 7, rule = s0/b2\n7bo3bo$8bobo2$4bobo$7bo$o$bobo!",
+  "images": [
+   {
+    "src": "glossary_files/image036.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "nickel puffer",
+  "desc": "The following large p5 c puffer with an initial population of 150 cells. Discovered by Josh Ball.",
+  "rle": "x = 54, y = 22, rule = s0/b2\no2bobo$2bo8bo2bo2bo$6bo11b4o$4bo19bob3o$3b2o9bo10b2o5bo19bo$4bo2bo2bo3b2o2bo8b2o9bobo9bo2bo$4bo4bo10bo13b2o5bo3bo3b2o2bo$4b5o11bo5bo9b2obob2o7bobo$4bo29bo3bo4bo$10b3obo3b2o23bobo2bo$50bobo$50bobo$10b3obo3b2o23bobo2bo$4bo29bo3bo4bo$4b5o11bo5bo9b2obob2o7bobo$4bo4bo10bo13b2o5bo3bo3b2o2bo$4bo2bo2bo3b2o2bo8b2o9bobo9bo2bo$3b2o9bo10b2o5bo19bo$4bo19bob3o$6bo11b4o$2bo8bo2bo2bo$o2bobo!",
+  "images": [
+   {
+    "src": "glossary_files/image128.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "nickel rake",
+  "desc": "The following p5 c backward moon rake with an initial population of 98 cells, which also produces a double trail of dots. Discovered by Josh Ball.",
+  "rle": "x = 30, y = 26, rule = s0/b2\n9bo$5bo2bobo$o8bobo$5bo2bo3bo$2bo10bo$7bo2b2o3bo$7bo2bo4bo12bo$8b2o16bo2bo$5bo3bo10bo4b2o2bo$21bo4bobo$13bo4bo2bo$5bo2bo2bo5b2o5bo$3b2o13b3o5bobo$3b2o13b3o5bobo$5bo2bo2bo5b2o5bo$13bo4bo2bo$21bo4bobo$5bo3bo10bo4b2o2bo$8b2o16bo2bo$7bo2bo4bo12bo$7bo2b2o3bo$2bo10bo$5bo2bo3bo$o8bobo$5bo2bobo$9bo!",
+  "images": [
+   {
+    "src": "glossary_files/image129.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "nickel ship",
+  "desc": "The following p5 c spaceship with a minimum population of 98 cells. Discovered by Josh Ball.",
+  "rle": "x = 38, y = 28, rule = s0/b2\n21bo$22bo$22bo$21bo6bo$29bo$17bo11bo$bo3bo20bobo$9bo15b2o9bo$8b2o4bo8bo13bo$obo5bo10bo3b2o5bo3bo2bo$15bobo10b2o6bo$obo6b3o12bo$25b3obo3bo$25bobo8bo$25bobo8bo$25b3obo3bo$obo6b3o12bo$15bobo10b2o6bo$obo5bo10bo3b2o5bo3bo2bo$8b2o4bo8bo13bo$9bo15b2o9bo$bo3bo20bobo$17bo11bo$29bo$21bo6bo$22bo$22bo$21bo!",
+  "images": [
+   {
+    "src": "glossary_files/image133.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "nose",
+  "desc": "A vertical domino at the front of the engine of every known c spaceship and puffer. Below is a 3-3 robot ship with the nose highlighted.",
+  "rle": "",
+  "images": [
+   {
+    "src": "glossary_files/image070.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "occidental puffer",
+  "desc": "The following p8 c puffer with an initial population of 24 cells, which is closely related to accidental puffers. Is also the largest indivisible puffer without an isolated spark. The name is a portmanteau of octopus and accidental.",
+  "rle": "x = 12, y = 12, rule = s0/b2\n10bo$6bo4bo$bo5bo3bo$o8bo$8bo$4b3o$4b3o$8bo$o8bo$bo5bo3bo$6bo4bo$10bo!",
+  "images": [
+   {
+    "src": "glossary_files/image071.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "octoplus",
+  "desc": "A small sun car-based p8 c tagalong of the following form that converts a plus ship into a p8 puffer.",
+  "rle": "x = 9, y = 18, rule = s0/b2\n5bo$6bo$o7bo$8bo$o3bobo3$o3bobo$8bo$o7bo$6bo$o4bo3$6bo$6bo$5bo$4bo!",
+  "images": [
+   {
+    "src": "glossary_files/image072.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "octopus ship",
+  "desc": "The following p8 c spaceship with a minimum population of 32 cells.",
+  "rle": "x = 11, y = 13, rule = s0/b2\n6bo$bo5bo$bo6bo$2o3bobo2bo$6bo3bo$bobo$b3o4bo$bobo$6bo3bo$2o3bobo2bo$bo6bo$bo5bo$6bo!",
+  "images": [
+   {
+    "src": "glossary_files/image073.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "oof puffer",
+  "desc": "A p4 c puffer of the following form, which can be extended and anchored on either side. The smallest iteration, shown below, has an initial population of 14 cells. For a full list of possible iterations, see Iteration Guides.",
+  "rle": "x = 6, y = 12, rule = s0/b2\nbo$obo$bobo$4bo$4bo$3bo$3bo$5bo$5bo$3bo$2bo$bo!",
+  "images": [
+   {
+    "src": "glossary_files/image074.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "oscillator",
+  "desc": "Any pattern which reappears in the same position and orientation after a number of generations. For examples in Live Free or Die, see checker, lever, or monster.",
+  "rle": "",
+  "images": [],
+  "credit": ""
+ },
+ {
+  "name": "period",
+  "desc": "The number of generations it takes a spaceship, puffer, or oscillator to reappear in its original form. For a puffer, the trail of debris is ignored. For example, the checker has a period of 2.",
+  "rle": "",
+  "images": [],
+  "credit": ""
+ },
+ {
+  "name": "phase type",
+  "desc": "A description of where in its period a spaceship or puffer is. The four phase types that common p4 c craft go through are empty, boxy, dusty, and heavy.",
+  "rle": "",
+  "images": [],
+  "credit": ""
+ },
+ {
+  "name": "phoenix",
+  "desc": "Any pattern in which every cell dies in every generation. In Live Free or Die, any pattern which does not have any isolated cells at any time is a phoenix.",
+  "rle": "",
+  "images": [],
+  "credit": ""
+ },
+ {
+  "name": "plus",
+  "desc": "The following common 5-cell spark, which is produced by many puffers and spaceships and the final generation of many small pre-sparks. This is the smallest object that dies in one generation.",
+  "rle": "",
+  "images": [
+   {
+    "src": "glossary_files/image075.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "plus ship",
+  "desc": "The following fairly common p4 c spaceship with a minimum population of 16 cells, named for the sparks it produces.",
+  "rle": "x = 9, y = 12, rule = s0/b2\n5bo$6bo$o7bo$8bo$o3bobo3$o3bobo$8bo$o7bo$6bo$5bo!",
+  "images": [
+   {
+    "src": "glossary_files/image076.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "puffer",
+  "desc": "Any pattern which moves like a spaceship but leaves a trail of debris. For examples in Live Free or Die, see dot puffer, rake and bake puffer, or scale puffer.",
+  "rle": "",
+  "images": [],
+  "credit": ""
+ },
+ {
+  "name": "quintessential ship",
+  "desc": "The following p5 c/5 spaceship with a minimum population of 126 cells, which is the only known c/5 object. Discovered by Josh Ball.",
+  "rle": "x = 50, y = 18, rule = s0/b2\n35bo$o5bo29bo$9bo3bobo3bo4bo23bo$2bo13bobo11bobo16bo$2bo4bo17bob2obo6bo$4b2o2bo4bo10bo3bo3bo13bo2bo$o5bob2o8bo2bo2b2o7b2o2b2o6b2obo$4bo2bobo5b3obo8bobo6bo6bo$5bo8bo13bo3bo7bo$5bo8bo13bo3bo7bo$4bo2bobo5b3obo8bobo6bo6bo$o5bob2o8bo2bo2b2o7b2o2b2o6b2obo$4b2o2bo4bo10bo3bo3bo13bo2bo$2bo4bo17bob2obo6bo$2bo13bobo11bobo16bo$9bo3bobo3bo4bo23bo$o5bo29bo$35bo!",
+  "images": [
+   {
+    "src": "glossary_files/image077.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "R car",
+  "desc": "The following small p4 tagalong for some p4 spaceships and puffers. Named for its similarity to the R ship.",
+  "rle": "x = 4, y = 11, rule = s0/b2\no$bo$3bo$o2bo3$2bo$3bo$o2bo$bo$o!",
+  "images": [
+   {
+    "src": "glossary_files/image078.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "R ship",
+  "desc": "The following small p4 c spaceship with a minimum population of 10 cells and a large flame, so named because of its shape in the boxy phase.",
+  "rle": "x = 4, y = 11, rule = s0/b2\no$bo$3bo$o2bo4$o2bo$3bo$bo$o!",
+  "images": [
+   {
+    "src": "glossary_files/image079.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "radar",
+  "desc": "The following p4 oscillator with a minimum population of 4 cells.",
+  "rle": "x = 4, y = 4, rule = s0/b2\nbo$o$3bo$2bo!",
+  "images": [
+   {
+    "src": "glossary_files/image080.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "radar puffer",
+  "desc": "In general, any puffer that leaves behind radar. One known method of constructing a radar puffer in Live Free or Die is with a p12 anchor track flotilla like the following, which is the first use of anchor track flotilla technology to create a unique and non-anchor-based output. Another example of the use of this technology is the monster puffer.",
+  "rle": "x = 63, y = 23, rule = s0/b2\n54bo4bo$57b2obo$62bo$62bo$57b2obo$54bo4bo3$38bo11bo$58bo$54bo4bo$55bo3bo$38bo18bo$43bo10bobo$44bo$42bo3bo$21bo4bo14bo4bo$3o5bo15b2obo17bo$7bobo19bo$11bo17bo$11bo12b2obo$7bobo11bo4bo$3o5bo!",
+  "images": [
+   {
+    "src": "glossary_files/image081.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "rake",
+  "desc": "Any puffer whose debris consists of spaceships. A rake is said to be forwards, backwards or sideways according to the direction of the spaceships relative to the direction of the rake. For an example in Live Free or Die, see free rake.",
+  "rle": "",
+  "images": [],
+  "credit": ""
+ },
+ {
+  "name": "rake and bake puffer",
+  "desc": "The following p7 c puffer with an initial population of 12 cells, which is the only known p7 object. So named because it nearly acts as a rake, sending a moon backwards to alter its trail every period.",
+  "rle": "x = 4, y = 10, rule = s0/b2\n2bo$3bo$o2bo$bo$o$o$bo$o2bo$3bo$2bo!",
+  "images": [
+   {
+    "src": "glossary_files/image082.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "ram ship",
+  "desc": "The following p4 c/4 diagonal spaceship with a minimum population of 37 cells, which is the smallest known diagonal spaceship. Discovered by Josh Ball.",
+  "rle": "x = 16, y = 16, rule = s0/b2\n3b3o$4bo$4b2o2bo$o2bo$3o4bo$obo4bo5bobo2$4b2o9bo$2bo5b2o4b2o$8b2o$12bobo2$10bo$5bo$8bobo$5bob2o!",
+  "images": [
+   {
+    "src": "glossary_files/image158.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "retail",
+  "desc": "The following tagalong for two p4 c spaceships or puffers of many different types, which produces a p4 trail of checkers.",
+  "rle": "x = 13, y = 14, rule = s0/b2\n7bo$8bo$9bo$9bo$7bo$6bo$5bo2$ob2o$2bo8bo$7bo4bo$8bo3bo$10bo$9bo!",
+  "images": [
+   {
+    "src": "glossary_files/image083.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "revival trailer",
+  "desc": "The following c trailer, which converts a quadruple trail of dots into a double trail of checkers.",
+  "rle": "x = 16, y = 15, rule = s0/b2\n12bo$o2bo2bo6bo$2bo9bo2bo$2b3o10bo$2bo11bo$5bo3bo$6bo2$6bo$5bo3bo$2bo11bo$2b3o10bo$2bo9bo2bo$o2bo2bo6bo$12bo!",
+  "images": [
+   {
+    "src": "glossary_files/image084.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "revolver puffer",
+  "desc": "The following large p6 c puffer with an initial population of 38 cells, one of comparatively few known p6 objects and the only known indivisible p6 puffer.",
+  "rle": "x = 20, y = 14, rule = s0/b2\n14bo$10b4obo$16bo$17bo$13b2obo2bo$obo3bo3bo5bo2bo$17bo$17bo$obo3bo3bo5bo2bo$13b2obo2bo$17bo$16bo$10b4obo$14bo!",
+  "images": [
+   {
+    "src": "glossary_files/image085.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "rex ship",
+  "desc": "The following p4 c spaceship with a minimum population of 30 cells, so named because its engine is an extension of the engine of the R ship.",
+  "rle": "x = 15, y = 13, rule = s0/b2\n10bo$9bobo$2bobo5bobo$14bo$5b2o2b2o3bo$o4bo2$o4bo$5b2o2b2o3bo$14bo$2bobo5bobo$9bobo$10bo!",
+  "images": [
+   {
+    "src": "glossary_files/image086.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "rhino ship",
+  "desc": "The following p4 c/2 spaceship with a minimum population of 97 cells. Discovered by Josh Ball.",
+  "rle": "x = 42, y = 14, rule = s0/b2\n7bo16bo$6bo18bo5bobo2bo$bo37bo$2obo2bo12bo11bob2obobobo$bo18bo2bobo13b2o$6b4o4bo3bobo2b2o3bo5bo4bo$7bo2bo3bo2b3o9b2obo3b5o$7bo2bo3bo6b3o15bobo$6b4o6bo8bo10bo$bo19bo3bobo9bo$2obo2bo7bo8bo8bo5bo2bo$bo9bobo10b3o6bo4bobo$6bo14bo4bo7bo3bo$7bo17bo!",
+  "images": [
+   {
+    "src": "glossary_files/image163.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "right-anchored",
+  "desc": "Describes a puffer which is anchored only on its right wing in traditional wing notation. See also left-anchored and bi-anchored. Below is a right-anchored 2-4 robot puffer.",
+  "rle": "x = 9, y = 8, rule = s0/b2\n6bo$7bo$8bo$8bo$6bo$5bo$o3bo$bobo!",
+  "images": [
+   {
+    "src": "glossary_files/image087.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "robot puffer",
+  "desc": "A p4 c puffer of the following form, which is closely related to robot ships. So named because it is more artificial and occurs naturally less often than dot puffers. The smallest iteration, shown below, has an initial population of 7 cells. For a full list of possible iterations, see Iteration Guides.",
+  "rle": "x = 5, y = 7, rule = s0/b2\n2bo$3bo$4bo$4bo$2bo$bo$o!",
+  "images": [
+   {
+    "src": "glossary_files/image088.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "robot ship",
+  "desc": "A p4 c spaceship of the following form, which is closely related to robot puffers. The smallest iteration, shown below, has the smallest minimum population of any known p4 spaceship at 8 cells. For a full list of possible iterations, see Iteration Guides.",
+  "rle": "x = 5, y = 8, rule = s0/b2\nbo$2bo$3bo$4bo$4bo$2bo$bo$o!",
+  "images": [
+   {
+    "src": "glossary_files/image033.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "rope puffer",
+  "desc": "The following p8 c puffer with an initial population of 20 cells.",
+  "rle": "x = 9, y = 16, rule = s0/b2\n5bo$6bo$8bo$5bo2bo2$o$2bo4bo$3bo4bo$4bo3bo$o5bo$5bo$4bo$3bo$2bo$bo$o!",
+  "images": [
+   {
+    "src": "glossary_files/image137.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "rotor",
+  "desc": "The cells in an oscillator which are not always on. In Live Free or Die, most oscillators consist only of a rotor.",
+  "rle": "",
+  "images": [],
+  "credit": ""
+ },
+ {
+  "name": "rotunda",
+  "desc": "The following p3 oscillator with a minimum population of 84 cells. Discovered by Josh Ball.",
+  "rle": "x = 22, y = 22, rule = s0/b2\n7bo6bo$8bo4bo$10b2o$5bo10bo$6bo2bo2bo2bo$3bobobo2b2o2bobobo$4bo5b2o5bo$o4bo4b2o4bo4bo$bo18bo$4bo12bo$2bo2b3o6b3o2bo$2bo2b3o6b3o2bo$4bo12bo$bo18bo$o4bo4b2o4bo4bo$4bo5b2o5bo$3bobobo2b2o2bobobo$6bo2bo2bo2bo$5bo10bo$10b2o$8bo4bo$7bo6bo!",
+  "images": [
+   {
+    "src": "glossary_files/image157.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "rusty anchor stack",
+  "desc": "The following p4 oscillator with a minimum population of 8 cells, which can be incorporated into larger anchor stacks. So named because it is “darker” than other anchor stacks, i.e. has a higher average population.",
+  "rle": "x = 8, y = 5, rule = s0/b2\n3bo3bo$4bobo2$bobo$o3bo!",
+  "images": [
+   {
+    "src": "glossary_files/image089.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "rusty ant stack",
+  "desc": "The following p6 oscillator, which has a minimum population of 12 cells, and can be incorporated into larger ant stacks. So named because it is “darker” than other ant stacks, i.e. has a higher average population.",
+  "rle": "x = 14, y = 9, rule = s0/b2\n10bobo$13bo$6bo$7bobo2$4bobo$7bo$o$bobo!",
+  "images": [
+   {
+    "src": "glossary_files/image123.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "scale puffer",
+  "desc": "The following p8 c puffer with an initial population of 19 cells. Named for the pattern of its output.",
+  "rle": "x = 9, y = 15, rule = s0/b2\n3bo$4bo$5bo$6bo$8bo$2bo5bo$4bobo$o$4bobo$2bo5bo$8bo$6bo$5bo$4bo$3bo!",
+  "images": [
+   {
+    "src": "glossary_files/image090.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "scorpion puffer",
+  "desc": "The following large p8 c puffer with an initial population of 31 cells.",
+  "rle": "x = 10, y = 17, rule = s0/b2\n4bo$5bo$6bo$7bo$5bo3bo$4b3o2bo$4bo2bo$2bo2b2o$o$2bo2b2o$4bo2bo$4b3o2bo$5bo3bo$7bo$6bo$5bo$4bo!",
+  "images": [
+   {
+    "src": "glossary_files/image091.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "shiny anchor stack",
+  "desc": "The following p4 oscillator with a minimum population of 8 cells, which, unlike other anchor stacks, can be incorporated into larger anchor stacks vertically but not horizontally. So named because it is “lighter” than other anchor stacks, i.e. has a lower average population.",
+  "rle": "x = 7, y = 5, rule = s0/b2\n2bo3bo$3bobo2$bobo$o3bo!",
+  "images": [
+   {
+    "src": "glossary_files/image092.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "shiny ant stack",
+  "desc": "The following p6 oscillator with a minimum population of 12 cells, which can be incorporated into larger ant stacks. So named because it is “lighter” than other ant stacks, i.e. has a lower average population.",
+  "rle": "x = 13, y = 9, rule = s0/b2\n9bobo$12bo$5bo$6bobo2$4bobo$7bo$o$bobo!",
+  "images": [
+   {
+    "src": "glossary_files/image124.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "short free ship",
+  "desc": "The following p6 c spaceship identical to the free ship except that its nose is shifted back one cell, identical in functional ability to the free ship but much less common naturally. This is the smallest known p6 object.",
+  "rle": "x = 8, y = 6, rule = s0/b2\no4bo$3b2obo$7bo$7bo$3b2obo$o4bo!",
+  "images": [
+   {
+    "src": "glossary_files/image093.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "shrapnel puffer",
+  "desc": "The following p4 c puffer with an initial population of 15 cells. So named because it was discovered as the product of a random explosion.",
+  "rle": "x = 6, y = 11, rule = s0/b2\n2bo$bobo$b2o2bo$bobobo4$o2bobo$5bo$3bo$2bo!",
+  "images": [
+   {
+    "src": "glossary_files/image094.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "shrinker",
+  "desc": "Any mechanism for converting a spaceship or puffer into a similar object of shorter wing length. The following example, consisting only of a dot, decreases the wing length of any non-anchored, sufficiently large robot, dot, or sun puffer by 2 cells, the reaction leaving behind a checker.",
+  "rle": "x = 5, y = 14, rule = s0/b2\n3bo$o$bo$2bo$3bo$4bo$4bo4$4bo$4bo$3bo$2bo!",
+  "images": [
+   {
+    "src": "glossary_files/image095.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "six shooter",
+  "desc": "An infinitely extensible p6 oscillator of the following form. For a set of possible iterations, see Oscillators in Files. The smallest iteration, shown below, has a minimum population of 16 cells. Discovered by Josh Ball.",
+  "rle": "x = 6, y = 10, rule = s0/b2\no4bo$o4bo$o4bo2$bo2bo$bo2bo2$o4bo$o4bo$o4bo!",
+  "images": [
+   {
+    "src": "glossary_files/image126.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "slanted ship",
+  "desc": "The following p4 c/4 diagonal spaceship with a minimum population of 135 cells. Discovered by Josh Ball.",
+  "rle": "x = 35, y = 35, rule = s0/b2\n4bobo4$o4bo$4bo2b2o$o6bo4bo$5b2obobo2bo3bo3bo$5bobo2bo2b2o$12b2o5bobo$7b2o7bob2o$26bo$6bo2bo4bo$7b3o12bo4bo$8bo3bo2bo7bo3bobo$14bo12b2o$10bo8bob3o2bo$7bo15b2obo$10bo13b2o3bo$9b2o5bo6bo$23b2o$7bobo6bo8bob2o$13bo2bo9bob2o3bo$14bob2ob2o5bobobo2b2o$17b2obo3bobob2o3bo$18bo2bo5bobo$11bo4b2o4b3o4b3o$13b3o5bo3bo$15bo5b4o$14bo3bo3bob3o$23bo2bo$26bo2$22b3o$23bo!",
+  "images": [
+   {
+    "src": "glossary_files/image096.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "snake eyes",
+  "desc": "The following common two-cell plus predecessor. This is the smallest pattern that dies.",
+  "rle": "",
+  "images": [
+   {
+    "src": "glossary_files/image097.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "spaceship",
+  "desc": "Any pattern which reappears after a number of generations at a different position. For examples in Live Free or Die, see moon, free ship, or slanted ship.",
+  "rle": "",
+  "images": [],
+  "credit": ""
+ },
+ {
+  "name": "spark",
+  "desc": "A pattern that dies in one generation. The smallest example in Live Free or Die is the plus. Sparks are often created by spaceships and can be used to perturb other objects.",
+  "rle": "",
+  "images": [],
+  "credit": ""
+ },
+ {
+  "name": "spider",
+  "desc": "The following small p8 tagalong for a pair of any of several p4 c spaceships or puffers, which produces a p8 pattern of dots.",
+  "rle": "x = 7, y = 17, rule = s0/b2\nbo$2bo$3bo$5bo$5bo$4bo$3bo2$o2$2bo$3bo$4bo$6bo$6bo$5bo$4bo!",
+  "images": [
+   {
+    "src": "glossary_files/image098.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "sprout puffer",
+  "desc": "The following p4 c puffer with an initial population of 27 cells. So named because it was built from a similar object in the Seeds universe.",
+  "rle": "x = 10, y = 15, rule = s0/b2\nobo4bo$6bobo$9bo$9bo$8bo$obo3b2o$7bo$o$7bo$obo3b2o$8bo$9bo$9bo$6bobo$obo4bo!",
+  "images": [
+   {
+    "src": "glossary_files/image099.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "squid ship",
+  "desc": "The following p8 c spaceship with a minimum population of 20 cells, which is the smallest known p8 spaceship. Discovered by Josh Ball.",
+  "rle": "x = 8, y = 13, rule = s0/b2\n6bo$7bo$4bo2bo$3bo2bo$o$5bo$bob3o$5bo$o$3bo2bo$4bo2bo$7bo$6bo!",
+  "images": [
+   {
+    "src": "glossary_files/image134.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "stack",
+  "desc": "Any oscillator formed from smaller oscillators which interact. For examples, see anchor stack, ant stack, or monster stack.",
+  "rle": "",
+  "images": [],
+  "credit": ""
+ },
+ {
+  "name": "star car",
+  "desc": "Any small tagalong of the following form for a variety of p4 c spaceships and puffers, which is closely related to the sun car.",
+  "rle": "x = 7, y = 17, rule = s0/b2\n4bo$5bo$6bo$6bo4$6bo$6bo$o4bo$bo2bo2$2bo$bo2bo$o3bo$3bo$obo!",
+  "images": [
+   {
+    "src": "glossary_files/image100.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "starfish",
+  "desc": "The following p5 oscillator with a minimum population of 64 cells, which is the only known p5 oscillator. Discovered by Josh Ball.",
+  "rle": "x = 28, y = 16, rule = s0/b2\n12bo2bo2$12b4o$11b2o2b2o$11bo4bo$ob2o5bob2o2b2obo5b2obo$3bo3bo4b4o4bo3bo3$3bo3bo4b4o4bo3bo$ob2o5bob2o2b2obo5b2obo$11bo4bo$11b2o2b2o$12b4o2$12bo2bo!",
+  "images": [
+   {
+    "src": "glossary_files/image144.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "stator",
+  "desc": "The cells in an oscillator which are always on. The only known oscillators in Live Free or Die that can have stators are the Cecil B. DeMille and the trilogy.",
+  "rle": "",
+  "images": [],
+  "credit": ""
+ },
+ {
+  "name": "still life",
+  "desc": "Any pattern which remains unchanged to the next generation. The only example in Live Free or Die is the dot.",
+  "rle": "",
+  "images": [],
+  "credit": ""
+ },
+ {
+  "name": "sun car",
+  "desc": "Any small p4 c tagalong of the following form, which can be stabilized by a wide variety of c spaceships and puffers, including any W-winged craft, and can be anchored. In the example below, the sun car actually prevents the output of a 2-3 robot puffer to create a spaceship. For a full list of possible iterations, see Iteration Guides.",
+  "rle": "x = 5, y = 14, rule = s0/b2\nbo$2bo$3bo$3bo3$2bo$3bo$4bo$4bo$2bo$bo$o!",
+  "images": [
+   {
+    "src": "glossary_files/image101.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "sun dial puffer",
+  "desc": "The following p4 c puffer with an initial population of 33 cells.",
+  "rle": "x = 9, y = 23, rule = s0/b2\n3bobo$2bo3bo$7bo$7bo3$6bo$3b3obo$8bo$6bobo$bo$3o$bo$6bobo$8bo$3b3obo$6bo3$7bo$7bo$2bo3bo$3bobo!",
+  "images": [
+   {
+    "src": "glossary_files/image102.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "sun puffer",
+  "desc": "A p4 c puffer of the following form, which is closely related to the sun ship and can be anchored on both sides. The smallest iteration, shown below, has an initial population of 9 cells. For a full list of possible iterations, see Iteration Guides.",
+  "rle": "x = 4, y = 12, rule = s0/b2\no$bo$2bo$3bo$3bo4$3bo$3bo$2bo$bo!",
+  "images": [
+   {
+    "src": "glossary_files/image103.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "sun ship",
+  "desc": "The following p4 c spaceship, which is closely related to sun puffers and has the smallest minimum population of any known p4 spaceship at 8 cells.",
+  "rle": "x = 3, y = 11, rule = s0/b2\no$bo$2bo$2bo4$2bo$2bo$bo$o!",
+  "images": [
+   {
+    "src": "glossary_files/image104.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "sun trailer",
+  "desc": "A p4 c trailer that consumes or converts a p4 trail of dots into trails of dots or checkers, so named because it is based on the same mechanism as the sun ship or sun puffer. The smallest iteration is the 2 sun trailer, shown below. For a full list of possible iterations, see Iteration Guides.",
+  "rle": "x = 12, y = 12, rule = s0/b2\n10bo$6bo4bo$7bo3bo$9bo$8bo$o2bo3$2bo$2bo$bo$o!",
+  "images": [
+   {
+    "src": "glossary_files/image105.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "sunset puffer",
+  "desc": "A p4 c puffer of the following form, which is closely related to the sunset ship and can be anchored on both sides. The name is a portmanteau of sun and offset. The smallest iteration, shown below, has an initial population of 8 cells. For a full list of possible iterations, see Iteration Guides.",
+  "rle": "x = 4, y = 10, rule = s0/b2\no$bo$2bo$2bo3$3bo$3bo$2bo$bo!",
+  "images": [
+   {
+    "src": "glossary_files/image106.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "sunset ship",
+  "desc": "The following p4 c spaceship with a minimum population of 9 cells, which is closely related to sunset puffers.",
+  "rle": "x = 4, y = 11, rule = s0/b2\no$bo$2bo$2bo3$3bo$3bo$2bo$bo$o!",
+  "images": [
+   {
+    "src": "glossary_files/image107.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "swamp puffer",
+  "desc": "A p4 c puffer of the following form, which ranges inclusively from 4-4 to 5-5 iterations.",
+  "rle": "x = 11, y = 15, rule = s0/b2\n5bo$6bo$7bo$3bo4bo$2bo2bo4bo$o4bob2obo4$o4bob2obo$2bo2bo4bo$3bo4bo$7bo$6bo$5bo!",
+  "images": [
+   {
+    "src": "glossary_files/image108.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "T-tetromino",
+  "desc": "The following 4-cell pattern, which is a common predecessor of the plus and parent of snake eyes.",
+  "rle": "",
+  "images": [
+   {
+    "src": "glossary_files/image109.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "tagalong",
+  "desc": "An object which is not a spaceship in its own right, but which can be attached to one or more spaceships or puffers to form a larger spaceship or puffer. For examples in Live Free or Die, see sun car, moonlighter, or harvest moon.",
+  "rle": "",
+  "images": [],
+  "credit": ""
+ },
+ {
+  "name": "tick puffer",
+  "desc": "A p8 c puffer of the following form, which can be extended on either side. The smallest iteration, shown below, has an initial population of 14 cells. For a full list of possible iterations, see Iteration Guides.",
+  "rle": "x = 9, y = 15, rule = s0/b2\n4bo$5bo$6bo$8bo$8bo2$o5bo2$o5bo2$8bo$8bo$6bo$5bo$4bo!",
+  "images": [
+   {
+    "src": "glossary_files/image110.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "tiny trailer",
+  "desc": "The following small p4 c trailer, which converts a p4 trail of checkers into a p4 trail of dots.",
+  "rle": "x = 15, y = 6, rule = s0/b2\n8bo4bo$9bo4bo$10bo3bo$12bo$o2bo7bo$2bo3bo!",
+  "images": [
+   {
+    "src": "glossary_files/image111.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "tippy trailer",
+  "desc": "The following small p4 c trailer, which converts a p4 trail of checkers into a p4 trail of dots, and is useful in eater constructions.",
+  "rle": "x = 17, y = 7, rule = s0/b2\n10bo4bo$11bo4bo$12bo3bo$o13bo$bo3bo7bo$4bo3bo$o!",
+  "images": [
+   {
+    "src": "glossary_files/image112.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "trailer",
+  "desc": "Any object that converts or consumes a trail left by a puffer, such as the tippy trailer or dot eater. Or, in other words, any non-explosive burning reaction of a fuse.",
+  "rle": "",
+  "images": [],
+  "credit": ""
+ },
+ {
+  "name": "trilogy",
+  "desc": "Any of several p3 oscillators with a mechanism similar to the following, which are the only known p3 oscillators and the only known oscillators other than Cecil B. DeMilles that can have stators. For a set of possible iterations, see Oscillators in Files. The smallest iteration, shown below, has a minimum population of 62 cells. Discovered by Josh Ball.",
+  "rle": "x = 25, y = 25, rule = s0/b2\n16bo4bo$17bo2bo$19bo$18bo5bo$13bobo7bo$12bo9bo$11b2obo6bo$13b2o2bo5bo$8bo4bo10bo$9bo10bo$17b2o$10bo2bo2b2o2bo$5bo2bo9b2o$4bo13bo$6b2o5bo$4bo10bo$o11bo3bo$bo8bo$3bo6bo$2bo9bo$bo7bobo$o5bo$5bo$4bo2bo$3bo4bo!",
+  "images": [
+   {
+    "src": "glossary_files/image113.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "tricycle puffer",
+  "desc": "The following p3 c puffer with an initial population of 34 cells, which is related to the wide tricycle puffer, and is one of few known p3 objects. Discovered by Josh Ball.",
+  "rle": "x = 7, y = 18, rule = s0/b2\n2bo$bobo$bo2bo$bo3bo$3bo2bo$2b2o2bo2$2o$2b2o2bo$2b2o2bo$2o2$2b2o2bo$3bo2bo$bo3bo$bo2bo$bobo$2bo!",
+  "images": [
+   {
+    "src": "glossary_files/image114.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "tricycle rake",
+  "desc": "The following p3 c backward moon rake with an initial population of 130 cells, which is the only known backward rake and clean moon rake, and one of few known p3 objects. Discovered by Josh Ball.",
+  "rle": "x = 21, y = 24, rule = s0/b2\n8bo$15bobo$3o4bo2bo7bo$2obo4bo2b2obo2bo2bo$2o5bo6bo2bo2bo$6bo4bo4bobo$b3obo3b2obobo2b2o$3b4o3bobo7bo$12bo7bo$6b2obo3bo2b3o$3bo4bo4bo2b3o$2bo3b2o4bo7bo$2bo3b2o4bo7bo$3bo4bo4bo2b3o$6b2obo3bo2b3o$12bo7bo$3b4o3bobo7bo$b3obo3b2obobo2b2o$6bo4bo4bobo$2o5bo6bo2bo2bo$2obo4bo2b2obo2bo2bo$3o4bo2bo7bo$15bobo$8bo!",
+  "images": [
+   {
+    "src": "glossary_files/image121.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "tricycle ship",
+  "desc": "The following p3 c spaceship with a minimum population of 126 cells, which is one of few known p3 objects. The nose at the front can be shifted back one cell for a smaller variation. The moons and the row of four cells at the back can be removed to create a puffer. Discovered by Josh Ball.",
+  "rle": "x = 37, y = 26, rule = s0/b2\n24bo$23b2obo$17bo9bo$16bobo5bo4bo$16bo2bo7bobo$o8bo6bo4bo2bobo$bo18bobo2bob2o$bo7bo4bobo8bo4bo$o10bobobobo7bo3bobo$14bo7bo2bo3bo2bo$5bo19bo7bo$bo2b2obo16bo2bo4bobo$bo2bobo2b2o2bo22bo$bo2bobo2b2o2bo22bo$bo2b2obo16bo2bo4bobo$5bo19bo7bo$14bo7bo2bo3bo2bo$o10bobobobo7bo3bobo$bo7bo4bobo8bo4bo$bo18bobo2bob2o$o8bo6bo4bo2bobo$16bo2bo7bobo$16bobo5bo4bo$17bo9bo$23b2obo$24bo!",
+  "images": [
+   {
+    "src": "glossary_files/image120.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "trombone puffer",
+  "desc": "An infinitely extensible p6 puffer of the following form, which stabilizes a p2 wick. The smallest iteration, shown below, has an initial population of 105 cells. Discovered by Josh Ball.",
+  "rle": "x = 26, y = 23, rule = s0/b2\n22bo$bo4bo4bo11bo$obo2bobo4bo4bo5bo$bo4bobo3bo5b2o2bo$7bo2bo7bo$7bobo7b2o3bobo$6bo9b2o7bo$4bo2b2o5b2obo3b2o2bo$bo9b2o7b2o2bo$2bo4bo5bo6bobo$2bo2bo3bo7bobo$bo6bo12bo$6bo9b2o3bo$9b2o6bo4bo$4bo9b2o2bo5bo$10b3o4bo4bo2bo$5b2obo4bo11bo$5bo3bo8bo2b2obo$10bo9b2o$4bo3bo3bo9bo$7bo4bo5bo4bo$6bo4bo11bo$22bo!",
+  "images": [
+   {
+    "src": "glossary_files/image145.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "twin puffer",
+  "desc": "A p4 c puffer of the following form, which can be extended and anchored like a robot puffer on either side. The smallest iteration, shown below, has an initial population of 20 cells. For a full list of possible iterations, see robot ships and puffers in Iteration Guides.",
+  "rle": "x = 7, y = 17, rule = s0/b2\n4bo$3bobo$6bo$6bo$2bobo$bobo$2bo$2o$bo2$2bo$3bo$4bo$6bo$6bo$5bo$4bo!",
+  "images": [
+   {
+    "src": "glossary_files/image139.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "ugly puffer",
+  "desc": "A p4 c puffer of the following form, which can be extended and anchored on the left. The smallest iteration, shown below, has an initial population of 23 cells. For a full list of possible iterations, see Iteration Guides.",
+  "rle": "x = 8, y = 14, rule = s0/b2\n2bo$3bo$4bo$5bo$7bo$7bo2$2b2obo$2bob2o$2bobobo$bobo2bo$4bo$2obo$bo!",
+  "images": [
+   {
+    "src": "glossary_files/image115.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "W-winged",
+  "desc": "Describes a c spaceship or puffer whose wing and spark create the following pattern at p4 in any phase, regardless of the period and appearance of the rest of the object. For specific examples, see sun ship, rex ship, robot puffer, and tick puffer. These craft are significant because they can support tagalongs like the sun car.",
+  "rle": "",
+  "images": [
+   {
+    "src": "glossary_files/image116.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "wavy anchor stack",
+  "desc": "The following p4 oscillator with a minimum population of 8 cells, which can be incorporated into larger anchor stacks, and is necessary to incorporate rusty anchor stacks into larger stacks horizontally.",
+  "rle": "x = 9, y = 5, rule = s0/b2\n4bo3bo$5bobo2$bobo$o3bo!",
+  "images": [
+   {
+    "src": "glossary_files/image117.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "wavy ant stack",
+  "desc": "The following p6 oscillator with a minimum population of 12 cells, which can be incorporated into larger ant stacks.",
+  "rle": "x = 15, y = 9, rule = s0/b2\n11bobo$14bo$7bo$8bobo2$4bobo$7bo$o$bobo!",
+  "images": [
+   {
+    "src": "glossary_files/image125.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "wide tricycle puffer",
+  "desc": "The following p3 c puffer with an initial population of 48 cells, which is related to the tricycle puffer, and is one of few known p3 objects. Discovered by Josh Ball.",
+  "rle": "x = 11, y = 22, rule = s0/b2\n6bo$5bobo$5bo2bo$5bo3bo$o6bo2bo$6b2o2bo$o$4b2o$3b5o2bo$7bo2bo3$7bo2bo$3b5o2bo$4b2o$o$6b2o2bo$o6bo2bo$5bo3bo$5bo2bo$5bobo$6bo!",
+  "images": [
+   {
+    "src": "glossary_files/image118.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "wide tricycle ship",
+  "desc": "The following p3 c spaceship with a minimum population of 108 cells, which is one of few known p3 objects. Discovered by Josh Ball.",
+  "rle": "x = 13, y = 48, rule = s0/b2\n6bobo$5bo3bo$8bobo$5bo2bo2bo$bo4bo5bo$3o6b2obo$bo3bo2bo$8bo$9b2obo$9b2obo2$4b3o$8bobobo$8bobobo$7bo2$9b2obo$12bo$8bo2bo$8bobo$4bo4bo$4bob2o$4bo$6bobo$6bobo$4bo$4bob2o$4bo4bo$8bobo$8bo2bo$12bo$9b2obo2$7bo$8bobobo$8bobobo$4b3o2$9b2obo$9b2obo$8bo$bo3bo2bo$3o6b2obo$bo4bo5bo$5bo2bo2bo$8bobo$5bo3bo$6bobo!",
+  "images": [
+   {
+    "src": "glossary_files/image151.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "wing",
+  "desc": "Any diagonal line of cells in the engine of a spaceship or puffer. The largest known wing is 9 pixels long, in an anchored dot puffer or ugly puffer, and the shortest is the one pixel attached to the nose of a moon or dot puffer. Below is a 3-3 robot ship with the wings highlighted. See also floating wing and attached wing.",
+  "rle": "",
+  "images": [
+   {
+    "src": "glossary_files/image119.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "wing notation",
+  "desc": "The description of a spaceship or puffer in terms of its wing length, describing the wings from left to right. Below is a 2-3 robot puffer, as described in wing notation.",
+  "rle": "",
+  "images": [
+   {
+    "src": "glossary_files/image088.jpg",
+    "title": null
+   }
+  ],
+  "credit": ""
+ },
+ {
+  "name": "zigzag puffer",
+  "desc": "The following p8 c puffer with an initial population of 36 cells. Discovered by Josh Ball.",
+  "rle": "x = 13, y = 20, rule = s0/b2\n11bo$5bobo4bo$8bo3bo$10bo$5bo3bo$6bobo$o5b2o2$9bo$2b2o6bo$bo8bo$bo7bo$bo$7bo$3bo2bobo$5bo3bo$10bo$8bo3bo$5bobo4bo$11bo!",
+  "images": [
+   {
+    "src": "glossary_files/image130.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "zirconium ship",
+  "desc": "The following p5 2c/5 spaceship with a minimum population of 268 cells, which is the only known 2c/5 spaceship and the largest known indivisible spaceship. Discovered by Josh Ball.",
+  "rle": "x = 85, y = 28, rule = s0/b2\n22bo2$26bo2bo$22b3o9b3o$32bo2bo21bo3bo$23bo3bo5b2o2bo2bo26bo$23bo2bo4bo4bo3bo2bo5bo7bo8bo6bo$8bo14bo8bo3bo15bo8bo4bo2bo$13bo3bo2b2o15b2o20bobo8b2o5bo$12bo6b2o9b5obo2b2o3b3o2bo5bobob3o2bo6bo3b2o$5bo5bo4bo3bo3bo8bo4bo13bo5bo2bo7b2o3bo4bo$o10bo2bo6bobobo4bobo7bo2bo2bo11b4o5bo4bo10bo$15bo9bo3b3o7bo3bo10bo4bobo2bo13b2obob2o$2bo5bo15bobo8bobo3bo2b2o9bobo18bo7bo$2bo5bo15bobo8bobo3bo2b2o9bobo18bo7bo$15bo9bo3b3o7bo3bo10bo4bobo2bo13b2obob2o$o10bo2bo6bobobo4bobo7bo2bo2bo11b4o5bo4bo10bo$5bo5bo4bo3bo3bo8bo4bo13bo5bo2bo7b2o3bo4bo$12bo6b2o9b5obo2b2o3b3o2bo5bobob3o2bo6bo3b2o$13bo3bo2b2o15b2o20bobo8b2o5bo$8bo14bo8bo3bo15bo8bo4bo2bo$23bo2bo4bo4bo3bo2bo5bo7bo8bo6bo$23bo3bo5b2o2bo2bo26bo$32bo2bo21bo3bo$22b3o9b3o$26bo2bo2$22bo!",
+  "images": [
+   {
+    "src": "glossary_files/image135.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ },
+ {
+  "name": "zodiac puffer",
+  "desc": "The following p12 puffer with an initial population of 29 cells, which is the only known indivisible p12 puffer and has the highest known period of any indivisible puffer or spaceship. Discovered by Josh Ball.",
+  "rle": "x = 6, y = 22, rule = s0/b2\nbobo$4bo$4bo$3bo2$2bo$b2o$o2bo$5bo$2b2obo$o2$3bobo$5bo$2b2o$b2o$2bo2$o2bo$bo2bo$4bo$3bo!",
+  "images": [
+   {
+    "src": "glossary_files/image148.jpg",
+    "title": null
+   }
+  ],
+  "credit": "Josh Ball"
+ }
+]

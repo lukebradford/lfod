@@ -1,0 +1,9 @@
+#CXRLE Pos=1850,255 Gen=961
+x = 76, y = 71, rule = s0/b2
+4bo$5bo$5bo$4bo3$8bobo9bobo$7bo3bo7bo3bo3bo3bo3bo3bo3bo$26b3o19bo$49bo
+$47bo3bo$32bo4bo8bo4bo$8b3o5bo18b2obo11bo$15bobo22bo$19bo20bo$19bo15b
+2obo$15bobo14bo4bo$8b3o5bo28$71bo$72bo$61bo5bo5bo$60b3o4bo2bobo2bo$61b
+o5bo3bo3bo$68bo$4b3o5bo53b3o4bo$11bobo54bo$15bo45bo5bo3bo3bo$15bo44b3o
+4bo2bobo2bo$11bobo47bo5bo5bo$4b3o5bo59bo$71bo$29bo23bo3$15bo3bo7bo3bo
+3bo3bo3bo3bo15b3o5bo$16bobo9bobo21bo17bobo$53bo20bo$51bo3bo18bo$o33bo
+4bo10bo4bo14bobo$bo35b2obo13bo8b3o5bo$bo40bo$o41bo$37b2obo$34bo4bo!

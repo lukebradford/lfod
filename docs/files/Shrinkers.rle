@@ -1,0 +1,13 @@
+#CXRLE Pos=42,9
+x = 17, y = 258, rule = s0/b2
+8bo$5bo$6bo$7bo$8bo$9bo$9bo4$9bo$9bo$8bo$7bo$6bo$5bo$8bo11$7bo$4bo$5bo
+$6bo$7bo$8bo$9bo$9bo$7bo$6bo$5bo$4bo$3bo$6bo9$3bo$o$bo$2bo$3bo4bo$4bo
+4bo$5bo3bo$7bo$6bo$5bo$4bo$3bo$2bo$bo$o$3bo13$9bo$8bo5bo$13bo$5bo$6bo$
+7bo$8bo$9bo$9bo4$9bo$9bo$8bo$7bo$6bo$5bo$13bo$8bo5bo$9bo13$9bo$8bo5bo$
+13bo$5bo$6bo$7bo$8bo$9bo$10bo$10bo$8bo$7bo$6bo$5bo$4bo$12bo$7bo5bo$8bo
+16$8bo$7bo5bo$12bo$4bo$5bo$6bo$7bo4bo$8bo4bo$9bo3bo$11bo$10bo$9bo$8bo$
+7bo$6bo$5bo$4bo$12bo$7bo5bo$8bo13$13bo$12bo$7bo$8bo$9bo$10bo$11bo$11bo
+4$11bo$11bo$10bo$9bo$8bo$7bo$12bo$13bo14$14bo$13bo$8bo$9bo$10bo$11bo$
+12bo$13bo$13bo$11bo$10bo$9bo$8bo$7bo$12bo$13bo18$13bo$12bo$7bo$8bo$9bo
+$10bo4bo$11bo4bo$12bo3bo$14bo$13bo$12bo$11bo$10bo$9bo$8bo$7bo$12bo$13b
+o!
