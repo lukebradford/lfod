@@ -34,6 +34,7 @@ python3 -m http.server -d docs 8000
 ```
 
 The extractors for the original Word HTML (`parse_glossary.py`, `extract_tables.py`) need `beautifulsoup4`.
+`extract_iterations.py` reads the 2008 iteration diagrams into `data/iterations.json` (which `build.py` redraws as SVG) and needs Pillow.
 `extract_forum.py` reads a local text dump of the ConwayLife thread, which isn't kept in this repo.
 Only the selected patterns are kept, each with its poster, date and a link to the post.
 

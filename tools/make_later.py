@@ -44,6 +44,46 @@ for p in WIKI:
                         "rles": ([p["rle"]] if p["rle"] else []) + p["extra_rles"],
                         "source": "wiki", "url": p["url"], "captured": p["captured"]})
 
+# The wiki's "Period" page ends with tables of the smallest objects per period, which don't survive as paragraphs.
+for e in entries:
+    if e["name"].lower() == "period" and e.get("paras"):
+        cut = e["paras"].index("Smallest known objects for each period")
+        e["paras"] = [q.replace("A table of the smallest objects for each known period is at the end of this article. The rest is a summary",
+                                "Below is a summary") for q in e["paras"][:cut]]
+        e["desc"] = " ".join(e["paras"])
+        break
+
+# Claims on archived wiki pages that later finds (most posted before the last capture) made wrong.
+# The wiki text stays as it was; the note follows it.
+P5_GUN = ('Arie Paap found a much smaller <a href="news.html#y2016">p5 moon gun</a> in August 2016, '
+          "so the moon laser is no longer the only known gun.")
+NOTES = {
+    "gun": P5_GUN,
+    "moon laser": P5_GUN,
+    "flotsam": P5_GUN,
+    "decade ship": 'It is no longer the only p10 object: Arie Paap found the first <a href="news.html#y2015">p10 puffers</a> in February 2015.',
+    "arrow puffer": 'They are no longer the only p9 objects: Arie Paap found a <a href="news.html#y2015">p9 dot puffer</a> in February 2015, '
+                    'and AforAmpere posted another <a href="news.html#y2021">p9 puffer</a> in 2021.',
+    "starfish": 'Arie Paap found a third p5 oscillator, the <a href="news.html#y2016">bow tie</a>, in August 2016.',
+    "crossroads": 'Arie Paap found a third p5 oscillator, the <a href="news.html#y2016">bow tie</a>, in August 2016.',
+    "moon": 'Not only moon rakes: the <a href="glossary.html#freedom-collider">freedom collider</a> (Arie Paap, January 2015) '
+            "is a backward short free ship rake that isn’t a flotilla.",
+    "rake": 'Not only flotillas: the <a href="glossary.html#freedom-collider">freedom collider</a>, described in the same paragraph, '
+            'is a short free ship rake, and in 2025 Game of Life Fun posted <a href="news.html#y2025">very small p12 and p24 free ship rakes</a>.',
+    "puffer": 'Not only flotillas: Josh Ball’s c p4 side rake (<a href="news.html#y2014">July 2014</a>) is a sideways rake that isn’t a flotilla, '
+              'and the <a href="glossary.html#freedom-collider">freedom collider</a> (Arie Paap, January 2015) is a backward short free ship rake.',
+    "period": "Several “only known” claims here are out of date. "
+              'P2: Josh Ball’s c p2 backrake (<a href="news.html#y2014">July 2014</a>) came before the flicker rake, and Arie Paap posted a p2 wick puffer in 2015. '
+              'P4: Arie Paap’s <a href="news.html#y2016">p5 moon gun</a> (2016) means the moon laser is not the only gun. '
+              'P5: the <a href="news.html#y2016">bow tie</a> (2016) is a third p5 oscillator. '
+              'P9: Arie Paap’s <a href="news.html#y2015">p9 dot puffer</a> (2015) and AforAmpere’s p9 puffer (2021). '
+              'P10: Arie Paap’s <a href="news.html#y2015">p10 puffers</a> (2015), which travel at c.',
+}
+for e in entries:
+    if e["name"].lower() in NOTES:
+        e["note"] = NOTES[e["name"].lower()]
+assert {e["name"].lower() for e in entries if "note" in e} == set(NOTES)
+
 # Names that survive only on the wiki's speed table and in the forum: take the pattern from the forum post.
 BY_TITLE = {f["title"]: f for f in FORUM}
 for name, title, desc in [

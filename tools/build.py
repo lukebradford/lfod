@@ -21,6 +21,7 @@ SUPPLEMENTS = load("supplements.json")
 TABLES = load("tables.json")
 NEWS = load("news.json")
 LATER = load("later.json", {"entries": [], "news": [], "files": []})
+ITER_GRIDS = load("iterations.json", {})
 
 NAV = [
     ("index.html", "Home"), ("news.html", "News"), ("glossary.html", "Glossary"),
@@ -141,7 +142,7 @@ def all_entries():
         if e["name"].lower() in names:
             x = next(x for x in entries if x["name"].lower() == e["name"].lower())
             x.update(desc=e["desc"], source=e["source"], url=e.get("url"), captured=e.get("captured"),
-                     paras=e.get("paras"), rles=e.get("rles"))
+                     paras=e.get("paras"), rles=e.get("rles"), note=e.get("note"))
             if e.get("credit"):
                 x["credit"] = e["credit"]
             if e.get("rle"):
@@ -241,6 +242,8 @@ def build_glossary():
             for im in e["images"][:1]:
                 src = "img/glossary/" + Path(im["src"]).name
                 body.append(f'<img class="orig" src="{src}" alt="Original 2009 illustration for {esc(e["name"])}" loading="lazy">')
+        if e.get("note"):
+            body.append(f'<div class="note">{e["note"]}</div>')
         src = e.get("source", "")
         if src == "wiki":
             cite = f'<a href="{esc(e["url"])}">Wiki page</a>, archived {esc(e["captured"])}'
@@ -366,23 +369,40 @@ ITERATIONS = [
     ("Ugly puffers", "ugly puffer iterations.jpg", "ugly puffer"),
 ]
 
+def iter_cell(x, y, color, circle=False, p=10):
+    if circle:
+        return f'<circle class="ic-{color} ic-ring" cx="{x*p + p/2}" cy="{y*p + p/2}" r="{p/2 - 1.2}"/>'
+    return f'<rect class="ic-{color}" x="{x*p + 0.75}" y="{y*p + 0.75}" width="{p - 1.5}" height="{p - 1.5}" rx="1.5"/>'
+
+def iter_svg(d, title, p=10):
+    """Redraw an iteration diagram from its cell grid, with a one-cell margin and faint grid lines."""
+    cols, rows = d["cols"] + 2, d["rows"] + 2
+    w, h = cols * p, rows * p
+    grid = "".join(f"M{i*p} 0V{h}" for i in range(1, cols)) + "".join(f"M0 {j*p}H{w}" for j in range(1, rows))
+    cells = "".join(iter_cell(x + 1, y + 1, c, bool(rest), p) for x, y, c, *rest in d["cells"])
+    return (f'<svg class="iter-svg" viewBox="0 0 {w} {h}" width="{w*1.4:g}" height="{h*1.4:g}" role="img" '
+            f'aria-label="Iteration diagram for {esc(title)}"><path class="grid" d="{grid}"/>{cells}</svg>')
+
+def swatch(color, circle=False):
+    return f'<svg class="swatch" viewBox="0 0 10 10" width="13" height="13" aria-hidden="true">{iter_cell(0, 0, color, circle)}</svg>'
+
 def build_iterations():
     by = {e["name"]: e for e in ENTRIES}
-    parts = ["<h1>Iteration guides</h1>", """<div class="prose">
+    parts = ["<h1>Iteration guides</h1>", f"""<div class="prose">
 <p class="lede">Possible iterations of the extensible puffer and spaceship families: which wing lengths work, and which must be anchored.</p>
-<p><strong>Key.</strong> Black cells are necessary in any iteration (the minimum length of extensible wings is marked by the first colored cell).
-<span style="color:#2a6fdb">Blue</span> cells mark wing lengths which cannot be anchored.
-<span style="color:#2f9a3b">Green</span> cells mark wing lengths which can be anchored or non-anchored.
-<span style="color:#c8322a">Red</span> cells mark wing lengths which must be anchored.
-Black circles mark wing lengths that produce no output if non-anchored, in objects that can be spaceships or eaters.
-Gray cells are caused by phase offsets in wings; wings should be extended and anchored in their empty phase, which may not be the phase shown.
+<p><strong>Key.</strong> {swatch("black")}Black cells are necessary in any iteration (the minimum length of extensible wings is marked by the first colored cell).
+{swatch("blue")}Blue cells mark wing lengths which cannot be anchored.
+{swatch("green")}Green cells mark wing lengths which can be anchored or non-anchored.
+{swatch("red")}Red cells mark wing lengths which must be anchored.
+{swatch("green", True)}Circled cells mark wing lengths that produce no output if non-anchored, in objects that can be spaceships or eaters.
+{swatch("gray")}Gray cells are caused by phase offsets in wings; wings should be extended and anchored in their empty phase, which may not be the phase shown.
 To see how the phase offsets work, consult the smallest iteration.</p>
-<p class="muted">The diagrams are the original July 2008 images, enlarged. Next to each is the smallest iteration, running live.</p>
+<p class="muted">The diagrams are redrawn cell for cell from the original July 2008 images. Next to each is the smallest iteration, running live.</p>
 </div>"""]
     for title, img, ref in ITERATIONS:
         e = by.get(ref)
         parts.append(f'<h2 id="{slug(title)}">{esc(title)}</h2><div class="iter">'
-                     f'<img class="iter-img" src="img/iterations/{esc(img)}" alt="Iteration diagram for {esc(title)}" loading="lazy">'
+                     f'{iter_svg(ITER_GRIDS[img], title)}'
                      f'<div>{player(e["rle"], ref, height=160, loop=80) if e else ""}'
                      f'<p class="muted">See <a href="glossary.html#{slug(ref)}">{esc(ref)}</a> in the glossary.</p></div></div>')
     parts.append('<h2 id="tables">Iteration tables (May 2008)</h2><div class="prose"><p class="muted">The earlier, tabular form of the same information, '
@@ -397,8 +417,10 @@ def build_challenges():
     later = LATER.get("challenges_html", "")
     body = f"""<h1>Challenges</h1>
 <div class="prose">
-<p class="lede">To anyone who discovers any of the following, I can guarantee eternal gratitude, naming rights, and a place of glory on this web site.</p>
-<p class="muted">Only broad categories that had not been discovered are shown, and any discoveries are gladly accepted. Bold entries are the most significant.
+<p class="lede">The open problems of Live Free or Die as the 2008 site listed them.</p>
+<div class="note">This is a historical list, not a live offer. In 2008 the site promised “eternal gratitude, naming rights, and a place of glory on this web site”
+to anyone who solved one of these; the 2013 wiki added cash prizes. This restoration no longer tracks new discoveries, and neither offer stands today.</div>
+<p class="muted">Only broad categories that had not been discovered are shown. Bold entries are the most significant.
 This is the list as it stood in July 2008. Several have since been solved; see the notes below.</p>
 <h2>General objects</h2>
 <ul>
@@ -626,11 +648,8 @@ def build_restoration():
 def copy_assets():
     img = OUT / "img"
     (img / "glossary").mkdir(parents=True, exist_ok=True)
-    (img / "iterations").mkdir(parents=True, exist_ok=True)
     for p in (ARCHIVE / "verizon-site/glossary_files").glob("*.jpg"):
         shutil.copy(p, img / "glossary" / p.name)
-    for p in (ARCHIVE / "images/iterations").glob("*.jpg"):
-        shutil.copy(p, img / "iterations" / p.name)
     shutil.copy(ARCHIVE / "verizon-site/icon.png", img / "icon.png")
     (OUT / ".nojekyll").write_text("")
 

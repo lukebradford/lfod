@@ -72,6 +72,7 @@ main { max-width: 1100px; margin: 0 auto; padding: 1.5rem 16px 4rem; }
 /* Glossary */
 .toolbar { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin: 1rem 0 1.5rem; position: sticky; top: 0; background: var(--bg); padding: 0.6rem 0; z-index: 2; border-bottom: 1px solid var(--rule); }
 .toolbar input { font: inherit; padding: 0.35rem 0.6rem; border: 1px solid var(--rule); border-radius: 4px; background: var(--panel); color: var(--fg); min-width: 0; flex: 1 1 180px; max-width: 320px; }
+[hidden] { display: none !important; }
 .chip { font: inherit; font-size: 0.85rem; border: 1px solid var(--rule); background: var(--panel); color: var(--fg); border-radius: 999px; padding: 0.2rem 0.75rem; cursor: pointer; }
 .chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
 .entries { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.2rem; }
@@ -126,7 +127,14 @@ tr:last-child td { border-bottom: 0; }
   .status.part { background: #3d3415; color: #e9d48a; }
   .status.lost { background: #45201b; color: #f0a99f; }
 }
-.iter-img { image-rendering: pixelated; width: auto; height: 160px; border: 1px solid var(--rule); background: #fff; }
+.iter-svg { display: block; max-width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 6px; background: var(--grid-bg); }
+.iter-svg .grid { stroke: var(--rule); stroke-width: 0.5; }
+.ic-black { fill: var(--cell); } .ic-blue { fill: #2a6fdb; } .ic-green { fill: #2f9a3b; } .ic-red { fill: #c8322a; } .ic-gray { fill: #bdb6aa; }
+.ic-ring { stroke: var(--cell); stroke-width: 1.6; }
+.swatch { display: inline-block; vertical-align: -0.1em; margin-right: 0.15em; }
+@media (prefers-color-scheme: dark) {
+  .ic-blue { fill: #6ea6f5; } .ic-green { fill: #6cc072; } .ic-red { fill: #ec6a5e; } .ic-gray { fill: #57524a; }
+}
 .iter { display: grid; grid-template-columns: auto 1fr; gap: 1rem 1.5rem; align-items: start; margin-bottom: 1.5rem; }
 @media (max-width: 600px) { .iter { grid-template-columns: 1fr; } }
 .prose td { white-space: normal; min-width: 9rem; }
