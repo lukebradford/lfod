@@ -584,9 +584,14 @@ def build_viewer():
 
 def build_index():
     by = {e["name"]: e for e in ENTRIES}
-    feat = [("free ship", 48), ("monster", 57), ("key ship", 40), ("radar puffer", 120)]
-    tiles = "".join(f'<div>{player(by[n]["rle"], n, height=150, loop=l)}<p class="muted" style="margin:.3em 0 0;font-size:.85rem">'
-                    f'<a href="glossary.html#{slug(n)}">{esc(n)}</a></p></div>' for n, l in feat if n in by)
+    def tile(label, name, loop):
+        return (f'<div>{player(by[name]["rle"], label, height=150, loop=loop)}<p class="muted" style="margin:.3em 0 0;font-size:.85rem">'
+                f'<a href="glossary.html#{slug(name)}">{esc(label)}</a></p></div>')
+    # The four objects the text names; the glossary's dot puffer pattern is the 2-2 dot puffer.
+    feat = [("free ship", "free ship", 48), ("double dot puffer", "double dot puffer", 60),
+            ("2-2 dot puffer", "dot puffer", 60), ("key ship", "key ship", 40)]
+    tiles = "".join(tile(*f) for f in feat)
+    monster = tile("monster", "monster", 57)
     counts = {k: sum(1 for e in ENTRIES if e["kind"] == k) for k in KIND_LABELS}
     body = f"""
 <div class="hero">
@@ -628,6 +633,9 @@ assemble. The explosive nature of the rule makes it receptive to the naturalisti
 and spaceships of each speed that is possible in the Seeds universe, along with objects that are impossible or undiscovered in Seeds: stable
 fuses, oscillators with stators, and oscillators and spaceships of indefinitely large period. In Live Free or Die, unlike Seeds, it seems that
 there is the potential to create anything that is possible in Life.</p>
+</div>
+<div class="cards">{monster}</div>
+<div class="prose">
 <h2>Disclaimer</h2>
 <p>I am not a mathematician. The interest I have taken in cellular automata is purely aesthetic, and I do not profess to know any of the
 complexities behind this universe. The methods I have used to find and describe objects are primitive at best, so accept my apologies if
