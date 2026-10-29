@@ -143,12 +143,14 @@ news += [
     {"date": "2012-07-22", "source": "forum", "paras": [
         f'Josh Ball (velcrorex) posts the first c/4 orthogonal spaceship, later named the beachcomber ship, to the '
         f'<a href="{THREAD}">Live Free or Die thread</a> on the ConwayLife forums (started in 2011). A week later he asks whether the '
-        "Verizon site was saved anywhere, and Paul Tooke points to its March 2008 Wayback Machine snapshot."]},
+        "Verizon site was saved anywhere, and Paul Tooke points to its March 2008 Wayback Machine snapshot. "
+        f'<a href="{post_url("p6835")}">Forum post</a>; <a href="{post_url("p6862")}">reply</a>.']},
     {"date": "2013-10-12", "source": "forum", "paras": [
         "Luke, pointed to the thread by Andrew Trevorrow, announces <em>lfod.wikispaces.com</em>, built over the previous week or two. "
-        "Its pattern collection is dated October 14, 2013."]},
+        f'Its pattern collection is dated October 14, 2013. <a href="{post_url("p9373")}">Forum post</a>.']},
     {"date": "2014-07-04", "source": "forum", "paras": [
-        "Luke offers cash prizes: $25 for a spaceship of a new speed, $25 for a moon reflector, $50 for a stable moon reflector."]},
+        "Luke offers cash prizes: $25 for a spaceship of a new speed, $25 for a moon reflector, $50 for a stable moon reflector. "
+        f'<a href="{post_url("p12513")}">Forum post</a>.']},
     {"date": "2014-12-29", "source": "private messages", "paras": [
         "Luke and Nico Brown sort Nico’s collection of 122 c/2 spaceships by front end. The rows become the "
         "<a href=\"glossary.html#horned-ship\">horned</a>, <a href=\"glossary.html#unicorn-ship\">unicorn</a>, "
@@ -164,17 +166,22 @@ news += [
         "The last Wayback Machine capture of the wiki. Wikispaces shut down later in 2018."]},
     {"date": "2020-10-21", "source": "forum", "paras": [
         "Peter Naszvadi bumps the thread for a new result on LifeWiki: a W110 unit cell, which emulates the one-dimensional "
-        "Rule 110 cellular automaton (itself known to be universal) in Live Free or Die."]},
+        "Rule 110 cellular automaton (itself known to be universal) in Live Free or Die. "
+        f'<a href="{post_url("p107244")}">Forum post</a>.']},
     {"date": "2020-11-12", "source": "forum", "paras": [
-        "FWKnightship builds the puffer setup LaundryPizza03 asked for, laying a pattern of dots that leads to superlinear growth."]},
+        "FWKnightship builds the puffer setup LaundryPizza03 asked for, laying a pattern of dots that leads to superlinear growth. "
+        f'<a href="{post_url("p110293")}">Forum post</a>.']},
     {"date": "2022-01-09", "source": "forum", "paras": [
-        "Luke returns to the thread, having found that Wikispaces shut down without his noticing."]},
+        "Luke returns to the thread, having found that Wikispaces shut down without his noticing. "
+        f'<a href="{post_url("p139991")}">Forum post</a>.']},
     {"date": "2025-05-26", "source": "forum", "paras": [
-        "Game of Life Fun builds the first MMM breeder, after a long series of rakes, puffers and breeders at many new periods."]},
+        "Game of Life Fun builds the first MMM breeder, after a long series of rakes, puffers and breeders at many new periods. "
+        f'<a href="{post_url("p212337")}">Forum post</a>.']},
     {"date": "2025-09-06", "source": "forum", "paras": [
-        "LaundryPizza03 adds the archived wiki’s names to the Glider Database, turning up earlier discoverers for some ships."]},
+        "LaundryPizza03 adds the archived wiki’s names to the Glider Database, turning up earlier discoverers for some ships. "
+        f'<a href="{post_url("p217471")}">Forum post</a>.']},
     {"date": "2026-10-26", "source": "restoration", "paras": [
-        'The site is rebuilt from the 2009 source files, Wayback captures, and the forum. See <a href="restoration.html">About this restoration</a>.']},
+        f'The site is rebuilt from the 2009 source files, Wayback captures, and the <a href="{THREAD}">forum thread</a>. See <a href="restoration.html">About this restoration</a>.']},
 ]
 
 challenges = f"""
