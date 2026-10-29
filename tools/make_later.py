@@ -140,12 +140,12 @@ for f in FORUM:
                            f'<a href="{post_url(f["post"])}">Forum post</a>.'],
                  "rle": f["rle"]})
 news += [
-    {"date": "2012-07-22", "source": "forum", "paras": [
+    {"date": "2012-07-21", "source": "forum", "paras": [
         f'Josh Ball (velcrorex) posts the first c/4 orthogonal spaceship, later named the beachcomber ship, to the '
         f'<a href="{THREAD}">Live Free or Die thread</a> on the ConwayLife forums (started in 2011). A week later he asks whether the '
         "Verizon site was saved anywhere, and Paul Tooke points to its March 2008 Wayback Machine snapshot. "
         f'<a href="{post_url("p6835")}">Forum post</a>; <a href="{post_url("p6862")}">reply</a>.']},
-    {"date": "2013-10-12", "source": "forum", "paras": [
+    {"date": "2013-10-11", "source": "forum", "paras": [
         "Luke, pointed to the thread by Andrew Trevorrow, announces <em>lfod.wikispaces.com</em>, built over the previous week or two. "
         f'Its pattern collection is dated October 14, 2013. <a href="{post_url("p9373")}">Forum post</a>.']},
     {"date": "2014-07-04", "source": "forum", "paras": [
@@ -177,7 +177,7 @@ news += [
     {"date": "2025-05-26", "source": "forum", "paras": [
         "Game of Life Fun builds the first MMM breeder, after a long series of rakes, puffers and breeders at many new periods. "
         f'<a href="{post_url("p212337")}">Forum post</a>.']},
-    {"date": "2025-09-06", "source": "forum", "paras": [
+    {"date": "2025-09-05", "source": "forum", "paras": [
         "LaundryPizza03 adds the archived wiki’s names to the Glider Database, turning up earlier discoverers for some ships. "
         f'<a href="{post_url("p217471")}">Forum post</a>.']},
     {"date": "2026-10-26", "source": "restoration", "paras": [

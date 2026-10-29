@@ -3,6 +3,8 @@
 Usage: python3 tools/extract_forum.py <t649_clean.txt>
 The cleaned thread text is not kept in this repo; only the selected patterns are,
 with poster, date and post link. Block numbers count [CODE] blocks from the top of the thread.
+Dates in the cleaned text can run a day late; data/forum_patterns.json was corrected by hand to the
+dates the forum displays, so check them again after re-running.
 """
 import json, re, sys
 from pathlib import Path
