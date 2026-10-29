@@ -16,7 +16,7 @@ GLOSSARY = {e["name"].lower(): e for e in json.loads((DATA / "glossary.json").re
 FORUM = json.loads((DATA / "forum_patterns.json").read_text())
 THREAD = "https://conwaylife.com/forums/viewtopic.php?t=649"
 NAMES = {"Sokwe": "Matthias Merzenich (Sokwe)", "wildmyron": "Arie Paap (wildmyron)",
-         "simsim314": "Michael Simkin (simsim314)", "glider_rider": "Nico Brown (glider_rider)",
+         "simsim314": "Michael Simkin (simsim314)", "glider_rider": "Nora Brown",
          "bprentice": "Brian Prentice", "velcrorex": "Josh Ball (velcrorex)", "lukebradford": "Luke Bradford"}
 CONCEPTS = {"chaos", "natural", "flotilla", "gun", "speed of light"}
 
@@ -98,24 +98,24 @@ for name, title, desc in [
     entries.append({"name": name, "desc": desc, "rle": f["rle"], "credit": NAMES.get(f["by"], f["by"]),
                     "source": "forum", "url": post_url(f["post"]), "captured": f["date"]})
 
-# Families in Nico Brown's organized c/2 collection (forum, 2014-12-29), named in private messages
-# between Luke and Nico that week: rows of horned, unicorn, hippo and buffalo ships, and the fox ship.
+# Families in Nora Brown's organized c/2 collection (forum, 2014-12-29), named in private messages
+# between Luke and Nora that week: rows of horned, unicorn, hippo and buffalo ships, and the fox ship.
 C2 = json.loads((DATA / "c2_families.json").read_text())
 C2_POST = post_url("p15361")
 for name, key, desc, credit in [
     ("horned ship", "horned",
-     "Any of a family of p4 and p8 c/2 spaceships sharing the front end of the horned rake. Nico Brown’s 2014 collection has {count}; "
-     "the smallest, shown below, has a minimum population of {minpop} cells.", "Nico Brown (glider_rider)"),
+     "Any of a family of p4 and p8 c/2 spaceships sharing the front end of the horned rake. Nora Brown’s 2014 collection has {count}; "
+     "the smallest, shown below, has a minimum population of {minpop} cells.", "Nora Brown"),
     ("hippo ship", "hippo",
-     "Any of a family of p4 c/2 spaceships with the same front-end mechanism. Nico Brown’s 2014 collection has {count}; "
+     "Any of a family of p4 c/2 spaceships with the same front-end mechanism. Nora Brown’s 2014 collection has {count}; "
      "the smallest, shown below, has a minimum population of {minpop} cells. The original hippo ship page is lost, and no surviving source records who found the first one.", "discoverer not recorded"),
     ("buffalo ship", "buffalo",
      "Any of a family of p4 and p8 c/2 spaceships with even bilateral symmetry, found by Arie Paap with gfind and WinLifeSearch in August 2014. "
-     "Nico Brown’s 2014 collection has {count} with the buffalo front end; the smallest, shown below, has a minimum population of {minpop} cells.",
+     "Nora Brown’s 2014 collection has {count} with the buffalo front end; the smallest, shown below, has a minimum population of {minpop} cells.",
      "Arie Paap (wildmyron)"),
     ("fox ship", "fox",
-     "The following p4 c/2 spaceship with a minimum population of {minpop} cells, the one ship in Nico Brown’s 2014 collection that fit no family. "
-     "Named by its discoverer because all four phases resemble canines.", "Nico Brown (glider_rider)"),
+     "The following p4 c/2 spaceship with a minimum population of {minpop} cells, the one ship in Nora Brown’s 2014 collection that fit no family. "
+     "Named by its discoverer because all four phases resemble canines.", "Nora Brown"),
 ]:
     f = C2[key]
     entries.append({"name": name, "desc": desc.format(count=f["count"], minpop=f["smallest"]["minpop"]),
@@ -152,7 +152,7 @@ news += [
         "Luke offers cash prizes: $25 for a spaceship of a new speed, $25 for a moon reflector, $50 for a stable moon reflector. "
         f'<a href="{post_url("p12513")}">Forum post</a>.']},
     {"date": "2014-12-29", "source": "private messages", "paras": [
-        "Luke and Nico Brown sort Nico’s collection of 122 c/2 spaceships by front end. The rows become the "
+        "Luke and Nora Brown sort Nora’s collection of 122 c/2 spaceships by front end. The rows become the "
         "<a href=\"glossary.html#horned-ship\">horned</a>, <a href=\"glossary.html#unicorn-ship\">unicorn</a>, "
         "<a href=\"glossary.html#hippo-ship\">hippo</a> and <a href=\"glossary.html#buffalo-ship\">buffalo</a> ships, and the odd one out "
         "the <a href=\"glossary.html#fox-ship\">fox ship</a>. Luke plans an updated collection “so that the set of known spaceships can be "
@@ -191,7 +191,7 @@ moon reflector, and $50 for a stable moon reflector. Several of the 2008 challen
 <li><strong>A gun</strong>: the p4 <a href="glossary.html#moon-laser">moon laser</a>, by Matthias Merzenich (August 2012). A much smaller p5 moon gun followed from Arie Paap in August 2016.</li>
 <li><strong>c/3 and c/4 orthogonal spaceships</strong>: the <a href="glossary.html#wasp-ship">wasp ship</a> (Michael Simkin, October 2014, which won a prize) and the <a href="glossary.html#beachcomber-ship">beachcomber ship</a> (Josh Ball, July 2012).</li>
 <li><strong>Period 10</strong>: the <a href="glossary.html#decade-ship">decade ship</a> (Paul Tooke, 2012), then p10 puffers (Arie Paap, 2015).</li>
-<li><strong>p2 rakes and puffers</strong>: Josh Ball’s c p2 backrake (July 2014) and the <a href="glossary.html#flicker-rake">flicker rake</a> (Nico Brown, 2015).</li>
+<li><strong>p2 rakes and puffers</strong>: Josh Ball’s c p2 backrake (July 2014) and the <a href="glossary.html#flicker-rake">flicker rake</a> (Nora Brown, 2015).</li>
 <li><strong>c/2 rakes</strong>: Josh Ball’s c/2 backrake (July 2014), then the <a href="glossary.html#buffalo-rake">buffalo rake</a>, <a href="glossary.html#horned-rake">horned rake</a> and hippo rake (by 2015).</li>
 <li><strong>Breeders</strong>: the first, an MMS breeder, by Arie Paap (March 2015). Game of Life Fun built the first MMM breeder in May 2025.</li>
 <li><strong>Universality</strong>: a W110 unit cell, emulating Rule 110 (2020, on LifeWiki).</li>
@@ -200,7 +200,7 @@ moon reflector, and $50 for a stable moon reflector. Several of the 2008 challen
 """
 
 contributors = (", and, after 2012, <strong>Paul Tooke</strong>, <strong>Matthias Merzenich</strong>, "
-                "<strong>Arie Paap</strong> (wildmyron), <strong>Michael Simkin</strong>, <strong>Nico Brown</strong> (glider_rider), "
+                "<strong>Arie Paap</strong> (wildmyron), <strong>Michael Simkin</strong>, <strong>Nora Brown</strong>, "
                 "and many others on the ConwayLife forums, including <strong>Game of Life Fun</strong>, praosylen, AforAmpere, "
                 "confocaloid and FWKnightship. The Glider Database credits earlier finds of the key ship to Peter Naszvadi (2001) "
                 "and the robot ship to Alex Fink (2000)")
@@ -219,15 +219,15 @@ for p in sorted(coll.rglob("*.rle")):
     shutil.copy(p, out / fname)
     files.append({"name": fname[5:-4], "file": fname, "desc": (desc[:1].upper() + desc[1:]) + " (wiki collection, October 2013)"})
 SCRATCH = Path(sys.argv[1]) if len(sys.argv) > 1 else None
-for src, name, date in [("att_482", "Nico Brown c/2 collection (first version)", "December 25, 2014"),
-                        ("att_485", "Nico Brown c/2 collection", "December 29, 2014")]:
+for src, name, date in [("att_482", "Nora Brown c/2 collection (first version)", "December 25, 2014"),
+                        ("att_485", "Nora Brown c/2 collection", "December 29, 2014")]:
     dest = out / (name.replace("c/2", "c2") + ".rle")
     if SCRATCH and (SCRATCH / src).exists():
         cells = parse_macrocell((SCRATCH / src).read_text())
         dest.write_text("#C " + name + ", posted to the ConwayLife forum " + date + "\n" + to_rle(cells))
     if dest.exists():
         files.append({"name": name, "file": dest.name,
-                      "desc": f"Nico Brown’s (glider_rider) collection of c/2 spaceships and rakes, posted as a Golly macrocell on {date}; converted to RLE."
+                      "desc": f"Nora Brown’s collection of c/2 spaceships and rakes, posted as a Golly macrocell on {date}; converted to RLE."
                               + (" Grouped by front end: rakes at top; then rows of horned ships and unicorn ships; then four hippo ships and, "
                                  "to their right, the fox ship; and buffalo ships at the bottom." if "first" not in name else "")})
 
