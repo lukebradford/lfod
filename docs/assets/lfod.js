@@ -160,12 +160,13 @@
       const ctx = c.getContext("2d");
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       ctx.fillStyle = css("--grid-bg"); ctx.fillRect(0, 0, W, H);
-      const v = this.view, pad = 2;
+      // Keep the band under the GEN · POP label clear when fitting the pattern.
+      const v = this.view, pad = 2, top = 18;
       const cw = v.x1 - v.x0 + 1 + pad * 2, ch = v.y1 - v.y0 + 1 + pad * 2;
-      const s0 = Math.min(this.maxCell, (W - 8) / cw, (H - 8) / ch);
+      const s0 = Math.min(this.maxCell, (W - 8) / cw, (H - 8 - top) / ch);
       const s = Math.max(0.05, s0 * this.zoom);
       const ox = (W - cw * s) / 2 + pad * s - v.x0 * s + this.panX;
-      const oy = (H - ch * s) / 2 + pad * s - v.y0 * s + this.panY;
+      const oy = top + (H - top - ch * s) / 2 + pad * s - v.y0 * s + this.panY;
       ctx.fillStyle = css("--cell");
       // Draw in device pixels, snapping cell edges so neighbours meet without gaps or seams.
       ctx.setTransform(1, 0, 0, 1, 0, 0);
