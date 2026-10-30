@@ -58,6 +58,8 @@
       this.height = parseInt(el.dataset.height || "180", 10);
       this.speed = parseInt(el.dataset.speed || "8", 10);
       this.loop = parseInt(el.dataset.loop || "0", 10);
+      // Small ships and puffers start further out, leaving room to move into.
+      this.maxCell = el.dataset.moves === "true" ? 7 : 14;
       this.build();
       this.reset();
     }
@@ -160,18 +162,21 @@
       ctx.fillStyle = css("--grid-bg"); ctx.fillRect(0, 0, W, H);
       const v = this.view, pad = 2;
       const cw = v.x1 - v.x0 + 1 + pad * 2, ch = v.y1 - v.y0 + 1 + pad * 2;
-      const s0 = Math.min(14, (W - 8) / cw, (H - 8) / ch);
+      const s0 = Math.min(this.maxCell, (W - 8) / cw, (H - 8) / ch);
       const s = Math.max(0.05, s0 * this.zoom);
       const ox = (W - cw * s) / 2 + pad * s - v.x0 * s + this.panX;
       const oy = (H - ch * s) / 2 + pad * s - v.y0 * s + this.panY;
       ctx.fillStyle = css("--cell");
-      const g = s >= 4 ? 1 : 0;
-      const d = Math.max(s - g, 0.8);
+      // Draw in device pixels, snapping cell edges so neighbours meet without gaps or seams.
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
+      const edge = (o, i) => Math.round((o + i * s) * dpr);
       for (const k of this.live) {
-        const px = ox + kx(k) * s, py = oy + ky(k) * s;
-        if (px > -d && py > -d && px < W && py < H) ctx.fillRect(px, py, d, d);
+        const x = kx(k), y = ky(k);
+        const px = edge(ox, x), py = edge(oy, y);
+        const w = Math.max(edge(ox, x + 1) - px, 1), h = Math.max(edge(oy, y + 1) - py, 1);
+        if (px > -w && py > -h && px < c.width && py < c.height) ctx.fillRect(px, py, w, h);
       }
-      this.info.textContent = `gen ${this.gen} · pop ${this.live.size}`;
+      this.info.textContent = `GEN ${this.gen} · POP ${this.live.size}`;
     }
   }
 

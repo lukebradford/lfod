@@ -2,12 +2,12 @@
 
 Usage: python3 tools/build.py   (standard library only)
 """
-import html, json, re, shutil, sys
+import functools, html, json, re, shutil, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
-from lfod import load_pattern, to_rle, classify  # noqa: E402
+from lfod import load_pattern, to_rle, classify, parse_rle, step  # noqa: E402
 
 DATA, ARCHIVE, OUT = ROOT / "data", ROOT / "archive", ROOT / "docs"
 esc = html.escape
@@ -56,7 +56,7 @@ def page(filename, title, body, description=""):
 </head>
 <body>
 <header class="site-header"><div class="inner">
-<a class="brand" href="index.html">Live Free or Die Universe<small>B2/S0</small></a>
+<a class="brand" href="index.html">Live Free or Die Universe</a>
 <nav class="main" aria-label="Main">{nav}</nav>
 </div></header>
 <main>
@@ -65,18 +65,41 @@ def page(filename, title, body, description=""):
 <footer class="site-footer"><div class="inner">
 Objects found and named by Luke Bradford unless otherwise credited. Originally published at
 mysite.verizon.net/live_free (2007–2012) and lfod.wikispaces.com (2013–2018); restored 2026.
-Patterns run live in your browser — click any pattern to pause or play.
 </div></footer>
 </body>
 </html>
 """
     (OUT / filename).write_text(doc)
 
+@functools.cache
+def behaviour(rle, gens):
+    """Whether a pattern dies out within `gens` generations, and whether it travels or grows:
+    its bounding box, accumulated over generations, is still expanding after 24 of them."""
+    cells = parse_rle(rle)
+    if not cells:
+        return False, False
+    xs = [x for x, _ in cells]; ys = [y for _, y in cells]
+    box, settled = [min(xs), min(ys), max(xs), max(ys)], None
+    for g in range(1, max(gens, 48) + 1):
+        cells = step(cells)
+        if not cells:
+            return g <= gens, False
+        for x, y in cells:
+            box = [min(box[0], x), min(box[1], y), max(box[2], x), max(box[3], y)]
+        if g == 24:
+            settled = list(box)
+        if g >= 48 and (len(cells) > 400 or g >= gens):
+            break  # large or long-lived; it isn't about to vanish
+    return False, settled is not None and box != settled
+
 def player(rle, label, height=170, loop=0, speed=8, autoplay=True):
     attrs = f'data-rle="{esc(rle)}" data-label="{esc(label)}" data-height="{height}" data-speed="{speed}"'
     if loop:
         attrs += f' data-loop="{loop}"'
-    if not autoplay:
+    dies, moves = behaviour(rle, loop or 200)
+    if moves:
+        attrs += ' data-moves="true"'
+    if dies or not autoplay:
         attrs += ' data-autoplay="false"'
     return f'<div class="pattern" {attrs}></div>'
 
@@ -621,7 +644,7 @@ evolves through consecutive generations, it exhibits emergent and often beautifu
 
 <div class="prose">
 <h2>A short explanation</h2>
-<p>I found Live Free or Die by accident while messing around with simple variations of Seeds (/b2). It is so named because the only cells
+<p>I found Live Free or Die while messing around with simple variations of Seeds (/b2). It is so named because the only cells
 that survive between generations are free of neighbors. What first intrigued me about it were the extremely common free ship, the double
 and 2-2 dot puffers, and the key ship.</p>
 </div>
@@ -631,16 +654,18 @@ and 2-2 dot puffers, and the key ship.</p>
 that is characteristic of Conway’s Life (s23/b3). It is full of readily visible patterns, and flotillas and other large projects are easy to
 assemble. The explosive nature of the rule makes it receptive to the naturalistic study of mobile objects. It has oscillators of each period
 and spaceships of each speed that is possible in the Seeds universe, along with objects that are impossible or undiscovered in Seeds: stable
-fuses, oscillators with stators, and oscillators and spaceships of indefinitely large period. In Live Free or Die, unlike Seeds, it seems that
-there is the potential to create anything that is possible in Life.</p>
+fuses, oscillators with stators, and oscillators and spaceships of indefinitely large period.</p>
+<p>Since then, objects of many periods and speeds have been discovered, such as the p10 <a href="glossary.html#decade-ship">decade ship</a>,
+the c/3 <a href="glossary.html#wasp-ship">wasp ship</a> and the <a href="glossary.html#moon-laser">moon laser</a> gun, along with various types
+of breeders, from the <a href="https://conwaylife.com/forums/viewtopic.php?p=17412#p17412">first MMS breeder</a> in 2015 to the
+<a href="https://conwaylife.com/forums/viewtopic.php?p=212337#p212337">first MMM breeder</a> in 2025 (see <a href="news.html">News</a>).
+The construction of a <a href="https://conwaylife.com/forums/viewtopic.php?p=107244#p107244">Rule 110 unit cell</a> in 2020 proved that
+Live Free or Die is Turing-complete.</p>
+<p class="muted">— Luke Bradford. Text from the 2009 home page, except the last paragraph.</p>
 </div>
 <div class="cards">{monster}</div>
 <div class="prose">
-<h2>Disclaimer</h2>
-<p>I am not a mathematician. The interest I have taken in cellular automata is purely aesthetic, and I do not profess to know any of the
-complexities behind this universe. The methods I have used to find and describe objects are primitive at best, so accept my apologies if
-this site is incomplete, misleading, or confusing in places.</p>
-<p class="muted">— Luke Bradford. Text from the 2009 home page.</p>
+<div class="note">This site is a historical restoration, not a complete and actively maintained catalogue of patterns and discoveries in Live Free or Die.</div>
 <h2>Contributors</h2>
 <p>Most objects were found by Luke Bradford. Major contributions came from <strong>Josh Ball</strong> (dozens of oscillators, ships, puffers and rakes, 2008–2009),
 <strong>David Eppstein</strong> (the first slower-than-light ship), <strong>Jason Summers</strong> (oscillators from his Seeds collection) and
@@ -658,7 +683,7 @@ def copy_assets():
     (img / "glossary").mkdir(parents=True, exist_ok=True)
     for p in (ARCHIVE / "verizon-site/glossary_files").glob("*.jpg"):
         shutil.copy(p, img / "glossary" / p.name)
-    shutil.copy(ARCHIVE / "verizon-site/icon.png", img / "icon.png")
+    shutil.copy(DATA / "icon.png", img / "icon.png")  # the 2009 icon without its drop shadow
     (OUT / ".nojekyll").write_text("")
 
 if __name__ == "__main__":
