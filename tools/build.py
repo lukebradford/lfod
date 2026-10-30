@@ -665,7 +665,7 @@ Live Free or Die is Turing-complete.</p>
 </div>
 <div class="cards">{monster}</div>
 <div class="prose">
-<div class="note">This site is a historical restoration, not a complete and actively maintained catalogue of patterns and discoveries in Live Free or Die.</div>
+<div class="note">This site is a historical restoration, not a complete and actively maintained catalog of patterns and discoveries in Live Free or Die.</div>
 <h2>Contributors</h2>
 <p>Most objects were found by Luke Bradford. Major contributions came from <strong>Josh Ball</strong> (dozens of oscillators, ships, puffers and rakes, 2008–2009),
 <strong>David Eppstein</strong> (the first slower-than-light ship), <strong>Jason Summers</strong> (oscillators from his Seeds collection) and
