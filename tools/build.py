@@ -7,7 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
-from lfod import load_pattern, to_rle, classify, parse_rle, step  # noqa: E402
+from lfod import load_pattern, to_rle, classify, parse_rle, step, object_stats, front_period, symmetry_code  # noqa: E402
 
 DATA, ARCHIVE, OUT = ROOT / "data", ROOT / "archive", ROOT / "docs"
 esc = html.escape
@@ -24,10 +24,11 @@ LATER = load("later.json", {"entries": [], "news": [], "files": []})
 ITER_GRIDS = load("iterations.json", {})
 
 NAV = [
-    ("index.html", "Home"), ("news.html", "News"), ("glossary.html", "Glossary"),
-    ("tables.html", "Object tables"), ("periods.html", "Periods"), ("iterations.html", "Iterations"),
+    ("index.html", "Home"), ("news.html", "News"), ("glossary.html", "Glossary"), ("periods.html", "Periods"),
     ("challenges.html", "Challenges"), ("files.html", "Files"), ("restoration.html", "About this restoration"),
 ]
+# Reference pages: linked from the footer of every page and from the glossary, not the header or home page.
+REFERENCE = [("tables.html", "Object tables"), ("iterations.html", "Iteration guides")]
 
 def slug(name):
     return re.sub(r"[^a-z0-9]+", "-", name.lower().replace("’", "").replace("'", "")).strip("-")
@@ -42,6 +43,7 @@ def asset_version():
 def page(filename, title, body, description=""):
     v = asset_version()
     nav = "".join(f'<a href="{h}"{" class=\"active\"" if h == filename else ""}>{esc(t)}</a>' for h, t in NAV)
+    ref = " · ".join(f'<a href="{h}"{" aria-current=\"page\"" if h == filename else ""}>{esc(t)}</a>' for h, t in REFERENCE)
     full_title = "Live Free or Die Universe" if filename == "index.html" else f"{title} · Live Free or Die Universe"
     doc = f"""<!doctype html>
 <html lang="en">
@@ -63,6 +65,7 @@ def page(filename, title, body, description=""):
 {body}
 </main>
 <footer class="site-footer"><div class="inner">
+<p class="ref">Reference: {ref}</p>
 Objects found and named by Luke Bradford unless otherwise credited. Originally published at
 mysite.verizon.net/live_free (2007–2012) and lfod.wikispaces.com (2013–2018); restored 2026.
 </div></footer>
@@ -103,19 +106,27 @@ def player(rle, label, height=170, loop=0, speed=8, autoplay=True):
         attrs += ' data-autoplay="false"'
     return f'<div class="pattern" {attrs}></div>'
 
-def table_html(rows, link_names=None, header=True):
-    out = ['<div class="table-wrap"><table>']
+TABLE_ALIASES = {"giraffe": "giraffe-ship"}  # 2009 table names that differ from the glossary's
+
+def table_html(rows, link_names=None, header=True, sortable=False):
+    out = ['<div class="table-wrap"><table class="sortable">' if sortable else '<div class="table-wrap"><table>']
     for i, row in enumerate(rows):
         tag = "th" if header and i == 0 else "td"
         cells = []
         for j, c in enumerate(row):
             cls = ' class="num"' if tag == "td" and re.fullmatch(r"[-+]?[\d.]+", c) else ""
             text = esc(c)
-            if link_names and tag == "td" and j == 0 and slug(c) in link_names:
-                text = f'<a href="glossary.html#{slug(c)}">{text}</a>'
+            target = TABLE_ALIASES.get(slug(c), slug(c))
+            if link_names and tag == "td" and j == 0 and target in link_names:
+                text = f'<a href="glossary.html#{target}">{text}</a>'
+            elif sortable and tag == "th":
+                text = f'<button type="button" class="sort">{text}</button>'
             cells.append(f"<{tag}{cls}>{text}</{tag}>")
-        out.append("<tr>" + "".join(cells) + "</tr>")
-    out.append("</table></div>")
+        tr = "<tr>" + "".join(cells) + "</tr>"
+        if header and i == 0:
+            tr = f"<thead>{tr}</thead><tbody>"
+        out.append(tr)
+    out.append("</tbody></table></div>" if header and rows else "</table></div>")
     return "\n".join(out)
 
 # ---------------------------------------------------------------- glossary data
@@ -238,6 +249,16 @@ def wiki_body(e, h):
 
 # ---------------------------------------------------------------- pages
 
+def iteration_link(html_text, name):
+    """Point the glossary's “see Iteration Guides” at the entry's own family diagram where there is one."""
+    if "Iteration Guides" not in html_text:
+        return html_text
+    n = name.lower()
+    titles = [t for t, _, ref in ITERATIONS if ref == n] or [t for t, _, _ in ITERATIONS if n in t.lower()] \
+        or [t for t, _, _ in ITERATIONS if (n.split()[0] + " ") in t.lower() + " "]
+    href = f"iterations.html#{slug(titles[0])}" if titles else "iterations.html"
+    return html_text.replace("Iteration Guides", f'<a href="{href}">Iteration Guides</a>')
+
 def build_glossary():
     chips = "".join(f'<button class="chip" type="button" data-kind="{k}" aria-pressed="false">{esc(v)}</button>'
                     for k, v in KIND_LABELS.items())
@@ -279,7 +300,7 @@ def build_glossary():
         search = esc((e["name"] + " " + e["desc"]).lower())
         cards.append(f'<article class="{cls}" id="{e["slug"]}" data-kind="{e["kind"]}" data-search="{search}">'
                      f'<h3><a href="#{e["slug"]}">{esc(e["name"])}</a></h3><div class="meta">{"".join(tags)}</div>'
-                     + "".join(body) + "</article>")
+                     + iteration_link("".join(body), e["name"]) + "</article>")
     n_pat = sum(1 for e in ENTRIES if e.get("rle"))
     body = f"""
 <h1>Glossary</h1>
@@ -288,7 +309,9 @@ def build_glossary():
 <p class="muted">Text is from the Live Free or Die wiki (2013–2018) where an archived copy of the page survives, and otherwise from
 the June 2009 Live Free or Die Universe glossary or the ConwayLife forum; each entry links to its source. All objects found and named
 by Luke Bradford unless otherwise noted. General CA terms are taken from Stephen Silver’s Life Lexicon. Each pattern runs live; click to pause,
-or copy its RLE into <a href="https://golly.sourceforge.io/">Golly</a> (rule <code>B2/S0</code>).</p>
+or copy its RLE into <a href="https://golly.sourceforge.io/">Golly</a> (rule <code>B2/S0</code>).
+To compare objects, see the <a href="tables.html">object tables</a>; for which wing lengths each extensible family allows,
+see the <a href="iterations.html">iteration guides</a>.</p>
 </div>
 <div class="toolbar" role="search">
 <input type="search" id="q" placeholder="Search the glossary…" aria-label="Search the glossary">
@@ -324,16 +347,83 @@ or copy its RLE into <a href="https://golly.sourceforge.io/">Golly</a> (rule <co
 """
     page("glossary.html", "Glossary", body, "Glossary of every named object in the Live Free or Die cellular automaton, with live patterns.")
 
+LATER_SKIP = {"ant stack"}  # the 2009 tables already list its three forms
+
+def fmt_avg(x):
+    from decimal import Decimal, ROUND_HALF_UP
+    return f"{Decimal(repr(x)).quantize(Decimal('0.01'), ROUND_HALF_UP):f}".rstrip("0").rstrip(".")
+
+def later_disc(e):
+    credit = re.sub(r"\s*\(.*?\)", "", e.get("credit") or "")
+    return "" if "not recorded" in credit else credit
+
+def later_tables():
+    """Statistics for objects catalogued after June 2009, computed from their glossary patterns."""
+    known = {TABLE_ALIASES.get(slug(r[0]), slug(r[0])) for t in TABLES["object tables.htm"] for r in t["rows"][1:]}
+    in_2009 = {g["name"].lower() for g in GLOSSARY}
+    osc = [["Name", "Min", "Avg", "Max", "Pd", "Area", "Box", "Sym", "Disc"]]
+    ships = [["Name", "Min", "Avg", "Max", "Pd", "Speed", "Area", "Box", "Sym", "Disc"]]
+    puffers = [["Name", "Type", "In pop", "Pd", "Speed", "Sym", "Disc"]]
+    tags = [["Name", "Pd", "Speed", "Type", "Disc"]]
+    notes = []
+    for e in ENTRIES:
+        if (e["name"].lower() in in_2009 or e["slug"] in known or e["name"] in LATER_SKIP
+                or not e.get("rle") or e["kind"] not in ("oscillator", "spaceship", "puffer", "tagalong")):
+            continue
+        cells = parse_rle(e["rle"])
+        disc = later_disc(e)
+        name = e["name"][0].upper() + e["name"][1:]
+        if e["kind"] == "tagalong":
+            st = object_stats(cells)  # the pattern shows it riding a ship, so only period and speed are its own
+            tags.append([name, str(st["period"]), st["speed"], "Tagalong", disc])
+            continue
+        if e["kind"] == "puffer":
+            kind = TAG_OVERRIDES.get(e["name"]) or ("Rake" if "rake" in e["desc"].lower() else "Puffer")
+            pd, speed = front_period(cells, gun=kind == "Gun")
+            pop = str(len(cells))
+            m = re.search(r"initial population (\d+) on the wiki", e["desc"])
+            if m:  # the pattern file holds more than the object itself
+                pop = ""
+                notes.append(f'The {esc(e["name"])} pattern holds more than one copy; the wiki gave its initial population as {m.group(1)}.')
+            puffers.append([name, kind, pop, str(pd or ""), speed, symmetry_code([cells]), disc])
+            continue
+        st = object_stats(cells)
+        w, h = st["box"]
+        row = [name, str(st["min"]), fmt_avg(st["avg"]), str(st["max"]), str(st["period"])]
+        if st["kind"] == "spaceship":
+            row.append(st["speed"])
+        row += [str(w * h), f"{w}x{h}", st["sym"], disc]
+        (ships if st["kind"] == "spaceship" else osc).append(row)
+    for t in (osc, ships, puffers, tags):
+        t[1:] = sorted(t[1:], key=lambda r: int(r[1]) if r[1].isdigit() else (int(r[2]) if r[2].isdigit() else 10**9))
+    return [("Oscillators", osc), ("Spaceships", ships), ("Puffers, rakes and guns", puffers),
+            ("Tagalongs", tags)], notes
+
 def build_tables():
-    parts = ["<h1>Object tables</h1>",
-             '<div class="prose"><p class="lede">Statistics for every known oscillator, spaceship, puffer, tagalong and pre-spark, '
-             'as of June 2009.</p><p class="muted">For objects with multiple or infinite iterations, tables refer to the smallest. '
-             'Names link to the glossary. The legend explains the abbreviations, including engine address (EA) notation, '
-             'Luke’s shorthand for describing the engine of any lightspeed ship or puffer.</p></div>']
     tables = TABLES["object tables.htm"]
+    later, later_notes = later_tables()
+    toc = " · ".join(f'<a href="#{slug(t["caption"])}">{esc(t["caption"])}</a>' for t in tables)
+    parts = ["<h1>Object tables</h1>",
+             '<div class="prose"><p class="lede">Statistics for every oscillator, spaceship, puffer, tagalong and pre-spark '
+             'known in June 2009, followed by the objects found since.</p><p class="muted">For objects with multiple or infinite '
+             'iterations, tables refer to the smallest. Names link to the glossary. Click a column heading to sort by it. '
+             'The legend explains the abbreviations, including engine address (EA) notation, '
+             'Luke’s shorthand for describing the engine of any lightspeed ship or puffer.</p>'
+             f'<p class="toc">{toc} · <a href="#later-finds">Later finds</a> · <a href="#legend">Legend</a></p></div>']
     for t in tables:
         parts.append(f'<h2 id="{slug(t["caption"])}">{esc(t["caption"])}</h2>')
-        parts.append(table_html(t["rows"], SLUGS))
+        parts.append(table_html(t["rows"], SLUGS, sortable=True))
+    parts.append('<h2 id="later-finds">Later finds</h2><div class="prose"><p class="muted">Objects catalogued after June 2009, '
+                 'on the wiki (2013–2018) or the ConwayLife forum. These tables were not part of the original site: population, '
+                 'period, speed, bounding box and symmetry are computed by simulating each glossary pattern, and the columns '
+                 'that need a human eye (noses, wings, sparks, engine address) are left out. A puffer’s symmetry is that of its '
+                 'initial pattern. Disc names the discoverer as the glossary credits them.</p></div>')
+    for title, rows in later:
+        if len(rows) > 1:
+            parts.append(f'<h3 id="later-{slug(title)}">{esc(title)}</h3>')
+            parts.append(table_html(rows, SLUGS, sortable=True))
+            if title.startswith("Puffers"):
+                parts += [f'<p class="muted table-note">{n}</p>' for n in later_notes]
     parts.append("""<h2 id="legend">Legend</h2>
 <div class="prose">
 <h3>Discovery method (Disc)</h3>
@@ -680,9 +770,7 @@ evolves through consecutive generations, it exhibits emergent and often beautifu
 <div class="cards">
 <a class="card" href="news.html"><strong>News</strong><span>Dated list of discoveries and explorations</span></a>
 <a class="card" href="glossary.html"><strong>Glossary</strong><span>{len(ENTRIES)} terms and objects, {counts["oscillator"]} oscillators, {counts["spaceship"]} spaceships, {counts["puffer"]} puffers and rakes</span></a>
-<a class="card" href="tables.html"><strong>Object tables</strong><span>Statistics for each object or its smallest iteration</span></a>
 <a class="card" href="periods.html"><strong>Period explorations</strong><span>The smallest oscillator, puffer and spaceship for each known period</span></a>
-<a class="card" href="iterations.html"><strong>Iteration guides</strong><span>Possible iterations of puffer and spaceship families</span></a>
 <a class="card" href="challenges.html"><strong>Challenges</strong><span>Objects nobody had found yet</span></a>
 <a class="card" href="files.html"><strong>Files</strong><span>Run-length encoded collections and explorations</span></a>
 <a class="card" href="restoration.html"><strong>About this restoration</strong><span>What was recovered, from where, and what is lost</span></a>

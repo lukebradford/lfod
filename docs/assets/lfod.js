@@ -183,6 +183,46 @@
 
   window.LFoD = { parseRLE, step, Player };
 
+  // Sortable tables: click a heading to sort by it, again to reverse. Numbers, boxes (by area)
+  // and speeds (c, c/2, 2c/5, c/4d) sort by value; empty cells always sort last.
+  function sortValue(text) {
+    const t = text.trim();
+    if (!t) return null;
+    if (/^-?\d+(\.\d+)?$/.test(t)) return parseFloat(t);
+    let m = t.match(/^(\d+)x(\d+)$/);
+    if (m) return m[1] * m[2];
+    m = t.match(/^(?:\(\d+,\d+\))?(\d*)c(?:\/(\d+))?d?$/);
+    if (m) return (m[1] ? +m[1] : 1) / (m[2] ? +m[2] : 1);
+    return t.toLowerCase();
+  }
+  function compare(a, b) {
+    if (a === null || b === null) return a === b ? 0 : a === null ? 1 : -1;
+    if (typeof a === typeof b) return typeof a === "number" ? a - b : a.localeCompare(b);
+    return typeof a === "number" ? -1 : 1;
+  }
+  function initSort(table) {
+    const body = table.tBodies[0];
+    if (!body) return;
+    const rows = [...body.rows];
+    rows.forEach((r, i) => { r._i = i; });
+    const heads = [...table.tHead.rows[0].cells];
+    heads.forEach((th, col) => {
+      const btn = th.querySelector("button.sort");
+      if (!btn) return;
+      btn.addEventListener("click", () => {
+        const dir = th.getAttribute("aria-sort") === "ascending" ? -1 : 1;
+        heads.forEach((h) => h.removeAttribute("aria-sort"));
+        th.setAttribute("aria-sort", dir === 1 ? "ascending" : "descending");
+        const keyed = rows.map((r) => [sortValue(r.cells[col] ? r.cells[col].textContent : ""), r]);
+        keyed.sort((x, y) => {
+          if (x[0] === null || y[0] === null) return compare(x[0], y[0]) || x[1]._i - y[1]._i;
+          return dir * compare(x[0], y[0]) || x[1]._i - y[1]._i;
+        });
+        for (const [, r] of keyed) body.appendChild(r);
+      });
+    });
+  }
+
   function init() {
     const players = [];
     const io = "IntersectionObserver" in window ? new IntersectionObserver((ents) => {
@@ -198,6 +238,7 @@
       el._player = p; players.push(p);
       if (io) io.observe(el);
     });
+    document.querySelectorAll("table.sortable").forEach(initSort);
     window.addEventListener("resize", () => players.forEach((p) => p.draw()));
     matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => players.forEach((p) => p.draw()));
   }

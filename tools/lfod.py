@@ -134,3 +134,101 @@ def parse_macrocell(text):
         emit(a, ox, oy); emit(b, ox + h, oy); emit(c, ox, oy + h); emit(d, ox + h, oy + h)
     emit(len(nodes) - 1, 0, 0)
     return out
+
+# ---------------------------------------------------------------- object statistics
+
+_TRANSFORMS = [lambda x, y: (x, y), lambda x, y: (-x, y), lambda x, y: (x, -y), lambda x, y: (-x, -y),
+               lambda x, y: (y, x), lambda x, y: (-y, -x), lambda x, y: (-y, x), lambda x, y: (y, -x)]
+
+def _same(cells, f):
+    shape = normalize(cells)[0]
+    return normalize({f(x, y) for x, y in shape})[0] == shape
+
+def symmetry_code(phases):
+    """The 2009 tables' symmetry code for the most symmetric phase, or G for glide symmetry:
+    O eight-way, I four-way mirror, / four-way diagonal, R four-way rotational, D diagonal mirror,
+    M orthogonal mirror, S two-way rotational."""
+    best = max(({i for i, f in enumerate(_TRANSFORMS) if _same(ph, f)} for ph in phases), key=len)
+    for code, need in (("O", set(range(8))), ("I", {1, 2}), ("/", {4, 5}), ("R", {6})):
+        if need <= best:
+            return code
+    if best & {4, 5}:
+        return "D"
+    if best & {1, 2}:
+        return "M"
+    if 3 in best:
+        return "S"
+    p = len(phases)
+    if p % 2 == 0:
+        half = normalize(phases[p // 2])[0]
+        start = normalize(phases[0])[0]
+        if any(normalize({f(x, y) for x, y in start})[0] == half for f in _TRANSFORMS[1:]):
+            return "G"
+    return ""
+
+def _speed(d, p):
+    from math import gcd
+    a, b = sorted((abs(d[0]), abs(d[1])), reverse=True)
+    if a == 0:
+        return ""
+    if b and b != a:
+        return f"({a},{b})c/{p}"
+    g = gcd(a, p)
+    n, m = a // g, p // g
+    return ("c" if n == 1 else f"{n}c") + (f"/{m}" if m > 1 else "") + ("d" if b else "")
+
+def object_stats(cells, maxgen=800):
+    """Population, period, speed, box and symmetry of an oscillator or spaceship, as in the 2009 tables:
+    the box spans the widest and tallest phases, oscillators list the shorter side first and
+    spaceships the side along their direction of travel."""
+    kind, p, d, _ = classify(cells, maxgen)
+    if kind not in ("oscillator", "spaceship"):
+        return None
+    phases, cur = [], set(cells)
+    for _ in range(p):
+        phases.append(cur)
+        cur = step(cur)
+    pops = [len(ph) for ph in phases]
+    w = max(bbox(ph)[0] for ph in phases)
+    h = max(bbox(ph)[1] for ph in phases)
+    if kind == "oscillator":
+        w, h = sorted((w, h))
+    elif abs(d[1]) > abs(d[0]):
+        w, h = h, w
+    return dict(kind=kind, min=min(pops), avg=sum(pops) / p, max=max(pops), period=p,
+                speed=_speed(d, p), box=(w, h), sym=symmetry_code(phases))
+
+def front_period(cells, gun=False, warmup=240, maxp=60):
+    """Period and speed of a puffer or rake, from the leading edge of its evolution;
+    for a gun, the period of the region it started in."""
+    gens, cur = [set(cells)], set(cells)
+    for _ in range(warmup + maxp):
+        cur = step(cur)
+        gens.append(cur)
+    x0 = min(x for x, _ in cells); x1 = max(x for x, _ in cells)
+    y0 = min(y for _, y in cells); y1 = max(y for _, y in cells)
+    span = max(x1 - x0, y1 - y0) + 2
+    def edge(c, axis, sign):
+        m = max(q[axis] * sign for q in c)
+        return {q for q in c if q[axis] * sign > m - span}, m
+    found = []
+    for axis in ((0, 1) if not gun else ()):
+        for sign in (1, -1):
+            f0, m0 = edge(gens[warmup], axis, sign)
+            for p in range(1, maxp + 1):
+                f1, m1 = edge(gens[warmup + p], axis, sign)
+                s = m1 - m0
+                if s > 0 and {(x - s * sign, y) if axis == 0 else (x, y - s * sign) for x, y in f1} == f0:
+                    found.append((p, s))
+                    break
+    if found:
+        # A rake's leading edge in its exhaust direction is a stream of spaceships, whose period
+        # divides the rake's; the engine's edge gives the longest period.
+        p, s = max(found)
+        return p, _speed((s, 0), p)
+    box = lambda c: {q for q in c if x0 <= q[0] <= x1 and y0 <= q[1] <= y1}
+    base = box(gens[warmup])
+    for p in range(1, maxp + 1):
+        if box(gens[warmup + p]) == base:
+            return p, ""
+    return None, ""
