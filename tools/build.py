@@ -106,7 +106,7 @@ def player(rle, label, height=170, loop=0, speed=8, autoplay=True):
         attrs += ' data-autoplay="false"'
     return f'<div class="pattern" {attrs}></div>'
 
-TABLE_ALIASES = {"giraffe": "giraffe-ship"}  # 2009 table names that differ from the glossary's
+TABLE_RENAMES = {"Giraffe": "Giraffe ship"}  # 2009 table names that differ from the glossary's
 
 def table_html(rows, link_names=None, header=True, sortable=False):
     out = ['<div class="table-wrap"><table class="sortable">' if sortable else '<div class="table-wrap"><table>']
@@ -115,8 +115,10 @@ def table_html(rows, link_names=None, header=True, sortable=False):
         cells = []
         for j, c in enumerate(row):
             cls = ' class="num"' if tag == "td" and re.fullmatch(r"[-+]?[\d.]+", c) else ""
+            if tag == "td" and j == 0:
+                c = TABLE_RENAMES.get(c, c)
             text = esc(c)
-            target = TABLE_ALIASES.get(slug(c), slug(c))
+            target = slug(c)
             if link_names and tag == "td" and j == 0 and target in link_names:
                 text = f'<a href="glossary.html#{target}">{text}</a>'
             elif sortable and tag == "th":
@@ -359,7 +361,7 @@ def later_disc(e):
 
 def later_tables():
     """Statistics for objects catalogued after June 2009, computed from their glossary patterns."""
-    known = {TABLE_ALIASES.get(slug(r[0]), slug(r[0])) for t in TABLES["object tables.htm"] for r in t["rows"][1:]}
+    known = {slug(TABLE_RENAMES.get(r[0], r[0])) for t in TABLES["object tables.htm"] for r in t["rows"][1:]}
     in_2009 = {g["name"].lower() for g in GLOSSARY}
     osc = [["Name", "Min", "Avg", "Max", "Pd", "Area", "Box", "Sym", "Disc"]]
     ships = [["Name", "Min", "Avg", "Max", "Pd", "Speed", "Area", "Box", "Sym", "Disc"]]
