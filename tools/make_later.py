@@ -9,7 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 sys.path.insert(0, str(ROOT / "tools"))
-from lfod import parse_macrocell, parse_life105, to_rle
+from lfod import parse_macrocell, parse_life105, parse_rle, to_rle
 
 WIKI = json.loads((DATA / "wiki.json").read_text())
 GLOSSARY = {e["name"].lower(): e for e in json.loads((DATA / "glossary.json").read_text())}
@@ -132,13 +132,39 @@ for name, title, desc in [
     entries.append({"name": name, "desc": desc, "rle": f["rle"], "credit": NAMES.get(f["by"], f["by"]),
                     "source": "forum", "url": post_url(f["post"]), "captured": f["date"]})
 
+# Which way each moving News pattern travels, as posted (screen coordinates, y down), checked by simulation.
+# The News page shows orthogonal craft travelling right and diagonal ones down and to the right.
+# Oscillators, guns, the seed and the four-way wave-riding ship are left as posted.
+HEADING = {
+    "c/4 diagonal ship": (-1, -1), "p10 c/5 ship (decade ship)": (0, -1), "Two growing spaceships": (0, 1),
+    "p12 anchor track flotillas": (1, 0), "p8 c/2 ship": (-1, 0), "c/2 p4 spaceship and backrake": (-1, 0),
+    "c p4 side rake": (-1, 0), "c p2 backrake": (-1, 0), "c p6 side rake": (-1, 0), "Buffalo ships": (1, 0),
+    "Buffalo rake and ship": (1, 0), "Buffalo bird": (1, 0), "p3 puffers (bent tricycle puffer)": (1, 0),
+    "c/3 ship (wasp ship)": (-1, 0), "Extended wasp ships": (-1, 0), "c/2 backrake": (0, 1),
+    "c/2 backrake stabilized into a ship": (0, 1), "Sawtooth": (1, 0), "Short free ship rake (freedom collider)": (1, 0),
+    "Anchored freedom collider": (1, 0), "Tiny c/2 ships (fruit fly ship)": (0, 1), "Small c/2 ships": (-1, 0),
+    "p9 dot puffer": (1, 0), "p10 puffers": (1, 0), "MMS breeder": (1, 0), "p5 c spaceship": (0, 1),
+    "p2 rake (flicker rake)": (0, 1), "p2 wick puffer, stabilized": (1, 0), "Short-necked giraffe": (1, 1),
+    "Completed almost-rake": (1, 0), "p9 puffer": (0, -1), "Small periodic MMS breeder": (0, -1),
+    "Tiny p12 and p24 free ship rakes": (0, -1), "c/5 spaceship collection": (1, 0),
+}
+ROTATIONS = [lambda x, y: (x, y), lambda x, y: (-y, x), lambda x, y: (-x, -y), lambda x, y: (y, -x)]
+
+def orient(rle, heading):
+    """Rotate a pattern so that it travels right, or down and to the right if diagonal."""
+    if not heading:
+        return rle
+    target = (1, 1) if all(heading) else (1, 0)
+    rot = next(r for r in ROTATIONS if r(*heading) == target)
+    return to_rle({rot(x, y) for x, y in parse_rle(rle)})
+
 news = []
 for f in FORUM:
     who = NAMES.get(f["by"], f["by"])
     news.append({"date": f["date"], "source": "forum",
                  "paras": [f'<strong>{f["title"]}</strong> by {who}. {f["note"]} '
                            f'<a href="{post_url(f["post"])}">Forum post</a>.'],
-                 "rle": f["rle"]})
+                 "rle": orient(f["rle"], HEADING.get(f["title"]))})
 news += [
     {"date": "2012-07-21", "source": "forum", "paras": [
         f'Josh Ball (velcrorex) posts the first c/4 orthogonal spaceship, later named the beachcomber ship, to the '
@@ -148,9 +174,6 @@ news += [
     {"date": "2013-10-11", "source": "forum", "paras": [
         "Luke, pointed to the thread by Andrew Trevorrow, announces <em>lfod.wikispaces.com</em>, built over the previous week or two. "
         f'Its pattern collection is dated October 14, 2013. <a href="{post_url("p9373")}">Forum post</a>.']},
-    {"date": "2014-07-04", "source": "forum", "paras": [
-        "Luke offers cash prizes: $25 for a spaceship of a new speed, $25 for a moon reflector, $50 for a stable moon reflector. "
-        f'<a href="{post_url("p12513")}">Forum post</a>.']},
     {"date": "2014-12-29", "source": "private messages", "paras": [
         "Luke and Nora Brown sort Nora’s collection of 122 c/2 spaceships by front end. The rows become the "
         "<a href=\"glossary.html#horned-ship\">horned</a>, <a href=\"glossary.html#unicorn-ship\">unicorn</a>, "
@@ -168,16 +191,9 @@ news += [
         "FWKnightship builds a Rule 110 unit cell in Live Free or Die, posting it in the forum’s thread on Turing-complete Life-like rules: "
         "six unit cells on a torus, swept by fleets of lightspeed ships. "
         f'<a href="{post_url("p107139")}">Forum post</a> · <a href="rule110.html">Run it</a>.']},
-    {"date": "2020-10-21", "source": "forum", "paras": [
-        "Peter Naszvadi bumps the thread for a new result on LifeWiki: a W110 unit cell, which emulates the one-dimensional "
-        "Rule 110 cellular automaton (itself known to be universal) in Live Free or Die. "
-        f'<a href="{post_url("p107244")}">Forum post</a>.']},
     {"date": "2020-11-12", "source": "forum", "paras": [
         "FWKnightship builds the puffer setup LaundryPizza03 asked for, laying a pattern of dots that leads to superlinear growth. "
         f'<a href="{post_url("p110293")}">Forum post</a>.']},
-    {"date": "2022-01-09", "source": "forum", "paras": [
-        "Luke returns to the thread, having found that Wikispaces shut down without his noticing. "
-        f'<a href="{post_url("p139991")}">Forum post</a>.']},
     {"date": "2025-05-26", "source": "forum", "paras": [
         "Game of Life Fun builds the first MMM breeder, after a long series of rakes, puffers and breeders at many new periods. "
         f'<a href="{post_url("p212337")}">Forum post</a>.']},

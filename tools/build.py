@@ -199,14 +199,14 @@ GENERIC = {"cell", "generation", "period", "oscillator", "spaceship", "puffer", 
            "tagalong", "stack", "still life", "rotor", "stator", "phoenix", "explosive", "wing", "engine", "nose",
            "horn", "flame", "heavy", "empty", "boxy", "dusty", "phase type"}
 
-def autolink(text, self_slug):
-    """Link mentions of other glossary entries (longest names first)."""
+def autolink(text, self_slug=None, prefix="#", used=None):
+    """Link the first mention of each other glossary entry (longest names first)."""
     names = sorted({e["name"] for e in ENTRIES if len(e["name"]) > 3 and e["slug"] != self_slug
                     and e["name"] not in GENERIC}, key=len, reverse=True)
     if not names:
         return esc(text)
     pat = re.compile(r"\b(" + "|".join(re.escape(n) for n in names) + r")(s|es)?\b", re.I)
-    out, last, used = [], 0, set()
+    out, last, used = [], 0, set() if used is None else used
     for m in pat.finditer(text):
         s = slug(m.group(1))
         out.append(esc(text[last:m.start()]))
@@ -214,9 +214,26 @@ def autolink(text, self_slug):
             out.append(esc(m.group(0)))
         else:
             used.add(s)
-            out.append(f'<a href="#{s}">{esc(m.group(0))}</a>')
+            out.append(f'<a href="{prefix}{s}">{esc(m.group(0))}</a>')
         last = m.end()
     out.append(esc(text[last:]))
+    return "".join(out)
+
+def autolink_html(markup, prefix="#", used=None):
+    """autolink for HTML: link mentions in text outside tags and existing links."""
+    used = set() if used is None else used
+    out, depth = [], 0
+    for part in re.split(r"(<[^>]+>)", markup):
+        if part.startswith("<"):
+            if re.match(r"<a\b", part):
+                depth += 1
+            elif part.startswith("</a"):
+                depth -= 1
+            out.append(part)
+        elif depth or not part:
+            out.append(part)
+        else:
+            out.append(autolink(html.unescape(part), prefix=prefix, used=used))
     return "".join(out)
 
 def loop_for(e):
@@ -564,25 +581,31 @@ This is the list as it stood in July 2008. Several have since been solved; see t
 </div>"""
     page("challenges.html", "Challenges", body)
 
+def news_date(iso):
+    import datetime
+    d = datetime.date.fromisoformat(iso)
+    return f"{d:%B} {d.day}, {d.year}"
+
 def build_news():
-    items = []
-    for n in NEWS:
-        items.append((n["date"], n["paras"], "site", None))
-    for n in LATER.get("news", []):
-        items.append((n["date"], n["paras"], n.get("source", ""), n.get("rle")))
+    # Newest first. The 2009 page already lists same-day items newest first; later items are
+    # listed oldest first, so their same-day order is reversed (e.g. a reply above its post).
+    items = [((n["date"], -i), n["paras"], "site", None) for i, n in enumerate(NEWS)]
+    items += [((n["date"], i), n["paras"], n.get("source", ""), n.get("rle")) for i, n in enumerate(LATER.get("news", []))]
     items.sort(key=lambda x: x[0], reverse=True)
     out, era = [], None
-    for date, paras, src, rle in items:
+    for (date, _), paras, src, rle in items:
         y = date[:4]
         if y != era:
             era = y
             out.append(f'</ul><h2 class="era" id="y{y}">{y}</h2><ul class="timeline">')
-        ps = "".join(f"<p>{p if src != 'site' else esc(p)}</p>" for p in paras)
+        used = set()
+        ps = "".join(f"<p>{autolink(p, prefix='glossary.html#', used=used) if src == 'site' else autolink_html(p, 'glossary.html#', used)}</p>"
+                     for p in paras)
         tag = f' <span class="tag">{esc(src)}</span>' if src != "site" else ""
         pl = player(rle, re.sub("<[^>]+>", "", paras[0])[:80], height=200, loop=200) if rle else ""
-        out.append(f'<li><time datetime="{date}">{date}</time><div>{ps}{tag}{pl}</div></li>')
+        out.append(f'<li><time datetime="{date}">{news_date(date)}</time><div>{ps}{tag}{pl}</div></li>')
     body = ('<h1>News</h1><div class="prose"><p class="lede">A dated record of discoveries.</p>'
-            '<p class="muted">Entries from December 2007 to September 2009 are Luke’s original News page, verbatim. '
+            '<p class="muted">Entries from December 2007 to September 2009 are the original Live Free or Die Universe News page, verbatim. '
             'Later entries, marked with their source, were reconstructed for this restoration from the ConwayLife forum, '
             'archived wiki pages, and correspondence.</p></div>'
             '<ul class="timeline">' + "".join(out) + "</ul>")
