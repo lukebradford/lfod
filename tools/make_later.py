@@ -89,7 +89,7 @@ BY_TITLE = {f["title"]: f for f in FORUM}
 for name, title, desc in [
     ("buffalo rake", "Buffalo rake and ship",
      "A p4 c/2 clean backward moon rake, the smallest known c/2 puffer or rake (initial population 88 on the wiki). "
-     "Can be converted to a spaceship with a trailer. Shown with the spaceship it was posted with."),
+     "Can be converted to a spaceship with a trailer."),
     ("buffalo bird", "Buffalo bird",
      "A small c/2 tagalong for a majority of the known c/2 spaceships and rakes. Shown riding a ship."),
     ("flicker rake", "p2 rake (flicker rake)", "A p2 rake, probably the pattern catalogued under this name in March 2015. It was hailed as the first p2 rake, but Josh Ball’s c p2 backrake from July 2014 is earlier."),
