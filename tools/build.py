@@ -65,7 +65,7 @@ def page(filename, title, body, description=""):
 {body}
 </main>
 <footer class="site-footer"><div class="inner">
-<p class="ref">Reference: {ref}</p>
+<p class="ref">{ref}</p>
 Objects found and named by Luke Bradford unless otherwise credited. Originally published at
 mysite.verizon.net/live_free (2007–2012) and lfod.wikispaces.com (2013–2018); restored 2026.
 </div></footer>
@@ -745,21 +745,21 @@ the top (circled): a live dot means 1. Fleets of lightspeed ships sweep down the
 
 def build_index():
     by = {e["name"]: e for e in ENTRIES}
-    def tile(label, name, loop):
+    def tile(label, name, loop, note=""):
         return (f'<div>{player(by[name]["rle"], label, height=150, loop=loop)}<p class="muted" style="margin:.3em 0 0;font-size:.85rem">'
-                f'<a href="glossary.html#{slug(name)}">{esc(label)}</a></p></div>')
+                f'<a href="glossary.html#{slug(name)}">{esc(label)}</a>{" " + esc(note) if note else ""}</p></div>')
     # The four objects the text names; the glossary's dot puffer pattern is the 2-2 dot puffer.
     feat = [("free ship", "free ship", 48), ("double dot puffer", "double dot puffer", 60),
             ("2-2 dot puffer", "dot puffer", 60), ("key ship", "key ship", 40)]
     tiles = "".join(tile(*f) for f in feat)
-    monster = tile("monster", "monster", 57)
+    monster = tile("monster", "monster", 57, "(a p19 oscillator)")
     counts = {k: sum(1 for e in ENTRIES if e["kind"] == k) for k in KIND_LABELS}
     body = f"""
 <div class="hero">
 <div class="prose">
 <h1>Live Free or Die Universe</h1>
 <p class="lede">An exploration of the Moore neighborhood s0/b2 cellular automaton.</p>
-<p>Live Free or Die, like Conway’s Game of Life, is a two-dimensional two-state Moore neighborhood cellular automaton. In other words,
+<p>Live Free or Die, like Conway’s <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Game of Life</a>, is a two-dimensional two-state Moore neighborhood cellular automaton. In other words,
 it is an infinite grid of cells which can either be live or dead. Given an initial configuration of cells, each cell applies simple rules
 based on its eight neighboring cells to determine whether its state will change. <strong>A live cell will die if it has any neighbors,
 and a dead cell will come to life if it has exactly two neighbors.</strong> Every cell in the grid changes at the same instant. As the pattern
@@ -773,7 +773,7 @@ evolves through consecutive generations, it exhibits emergent and often beautifu
 <a class="card" href="news.html"><strong>News</strong><span>Dated list of discoveries and explorations</span></a>
 <a class="card" href="glossary.html"><strong>Glossary</strong><span>{len(ENTRIES)} terms and objects, {counts["oscillator"]} oscillators, {counts["spaceship"]} spaceships, {counts["puffer"]} puffers and rakes</span></a>
 <a class="card" href="periods.html"><strong>Period explorations</strong><span>The smallest oscillator, puffer and spaceship for each known period</span></a>
-<a class="card" href="challenges.html"><strong>Challenges</strong><span>Objects nobody had found yet</span></a>
+<a class="card" href="challenges.html"><strong>Challenges</strong><span>Undiscovered patterns</span></a>
 <a class="card" href="files.html"><strong>Files</strong><span>Run-length encoded collections and explorations</span></a>
 <a class="card" href="restoration.html"><strong>About this restoration</strong><span>What was recovered, from where, and what is lost</span></a>
 </div>
@@ -791,16 +791,17 @@ that is characteristic of Conway’s Life (s23/b3). It is full of readily visibl
 assemble. The explosive nature of the rule makes it receptive to the naturalistic study of mobile objects. It has oscillators of each period
 and spaceships of each speed that is possible in the Seeds universe, along with objects that are impossible or undiscovered in Seeds: stable
 fuses, oscillators with stators, and oscillators and spaceships of indefinitely large period.</p>
-<p>Since then, objects of many periods and speeds have been discovered, such as the p10 <a href="glossary.html#decade-ship">decade ship</a>,
+<p>Over the years, thanks to the contributions of a large number of fellow explorers, objects of many periods and speeds have been discovered, such as the p10 <a href="glossary.html#decade-ship">decade ship</a>,
 the c/3 <a href="glossary.html#wasp-ship">wasp ship</a> and the <a href="glossary.html#moon-laser">moon laser</a> gun, along with various types
 of breeders, from the <a href="https://conwaylife.com/forums/viewtopic.php?p=17412#p17412">first MMS breeder</a> in 2015 to the
 <a href="https://conwaylife.com/forums/viewtopic.php?p=212337#p212337">first MMM breeder</a> in 2025 (see <a href="news.html">News</a>).
 The construction of a <a href="rule110.html">Rule 110 unit cell</a> in 2020 proved that
-Live Free or Die is Turing-complete.</p>
+Live Free or Die is <a href="https://en.wikipedia.org/wiki/Turing_completeness">Turing-complete</a>.</p>
+<p>— Luke Bradford</p>
 </div>
 <div class="cards">{monster}</div>
 <div class="prose">
-<div class="note">This site is a historical restoration, not a complete and actively maintained catalog of patterns and discoveries in Live Free or Die.</div>
+<div class="note">Most of this site is a historical restoration, not a complete and actively maintained catalog of patterns and discoveries in Live Free or Die.</div>
 <h2>Contributors</h2>
 <p>Most objects were found by Luke Bradford. Major contributions came from <strong>Josh Ball</strong> (dozens of oscillators, ships, puffers and rakes, 2008–2009),
 <strong>David Eppstein</strong> (the first slower-than-light ship), <strong>Jason Summers</strong> (oscillators from his Seeds collection) and
