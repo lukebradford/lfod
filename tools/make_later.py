@@ -164,6 +164,10 @@ news += [
         "Full HTML and PDF exports of the wiki are made (lfod_20140922 and lfod_20140929). Their download links have since died."]},
     {"date": "2018-03-25", "source": "Wayback", "paras": [
         "The last Wayback Machine capture of the wiki. Wikispaces shut down later in 2018."]},
+    {"date": "2020-10-20", "source": "forum", "paras": [
+        "FWKnightship builds a Rule 110 unit cell in Live Free or Die, posting it in the forum’s thread on Turing-complete Life-like rules: "
+        "six unit cells on a torus, swept by fleets of lightspeed ships. "
+        f'<a href="{post_url("p107139")}">Forum post</a> · <a href="rule110.html">Run it</a>.']},
     {"date": "2020-10-21", "source": "forum", "paras": [
         "Peter Naszvadi bumps the thread for a new result on LifeWiki: a W110 unit cell, which emulates the one-dimensional "
         "Rule 110 cellular automaton (itself known to be universal) in Live Free or Die. "
@@ -194,7 +198,7 @@ moon reflector, and $50 for a stable moon reflector. Several of the 2008 challen
 <li><strong>p2 rakes and puffers</strong>: Josh Ball’s c p2 backrake (July 2014) and the <a href="glossary.html#flicker-rake">flicker rake</a> (Nora Brown, 2015).</li>
 <li><strong>c/2 rakes</strong>: Josh Ball’s c/2 backrake (July 2014), then the <a href="glossary.html#buffalo-rake">buffalo rake</a>, <a href="glossary.html#horned-rake">horned rake</a> and hippo rake (by 2015).</li>
 <li><strong>Breeders</strong>: the first, an MMS breeder, by Arie Paap (March 2015). Game of Life Fun built the first MMM breeder in May 2025.</li>
-<li><strong>Universality</strong>: a W110 unit cell, emulating Rule 110 (2020, on LifeWiki).</li>
+<li><strong>Universality</strong>: FWKnightship’s <a href="rule110.html">Rule 110 unit cell</a> (October 2020).</li>
 </ul>
 <p>As of the wiki’s Challenges page in April 2015, no moon reflector, knightship, spacefiller or replicator was known, and there were no objects at period 11, 13, 14 or 15.</p>
 """

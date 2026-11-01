@@ -35,7 +35,7 @@ def slug(name):
 def asset_version():
     import hashlib
     h = hashlib.sha1()
-    for name in ("style.css", "lfod.js"):
+    for name in ("style.css", "lfod.js", "w110.js"):
         h.update((OUT / "assets" / name).read_bytes())
     return h.hexdigest()[:8]
 
@@ -605,6 +605,52 @@ def build_viewer():
 </script>"""
     page("viewer.html", "Viewer", body)
 
+def build_rule110():
+    # FWKnightship's pattern, as distributed with Golly (identical to the forum post). Too big for lfod.js,
+    # so the page runs it on the GPU with assets/w110.js.
+    name = "lfod-flying-rule110-simulator.rle"
+    shutil.copy(DATA / name, OUT / "files" / name)
+    body = f"""<h1>Rule 110 unit cell</h1>
+<div class="prose">
+<p>FWKnightship’s Rule 110 emulator in Live Free or Die, posted on 20 October 2020. Rule 110 is a one-dimensional cellular automaton
+that is known to be universal, so emulating it showed that Live Free or Die is Turing-complete.</p>
+<p>The torus is 4320 × 7200 and holds six unit cells, each 720 cells wide. Each unit cell stores its Rule 110 state in a lone dot at
+the top (circled): a live dot means 1. Fleets of lightspeed ships sweep down the torus, read the dots, and rewrite them. Each sweep takes
+7200 generations, the height of the torus, and computes one Rule 110 generation.</p>
+<p class="muted">Simulated on your GPU. Scroll to zoom, drag to pan. The panel shows the six dots, read every 7200 generations.
+<a href="https://conwaylife.com/forums/viewtopic.php?p=107139#p107139">Forum post</a> ·
+<a href="files/{name}" download>Download RLE</a> (also distributed with <a href="https://golly.sourceforge.io/">Golly</a>).</p>
+</div>
+<div class="w110">
+<div class="stage">
+<canvas id="gl"></canvas>
+<canvas id="ov"></canvas>
+<span class="pinfo" id="info">Loading…</span>
+<div class="pbar">
+<button type="button" id="play" title="Play / pause">▶</button>
+<button type="button" id="step" title="Step one generation">⏭</button>
+<button type="button" id="next" title="Run to the next Rule 110 generation">Next Rule 110 step</button>
+<button type="button" id="reset" title="Reset">⟲</button>
+<button type="button" id="fit" title="Fit the whole torus">Fit</button>
+<span class="grow"></span>
+<label for="speed" class="muted">Speed</label>
+<select id="speed">
+<option value="1">1 gen/frame</option>
+<option value="10">10 gen/frame</option>
+<option value="100">100 gen/frame</option>
+<option value="max" selected>Max</option>
+</select>
+</div>
+</div>
+<aside class="side">
+<h3>Rule 110 state</h3>
+<div id="hist"></div>
+</aside>
+</div>
+<script src="assets/w110.js?v={asset_version()}" defer></script>"""
+    page("rule110.html", "Rule 110 unit cell", body,
+         "FWKnightship’s Rule 110 unit cell in Live Free or Die (B2/S0), running in the browser.")
+
 def build_index():
     by = {e["name"]: e for e in ENTRIES}
     def tile(label, name, loop):
@@ -659,9 +705,8 @@ fuses, oscillators with stators, and oscillators and spaceships of indefinitely 
 the c/3 <a href="glossary.html#wasp-ship">wasp ship</a> and the <a href="glossary.html#moon-laser">moon laser</a> gun, along with various types
 of breeders, from the <a href="https://conwaylife.com/forums/viewtopic.php?p=17412#p17412">first MMS breeder</a> in 2015 to the
 <a href="https://conwaylife.com/forums/viewtopic.php?p=212337#p212337">first MMM breeder</a> in 2025 (see <a href="news.html">News</a>).
-The construction of a <a href="https://conwaylife.com/forums/viewtopic.php?p=107244#p107244">Rule 110 unit cell</a> in 2020 proved that
+The construction of a <a href="rule110.html">Rule 110 unit cell</a> in 2020 proved that
 Live Free or Die is Turing-complete.</p>
-<p class="muted">— Luke Bradford. Text from the 2009 home page, except the last paragraph.</p>
 </div>
 <div class="cards">{monster}</div>
 <div class="prose">
@@ -690,7 +735,7 @@ if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
     copy_assets()
     build_index(); build_news(); build_glossary(); build_tables(); build_periods()
-    build_iterations(); build_challenges(); build_files(); build_viewer()
+    build_iterations(); build_challenges(); build_files(); build_viewer(); build_rule110()
     if (DATA / "restoration.html").exists():
         build_restoration()
     print("built", len(ENTRIES), "glossary entries")

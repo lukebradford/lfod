@@ -146,3 +146,23 @@ a.card:hover { background: var(--code-bg); }
 .iter { display: grid; grid-template-columns: auto 1fr; gap: 1rem 1.5rem; align-items: start; margin-bottom: 1.5rem; }
 @media (max-width: 600px) { .iter { grid-template-columns: 1fr; } }
 .prose td { white-space: normal; min-width: 9rem; }
+
+/* Rule 110 unit cell page */
+.w110 { display: grid; grid-template-columns: 1fr 150px; gap: 14px; align-items: start; }
+@media (max-width: 760px) { .w110 { grid-template-columns: 1fr; } }
+.w110 .stage { position: relative; background: var(--grid-bg); border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; }
+.w110 .stage canvas { display: block; width: 100%; }
+#gl { cursor: grab; touch-action: none; }
+#gl.dragging { cursor: grabbing; }
+#ov { position: absolute; left: 0; top: 0; pointer-events: none; }
+.w110 .pbar select { font: inherit; background: none; color: var(--fg); border: 1px solid var(--rule); border-radius: 999px; padding: 0.1rem 0.5rem; min-height: 28px; }
+.w110 .pbar .grow { flex: 1; }
+.w110 .side { border: 1px solid var(--rule); border-radius: 12px; padding: 10px; font-size: 0.8rem; }
+.w110 .side h3 { margin: 0 0 0.5em; font-size: 0.9rem; }
+#hist { max-height: 70vh; overflow-y: auto; display: grid; gap: 3px; font-family: var(--mono); font-size: 0.72rem; font-variant-numeric: tabular-nums; }
+#hist .row { display: grid; grid-template-columns: 2.2em repeat(6, 1fr); gap: 3px; align-items: center; }
+#hist .b { aspect-ratio: 1; border: 1px solid var(--rule-strong); border-radius: 2px; }
+#hist .b.on { background: var(--fg); border-color: var(--fg); }
+#hist .t { color: var(--muted); }
+.w110 .err { color: #c00; }
+.w110 .pbar { flex-wrap: wrap; }

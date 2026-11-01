@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rule 110 unit cell · Live Free or Die Universe</title>
+<meta name="description" content="FWKnightship’s Rule 110 unit cell in Live Free or Die (B2/S0), running in the browser.">
+<link rel="icon" href="img/icon.png">
+<link rel="stylesheet" href="assets/style.css?v=f564e5c1">
+<script src="assets/lfod.js?v=f564e5c1" defer></script>
+</head>
+<body>
+<header class="site-header"><div class="inner">
+<a class="brand" href="index.html">Live Free or Die Universe</a>
+<nav class="main" aria-label="Main"><a href="index.html">Home</a><a href="news.html">News</a><a href="glossary.html">Glossary</a><a href="tables.html">Object tables</a><a href="periods.html">Periods</a><a href="iterations.html">Iterations</a><a href="challenges.html">Challenges</a><a href="files.html">Files</a><a href="restoration.html">About this restoration</a></nav>
+</div></header>
+<main>
+<h1>Rule 110 unit cell</h1>
+<div class="prose">
+<p>FWKnightship’s Rule 110 emulator in Live Free or Die, posted on 20 October 2020. Rule 110 is a one-dimensional cellular automaton
+that is known to be universal, so emulating it showed that Live Free or Die is Turing-complete.</p>
+<p>The torus is 4320 × 7200 and holds six unit cells, each 720 cells wide. Each unit cell stores its Rule 110 state in a lone dot at
+the top (circled): a live dot means 1. Fleets of lightspeed ships sweep down the torus, read the dots, and rewrite them. Each sweep takes
+7200 generations, the height of the torus, and computes one Rule 110 generation.</p>
+<p class="muted">Simulated on your GPU. Scroll to zoom, drag to pan. The panel shows the six dots, read every 7200 generations.
+<a href="https://conwaylife.com/forums/viewtopic.php?p=107139#p107139">Forum post</a> ·
+<a href="files/lfod-flying-rule110-simulator.rle" download>Download RLE</a> (also distributed with <a href="https://golly.sourceforge.io/">Golly</a>).</p>
+</div>
+<div class="w110">
+<div class="stage">
+<canvas id="gl"></canvas>
+<canvas id="ov"></canvas>
+<span class="pinfo" id="info">Loading…</span>
+<div class="pbar">
+<button type="button" id="play" title="Play / pause">▶</button>
+<button type="button" id="step" title="Step one generation">⏭</button>
+<button type="button" id="next" title="Run to the next Rule 110 generation">Next Rule 110 step</button>
+<button type="button" id="reset" title="Reset">⟲</button>
+<button type="button" id="fit" title="Fit the whole torus">Fit</button>
+<span class="grow"></span>
+<label for="speed" class="muted">Speed</label>
+<select id="speed">
+<option value="1">1 gen/frame</option>
+<option value="10">10 gen/frame</option>
+<option value="100">100 gen/frame</option>
+<option value="max" selected>Max</option>
+</select>
+</div>
+</div>
+<aside class="side">
+<h3>Rule 110 state</h3>
+<div id="hist"></div>
+</aside>
+</div>
+<script src="assets/w110.js?v=f564e5c1" defer></script>
+</main>
+<footer class="site-footer"><div class="inner">
+Objects found and named by Luke Bradford unless otherwise credited. Originally published at
+mysite.verizon.net/live_free (2007–2012) and lfod.wikispaces.com (2013–2018); restored 2026.
+</div></footer>
+</body>
+</html>
