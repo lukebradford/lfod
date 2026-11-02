@@ -805,7 +805,7 @@ for the largest files (the p192 backward free rake is about 30,000 cells) <a hre
 <h2>Files page (2008)</h2>
 {render("listed")}
 <h2>Other files from the site folder</h2>
-<div class="prose"><p class="muted">These were uploaded to the site or kept alongside it but weren’t on the Files page, including the original files of Josh Ball’s discoveries as he sent them.</p></div>
+<div class="prose"><p class="muted">These were uploaded to the site or kept alongside it but weren’t on the Files page.</p></div>
 {render("extra")}
 {"<h2>Later files</h2>" + render("later") if any(r[0] == "later" for r in rows) else ""}
 """

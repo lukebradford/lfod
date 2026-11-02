@@ -232,6 +232,10 @@ contributors = (", and, after 2012, <strong>Paul Tooke</strong>, <strong>Matthia
                 "and the robot ship to Alex Fink (2000)")
 
 # Later files.
+# Readme descriptions that need rewording, e.g. to credit another discoverer up front.
+FILE_DESC = {
+    "2013 Gun.rle": "Matthias Merzenich’s p4 double-barreled moon gun, the only known gun.",
+}
 out = DATA / "later-files"
 out.mkdir(exist_ok=True)
 files = []
@@ -243,7 +247,8 @@ for p in sorted(coll.rglob("*.rle")):
     desc = re.sub(r"^(is|has|includes|shows|gives) ", "", desc)
     fname = "2013 " + (f"Flotillas - {p.name}" if p.parent.name == "Flotillas" else p.name)
     shutil.copy(p, out / fname)
-    files.append({"name": fname[5:-4], "file": fname, "desc": (desc[:1].upper() + desc[1:]) + " (wiki collection, October 2013)"})
+    desc = FILE_DESC.get(fname, desc[:1].upper() + desc[1:])
+    files.append({"name": fname[5:-4], "file": fname, "desc": desc + " (wiki collection, October 2013)"})
 SCRATCH = Path(sys.argv[1]) if len(sys.argv) > 1 else None
 for src, name, date in [("att_482", "Nora Brown c/2 collection (first version)", "December 25, 2014"),
                         ("att_485", "Nora Brown c/2 collection", "December 29, 2014")]:
