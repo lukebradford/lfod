@@ -83,6 +83,45 @@ def sup_tags(doc):
     return "".join(part if part.startswith("<") else run.sub(lambda m: f"<sup>{m.group(0).translate(NORMAL)}</sup>", part)
                    for part in re.split(r"(<[^>]+>)", doc))
 
+MATH_OPS = {"-": "−", "*": "×"}
+
+def mathml(expr):
+    """Typeset a formula such as “4 × 2^(n+1) − 4” as inline MathML: numbers upright, variables italic,
+    true minus and times signs, and ^ for a superscript (a parenthesized exponent loses its parentheses)."""
+    toks = re.findall(r"\d+|[a-z]|[-+−×*()^]", expr)
+    pos = 0
+
+    def atom():
+        nonlocal pos
+        t = toks[pos]; pos += 1
+        if t == "(":
+            inner = seq(")"); pos += 1
+            return inner, True
+        if t.isdigit():
+            return f"<mn>{t}</mn>", False
+        if t.isalpha():
+            return f"<mi>{t}</mi>", False
+        return f"<mo>{MATH_OPS.get(t, t)}</mo>", False
+
+    def seq(end=None):
+        nonlocal pos
+        out = []
+        while pos < len(toks) and toks[pos] != end:
+            a, grouped = atom()
+            if pos < len(toks) and toks[pos] == "^":
+                pos += 1
+                e, _ = atom()
+                base = f"<mo>(</mo>{a}<mo>)</mo>" if grouped else a
+                out.append(f"<msup><mrow>{base}</mrow><mrow>{e}</mrow></msup>")
+            else:
+                out.append(f"<mo>(</mo>{a}<mo>)</mo>" if grouped else a)
+        return "".join(out)
+
+    return f"<math>{seq()}</math>"
+
+def is_formula(text):
+    return bool(re.search(r"[a-z^]", text)) and not re.search(r"[a-z]{2}", text)
+
 @functools.cache
 def behaviour(rle, gens):
     """Whether a pattern dies out within `gens` generations, and whether it travels or grows:
@@ -521,29 +560,50 @@ D.E. – David Eppstein · J.B. – Josh Ball · PSF – Pre-spark-find program<
 </div>""")
     page("tables.html", "Object tables", "\n".join(parts), "Tables of oscillators, spaceships and puffers in Live Free or Die.")
 
-# The 2009 general anchor track row is one power of 2 off: a (2ⁿ - 1)-slot track (2s + 2 cells for s slots)
-# has 2ⁿ⁺¹ cells and period 4 * 2ⁿ⁺¹ - 4 (3 slots: 8 cells, p28; 7 slots: 16 cells, p60), checked by simulation.
-PERIOD_FIXES = {("4 * 2ⁿ - 4", "(2ⁿ - 1)-slot anchor track", "2⁽ⁿ⁺²⁾"): ["4 * 2ⁿ⁺¹ - 4", "(2ⁿ - 1)-slot anchor track", "2ⁿ⁺¹"]}
+PERIODS = load("periods.json")
+
+def period_name(row):
+    """An object's name in the period tables: glossary links, {formula} spans as MathML,
+    and, for later finds, who found it and when, linked to the post."""
+    used, out = {"anchor"}, []  # “anchor” here is part of “anchor nibbler”, not the anchor oscillator
+    for i, part in enumerate(re.split(r"\{([^}]*)\}", row["name"])):
+        if i % 2:
+            out.append(mathml(part))
+        elif row.get("slug"):
+            out.append(esc(part))
+        elif re.fullmatch(r"[A-Za-z ]+", part) and slug(part) in SLUGS:  # short names autolink skips, such as Dot
+            used.add(slug(part))
+            out.append(f'<a href="glossary.html#{slug(part)}">{esc(part)}</a>')
+        else:
+            out.append(autolink(part, prefix="glossary.html#", used=used))
+    name = "".join(out)
+    if row.get("slug"):
+        name = f'<a href="glossary.html#{row["slug"]}">{name}</a>'
+    if row.get("credit"):
+        credit = esc(row["credit"])
+        if row.get("url"):
+            credit = f'<a href="{esc(row["url"])}">{credit}</a>'
+        name += f' <span class="credit">{credit}</span>'
+    return name
+
+def period_cell(text):
+    if not text:
+        return '<td class="num">?</td>'
+    return f'<td class="num">{mathml(text) if is_formula(text) else esc(text)}</td>'
 
 def build_periods():
-    ts = TABLES["period.htm"]
-    rows = [r for t in ts for r in t["rows"]]
-    assert all(list(k) in rows for k in PERIOD_FIXES), "period table changed; check PERIOD_FIXES"
-    for t in ts:
-        t["rows"] = [PERIOD_FIXES.get(tuple(r), r) for r in t["rows"]]
-    titles = ["Oscillators", "Puffers", "Spaceships"]
-    parts = ["<h1>Period explorations</h1>",
-             '<div class="prose"><p class="lede">The smallest known object of each period, as of June 2009.</p>'
-             '<p class="muted">[…] denotes a flotilla. Cells is the minimum (oscillators, spaceships) or initial (puffers) population. '
-             'For all of these in one file, see <a href="files.html#period-examples-digits">Period examples (digits)</a>.</p></div>']
-    for title, t in zip(titles, ts):
-        rows = t["rows"]
-        rows[0] = ["Period", title[:-1], "Cells"]
-        parts.append(f"<h2>{title}</h2>")
-        parts.append(table_html(rows, SLUGS))
-    if LATER.get("periods_note"):
-        parts.append(f'<div class="note prose">{LATER["periods_note"]}</div>')
-    page("periods.html", "Period explorations", "\n".join(parts))
+    parts = ["<h1>Period explorations</h1>", f'<div class="prose">{PERIODS["intro"]}</div>']
+    for t in PERIODS["tables"]:
+        rows = "".join(f"<tr>{period_cell(r['period'])}<td>{period_name(r)}</td>{period_cell(r['cells'])}</tr>"
+                       for r in t["rows"])
+        parts.append(f'<h2 id="{slug(t["title"])}">{esc(t["title"])}</h2>'
+                     f'<div class="table-wrap"><table class="periods"><thead><tr><th class="num">Period</th>'
+                     f'<th>{esc(t["column"])}</th><th class="num">Cells</th></tr></thead><tbody>{rows}</tbody></table></div>')
+        if t.get("note"):
+            note = re.sub(r"\{([^}]*)\}", lambda m: mathml(m.group(1)), t["note"])
+            parts.append(f'<p class="muted table-note">{note}</p>')
+    page("periods.html", "Period explorations", "\n".join(parts),
+         "The smallest known oscillator, spaceship and puffer of each period in Live Free or Die.")
 
 ITERATIONS = [
     ("Accidental ships and puffers", "accidental puffer iterations.jpg", "accidental ship"),
@@ -607,40 +667,35 @@ To see how the phase offsets work, consult the smallest iteration.</p>
     page("iterations.html", "Iteration guides", "\n".join(parts))
 
 def build_challenges():
-    later = LATER.get("challenges_html", "")
-    body = f"""<h1>Challenges</h1>
+    body = """<h1>Challenges</h1>
 <div class="prose">
-<p class="lede">The open problems of Live Free or Die as the 2008 site listed them.</p>
-<div class="note">This is a historical list, not a live offer. In 2008 the site promised “eternal gratitude, naming rights, and a place of glory on this web site”
-to anyone who solved one of these; the 2013 wiki added cash prizes. This restoration no longer tracks new discoveries, and neither offer stands today.</div>
-<p class="muted">Only broad categories that had not been discovered are shown. Bold entries are the most significant.
-This is the list as it stood in July 2008. Several have since been solved; see the notes below.</p>
-<h2>General objects</h2>
+<p class="lede">Patterns not yet known in Live Free or Die, as of November 2026.</p>
+<p class="muted">Compiled from the <a href="periods.html">period tables</a>, the wiki’s last list of challenges (April 2015),
+and the <a href="https://conwaylife.com/forums/viewtopic.php?t=649">ConwayLife forum thread</a>.</p>
 <ul>
-<li>Objects of undiscovered periods: p10, p11, p13, p14, p15, etc.</li>
-<li>Oscillators of undiscovered periods: p7, p8, p9, p16, p24, etc.</li>
-<li>Spaceships or puffers of undiscovered periods: p2, p7, p9, p28, etc.</li>
-<li><strong>Guns</strong></li>
-<li><strong>Reusable reflectors for moons or other spaceships</strong></li>
-<li>Eaters for spaceships other than moons</li>
-<li><strong>Signal circuitry analogous to Herschel conduits in Conway’s Life</strong></li>
-<li>“Clean” (i.e. non-chaotic) breeders or spacefillers</li>
-<li>“Knightships” or puffers with similar movement</li>
-<li>Spaceships or puffers of unknown speeds: c/3, c/4, c/6, etc.</li>
+<li>Objects of period 11, 13, 14, 15, 17, 21, 22 and 23, and of most higher periods not in the <a href="periods.html">period tables</a></li>
+<li>Oscillators of period 7, 9, 10, 11, 13 to 18, or 20 to 27</li>
+<li>Spaceships of period 7, 9, 11, 13, 14, 15, 17, 18 or 19. Partial p9 lightspeed ships were posted to the forum in 2021, but none was completed.</li>
+<li>Puffers and rakes of period 11, 13, 14, 15, 17 or 19</li>
+<li>Spaceships of speeds other than c, c/2, 2c/5, c/3, c/4 and c/5 orthogonally, and c/4 diagonally</li>
+<li>Puffers and rakes slower than c, other than at c/2 and c/5</li>
+<li>Knightships: spaceships or puffers that travel obliquely. A (2,1)c/5 front end was posted in 2018, but never completed.</li>
+<li>A reusable reflector for <a href="glossary.html#moon">moons</a>, ideally a stable one. The only known moon reflectors destroy themselves.</li>
+<li>Guns for any spaceship other than the moon, and moon guns of periods other than 4 and 5</li>
+<li>Signal circuitry analogous to Herschel conduits in Conway’s Life</li>
+<li>Spacefillers, other than the light-speed expansion of <a href="glossary.html#chaos">chaos</a></li>
+<li>Replicators</li>
+<li>Stabilizations for wicks and oscillator components that work the same way in Seeds (B2/S)</li>
 </ul>
-<h2>Live Free or Die-specific objects</h2>
-<ul>
-<li>Puffers that produce rare objects: levers, Cecil B. DeMilles, etc.</li>
-<li>Undiscovered logic gates built with “hot sand” (see <a href="files.html#logic-gates">Logic gates</a> for known gates)</li>
-<li>Moon syntheses for significant objects (preferably to be usable with rakes)</li>
-<li>New implementations of anchor track flotilla technology</li>
-<li>Stabilizers for wicks and other oscillator components that function identically in the Seeds universe</li>
-<li>Dot-constructed technology, i.e. stable eaters, reflectors etc.</li>
-</ul>
-<h2>Since then</h2>
-{later}
+<h2>History</h2>
+<p>The 2008 site kept a list of open problems, promising “eternal gratitude, naming rights, and a place of glory on this web site”
+to anyone who solved one. The wiki carried it on from 2013 and in July 2014 added cash prizes: $25 for a spaceship of a new speed,
+$25 for any moon reflector and $50 for a stable one. Michael Simkin’s c/3 <a href="glossary.html#wasp-ship">wasp ship</a> won the speed prize
+in October 2014. Many of the 2008 challenges have since been met, among them guns (2012), c/3 and c/4 spaceships, period 10 (2012),
+p2 puffers (2014), breeders (2015), and a <a href="rule110.html">Rule 110 unit cell</a> showing that the rule is universal (2020).
+Neither offer stands today.</p>
 </div>"""
-    page("challenges.html", "Challenges", body)
+    page("challenges.html", "Challenges", body, "Undiscovered patterns in the Live Free or Die cellular automaton.")
 
 def news_date(iso):
     import datetime

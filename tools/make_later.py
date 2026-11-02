@@ -225,21 +225,6 @@ news += [
         f'The site is rebuilt from the 2009 source files, Wayback captures, and the <a href="{THREAD}">forum thread</a>. See <a href="restoration.html">About this restoration</a>.']},
 ]
 
-challenges = f"""
-<p>The 2013 wiki kept this page going, adding cash prizes in July 2014: $25 for a spaceship of a new speed, $25 for any
-moon reflector, and $50 for a stable moon reflector. Several of the 2008 challenges have since been answered:</p>
-<ul>
-<li><strong>A gun</strong>: the p4 <a href="glossary.html#moon-laser">moon laser</a>, by Matthias Merzenich (August 2012). A much smaller p5 moon gun followed from Arie Paap in August 2016.</li>
-<li><strong>c/3 and c/4 orthogonal spaceships</strong>: the <a href="glossary.html#wasp-ship">wasp ship</a> (Michael Simkin, October 2014, which won a prize) and the <a href="glossary.html#beachcomber-ship">beachcomber ship</a> (Josh Ball, July 2012).</li>
-<li><strong>Period 10</strong>: the <a href="glossary.html#decade-ship">decade ship</a> (Paul Tooke, 2012), then p10 puffers (Arie Paap, 2015).</li>
-<li><strong>p2 rakes and puffers</strong>: Josh Ball’s c p2 backrake (July 2014) and the <a href="glossary.html#flicker-rake">flicker rake</a> (Nora Brown, 2015).</li>
-<li><strong>c/2 rakes</strong>: Josh Ball’s c/2 backrake (July 2014), then the <a href="glossary.html#buffalo-rake">buffalo rake</a>, <a href="glossary.html#horned-rake">horned rake</a> and hippo rake (by 2015).</li>
-<li><strong>Breeders</strong>: the first, an MMS breeder, by Arie Paap (March 2015). Game of Life Fun built the first MMM breeder in May 2025.</li>
-<li><strong>Universality</strong>: FWKnightship’s <a href="rule110.html">Rule 110 unit cell</a> (October 2020).</li>
-</ul>
-<p>As of the wiki’s Challenges page in April 2015, no moon reflector, knightship, spacefiller or replicator was known, and there were no objects at period 11, 13, 14 or 15.</p>
-"""
-
 contributors = (", and, after 2012, <strong>Paul Tooke</strong>, <strong>Matthias Merzenich</strong>, "
                 "<strong>Arie Paap</strong> (wildmyron), <strong>Michael Simkin</strong>, <strong>Nora Brown</strong>, "
                 "and many others on the ConwayLife forums, including <strong>Game of Life Fun</strong>, praosylen, AforAmpere, "
@@ -272,9 +257,6 @@ for src, name, date in [("att_482", "Nora Brown c/2 collection (first version)",
                               + (" Grouped by front end: rakes at top; then rows of horned ships and unicorn ships; then four hippo ships and, "
                                  "to their right, the fox ship; and buffalo ships at the bottom." if "first" not in name else "")})
 
-later = {"entries": entries, "news": news, "files": files, "challenges_html": challenges,
-         "contributors_html": contributors,
-         "periods_note": "Since 2009, the first p10 objects (the decade ship and p10 puffers) have been found, along with new p3, p5 and p9 objects "
-                         "and many high-period rakes and breeders. See the <a href=\"news.html\">News</a> page."}
+later = {"entries": entries, "news": news, "files": files, "contributors_html": contributors}
 (DATA / "later.json").write_text(json.dumps(later, indent=1, ensure_ascii=False))
 print(len(entries), "entries,", len(news), "news,", len(files), "files")
