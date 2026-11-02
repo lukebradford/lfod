@@ -5,15 +5,20 @@ Usage: python3 tools/extract_tables.py   (requires beautifulsoup4)
 import json, re
 from pathlib import Path
 from bs4 import BeautifulSoup
+import sys
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE = ROOT / "archive" / "verizon-site"
+sys.path.insert(0, str(ROOT / "tools"))
+from lfod import superscript  # noqa: E402
 
 def clean(t):
     return re.sub(r"\s+", " ", t.replace("\xa0", " ")).strip()
 
 def tables(page):
     soup = BeautifulSoup((SITE / page).read_text(encoding="windows-1252"), "html.parser")
+    for sup in soup.find_all("sup"):  # exponents, e.g. 4 * 2<sup>n</sup> - 4
+        sup.replace_with(superscript(sup.get_text().replace("\xa0", " ")))
     out = []
     for table in soup.find_all("table"):
         # Nearest preceding non-empty paragraph serves as the caption.

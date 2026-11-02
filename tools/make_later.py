@@ -158,6 +158,27 @@ def orient(rle, heading):
     rot = next(r for r in ROTATIONS if r(*heading) == target)
     return to_rle({rot(x, y) for x, y in parse_rle(rle)})
 
+# Glossary patterns follow the same convention. These are the later entries that don't already travel that way
+# (checked by simulating every glossary pattern); the 2009 and wiki patterns already do.
+GLOSSARY_HEADING = {"buffalo ship": (0, 1), "fox ship": (0, 1), "hippo ship": (0, 1), "horned ship": (0, 1),
+                    "horned rake": (0, 1), "flicker rake": (0, 1)}
+for e in entries:
+    h = GLOSSARY_HEADING.get(e["name"])
+    if h:
+        e["rle"] = orient(e["rle"], h)
+        if e.get("rles"):
+            e["rles"] = [orient(r, h) for r in e["rles"]]
+assert {e["name"] for e in entries} >= set(GLOSSARY_HEADING)
+
+# The wiki's superscripts were lost in extraction: “4 × 2n - 4” is 4 × 2ⁿ − 4.
+def powers(t):
+    t = re.sub(r"\b2n == \+- 1\b", "2ⁿ ≡ ±1", t)
+    return re.sub(r"\b2n\b", "2ⁿ", t) if t else t
+for e in entries:
+    e["desc"] = powers(e["desc"])
+    if e.get("paras"):
+        e["paras"] = [powers(q) for q in e["paras"]]
+
 news = []
 for f in FORUM:
     who = NAMES.get(f["by"], f["by"])

@@ -2133,14 +2133,14 @@
      "14"
     ],
     [
-     "4 * 2n - 4",
-     "(2n - 1)-slot anchor track",
-     "2(n + 2)"
+     "4 * 2ⁿ - 4",
+     "(2ⁿ - 1)-slot anchor track",
+     "2⁽ⁿ⁺²⁾"
     ]
    ]
   },
   {
-   "caption": "2(n + 2)",
+   "caption": "2⁽ⁿ⁺²⁾",
    "rows": [
     [
      "Period",
@@ -2243,19 +2243,19 @@
      "161"
     ],
     [
-     "8 * 2n",
-     "(2 * 2n + 2)-slot anchor nibbler puffer",
-     "4 * 2n + 35"
+     "8 * 2ⁿ",
+     "(2 * 2ⁿ + 2)-slot anchor nibbler puffer",
+     "4 * 2ⁿ + 35"
     ],
     [
      "48n",
-     "[Hex ship + (2 * 2n + 2)-slot half anchor biter puffer]",
-     "4 * 2n + 51"
+     "[Hex ship + (2 * 2ⁿ + 2)-slot half anchor biter puffer]",
+     "4 * 2ⁿ + 51"
     ]
    ]
   },
   {
-   "caption": "4 * 2n + 51",
+   "caption": "4 * 2ⁿ + 51",
    "rows": [
     [
      "Period",
@@ -2343,9 +2343,9 @@
      "180"
     ],
     [
-     "8 * 2n",
-     "(2 * 2n + 2)-slot anchor eater ship",
-     "4 * 2n + 60"
+     "8 * 2ⁿ",
+     "(2 * 2ⁿ + 2)-slot anchor eater ship",
+     "4 * 2ⁿ + 60"
     ],
     [
      "48n",

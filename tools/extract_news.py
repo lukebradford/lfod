@@ -1,10 +1,17 @@
 """Extract the dated entries of the 2009 News page into data/news.json."""
-import json, re, subprocess
+import json, re, subprocess, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-text = subprocess.run(["textutil", "-convert", "txt", "-stdout", str(ROOT / "archive/verizon-site/news.htm")],
-                      capture_output=True, text=True).stdout
+sys.path.insert(0, str(ROOT / "tools"))
+from lfod import superscript  # noqa: E402
+
+# Exponents (96*2<sup>n</sup>) would lose their superscript in plain text.
+src = (ROOT / "archive/verizon-site/news.htm").read_text(encoding="windows-1252")
+src = re.sub(r"<sup[^>]*>(.*?)</sup>", lambda m: superscript(re.sub(r"<[^>]*>", "", m.group(1))), src, flags=re.S | re.I)
+src = re.sub(r"charset=windows-1252", "charset=utf-8", src, flags=re.I)
+text = subprocess.run(["textutil", "-convert", "txt", "-format", "html", "-inputencoding", "UTF-8", "-stdin", "-stdout"],
+                      input=src.encode("utf-8"), capture_output=True).stdout.decode("utf-8")
 items, cur = [], None
 for line in (l.strip() for l in text.splitlines()):
     if not line or line.startswith("Live Free or Die"):

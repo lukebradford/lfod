@@ -72,7 +72,16 @@ mysite.verizon.net/live_free (2007–2012) and lfod.wikispaces.com (2013–2018)
 </body>
 </html>
 """
-    (OUT / filename).write_text(doc)
+    (OUT / filename).write_text(sup_tags(doc))
+
+SUPERSCRIPTS = "⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁽⁾ⁿ"
+NORMAL = str.maketrans(SUPERSCRIPTS, "0123456789+-()n")
+
+def sup_tags(doc):
+    """Show exponents stored as Unicode superscripts (2ⁿ) with <sup> outside tags, in the site's own font."""
+    run = re.compile(f"[{SUPERSCRIPTS}]+")
+    return "".join(part if part.startswith("<") else run.sub(lambda m: f"<sup>{m.group(0).translate(NORMAL)}</sup>", part)
+                   for part in re.split(r"(<[^>]+>)", doc))
 
 @functools.cache
 def behaviour(rle, gens):
@@ -164,6 +173,28 @@ def kind_of(e):
     return {"rake": "puffer", "trailer": "tagalong", "pre-spark": "reaction", "spark": "reaction",
             "fuse": "reaction", "predecessor": "reaction"}.get(w, w)
 
+# Corrections to the original text: claims that were wrong when written, typos, and a stray footnote mark.
+EDITS = {
+    "hex ship": [("the only known p6 object other than", "the only known p6 spaceship other than")],
+    "short free ship": [("This is the smallest known p6 object.", "This is the smallest known p6 spaceship.")],
+    "tricycle rake": [(", which is the only known backward rake and clean moon rake, and one of few known p3 objects",
+                       ", which is one of few known p3 objects")],
+    "metronome puffer": [("plus-like reactions occur follow behind", "plus-like reactions follow behind")],
+    "metronome ship": [("plus-like reactions occur follow behind", "plus-like reactions follow behind")],
+    "anchor track": [("(mod 2s + 1). (1)", "(mod 2s + 1).")],
+    "period": [(", making p3 the shortest period with known puffers and rakes.", ".")],
+}
+# Claims in the 2009 glossary that were true then but that later finds overtook (the wiki's are in make_later.py).
+NOTES = {
+    "hex ship": 'Michael Simkin found another p6 spaceship, the c/3 <a href="glossary.html#wasp-ship">wasp ship</a>, in October 2014.',
+    "long arrow puffer": 'It and the arrow puffer are no longer the only p9 objects: Arie Paap found a <a href="news.html#y2015">p9 dot puffer</a> '
+                         'in February 2015, and AforAmpere posted another <a href="news.html#y2021">p9 puffer</a> in 2021.',
+    "flip-flop rake": 'It is no longer the only p4 rake: Josh Ball’s <a href="news.html#y2014">c p4 side rake</a> (July 2014), '
+                      'the c/2 <a href="glossary.html#buffalo-rake">buffalo rake</a> (Arie Paap, August 2014) and '
+                      '<a href="glossary.html#horned-rake">horned rake</a> (Nora Brown, December 2014), and the pocket rake and '
+                      'zipper rake on the later wiki are all p4 rakes.',
+}
+
 def all_entries():
     entries = []
     for e in GLOSSARY:
@@ -187,6 +218,14 @@ def all_entries():
         else:
             entries.append(dict(e))
     for e in entries:
+        for old, new in EDITS.get(e["name"], []):
+            assert old in e["desc"], (e["name"], old)
+            e["desc"] = e["desc"].replace(old, new)
+            if e.get("paras"):
+                e["paras"] = [q.replace(old, new) for q in e["paras"]]
+        if e["name"] in NOTES:
+            assert not e.get("note"), e["name"]
+            e["note"] = NOTES[e["name"]]
         e["kind"] = e.get("kind") or kind_of(e)
         e["slug"] = slug(e["name"])
     entries.sort(key=lambda e: e["name"].lower().lstrip("’'"))
@@ -268,15 +307,29 @@ def wiki_body(e, h):
 
 # ---------------------------------------------------------------- pages
 
+ITER_REFS = {"twin puffer": "robot puffer"}  # entries that point at another family's diagram
+
 def iteration_link(html_text, name):
-    """Point the glossary's “see Iteration Guides” at the entry's own family diagram where there is one."""
-    if "Iteration Guides" not in html_text:
+    """Lower-case the glossary's “see Iteration Guides” and link its first mention to the entry's own
+    family diagram where there is one."""
+    pat = re.compile(r"Iteration [Gg]uides")
+    if not pat.search(html_text):
         return html_text
-    n = name.lower()
+    n = ITER_REFS.get(name.lower(), name.lower())
     titles = [t for t, _, ref in ITERATIONS if ref == n] or [t for t, _, _ in ITERATIONS if n in t.lower()] \
         or [t for t, _, _ in ITERATIONS if (n.split()[0] + " ") in t.lower() + " "]
     href = f"iterations.html#{slug(titles[0])}" if titles else "iterations.html"
-    return html_text.replace("Iteration Guides", f'<a href="{href}">Iteration Guides</a>')
+    html_text = pat.sub(f'<a href="{href}">iteration guides</a>', html_text, count=1)
+    return pat.sub("iteration guides", html_text)
+
+LIFEWIKI = re.compile(r"\b(Gun|Oscillator|Period|Puffer|Rake|Spaceship|Speed|Still life) on LifeWiki\b")
+FILES_REF = re.compile(r'(?:<a href="#[^"]*">)?(Metronome puffers|Oscillators|Output examples)(?:</a>)? in Files\b')
+
+def reference_links(html_text):
+    """Link the glossary's “see Speed on LifeWiki” and “see Oscillators in Files”."""
+    html_text = LIFEWIKI.sub(lambda m: f'<a href="https://conwaylife.com/wiki/{m.group(1).replace(" ", "_")}">'
+                                       f'{m.group(1)} on LifeWiki</a>', html_text)
+    return FILES_REF.sub(lambda m: f'<a href="files.html#{slug(m.group(1))}">{m.group(1)}</a> in Files', html_text)
 
 def build_glossary():
     chips = "".join(f'<button class="chip" type="button" data-kind="{k}" aria-pressed="false">{esc(v)}</button>'
@@ -319,12 +372,12 @@ def build_glossary():
         search = esc((e["name"] + " " + e["desc"]).lower())
         cards.append(f'<article class="{cls}" id="{e["slug"]}" data-kind="{e["kind"]}" data-search="{search}">'
                      f'<h3><a href="#{e["slug"]}">{esc(e["name"])}</a></h3><div class="meta">{"".join(tags)}</div>'
-                     + iteration_link("".join(body), e["name"]) + "</article>")
+                     + reference_links(iteration_link("".join(body), e["name"])) + "</article>")
     n_pat = sum(1 for e in ENTRIES if e.get("rle"))
     body = f"""
 <h1>Glossary</h1>
-<div class="prose">
 <p class="lede">Every named object and term in Live Free or Die: {len(ENTRIES)} entries, {n_pat} with runnable patterns.</p>
+<div class="prose">
 <p class="muted">Text is from the Live Free or Die wiki (2013–2018) where an archived copy of the page survives, and otherwise from
 the June 2009 Live Free or Die Universe glossary or the ConwayLife forum; each entry links to its source. All objects found and named
 by Luke Bradford unless otherwise noted. General CA terms are taken from Stephen Silver’s Life Lexicon. Each pattern runs live; click to pause,

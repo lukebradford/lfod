@@ -2,6 +2,13 @@
 import re
 from collections import Counter
 
+SUPERSCRIPT = str.maketrans("0123456789+-()n", "⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁽⁾ⁿ")
+
+def superscript(text):
+    """Write an exponent such as “(n + 2)” as Unicode superscripts (“⁽ⁿ⁺²⁾”), keeping trailing space."""
+    core = text.rstrip()
+    return core.replace(" ", "").translate(SUPERSCRIPT) + text[len(core):]
+
 def parse_rle(rle):
     lines = [l for l in rle.strip().splitlines() if not l.startswith("#")]
     body = "".join(l.strip() for l in lines if not re.match(r"\s*x\s*=", l))

@@ -55,6 +55,7 @@ nav.main a:hover, nav.main a.active { text-decoration: underline; text-decoratio
 
 main { max-width: 1100px; margin: 0 auto; padding: 1.5rem 16px 4rem; }
 .prose { max-width: 720px; }
+sup { font-size: 0.72em; line-height: 0; vertical-align: 0.42em; }
 .lede { font-size: 1.25rem; line-height: 1.4; color: var(--fg); letter-spacing: -0.01em; }
 .muted { color: var(--muted); }
 .note { background: var(--panel); padding: 0.85em 1.1em; border-radius: 12px; margin: 1.2em 0; }
