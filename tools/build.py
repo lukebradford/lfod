@@ -284,13 +284,13 @@ GENERIC = {"cell", "generation", "period", "oscillator", "spaceship", "puffer", 
            "tagalong", "stack", "still life", "rotor", "stator", "phoenix", "explosive", "wing", "engine", "nose",
            "horn", "flame", "heavy", "empty", "boxy", "dusty", "phase type"}
 
-SHORT_LINKS = {"still-life": {"dot"}}  # names of three letters or fewer, which autolink skips, to link in particular entries
+SHORT_LINKS = {"dot"}  # names of three letters or fewer that autolink links anyway; "ant" and "gun" match too much ordinary text
 
 def autolink(text, self_slug=None, prefix="#", used=None):
     """Link the first mention of each other glossary entry (longest names first)."""
     names = sorted({e["name"] for e in ENTRIES if len(e["name"]) > 3 and e["slug"] != self_slug
                     and e["name"] not in GENERIC} | {a for a, t in ALIASES.items() if slug(t) != self_slug}
-                   | SHORT_LINKS.get(self_slug, set()),
+                   | {n for n in SHORT_LINKS if slug(n) != self_slug},
                    key=len, reverse=True)
     if not names:
         return esc(text)
@@ -298,10 +298,14 @@ def autolink(text, self_slug=None, prefix="#", used=None):
     alts = "|".join(re.escape(n).replace("’", "['’]") for n in names)
     pat = re.compile(r"\b(" + alts + r")(s|es)?\b", re.I)
     out, last, used = [], 0, set() if used is None else used
+    # A short name inside the entry's own name (the "dot" of "dot puffer" on the dot puffer entry) isn't a mention.
+    own = [(o.start(), o.end()) for e in ENTRIES if e["slug"] == self_slug
+           for o in re.finditer(re.escape(e["name"]), text, re.I)]
     for m in pat.finditer(text):
         s = slug(ALIASES.get(m.group(1).lower(), m.group(1)))
         out.append(esc(text[last:m.start()]))
-        if s in used or s not in SLUGS:
+        if s in used or s not in SLUGS or (m.group(1).lower() in SHORT_LINKS
+                                           and any(a <= m.start() and m.end() <= b for a, b in own)):
             out.append(esc(m.group(0)))
         else:
             used.add(s)
