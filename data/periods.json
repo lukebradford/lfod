@@ -24,7 +24,7 @@
    {"period": "32764", "name": "1365-slot anchor track", "cells": "2732"},
    {"period": "65532", "name": "14-slot anchor track", "cells": "30"},
    {"period": "4*2^(n+1)-4", "name": "{(2^n-1)}-slot anchor track", "cells": "2^(n+1)"}
-  ]},
+  ], "note": "An <a href=\"glossary.html#anchor-track\">anchor track</a> with {s} slots has {2s+2} cells and period {4*2^k-4}, where {k} is the smallest number for which {2^k} is one more or one less than a multiple of {2s+1}. The last row is one family this gives; {2^n}-slot tracks are another, with the same periods and two more cells. Most periods have a smaller track than either family, as the rows above show."},
   {"title": "Puffers", "column": "Puffer", "rows": [
    {"period": "2", "name": "Unnamed backrake", "cells": "82", "credit": "Josh Ball, 2014", "url": "https://conwaylife.com/forums/viewtopic.php?p=12574#p12574"},
    {"period": "3", "name": "Bent tricycle puffer", "cells": "33", "credit": "Arie Paap, 2014", "url": "https://conwaylife.com/forums/viewtopic.php?p=12956#p12956"},
