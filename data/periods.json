@@ -17,6 +17,12 @@
    {"period": "252", "name": "6-slot anchor track", "cells": "14"},
    {"period": "508", "name": "21-slot anchor track", "cells": "44", "credit": "Anchor track periods", "url": "files.html#anchor-track-periods"},
    {"period": "1020", "name": "25-slot anchor track", "cells": "52", "credit": "Anchor tracks, 2013", "url": "files.html#anchor-tracks"},
+   {"period": "2044", "name": "9-slot anchor track", "cells": "20"},
+   {"period": "4092", "name": "12-slot anchor track", "cells": "26"},
+   {"period": "8188", "name": "11-slot anchor track", "cells": "24"},
+   {"period": "16380", "name": "17-slot anchor track", "cells": "36"},
+   {"period": "32764", "name": "1365-slot anchor track", "cells": "2732"},
+   {"period": "65532", "name": "14-slot anchor track", "cells": "30"},
    {"period": "4*2^(n+1)-4", "name": "{(2^n-1)}-slot anchor track", "cells": "2^(n+1)"}
   ]},
   {"title": "Puffers", "column": "Puffer", "rows": [
