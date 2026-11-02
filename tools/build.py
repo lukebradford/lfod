@@ -750,6 +750,11 @@ EXTRA_FILES = [
     ("Double moon rake experiment", "Double moon rake experiment.rle", "A double moon rake built from free rakes (February 2008)."),
 ]
 
+# Updates for out-of-date claims in the verbatim 2008 descriptions, keyed by file (HTML).
+FILE_NOTES = {
+    "p192 backward free rake.rle": 'No longer the largest: FWKnightship’s <a href="rule110.html">Rule 110 unit cell</a> (2020) has about 73,000 cells.',
+}
+
 def build_files():
     files_out = OUT / "files"
     files_out.mkdir(exist_ok=True)
@@ -792,8 +797,9 @@ def build_files():
                         f'<span class="muted">{pop:,} cells</span>' if pop is not None else f'<a href="{href}" download>Download</a>')
             else:
                 acts = '<span class="status lost">not recovered</span>'
+            note = f' <strong>Update:</strong> {FILE_NOTES[fn]}' if fn in FILE_NOTES else ""
             out.append(f'<div class="file" id="{slug(name)}"><div class="name">{esc(name)}</div>'
-                       f'<div class="desc">{esc(desc)}</div><div class="actions">{acts}</div></div>')
+                       f'<div class="desc">{esc(desc)}{note}</div><div class="actions">{acts}</div></div>')
         out.append("</div>")
         return "\n".join(out)
     body = f"""<h1>Files</h1>
@@ -801,6 +807,7 @@ def build_files():
 <p class="lede">Original files created in Golly containing explorations, experiments, and collections of objects.</p>
 <p class="muted">Each file is the latest surviving version (most from 2008–2010). <em>View</em> opens it in the in-browser player;
 for the largest files (the p192 backward free rake is about 30,000 cells) <a href="https://golly.sourceforge.io/">Golly</a> is much faster.</p>
+<p class="muted">Descriptions are as of when each file was made, so “known” means known then. For current records, see <a href="periods.html">Period explorations</a>.</p>
 </div>
 <h2>Files page (2008)</h2>
 {render("listed")}

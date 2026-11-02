@@ -234,7 +234,8 @@ contributors = (", and, after 2012, <strong>Paul Tooke</strong>, <strong>Matthia
 # Later files.
 # Readme descriptions that need rewording, e.g. to credit another discoverer up front.
 FILE_DESC = {
-    "2013 Gun.rle": "Matthias Merzenich’s p4 double-barreled moon gun, the only known gun.",
+    "2013 Gun.rle": "Matthias Merzenich’s p4 double-barreled moon gun (the moon laser), the only known gun until Arie Paap’s much smaller p5 moon gun in 2016.",
+    "2013 Collection.rle": "Every known oscillator, puffer, and spaceship, excluding flotillas, trailers, tagalongs, and larger iterations of extensible objects.",
 }
 out = DATA / "later-files"
 out.mkdir(exist_ok=True)
@@ -242,7 +243,7 @@ files = []
 coll = ROOT / "archive/wikispaces/collection-2013/Live Free or Die collection"
 readme = (coll / "readme.txt").read_text()
 for p in sorted(coll.rglob("*.rle")):
-    m = re.search(re.escape(p.name) + r" (.+?)\n", readme)
+    m = re.search(re.escape(p.name) + r" (.+?)(?:\n|$)", readme)
     desc = m.group(1) if m else ""
     desc = re.sub(r"^(is|has|includes|shows|gives) ", "", desc)
     fname = "2013 " + (f"Flotillas - {p.name}" if p.parent.name == "Flotillas" else p.name)

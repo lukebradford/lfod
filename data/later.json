@@ -2001,7 +2001,7 @@
   {
    "name": "Collection",
    "file": "2013 Collection.rle",
-   "desc": "- it excludes flotillas, trailers, tagalongs, and larger iterations of extensible objects, but otherwise has every known oscillator, puffer, and spaceship in the rule. (wiki collection, October 2013)"
+   "desc": "Every known oscillator, puffer, and spaceship, excluding flotillas, trailers, tagalongs, and larger iterations of extensible objects. (wiki collection, October 2013)"
   },
   {
    "name": "Flotillas - Anchor eater ships",
@@ -2036,12 +2036,12 @@
   {
    "name": "Flotillas - Sideways free ship rakes",
    "file": "2013 Flotillas - Sideways free ship rakes.rle",
-   "desc": " (wiki collection, October 2013)"
+   "desc": "A few examples of sideways free ship rakes built using anchor track flotilla technology. (wiki collection, October 2013)"
   },
   {
    "name": "Gun",
    "file": "2013 Gun.rle",
-   "desc": "Matthias Merzenich’s p4 double-barreled moon gun, the only known gun. (wiki collection, October 2013)"
+   "desc": "Matthias Merzenich’s p4 double-barreled moon gun (the moon laser), the only known gun until Arie Paap’s much smaller p5 moon gun in 2016. (wiki collection, October 2013)"
   },
   {
    "name": "Hot sand",
