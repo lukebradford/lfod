@@ -95,15 +95,26 @@ assert {e["name"].lower() for e in entries if "note" in e} == set(NOTES)
 BY_TITLE = {f["title"]: f for f in FORUM}
 for name, title, desc in [
     ("buffalo rake", "Buffalo rake and ship",
-     "A p4 c/2 clean backward moon rake, the smallest known c/2 puffer or rake (initial population 88 on the wiki). "
-     "Can be converted to a spaceship with a trailer."),
+     "A p4 c/2 clean backward moon rake with an initial population of 88 cells, the smallest known c/2 puffer or rake. "
+     "Can be converted to a spaceship with a trailer. Shown below as a rake (with one moon already released) and as a ship."),
     ("buffalo bird", "Buffalo bird",
      "A small c/2 tagalong for a majority of the known c/2 spaceships and rakes. Shown riding a ship."),
-    ("flicker rake", "p2 rake (flicker rake)", "A p2 rake, named the flicker rake by Luke Bradford in March 2015, two weeks after it was posted. He hailed it as the first p2 puffer, but Josh Ball’s c p2 backrake from July 2014 is earlier. That backrake was never named, though the wiki later gave its 82 cells as the flicker rake’s initial population."),
+    ("flicker rake", "p2 rake (flicker rake)",
+     "The following p2 c clean backward moon rake with an initial population of 384 cells. Discovered by Nora Brown "
+     "and named by Luke Bradford in March 2015."),
 ]:
     f = BY_TITLE[title]
     entries.append({"name": name, "desc": desc, "rle": f["rle"], "credit": NAMES.get(f["by"], f["by"]),
                     "source": "forum", "url": post_url(f["post"]), "captured": f["date"]})
+FORUM_NOTES = {
+    "flicker rake": "Luke hailed the flicker rake as the first p2 puffer, but Josh Ball’s "
+                    '<a href="news.html#y2014">c p2 backrake</a>, posted in July 2014, is an earlier p2 rake. That backrake was never named. '
+                    "The wiki’s period table later listed the flicker rake as the smallest known p2 puffer with an initial population "
+                    "of 82 cells, which is the backrake’s population, not the flicker rake’s.",
+}
+for e in entries:
+    if e["name"] in FORUM_NOTES:
+        e["note"] = FORUM_NOTES[e["name"]]
 
 # Families in Nora Brown's organized c/2 collection (forum, 2014-12-29), named in private messages
 # between Luke and Nora that week: rows of horned, unicorn, hippo and buffalo ships, and the fox ship.
@@ -122,7 +133,7 @@ for name, key, desc, credit in [
      "Arie Paap (wildmyron)"),
     ("fox ship", "fox",
      "The following p4 c/2 spaceship with a minimum population of {minpop} cells, the one ship in Nora Brown’s 2014 collection that fit no family. "
-     "Named by its discoverer because all four phases resemble canines.", "Nora Brown"),
+     "Nora Brown named it the fox ship because each of its four phases looks like a dog or fox.", "Nora Brown"),
 ]:
     f = C2[key]
     entries.append({"name": name, "desc": desc.format(count=f["count"], minpop=f["smallest"]["minpop"]),
@@ -138,6 +149,38 @@ for name, title, desc in [
     f = BY_TITLE[title]
     entries.append({"name": name, "desc": desc, "rle": f["rle"], "credit": NAMES.get(f["by"], f["by"]),
                     "source": "forum", "url": post_url(f["post"]), "captured": f["date"]})
+
+# Objects whose wiki pages were never archived, but which surviving pages name. Each entry gathers what those pages say,
+# so that the names can link somewhere; a note says the page is lost.
+WIKI_URL = {p["name"]: p["url"] for p in WIKI}
+for name, kind, desc, pages in [
+    ("collider ship", "spaceship", "A spaceship that the wiki’s freedom collider page asks readers to compare with the freedom collider.",
+     ["freedom collider"]),
+    ("ellipsis puffer", "puffer", "A p3 puffer.", ["period"]),
+    ("hex rake", "puffer", "A p6 c sideways moon rake.", ["period", "rake"]),
+    ("hippo rake", "puffer", "A p4 c/2 backward moon rake.", ["period", "puffer", "rake"]),
+    ("plow trailer", "tagalong", "A p4 c trailer that can be used to build rakes.", ["period"]),
+    ("pocket rake", "puffer", "A p4 c clean backward moon rake.", ["period", "rake"]),
+    ("quintessential rake", "puffer", "A p5 c/5 backward moon rake with the same front-end mechanism as the quintessential ships.",
+     ["quintessential ship", "hammerhead ship", "period", "rake"]),
+    ("wave puffer", "puffer", "Any of a family of c puffers whose wings can be extended infinitely.", ["wing"]),
+    ("wave ship", "spaceship", "Any of a family of c spaceships whose wings can be extended infinitely.", ["wing"]),
+    ("wide rhino ship", "spaceship", "A p4 c/2 spaceship with the same front-end mechanism as the unicorn ships, "
+     "named separately because it was found before them.", ["unicorn ship", "dust mite ship", "period"]),
+    ("zipper rake", "puffer", "A p4 c sideways moon rake.", ["period", "rake"]),
+]:
+    entries.append({"name": name, "kind": kind, "desc": desc, "rle": "", "credit": "", "source": "lost",
+                    "mentions": [{"name": p, "url": WIKI_URL[p]} for p in pages],
+                    "note": f"The wiki’s {name} page was never archived, and no pattern under this name survives. "
+                            "This entry gathers what other wiki pages say about it."})
+# The big six shooter stack's page is lost too, but Josh Ball's July 2014 post includes one (the leftmost pattern).
+f = BY_TITLE["New p4 oscillators and a big six shooter stack"]
+stack = {(x, y) for x, y in parse_rle(f["rle"]) if x < 35}
+entries.append({"name": "big six shooter stack", "rle": to_rle(stack), "credit": NAMES[f["by"]],
+                "desc": "Any p6 oscillator formed by combining big six shooters. The one below, from Josh Ball’s July 2014 forum post, "
+                        "has a minimum population of 89 cells.",
+                "source": "forum", "url": post_url(f["post"]), "captured": f["date"],
+                "note": "The wiki’s big six shooter stack page was never archived; this example comes from the forum."})
 
 # Which way each moving News pattern travels, as posted (screen coordinates, y down), checked by simulation.
 # The News page shows orthogonal craft travelling right and diagonal ones down and to the right.

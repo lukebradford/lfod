@@ -225,6 +225,8 @@ EDITS = {
     "metronome ship": [("plus-like reactions occur follow behind", "plus-like reactions follow behind")],
     "anchor track": [("(mod 2s + 1). (1)", "(mod 2s + 1).")],
     "period": [(", making p3 the shortest period with known puffers and rakes.", ".")],
+    "eclipse puffer": [("with an initial population of 13 cells.",
+                        "with an initial population of 13 cells, which is the smallest known p8 puffer.")],
 }
 # Claims in the 2009 glossary that were true then but that later finds overtook (the wiki's are in make_later.py).
 NOTES = {
@@ -276,6 +278,8 @@ def all_entries():
 ENTRIES = all_entries()
 SLUGS = {e["slug"] for e in ENTRIES}
 
+ALIASES = {"anchor nibbler": "half anchor eater"}  # other names that glossary text uses for an entry
+
 GENERIC = {"cell", "generation", "period", "oscillator", "spaceship", "puffer", "spark", "rake", "trailer",
            "tagalong", "stack", "still life", "rotor", "stator", "phoenix", "explosive", "wing", "engine", "nose",
            "horn", "flame", "heavy", "empty", "boxy", "dusty", "phase type"}
@@ -283,13 +287,16 @@ GENERIC = {"cell", "generation", "period", "oscillator", "spaceship", "puffer", 
 def autolink(text, self_slug=None, prefix="#", used=None):
     """Link the first mention of each other glossary entry (longest names first)."""
     names = sorted({e["name"] for e in ENTRIES if len(e["name"]) > 3 and e["slug"] != self_slug
-                    and e["name"] not in GENERIC}, key=len, reverse=True)
+                    and e["name"] not in GENERIC} | {a for a, t in ALIASES.items() if slug(t) != self_slug},
+                   key=len, reverse=True)
     if not names:
         return esc(text)
-    pat = re.compile(r"\b(" + "|".join(re.escape(n) for n in names) + r")(s|es)?\b", re.I)
+    # Either apostrophe matches either: the wiki writes “Eppstein's slow ship”, the glossary “Eppstein’s slow ship”.
+    alts = "|".join(re.escape(n).replace("’", "['’]") for n in names)
+    pat = re.compile(r"\b(" + alts + r")(s|es)?\b", re.I)
     out, last, used = [], 0, set() if used is None else used
     for m in pat.finditer(text):
-        s = slug(m.group(1))
+        s = slug(ALIASES.get(m.group(1).lower(), m.group(1)))
         out.append(esc(text[last:m.start()]))
         if s in used or s not in SLUGS:
             out.append(esc(m.group(0)))
@@ -366,12 +373,18 @@ def iteration_link(html_text, name):
 
 LIFEWIKI = re.compile(r"\b(Gun|Oscillator|Period|Puffer|Rake|Spaceship|Speed|Still life) on LifeWiki\b")
 FILES_REF = re.compile(r'(?:<a href="#[^"]*">)?(Metronome puffers|Oscillators|Output examples)(?:</a>)? in Files\b')
+# Other mentions of collections that are on the Files page.
+COLLECTIONS = [("download the Live Free or Die collection", "files.html#later-files", "Live Free or Die collection"),
+               ("Nora Brown’s 2014 collection", "files.html#nora-brown-c-2-collection", "2014 collection")]
 
 def reference_links(html_text):
     """Link the glossary's “see Speed on LifeWiki” and “see Oscillators in Files”."""
     html_text = LIFEWIKI.sub(lambda m: f'<a href="https://conwaylife.com/wiki/{m.group(1).replace(" ", "_")}">'
                                        f'{m.group(1)} on LifeWiki</a>', html_text)
-    return FILES_REF.sub(lambda m: f'<a href="files.html#{slug(m.group(1))}">{m.group(1)}</a> in Files', html_text)
+    html_text = FILES_REF.sub(lambda m: f'<a href="files.html#{slug(m.group(1))}">{m.group(1)}</a> in Files', html_text)
+    for phrase, href, linked in COLLECTIONS:
+        html_text = html_text.replace(esc(phrase), esc(phrase).replace(esc(linked), f'<a href="{href}">{esc(linked)}</a>'), 1)
+    return html_text
 
 def build_glossary():
     chips = "".join(f'<button class="chip" type="button" data-kind="{k}" aria-pressed="false">{esc(v)}</button>'
@@ -407,6 +420,10 @@ def build_glossary():
             cite = f'<a href="{esc(e["url"])}">Wiki page</a>, archived {esc(e["captured"])}'
         elif src == "forum":
             cite = f'<a href="{esc(e["url"])}">Forum post</a>, {esc(e["captured"])}'
+        elif src == "lost":
+            pages = ", ".join(f'<a href="{esc(m["url"])}">{esc(m["name"])}</a>' for m in e["mentions"])
+            cite = (f"archived wiki pages that mention it: {pages}" if len(e["mentions"]) > 1
+                    else f"archived wiki page that mentions it: {pages}")
         else:
             cite = "Live Free or Die Universe glossary, 2009"
         body.append(f'<p class="src">Source: {cite}</p>')
@@ -461,7 +478,10 @@ see the <a href="iterations.html">iteration guides</a>.</p>
 """
     page("glossary.html", "Glossary", body, "Glossary of every named object in the Live Free or Die cellular automaton, with live patterns.")
 
-LATER_SKIP = {"ant stack"}  # the 2009 tables already list its three forms
+LATER_SKIP = {"ant stack"}
+# Puffers whose glossary pattern holds more than the puffer: its initial population, and a note under the table.
+INITIAL_POP = {"buffalo rake": ("88", "The buffalo rake pattern also shows the ship it converts into, and a moon the rake has "
+                                      "already released; its initial population counts the rake alone.")}  # the 2009 tables already list its three forms
 
 def fmt_avg(x):
     from decimal import Decimal, ROUND_HALF_UP
@@ -495,10 +515,9 @@ def later_tables():
             kind = TAG_OVERRIDES.get(e["name"]) or ("Rake" if "rake" in e["desc"].lower() else "Puffer")
             pd, speed = front_period(cells, gun=kind == "Gun")
             pop = str(len(cells))
-            m = re.search(r"initial population (\d+) on the wiki", e["desc"])
-            if m:  # the pattern file holds more than the object itself
-                pop = ""
-                notes.append(f'The {esc(e["name"])} pattern holds more than one copy; the wiki gave its initial population as {m.group(1)}.')
+            if e["name"] in INITIAL_POP:  # the pattern holds more than the object itself
+                pop, note = INITIAL_POP[e["name"]]
+                notes.append(note)
             puffers.append([name, kind, pop, str(pd or ""), speed, symmetry_code([cells]), disc])
             continue
         st = object_stats(cells)
@@ -817,7 +836,7 @@ for the largest files (the p192 backward free rake is about 30,000 cells) <a hre
 <h2>Other files from the site folder</h2>
 <div class="prose"><p class="muted">These were uploaded to the site or kept alongside it but weren’t on the Files page.</p></div>
 {render("extra")}
-{"<h2>Later files</h2>" + render("later") if any(r[0] == "later" for r in rows) else ""}
+{'<h2 id="later-files">Later files</h2>' + render("later") if any(r[0] == "later" for r in rows) else ""}
 """
     page("files.html", "Files", body)
 
