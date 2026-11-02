@@ -192,7 +192,17 @@ TERM_NAMES = {"anchored", "bi-anchored", "left-anchored", "right-anchored", "att
               "boxy", "dusty", "empty", "heavy", "engine", "engine horn", "flame", "horn", "nose", "wing",
               "wing notation", "W-winged", "phase type", "anchor track flotilla", "stack"}
 
-TAG_OVERRIDES = {"moon laser": "Gun", "sawtooth": "Sawtooth"}
+TAG_OVERRIDES = {"moon laser": "Gun", "sawtooth": "Sawtooth", "bomb": "Reaction", "shrinker": "Reaction"}
+
+def tag_of(e):
+    """The per-entry tag. Most kinds use the singular of the group label; the reaction group is
+    mixed, so each entry gets the word its own description uses (pre-spark, spark, fuse, reaction or predecessor)."""
+    if e["name"] in TAG_OVERRIDES:
+        return TAG_OVERRIDES[e["name"]]
+    if e["kind"] == "reaction":
+        m = re.search(r"\b(pre-spark|spark|fuse|reaction|predecessor)s?\b", e["desc"].lower())
+        return (m.group(1) if m else "reaction").capitalize()
+    return KIND_LABELS[e["kind"]].split(" &")[0].split(",")[0].rstrip("s")
 
 def kind_of(e):
     if e["name"] in TERM_NAMES or not e.get("rle"):
@@ -402,8 +412,7 @@ def build_glossary():
         if L != letter:
             letter = L
             cards.append(f'<div class="letter" data-letter>{L}</div>')
-        label = TAG_OVERRIDES.get(e["name"]) or KIND_LABELS[e["kind"]].split(" &")[0].split(",")[0].rstrip("s")
-        tags = [f'<span class="tag">{esc(label)}</span>']
+        tags = [f'<span class="tag">{esc(tag_of(e))}</span>']
         credit = e.get("credit") or ""
         if credit:
             tags.append(f'<span class="tag credit">{esc(credit)}</span>')
