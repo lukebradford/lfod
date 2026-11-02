@@ -53,6 +53,13 @@ for e in entries:
         e["desc"] = " ".join(e["paras"])
         break
 
+# A mid-sentence parenthetical on the wiki sometimes closes over the sentence's period: "(a p1 oscillator.)".
+MIDSENTENCE_PAREN = re.compile(r"(\w \([^()]*)\.\)")
+for e in entries:
+    e["desc"] = MIDSENTENCE_PAREN.sub(r"\1).", e["desc"])
+    if e.get("paras"):
+        e["paras"] = [MIDSENTENCE_PAREN.sub(r"\1).", q) for q in e["paras"]]
+
 # Claims on archived wiki pages that later finds (most posted before the last capture) made wrong.
 # The wiki text stays as it was; the note follows it.
 P5_GUN = ('Arie Paap found a much smaller <a href="news.html#y2016">p5 moon gun</a> in August 2016, '
