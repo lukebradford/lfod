@@ -1505,8 +1505,8 @@
   },
   {
    "name": "buffalo rake",
-   "desc": "A p4 c/2 clean backward moon rake with an initial population of 88 cells, the smallest known c/2 puffer or rake. Can be converted to a spaceship with a trailer. Shown below as a rake (with one moon already released) and as a ship.",
-   "rle": "x = 21, y = 82, rule = B2/S0\n4bo$5bo$3b3o$bo2bo$3bo3bo11bo$20bo$20bo$9bo4bo5bo$7bo5b3o4bo$4b4o2bo3b\n2o$6bo7bobo2bo$6bo4bo2bo2bo$12b2o5bo$12bo7bo$5bo5bobobo$4bo5bo$4bo5bo$\n5bo5bobobo$12bo7bo$12b2o5bo$6bo4bo2bo2bo$6bo7bobo2bo$4b4o2bo3b2o$7bo5b\n3o4bo$9bo4bo5bo$20bo$20bo$3bo3bo11bo$bo2bo$3b3o$5bo$4bo19$4bo$5bo$3b3o\n$bo2bo$3bo3bo11bo$20bo$20bo$9bo4bo5bo$7bo5b3o4bo$4b4o2bo3b2o$6bo7bobo2\nbo$6bo4bo2bo2bo$12b2o5bo$o11bo7bo$5bo5bobobo$4bo5bo$4bo5bo$5bo5bobobo$\no11bo7bo$12b2o5bo$6bo4bo2bo2bo$6bo7bobo2bo$4b4o2bo3b2o$7bo5b3o4bo$9bo4\nbo5bo$20bo$20bo$3bo3bo11bo$bo2bo$3b3o$5bo$4bo!",
+   "desc": "A p4 c/2 clean backward moon rake with an initial population of 88 cells, the smallest known c/2 puffer or rake. Can be converted to a spaceship with a trailer.",
+   "rle": "x = 21, y = 82, rule = B2/S0\n4bo$5bo$3b3o$bo2bo$3bo3bo11bo$20bo$20bo$9bo4bo5bo$7bo5b3o4bo$4b4o2bo3b\n2o$6bo7bobo2bo$6bo4bo2bo2bo$12b2o5bo$12bo7bo$11bobobo$10bo$10bo$11bobo\nbo$12bo7bo$12b2o5bo$6bo4bo2bo2bo$6bo7bobo2bo$4b4o2bo3b2o$7bo5b3o4bo$9b\no4bo5bo$20bo$20bo$3bo3bo11bo$bo2bo$3b3o$5bo$4bo19$4bo$5bo$3b3o$bo2bo$3\nbo3bo11bo$20bo$20bo$9bo4bo5bo$7bo5b3o4bo$4b4o2bo3b2o$6bo7bobo2bo$6bo4b\no2bo2bo$12b2o5bo$o11bo7bo$5bo5bobobo$4bo5bo$4bo5bo$5bo5bobobo$o11bo7bo\n$12b2o5bo$6bo4bo2bo2bo$6bo7bobo2bo$4b4o2bo3b2o$7bo5b3o4bo$9bo4bo5bo$20\nbo$20bo$3bo3bo11bo$bo2bo$3b3o$5bo$4bo!",
    "credit": "Arie Paap (wildmyron)",
    "source": "forum",
    "url": "https://conwaylife.com/forums/viewtopic.php?p=12938#p12938",

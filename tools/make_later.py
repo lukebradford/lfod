@@ -93,10 +93,22 @@ assert {e["name"].lower() for e in entries if "note" in e} == set(NOTES)
 
 # Names that survive only on the wiki's speed table and in the forum: take the pattern from the forum post.
 BY_TITLE = {f["title"]: f for f in FORUM}
+# The forum post shows the buffalo rake with a moon already released, above the ship; this drops that moon so the rake is 88 cells.
+FORUM_RLE = {
+    "buffalo rake": "x = 21, y = 82, rule = B2/S0\n"
+                    "4bo$5bo$3b3o$bo2bo$3bo3bo11bo$20bo$20bo$9bo4bo5bo$7bo5b3o4bo$4b4o2bo3b\n"
+                    "2o$6bo7bobo2bo$6bo4bo2bo2bo$12b2o5bo$12bo7bo$11bobobo$10bo$10bo$11bobo\n"
+                    "bo$12bo7bo$12b2o5bo$6bo4bo2bo2bo$6bo7bobo2bo$4b4o2bo3b2o$7bo5b3o4bo$9b\n"
+                    "o4bo5bo$20bo$20bo$3bo3bo11bo$bo2bo$3b3o$5bo$4bo19$4bo$5bo$3b3o$bo2bo$3\n"
+                    "bo3bo11bo$20bo$20bo$9bo4bo5bo$7bo5b3o4bo$4b4o2bo3b2o$6bo7bobo2bo$6bo4b\n"
+                    "o2bo2bo$12b2o5bo$o11bo7bo$5bo5bobobo$4bo5bo$4bo5bo$5bo5bobobo$o11bo7bo\n"
+                    "$12b2o5bo$6bo4bo2bo2bo$6bo7bobo2bo$4b4o2bo3b2o$7bo5b3o4bo$9bo4bo5bo$20\n"
+                    "bo$20bo$3bo3bo11bo$bo2bo$3b3o$5bo$4bo!",
+}
 for name, title, desc in [
     ("buffalo rake", "Buffalo rake and ship",
      "A p4 c/2 clean backward moon rake with an initial population of 88 cells, the smallest known c/2 puffer or rake. "
-     "Can be converted to a spaceship with a trailer. Shown below as a rake (with one moon already released) and as a ship."),
+     "Can be converted to a spaceship with a trailer."),
     ("buffalo bird", "Buffalo bird",
      "A small c/2 tagalong for a majority of the known c/2 spaceships and rakes. Shown riding a ship."),
     ("flicker rake", "p2 rake (flicker rake)",
@@ -104,7 +116,7 @@ for name, title, desc in [
      "and named by Luke Bradford in March 2015."),
 ]:
     f = BY_TITLE[title]
-    entries.append({"name": name, "desc": desc, "rle": f["rle"], "credit": NAMES.get(f["by"], f["by"]),
+    entries.append({"name": name, "desc": desc, "rle": FORUM_RLE.get(name, f["rle"]), "credit": NAMES.get(f["by"], f["by"]),
                     "source": "forum", "url": post_url(f["post"]), "captured": f["date"]})
 FORUM_NOTES = {
     "flicker rake": "Luke hailed the flicker rake as the first p2 puffer, but Josh Ball’s "
@@ -154,7 +166,7 @@ for name, title, desc in [
      "it had its own wiki page, now lost."),
 ]:
     f = BY_TITLE[title]
-    entries.append({"name": name, "desc": desc, "rle": f["rle"], "credit": NAMES.get(f["by"], f["by"]),
+    entries.append({"name": name, "desc": desc, "rle": FORUM_RLE.get(name, f["rle"]), "credit": NAMES.get(f["by"], f["by"]),
                     "source": "forum", "url": post_url(f["post"]), "captured": f["date"]})
 
 # Objects whose wiki pages were never archived, but which surviving pages name. Each entry gathers what those pages say,
