@@ -1523,7 +1523,7 @@
   },
   {
    "name": "flicker rake",
-   "desc": "A p2 rake, probably the pattern catalogued under this name in March 2015. It was hailed as the first p2 rake, but Josh Ball’s c p2 backrake from July 2014 is earlier.",
+   "desc": "A p2 rake, named the flicker rake by Luke Bradford in March 2015, two weeks after it was posted. He hailed it as the first p2 puffer, but Josh Ball’s c p2 backrake from July 2014 is earlier. That backrake was never named, though the wiki later gave its 82 cells as the flicker rake’s initial population.",
    "rle": "x = 80, y = 50, rule = B2/S0\n4bo4bo$14bo$4bob2o3b3ob2o3bo$5b2o17bo$16b3o3b2ob2o3bo$8bobobo21bo$o2b2\no5bo2bo3bo8b3o3b2ob2o3bo$7bo2b2o2bo3bo3bo21bo29bo$obo6b2o3bo3bo4bo3bo8\nb3o3b2ob2o3bo24bo$2bo5bo2bobo3bo5bo4bo3bo21bo15bo4bo$3bo2bo15bo5bo4bo3\nbo8b3o3b2ob2o3bo13bo$3bobo5bo15bo5bo4bo3bo21bo7b2o$o2bobo7bo18bo5bo4bo\n3bo8b3o3b2ob2o3bo2b2obo$3bo6b2o2bo22bo5bo4bo3bo19b2o3bo$o3bobo7bo27bo5\nbo4bo3bo8b3o4b2o2bo$4b2obo3bobo33bo5bo4bo3bo13bo$3bo3bo44bo5bo4bo3bo6b\no$7b2o2bo45bo5bo4bo$6bo5bo49bo5bo4bo$12bo54bo4b2o4bo$11bo62bo4bo$73bob\no3bo$74bo2bo$72b3obo$71bo$71bo$72b3obo$74bo2bo$73bobo3bo$11bo62bo4bo$1\n2bo54bo4b2o4bo$6bo5bo49bo5bo4bo$7b2o2bo45bo5bo4bo$3bo3bo44bo5bo4bo3bo6\nbo$4b2obo3bobo33bo5bo4bo3bo13bo$o3bobo7bo27bo5bo4bo3bo8b3o4b2o2bo$3bo6\nb2o2bo22bo5bo4bo3bo19b2o3bo$o2bobo7bo18bo5bo4bo3bo8b3o3b2ob2o3bo2b2obo\n$3bobo5bo15bo5bo4bo3bo21bo7b2o$3bo2bo15bo5bo4bo3bo8b3o3b2ob2o3bo13bo$2\nbo5bo2bobo3bo5bo4bo3bo21bo15bo4bo$obo6b2o3bo3bo4bo3bo8b3o3b2ob2o3bo24b\no$7bo2b2o2bo3bo3bo21bo29bo$o2b2o5bo2bo3bo8b3o3b2ob2o3bo$8bobobo21bo$16\nb3o3b2ob2o3bo$5b2o17bo$4bob2o3b3ob2o3bo$14bo$4bo4bo!",
    "credit": "Nora Brown",
    "source": "forum",
@@ -1830,7 +1830,7 @@
    "date": "2015-03-07",
    "source": "forum",
    "paras": [
-    "<strong>p2 rake (flicker rake)</strong> by Nora Brown. A p2 rake, the second after Josh Ball’s July 2014 backrake (Luke hailed it as the first, but the earlier one is also p2). Probably the one catalogued as the flicker rake. <a href=\"https://conwaylife.com/forums/viewtopic.php?p=17535#p17535\">Forum post</a>."
+    "<strong>p2 rake (flicker rake)</strong> by Nora Brown. A p2 rake, the second after Josh Ball’s July 2014 backrake (Luke hailed it as the first, but the earlier one is also p2). Luke named it the flicker rake on March 24, 2015. <a href=\"https://conwaylife.com/forums/viewtopic.php?p=17535#p17535\">Forum post</a>."
    ],
    "rle": "x = 80, y = 50, rule = B2/S0\n4bo4bo$14bo$4bob2o3b3ob2o3bo$5b2o17bo$16b3o3b2ob2o3bo$8bobobo21bo$o2b2\no5bo2bo3bo8b3o3b2ob2o3bo$7bo2b2o2bo3bo3bo21bo29bo$obo6b2o3bo3bo4bo3bo8\nb3o3b2ob2o3bo24bo$2bo5bo2bobo3bo5bo4bo3bo21bo15bo4bo$3bo2bo15bo5bo4bo3\nbo8b3o3b2ob2o3bo13bo$3bobo5bo15bo5bo4bo3bo21bo7b2o$o2bobo7bo18bo5bo4bo\n3bo8b3o3b2ob2o3bo2b2obo$3bo6b2o2bo22bo5bo4bo3bo19b2o3bo$o3bobo7bo27bo5\nbo4bo3bo8b3o4b2o2bo$4b2obo3bobo33bo5bo4bo3bo13bo$3bo3bo44bo5bo4bo3bo6b\no$7b2o2bo45bo5bo4bo$6bo5bo49bo5bo4bo$12bo54bo4b2o4bo$11bo62bo4bo$73bob\no3bo$74bo2bo$72b3obo$71bo$71bo$72b3obo$74bo2bo$73bobo3bo$11bo62bo4bo$1\n2bo54bo4b2o4bo$6bo5bo49bo5bo4bo$7b2o2bo45bo5bo4bo$3bo3bo44bo5bo4bo3bo6\nbo$4b2obo3bobo33bo5bo4bo3bo13bo$o3bobo7bo27bo5bo4bo3bo8b3o4b2o2bo$3bo6\nb2o2bo22bo5bo4bo3bo19b2o3bo$o2bobo7bo18bo5bo4bo3bo8b3o3b2ob2o3bo2b2obo\n$3bobo5bo15bo5bo4bo3bo21bo7b2o$3bo2bo15bo5bo4bo3bo8b3o3b2ob2o3bo13bo$2\nbo5bo2bobo3bo5bo4bo3bo21bo15bo4bo$obo6b2o3bo3bo4bo3bo8b3o3b2ob2o3bo24b\no$7bo2b2o2bo3bo3bo21bo29bo$o2b2o5bo2bo3bo8b3o3b2ob2o3bo$8bobobo21bo$16\nb3o3b2ob2o3bo$5b2o17bo$4bob2o3b3ob2o3bo$14bo$4bo4bo!"
   },

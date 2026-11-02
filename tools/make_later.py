@@ -92,7 +92,7 @@ for name, title, desc in [
      "Can be converted to a spaceship with a trailer."),
     ("buffalo bird", "Buffalo bird",
      "A small c/2 tagalong for a majority of the known c/2 spaceships and rakes. Shown riding a ship."),
-    ("flicker rake", "p2 rake (flicker rake)", "A p2 rake, probably the pattern catalogued under this name in March 2015. It was hailed as the first p2 rake, but Josh Ball’s c p2 backrake from July 2014 is earlier."),
+    ("flicker rake", "p2 rake (flicker rake)", "A p2 rake, named the flicker rake by Luke Bradford in March 2015, two weeks after it was posted. He hailed it as the first p2 puffer, but Josh Ball’s c p2 backrake from July 2014 is earlier. That backrake was never named, though the wiki later gave its 82 cells as the flicker rake’s initial population."),
 ]:
     f = BY_TITLE[title]
     entries.append({"name": name, "desc": desc, "rle": f["rle"], "credit": NAMES.get(f["by"], f["by"]),

@@ -45,7 +45,7 @@ SELECT = [
     (84, "p10 puffers", "The first p10 puffers, and the only p10 craft that travel at c."),
     (87, "MMS breeder", "The first breeder in Live Free or Die."),
     (88, "p5 c spaceship", "A p5 c spaceship."),
-    (90, "p2 rake (flicker rake)", "A p2 rake, the second after Josh Ball’s July 2014 backrake (Luke hailed it as the first, but the earlier one is also p2). Probably the one catalogued as the flicker rake."),
+    (90, "p2 rake (flicker rake)", "A p2 rake, the second after Josh Ball’s July 2014 backrake (Luke hailed it as the first, but the earlier one is also p2). Luke named it the flicker rake on March 24, 2015."),
     (115, "p2 wick puffer, stabilized", "A p2 puffer whose wick is stabilized at the end."),
     (138, "p5 moon gun", "A surprisingly small p5 moon gun, the second known working gun."),
     (140, "Bow tie", "A p5 oscillator."),
