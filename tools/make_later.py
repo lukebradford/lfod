@@ -125,8 +125,10 @@ for name, key, desc, credit in [
      "Any of a family of p4 and p8 c/2 spaceships sharing the front end of the horned rake. Nora Brown’s 2014 collection has {count}; "
      "the smallest, shown below, has a minimum population of {minpop} cells.", "Nora Brown"),
     ("hippo ship", "hippo",
-     "Any of a family of p4 c/2 spaceships with the same front-end mechanism. Nora Brown’s 2014 collection has {count}; "
-     "the smallest, shown below, has a minimum population of {minpop} cells. The original hippo ship page is lost, and no surviving source records who found the first one.", "discoverer not recorded"),
+     "Any of a family of p4 and p8 c/2 spaceships with the same front-end mechanism. The earliest surviving one is Josh Ball’s "
+     "p8 c/2 ship, posted in March 2014. "
+     "Nora Brown’s 2014 collection has {count}; the smallest, shown below, has a minimum population of {minpop} cells. "
+     "The original hippo ship page is lost.", "Josh Ball (velcrorex)"),
     ("buffalo ship", "buffalo",
      "Any of a family of p4 and p8 c/2 spaceships with even bilateral symmetry, found by Arie Paap with gfind and WinLifeSearch in August 2014. "
      "Nora Brown’s 2014 collection has {count} with the buffalo front end; the smallest, shown below, has a minimum population of {minpop} cells.",
@@ -138,6 +140,11 @@ for name, key, desc, credit in [
     f = C2[key]
     entries.append({"name": name, "desc": desc.format(count=f["count"], minpop=f["smallest"]["minpop"]),
                     "rle": f["smallest"]["rle"], "credit": credit, "source": "forum", "url": C2_POST, "captured": "2014-12-29"})
+    if name == "fox ship":
+        entries[-1]["note"] = ('The fox ship’s front end is older than this ship: the spaceship in Josh Ball’s '
+                               '<a href="news.html#y2014">c/2 p4 spaceship and backrake</a> post of July 2014 has the same front end '
+                               '(checked by simulation), though the rest of the ship differs. Nora Brown may have built this ship, '
+                               'but Josh Ball found its front end five months earlier.')
 for name, title, desc in [
     ("horned rake", "c/2 backrake",
      "A p4 c/2 clean backward moon rake, named by its discoverer in December 2014. Can be stabilized into a horned ship."),

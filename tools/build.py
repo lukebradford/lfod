@@ -284,10 +284,13 @@ GENERIC = {"cell", "generation", "period", "oscillator", "spaceship", "puffer", 
            "tagalong", "stack", "still life", "rotor", "stator", "phoenix", "explosive", "wing", "engine", "nose",
            "horn", "flame", "heavy", "empty", "boxy", "dusty", "phase type"}
 
+SHORT_LINKS = {"still-life": {"dot"}}  # names of three letters or fewer, which autolink skips, to link in particular entries
+
 def autolink(text, self_slug=None, prefix="#", used=None):
     """Link the first mention of each other glossary entry (longest names first)."""
     names = sorted({e["name"] for e in ENTRIES if len(e["name"]) > 3 and e["slug"] != self_slug
-                    and e["name"] not in GENERIC} | {a for a, t in ALIASES.items() if slug(t) != self_slug},
+                    and e["name"] not in GENERIC} | {a for a, t in ALIASES.items() if slug(t) != self_slug}
+                   | SHORT_LINKS.get(self_slug, set()),
                    key=len, reverse=True)
     if not names:
         return esc(text)
