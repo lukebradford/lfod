@@ -44,6 +44,10 @@ def page(filename, title, body, description=""):
     v = asset_version()
     nav = "".join(f'<a href="{h}"{" class=\"active\"" if h == filename else ""}>{esc(t)}</a>' for h, t in NAV)
     ref = " · ".join(f'<a href="{h}"{" aria-current=\"page\"" if h == filename else ""}>{esc(t)}</a>' for h, t in REFERENCE)
+    # Home has the large title in its hero, so the small one in the header is left out there.
+    is_home = filename == "index.html"
+    brand = "" if is_home else '<a class="brand" href="index.html">Live Free or Die Universe</a>\n'
+    home = " home" if is_home else ""
     full_title = "Live Free or Die Universe" if filename == "index.html" else f"{title} · Live Free or Die Universe"
     doc = f"""<!doctype html>
 <html lang="en">
@@ -57,9 +61,8 @@ def page(filename, title, body, description=""):
 <script src="assets/lfod.js?v={v}" defer></script>
 </head>
 <body>
-<header class="site-header"><div class="inner">
-<a class="brand" href="index.html">Live Free or Die Universe</a>
-<nav class="main" aria-label="Main">{nav}</nav>
+<header class="site-header{home}"><div class="inner">
+{brand}<nav class="main" aria-label="Main">{nav}</nav>
 </div></header>
 <main>
 {body}
