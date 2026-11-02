@@ -521,8 +521,16 @@ D.E. – David Eppstein · J.B. – Josh Ball · PSF – Pre-spark-find program<
 </div>""")
     page("tables.html", "Object tables", "\n".join(parts), "Tables of oscillators, spaceships and puffers in Live Free or Die.")
 
+# The 2009 general anchor track row is one power of 2 off: a (2ⁿ - 1)-slot track (2s + 2 cells for s slots)
+# has 2ⁿ⁺¹ cells and period 4 * 2ⁿ⁺¹ - 4 (3 slots: 8 cells, p28; 7 slots: 16 cells, p60), checked by simulation.
+PERIOD_FIXES = {("4 * 2ⁿ - 4", "(2ⁿ - 1)-slot anchor track", "2⁽ⁿ⁺²⁾"): ["4 * 2ⁿ⁺¹ - 4", "(2ⁿ - 1)-slot anchor track", "2ⁿ⁺¹"]}
+
 def build_periods():
     ts = TABLES["period.htm"]
+    rows = [r for t in ts for r in t["rows"]]
+    assert all(list(k) in rows for k in PERIOD_FIXES), "period table changed; check PERIOD_FIXES"
+    for t in ts:
+        t["rows"] = [PERIOD_FIXES.get(tuple(r), r) for r in t["rows"]]
     titles = ["Oscillators", "Puffers", "Spaceships"]
     parts = ["<h1>Period explorations</h1>",
              '<div class="prose"><p class="lede">The smallest known object of each period, as of June 2009.</p>'
