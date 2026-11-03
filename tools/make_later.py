@@ -173,8 +173,6 @@ for name, title, desc in [
 # so that the names can link somewhere; a note says the page is lost.
 WIKI_URL = {p["name"]: p["url"] for p in WIKI}
 for name, kind, desc, pages in [
-    ("collider ship", "spaceship", "A spaceship that the wiki’s freedom collider page asks readers to compare with the freedom collider.",
-     ["freedom collider"]),
     ("ellipsis puffer", "puffer", "A p3 puffer.", ["period"]),
     ("hex rake", "puffer", "A p6 c sideways moon rake.", ["period", "rake"]),
     ("hippo rake", "puffer", "A p4 c/2 backward moon rake.", ["period", "puffer", "rake"]),

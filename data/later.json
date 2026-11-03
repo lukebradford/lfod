@@ -1587,21 +1587,6 @@
    "captured": "2014-12-20"
   },
   {
-   "name": "collider ship",
-   "kind": "spaceship",
-   "desc": "A spaceship that the wiki’s freedom collider page asks readers to compare with the freedom collider.",
-   "rle": "",
-   "credit": "",
-   "source": "lost",
-   "mentions": [
-    {
-     "name": "freedom collider",
-     "url": "https://web.archive.org/web/20150422135129/http://lfod.wikispaces.com/freedom+collider"
-    }
-   ],
-   "note": "The wiki’s collider ship page was never archived, and no pattern under this name survives. This entry gathers what other wiki pages say about it."
-  },
-  {
    "name": "ellipsis puffer",
    "kind": "puffer",
    "desc": "A p3 puffer.",
