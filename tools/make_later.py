@@ -178,6 +178,48 @@ entries.append({"name": "big six shooter stack", "rle": to_rle(stack), "credit":
                 "source": "forum", "url": post_url(f["post"]), "captured": f["date"],
                 "note": "The wiki’s big six shooter stack page was never archived; this example comes from the forum."})
 
+# Rakes whose wiki pages were never archived, identified by simulation in surviving files: each is the only object there
+# that matches what the surviving wiki pages say (period, speed, direction, and the speed table's initial population).
+def crop(cells, x0, y0, x1, y1):
+    return {(x, y) for x, y in cells if x0 <= x <= x1 and y0 <= y <= y1}
+PUFFERS_2013 = parse_rle((DATA / "later-files/2013 Puffers.rle").read_text())
+COLLECTION_URL = "viewer.html?f=2013%2520Puffers.rle"
+quint = crop(PUFFERS_2013, 0, 0, 56, 17)
+pocket = crop(PUFFERS_2013, 2, 527, 8, 544)
+assert (len(quint), len(pocket)) == (130, 32)
+for name, cells, desc, credit, note in [
+    ("quintessential rake", quint,
+     "A p5 c/5 backward moon rake with an initial population of 130 cells, with the same front-end mechanism as the quintessential ships.",
+     NAMES["velcrorex"],
+     "The wiki’s quintessential rake page was never archived. This is the only c/5 rake in the wiki’s October 2013 collection, "
+     "and its period, population and front end match what other wiki pages say about the quintessential rake. "
+     'Luke credited Josh Ball with a <a href="news.html#c-2-p4-spaceship-and-backrake">c/5 backrake</a> in July 2014.'),
+    ("pocket rake", pocket, "A p4 c clean backward moon rake with an initial population of 32 cells.", "",
+     "The wiki’s pocket rake page was never archived. This is the 32-cell p4 c rake in the wiki’s October 2013 collection, "
+     "which matches the wiki’s figures for the pocket rake."),
+]:
+    entries.append({"name": name, "kind": "puffer", "desc": desc, "rle": to_rle(cells), "credit": credit,
+                    "source": "collection", "url": COLLECTION_URL, "captured": "2013-10-14", "note": note})
+# The p6 side rake post wraps the rake (its front 64 cells) in a flotilla; the two cells dropped from the crop are inert.
+f = BY_TITLE["c p6 side rake"]
+hex_rake = crop(parse_rle(f["rle"]), 0, 0, 13, 99) - {(13, 27), (13, 52)}
+assert len(hex_rake) == 64
+for name, title, rle, desc, note in [
+    ("zipper rake", "c p4 side rake", BY_TITLE["c p4 side rake"]["rle"],
+     "A p4 c sideways moon rake with an initial population of 96 cells.",
+     "The wiki’s zipper rake page was never archived. This is Josh Ball’s c p4 side rake from July 2014, "
+     "the only p4 sideways rake that survives, which matches the wiki’s description of the zipper rake."),
+    ("hex rake", "c p6 side rake", to_rle(hex_rake),
+     "A p6 c sideways moon rake with an initial population of 64 cells. It fires moons to both sides and leaves a trail of dots and checkers.",
+     "The wiki’s hex rake page was never archived. This is the front of Josh Ball’s "
+     '<a href="news.html#c-p6-side-rake">c p6 side rake</a> from July 2014, the only p6 sideways rake that survives, '
+     "which matches the wiki’s description of the hex rake. In his post, a flotilla behind the rake cleans up the trail "
+     "and the moons on one side."),
+]:
+    f = BY_TITLE[title]
+    entries.append({"name": name, "kind": "puffer", "desc": desc, "rle": rle, "credit": NAMES[f["by"]],
+                    "source": "forum", "url": post_url(f["post"]), "captured": f["date"], "note": note})
+
 # Which way each moving News pattern travels, as posted (screen coordinates, y down), checked by simulation.
 # The News page shows orthogonal craft travelling right and diagonal ones down and to the right.
 # Oscillators, guns, the seed and the four-way wave-riding ship are left as posted.
@@ -207,7 +249,7 @@ def orient(rle, heading):
 # Glossary patterns follow the same convention. These are the later entries that don't already travel that way
 # (checked by simulating every glossary pattern); the 2009 and wiki patterns already do.
 GLOSSARY_HEADING = {"buffalo ship": (0, 1), "fox ship": (0, 1), "hippo ship": (0, 1), "horned ship": (0, 1),
-                    "horned rake": (0, 1), "flicker rake": (0, 1)}
+                    "horned rake": (0, 1), "flicker rake": (0, 1), "zipper rake": (-1, 0), "hex rake": (-1, 0)}
 for e in entries:
     h = GLOSSARY_HEADING.get(e["name"])
     if h:

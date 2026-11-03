@@ -243,10 +243,10 @@ NOTES = {
     "hex ship": 'Michael Simkin found another p6 spaceship, the c/3 <a href="glossary.html#wasp-ship">wasp ship</a>, in October 2014.',
     "long arrow puffer": 'It and the arrow puffer are no longer the only p9 objects: Arie Paap found a <a href="news.html#p9-dot-puffer">p9 dot puffer</a> '
                          'in February 2015, and AforAmpere posted another <a href="news.html#p9-puffer">p9 puffer</a> in 2021.',
-    "flip-flop rake": 'It is no longer the only p4 rake: Josh Ball’s <a href="news.html#c-p4-side-rake">c p4 side rake</a> (July 2014), '
+    "flip-flop rake": 'It is no longer the only p4 rake: the <a href="glossary.html#pocket-rake">pocket rake</a> (by October 2013), '
+                      'Josh Ball’s <a href="glossary.html#zipper-rake">zipper rake</a> (July 2014), '
                       'the c/2 <a href="glossary.html#buffalo-rake">buffalo rake</a> (Arie Paap, August 2014) and '
-                      '<a href="glossary.html#horned-rake">horned rake</a> (Nora Brown, December 2014), and the pocket rake and '
-                      'zipper rake on the later wiki are all p4 rakes.',
+                      '<a href="glossary.html#horned-rake">horned rake</a> (Nora Brown, December 2014) are all p4 rakes.',
 }
 
 # Entries whose text describes a highlighted still picture that a running pattern can't show:
@@ -447,6 +447,8 @@ def build_glossary():
             cite = f'<a href="{esc(e["url"])}">Wiki page</a>, archived {esc(e["captured"])}'
         elif src == "forum":
             cite = f'<a href="{esc(e["url"])}">Forum post</a>, {esc(e["captured"])}'
+        elif src == "collection":
+            cite = f'<a href="{esc(e["url"])}">Wiki collection file</a>, {esc(e["captured"])}'
         else:
             cite = "Live Free or Die Universe glossary, 2009"
         body.append(f'<p class="src">Source: {cite}</p>')
