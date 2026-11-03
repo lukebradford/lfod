@@ -189,14 +189,17 @@ pocket = crop(PUFFERS_2013, 2, 527, 8, 544)
 assert (len(quint), len(pocket)) == (130, 32)
 for name, cells, desc, credit, note in [
     ("quintessential rake", quint,
-     "A p5 c/5 backward moon rake with an initial population of 130 cells, with the same front-end mechanism as the quintessential ships.",
+     "A p5 c/5 backward moon rake with an initial population of 130 cells, with the same front-end mechanism as the quintessential ships. "
+     "It was the first known puffer slower than c, and is the only known c/5 puffer.",
      NAMES["velcrorex"],
      "The wiki’s quintessential rake page was never archived. This is the only c/5 rake in the wiki’s October 2013 collection, "
      "and its period, population and front end match what other wiki pages say about the quintessential rake. "
-     'Luke credited Josh Ball with a <a href="news.html#c-2-p4-spaceship-and-backrake">c/5 backrake</a> in July 2014.'),
-    ("pocket rake", pocket, "A p4 c clean backward moon rake with an initial population of 32 cells.", "",
+     f'Josh Ball posted two copies of it in his <a href="{post_url("p9405")}">c/5 collection</a> on the forum in October 2013, '
+     "and it already appears in a file dated September 2009."),
+    ("pocket rake", pocket, "A p4 c clean backward moon rake with an initial population of 32 cells. It was the smallest known rake until 2025.", "",
      "The wiki’s pocket rake page was never archived. This is the 32-cell p4 c rake in the wiki’s October 2013 collection, "
-     "which matches the wiki’s figures for the pocket rake."),
+     "which matches the wiki’s figures for the pocket rake. In August 2025 Game of Life Fun posted a smaller one, "
+     f'an <a href="{post_url("p217159")}">18-cell p4 c backward moon rake</a>.'),
 ]:
     entries.append({"name": name, "kind": "puffer", "desc": desc, "rle": to_rle(cells), "credit": credit,
                     "source": "collection", "url": COLLECTION_URL, "captured": "2013-10-14", "note": note})
@@ -206,14 +209,15 @@ hex_rake = crop(parse_rle(f["rle"]), 0, 0, 13, 99) - {(13, 27), (13, 52)}
 assert len(hex_rake) == 64
 for name, title, rle, desc, note in [
     ("zipper rake", "c p4 side rake", BY_TITLE["c p4 side rake"]["rle"],
-     "A p4 c sideways moon rake with an initial population of 96 cells.",
+     "A p4 c sideways moon rake with an initial population of 96 cells. It was the first known sideways rake that isn’t a flotilla.",
      "The wiki’s zipper rake page was never archived. This is Josh Ball’s c p4 side rake from July 2014, "
-     "the only p4 sideways rake that survives, which matches the wiki’s description of the zipper rake."),
+     "which matches the wiki’s description of the zipper rake, the only p4 sideways rake on the wiki."),
     ("hex rake", "c p6 side rake", to_rle(hex_rake),
-     "A p6 c sideways moon rake with an initial population of 64 cells. It fires moons to both sides and leaves a trail of dots and checkers.",
+     "A p6 c sideways moon rake with an initial population of 64 cells. It fires moons to both sides and leaves a trail of dots and checkers. "
+     "Posted the same day as the zipper rake, it was the first known p6 rake that isn’t a flotilla.",
      "The wiki’s hex rake page was never archived. This is the front of Josh Ball’s "
-     '<a href="news.html#c-p6-side-rake">c p6 side rake</a> from July 2014, the only p6 sideways rake that survives, '
-     "which matches the wiki’s description of the hex rake. In his post, a flotilla behind the rake cleans up the trail "
+     '<a href="news.html#c-p6-side-rake">c p6 side rake</a> from July 2014, '
+     "which matches the wiki’s description of the hex rake, the only p6 sideways rake on the wiki. In his post, a flotilla behind the rake cleans up the trail "
      "and the moons on one side."),
 ]:
     f = BY_TITLE[title]
