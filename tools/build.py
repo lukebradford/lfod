@@ -251,7 +251,7 @@ NOTES = {
 
 # Entries whose text describes a highlighted still picture that a running pattern can't show:
 # the 2009 illustration replaces the wiki's pattern.
-ILLUSTRATED = {"engine"}
+ILLUSTRATED = {"engine", "nose", "wing"}
 
 def all_entries():
     entries = []
