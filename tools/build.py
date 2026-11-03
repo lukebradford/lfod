@@ -241,13 +241,17 @@ EDITS = {
 # Claims in the 2009 glossary that were true then but that later finds overtook (the wiki's are in make_later.py).
 NOTES = {
     "hex ship": 'Michael Simkin found another p6 spaceship, the c/3 <a href="glossary.html#wasp-ship">wasp ship</a>, in October 2014.',
-    "long arrow puffer": 'It and the arrow puffer are no longer the only p9 objects: Arie Paap found a <a href="news.html#y2015">p9 dot puffer</a> '
-                         'in February 2015, and AforAmpere posted another <a href="news.html#y2021">p9 puffer</a> in 2021.',
-    "flip-flop rake": 'It is no longer the only p4 rake: Josh Ball’s <a href="news.html#y2014">c p4 side rake</a> (July 2014), '
+    "long arrow puffer": 'It and the arrow puffer are no longer the only p9 objects: Arie Paap found a <a href="news.html#p9-dot-puffer">p9 dot puffer</a> '
+                         'in February 2015, and AforAmpere posted another <a href="news.html#p9-puffer">p9 puffer</a> in 2021.',
+    "flip-flop rake": 'It is no longer the only p4 rake: Josh Ball’s <a href="news.html#c-p4-side-rake">c p4 side rake</a> (July 2014), '
                       'the c/2 <a href="glossary.html#buffalo-rake">buffalo rake</a> (Arie Paap, August 2014) and '
                       '<a href="glossary.html#horned-rake">horned rake</a> (Nora Brown, December 2014), and the pocket rake and '
                       'zipper rake on the later wiki are all p4 rakes.',
 }
+
+# Entries whose text describes a highlighted still picture that a running pattern can't show:
+# the 2009 illustration replaces the wiki's pattern.
+ILLUSTRATED = {"engine"}
 
 def all_entries():
     entries = []
@@ -269,6 +273,9 @@ def all_entries():
             if e.get("rle"):
                 x["rle"] = e["rle"]
                 x.pop("reconstructed", None)
+            if x["name"] in ILLUSTRATED:
+                assert x.get("images"), x["name"]
+                x.update(rle="", rles=[])
         else:
             entries.append(dict(e))
     for e in entries:
@@ -429,7 +436,7 @@ def build_glossary():
             body = [f'<p>{autolink(e["desc"], e["slug"])}</p>']
             if e.get("rle"):
                 body.append(player(e["rle"], e["name"], height=h, loop=loop_for(e)))
-        if not (e.get("rle") or e.get("paras")) and e.get("images"):
+        if (not (e.get("rle") or e.get("paras")) or e["name"] in ILLUSTRATED) and e.get("images"):
             for im in e["images"][:1]:
                 src = "img/glossary/" + Path(im["src"]).name
                 body.append(f'<img class="orig" src="{src}" alt="Original 2009 illustration for {esc(e["name"])}" loading="lazy">')
@@ -440,10 +447,6 @@ def build_glossary():
             cite = f'<a href="{esc(e["url"])}">Wiki page</a>, archived {esc(e["captured"])}'
         elif src == "forum":
             cite = f'<a href="{esc(e["url"])}">Forum post</a>, {esc(e["captured"])}'
-        elif src == "lost":
-            pages = ", ".join(f'<a href="{esc(m["url"])}">{esc(m["name"])}</a>' for m in e["mentions"])
-            cite = (f"archived wiki pages that mention it: {pages}" if len(e["mentions"]) > 1
-                    else f"archived wiki page that mentions it: {pages}")
         else:
             cite = "Live Free or Die Universe glossary, 2009"
         body.append(f'<p class="src">Source: {cite}</p>')
@@ -750,18 +753,25 @@ def build_news():
     items = [((n["date"], -i), n["paras"], "site", None) for i, n in enumerate(NEWS)]
     items += [((n["date"], i), n["paras"], n.get("source", ""), n.get("rle")) for i, n in enumerate(LATER.get("news", []))]
     items.sort(key=lambda x: x[0], reverse=True)
-    out, era = [], None
+    out, era, ids = [], None, set()
     for (date, _), paras, src, rle in items:
         y = date[:4]
         if y != era:
             era = y
             out.append(f'</ul><h2 class="era" id="y{y}">{y}</h2><ul class="timeline">')
+        # Each item links by its bold title (later forum items) or else by its date.
+        title = re.match(r"<strong>(.*?)</strong>", paras[0]) if paras else None
+        nid = base = slug(re.sub("<[^>]+>", "", title.group(1))) if title else f"d{date}"
+        n = 2
+        while nid in ids:
+            nid, n = f"{base}-{n}", n + 1
+        ids.add(nid)
         used = set()
         ps = "".join(f"<p>{autolink(p, prefix='glossary.html#', used=used) if src == 'site' else autolink_html(p, 'glossary.html#', used)}</p>"
                      for p in paras)
         tag = f' <span class="tag">{esc(src)}</span>' if src != "site" else ""
         pl = player(rle, re.sub("<[^>]+>", "", paras[0])[:80], height=200, loop=200) if rle else ""
-        out.append(f'<li><time datetime="{date}">{news_date(date)}</time><div>{ps}{tag}{pl}</div></li>')
+        out.append(f'<li id="{nid}"><time datetime="{date}">{news_date(date)}</time><div>{ps}{tag}{pl}</div></li>')
     body = ('<h1>News</h1><div class="prose"><p class="lede">A dated record of discoveries.</p>'
             '<p class="muted">Entries from December 2007 to September 2009 are the original Live Free or Die Universe News page, verbatim. '
             'Later entries, marked with their source, were reconstructed for this restoration from the ConwayLife forum, '
@@ -1017,4 +1027,9 @@ if __name__ == "__main__":
     build_iterations(); build_challenges(); build_files(); build_viewer(); build_rule110()
     if (DATA / "restoration.html").exists():
         build_restoration()
+    # Every link into News must land on an item, not just a year.
+    news_ids = set(re.findall(r'<li id="([^"]+)"', (OUT / "news.html").read_text()))
+    for f in OUT.glob("*.html"):
+        bad = [t for t in re.findall(r'href="news\.html#([^"]+)"', f.read_text()) if t not in news_ids]
+        assert not bad, (f.name, bad)
     print("built", len(ENTRIES), "glossary entries")

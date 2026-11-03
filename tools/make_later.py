@@ -62,29 +62,29 @@ for e in entries:
 
 # Claims on archived wiki pages that later finds (most posted before the last capture) made wrong.
 # The wiki text stays as it was; the note follows it.
-P5_GUN = ('Arie Paap found a much smaller <a href="news.html#y2016">p5 moon gun</a> in August 2016, '
+P5_GUN = ('Arie Paap found a much smaller <a href="news.html#p5-moon-gun">p5 moon gun</a> in August 2016, '
           "so the moon laser is no longer the only known gun.")
 NOTES = {
     "gun": P5_GUN,
     "moon laser": P5_GUN,
     "flotsam": P5_GUN,
-    "decade ship": 'It is no longer the only p10 object: Arie Paap found the first <a href="news.html#y2015">p10 puffers</a> in February 2015.',
-    "arrow puffer": 'They are no longer the only p9 objects: Arie Paap found a <a href="news.html#y2015">p9 dot puffer</a> in February 2015, '
-                    'and AforAmpere posted another <a href="news.html#y2021">p9 puffer</a> in 2021.',
-    "starfish": 'Arie Paap found a third p5 oscillator, the <a href="news.html#y2016">bow tie</a>, in August 2016.',
-    "crossroads": 'Arie Paap found a third p5 oscillator, the <a href="news.html#y2016">bow tie</a>, in August 2016.',
+    "decade ship": 'It is no longer the only p10 object: Arie Paap found the first <a href="news.html#p10-puffers">p10 puffers</a> in February 2015.',
+    "arrow puffer": 'They are no longer the only p9 objects: Arie Paap found a <a href="news.html#p9-dot-puffer">p9 dot puffer</a> in February 2015, '
+                    'and AforAmpere posted another <a href="news.html#p9-puffer">p9 puffer</a> in 2021.',
+    "starfish": 'Arie Paap found a third p5 oscillator, the <a href="news.html#bow-tie">bow tie</a>, in August 2016.',
+    "crossroads": 'Arie Paap found a third p5 oscillator, the <a href="news.html#bow-tie">bow tie</a>, in August 2016.',
     "moon": 'Not only moon rakes: the <a href="glossary.html#freedom-collider">freedom collider</a> (Arie Paap, January 2015) '
             "is a backward short free ship rake that isn’t a flotilla.",
     "rake": 'Not only flotillas: the <a href="glossary.html#freedom-collider">freedom collider</a>, described in the same paragraph, '
-            'is a short free ship rake, and in 2025 Game of Life Fun posted <a href="news.html#y2025">very small p12 and p24 free ship rakes</a>.',
-    "puffer": 'Not only flotillas: Josh Ball’s c p4 side rake (<a href="news.html#y2014">July 2014</a>) is a sideways rake that isn’t a flotilla, '
+            'is a short free ship rake, and in 2025 Game of Life Fun posted <a href="news.html#tiny-p12-and-p24-free-ship-rakes">very small p12 and p24 free ship rakes</a>.',
+    "puffer": 'Not only flotillas: Josh Ball’s c p4 side rake (<a href="news.html#c-p4-side-rake">July 2014</a>) is a sideways rake that isn’t a flotilla, '
               'and the <a href="glossary.html#freedom-collider">freedom collider</a> (Arie Paap, January 2015) is a backward short free ship rake.',
     "period": "Several “only known” claims here are out of date. "
-              'P2: Josh Ball’s c p2 backrake (<a href="news.html#y2014">July 2014</a>) came before the flicker rake, and Arie Paap posted a p2 wick puffer in 2015. '
-              'P4: Arie Paap’s <a href="news.html#y2016">p5 moon gun</a> (2016) means the moon laser is not the only gun. '
-              'P5: the <a href="news.html#y2016">bow tie</a> (2016) is a third p5 oscillator. '
-              'P9: Arie Paap’s <a href="news.html#y2015">p9 dot puffer</a> (2015) and AforAmpere’s p9 puffer (2021). '
-              'P10: Arie Paap’s <a href="news.html#y2015">p10 puffers</a> (2015), which travel at c.',
+              'P2: Josh Ball’s c p2 backrake (<a href="news.html#c-p2-backrake">July 2014</a>) came before the flicker rake, and Arie Paap posted a p2 wick puffer in 2015. '
+              'P4: Arie Paap’s <a href="news.html#p5-moon-gun">p5 moon gun</a> (2016) means the moon laser is not the only gun. '
+              'P5: the <a href="news.html#bow-tie">bow tie</a> (2016) is a third p5 oscillator. '
+              'P9: Arie Paap’s <a href="news.html#p9-dot-puffer">p9 dot puffer</a> (2015) and AforAmpere’s p9 puffer (2021). '
+              'P10: Arie Paap’s <a href="news.html#p10-puffers">p10 puffers</a> (2015), which travel at c.',
 }
 for e in entries:
     if e["name"].lower() in NOTES:
@@ -120,9 +120,9 @@ for name, title, desc in [
                     "source": "forum", "url": post_url(f["post"]), "captured": f["date"]})
 FORUM_NOTES = {
     "flicker rake": "Luke hailed the flicker rake as the first p2 puffer, but Josh Ball’s "
-                    '<a href="news.html#y2014">c p2 backrake</a>, posted in July 2014, is an earlier p2 rake. That backrake was never named. '
+                    '<a href="news.html#c-p2-backrake">c p2 backrake</a>, posted in July 2014, is an earlier p2 rake. That backrake was never named. '
                     "The wiki’s period table later listed the flicker rake as the smallest known p2 puffer with an initial population "
-                    "of 82 cells, which is the backrake’s population, not the flicker rake’s.",
+                    "of 82 cells, which is the 2014 backrake’s population, not the flicker rake’s.",
 }
 for e in entries:
     if e["name"] in FORUM_NOTES:
@@ -154,7 +154,7 @@ for name, key, desc, credit in [
                     "rle": f["smallest"]["rle"], "credit": credit, "source": "forum", "url": C2_POST, "captured": "2014-12-29"})
     if name == "fox ship":
         entries[-1]["note"] = ('The fox ship’s front end is older than this ship: the spaceship in Josh Ball’s '
-                               '<a href="news.html#y2014">c/2 p4 spaceship and backrake</a> post of July 2014 has the same front end '
+                               '<a href="news.html#c-2-p4-spaceship-and-backrake">c/2 p4 spaceship and backrake</a> post of July 2014 has the same front end '
                                '(checked by simulation), though the rest of the ship differs. Nora Brown may have built this ship, '
                                'but Josh Ball found its front end five months earlier.')
 for name, title, desc in [
@@ -169,28 +169,7 @@ for name, title, desc in [
     entries.append({"name": name, "desc": desc, "rle": FORUM_RLE.get(name, f["rle"]), "credit": NAMES.get(f["by"], f["by"]),
                     "source": "forum", "url": post_url(f["post"]), "captured": f["date"]})
 
-# Objects whose wiki pages were never archived, but which surviving pages name. Each entry gathers what those pages say,
-# so that the names can link somewhere; a note says the page is lost.
-WIKI_URL = {p["name"]: p["url"] for p in WIKI}
-for name, kind, desc, pages in [
-    ("ellipsis puffer", "puffer", "A p3 puffer.", ["period"]),
-    ("hex rake", "puffer", "A p6 c sideways moon rake.", ["period", "rake"]),
-    ("hippo rake", "puffer", "A p4 c/2 backward moon rake.", ["period", "puffer", "rake"]),
-    ("plow trailer", "tagalong", "A p4 c trailer that can be used to build rakes.", ["period"]),
-    ("pocket rake", "puffer", "A p4 c clean backward moon rake.", ["period", "rake"]),
-    ("quintessential rake", "puffer", "A p5 c/5 backward moon rake with the same front-end mechanism as the quintessential ships.",
-     ["quintessential ship", "hammerhead ship", "period", "rake"]),
-    ("wave puffer", "puffer", "Any of a family of c puffers whose wings can be extended infinitely.", ["wing"]),
-    ("wave ship", "spaceship", "Any of a family of c spaceships whose wings can be extended infinitely.", ["wing"]),
-    ("wide rhino ship", "spaceship", "A p4 c/2 spaceship with the same front-end mechanism as the unicorn ships, "
-     "named separately because it was found before them.", ["unicorn ship", "dust mite ship", "period"]),
-    ("zipper rake", "puffer", "A p4 c sideways moon rake.", ["period", "rake"]),
-]:
-    entries.append({"name": name, "kind": kind, "desc": desc, "rle": "", "credit": "", "source": "lost",
-                    "mentions": [{"name": p, "url": WIKI_URL[p]} for p in pages],
-                    "note": f"The wiki’s {name} page was never archived, and no pattern under this name survives. "
-                            "This entry gathers what other wiki pages say about it."})
-# The big six shooter stack's page is lost too, but Josh Ball's July 2014 post includes one (the leftmost pattern).
+# The big six shooter stack's wiki page was never archived, but Josh Ball's July 2014 post includes one (the leftmost pattern).
 f = BY_TITLE["New p4 oscillators and a big six shooter stack"]
 stack = {(x, y) for x, y in parse_rle(f["rle"]) if x < 35}
 entries.append({"name": "big six shooter stack", "rle": to_rle(stack), "credit": NAMES[f["by"]],
