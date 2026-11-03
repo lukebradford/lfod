@@ -341,9 +341,13 @@ def autolink_html(markup, prefix="#", used=None):
             out.append(autolink(html.unescape(part), prefix=prefix, used=used))
     return "".join(out)
 
+LOOP_OVERRIDES = {"bomb": 200}  # long enough to see the explosion (it leaves its box at generation 162)
+
 def loop_for(e):
     if not e.get("rle"):
         return 0
+    if e["name"] in LOOP_OVERRIDES:
+        return LOOP_OVERRIDES[e["name"]]
     k = e["kind"]
     m = re.search(r"\bp(\d+)\b", e["desc"])
     p = int(m.group(1)) if m else 4
