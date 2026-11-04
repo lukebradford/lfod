@@ -325,7 +325,7 @@
   "by": "glider_rider",
   "date": "2015-01-22",
   "post": "p16168",
-  "note": "The one on the left, with a minimum population of 36, tied the dust mite ship as the smallest c/2 ship. Named the fruit fly ship.",
+  "note": "The one at the bottom, with a minimum population of 36, tied the dust mite ship as the smallest c/2 ship. Named the fruit fly ship.",
   "rle": "x = 72, y = 37, rule = B2/S0\n69bobo2$63bobo$68bo2bo$35bo4bo22bo4b2o$33bobo5bo24bo$34b2o5bo22bobo$34\nbo2bob3o14bobo3bo3b2obo$38b2o26bob2obo$40bo23bo5bo$39bo16bo2bo3bo$38bo\n5bo13b2o9bo$35b2o26bo5bobo$36bo20bo2bo8b2o$41b2o13bo5bo4bo$39b2o2bo17b\no$34bo23bo2bobo$34bo6b2o13bob2o$34b3obo2bo15b2o6bo$35bo3b2o4bo$39bobo1\n8bo4bo5bo$38bo2bo25b4o$35bo2bobo$38b2o2bobo18bo$37bo4bo16bo4bo$36bobo3\nbo17bo2bobo$33bo3bo5bo14bobo$13bo18b2ob2o20bob4o$9bo4bo18b3o8b3o11b2ob\no$15bo18bobo25bo4bo$18bo4bo14bo26b2o2bo$o4bo28bobo4bo24bo3bo$11b2o3bob\nobo21bo24bo$3bobobo2bo2b2o21bo6b3o$9bo3bo5bobo13bob4o$2bobo5bo3b4o4bo1\n3b2obo4bo17bo5bobo$bo4b4o30bo2bo19b4o4bo!",
   "pop": 216,
   "kind": "spaceship",

@@ -39,7 +39,7 @@ SELECT = [
     (57, "p5 oscillator (crossroads)", "The second p5 oscillator after the starfish. Named crossroads."),
     (63, "Short free ship rake (freedom collider)", "A p8 backward short free ship rake: apart from flotillas, the first rake that emits anything other than moons."),
     (65, "Anchored freedom collider", "Luke’s anchored version of the freedom collider, posted the same day, with an initial population of 34 cells."),
-    (67, "Tiny c/2 ships (fruit fly ship)", "The one on the left, with a minimum population of 36, tied the dust mite ship as the smallest c/2 ship. Named the fruit fly ship."),
+    (67, "Tiny c/2 ships (fruit fly ship)", "The one at the bottom, with a minimum population of 36, tied the dust mite ship as the smallest c/2 ship. Named the fruit fly ship."),
     (68, "Small c/2 ships", "Three p4 c/2 ships, with minimum populations of 46, 89 and 96 cells; Luke noted that the 96-cell one was a known unicorn ship."),
     (80, "p9 dot puffer", "The first p9 object other than the arrow puffers."),
     (84, "p10 puffers", "The first p10 puffers, and the only p10 craft that travel at c."),
