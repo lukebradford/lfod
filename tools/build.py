@@ -25,7 +25,7 @@ ITER_GRIDS = load("iterations.json", {})
 
 NAV = [
     ("index.html", "Home"), ("news.html", "News"), ("glossary.html", "Glossary"), ("periods.html", "Periods"),
-    ("challenges.html", "Challenges"), ("files.html", "Files"), ("restoration.html", "About this restoration"),
+    ("speeds.html", "Speeds"), ("challenges.html", "Challenges"), ("files.html", "Files"), ("restoration.html", "About this restoration"),
 ]
 # Reference pages: linked from the footer of every page and from the glossary, not the header or home page.
 REFERENCE = [("tables.html", "Object tables"), ("iterations.html", "Iteration guides")]
@@ -608,6 +608,7 @@ D.E. – David Eppstein · J.B. – Josh Ball · PSF – Pre-spark-find program<
     page("tables.html", "Object tables", "\n".join(parts), "Tables of oscillators, spaceships and puffers in Live Free or Die.")
 
 PERIODS = load("periods.json")
+SPEEDS = load("speeds.json")
 
 def period_name(row):
     """An object's name in the period tables: glossary links, {formula} spans as MathML,
@@ -651,6 +652,19 @@ def build_periods():
             parts.append(f'<p class="muted table-note">{note}</p>')
     page("periods.html", "Period explorations", "\n".join(parts),
          "The smallest known oscillator, spaceship and puffer of each period in Live Free or Die.")
+
+def build_speeds():
+    parts = ["<h1>Speed explorations</h1>", f'<div class="prose">{SPEEDS["intro"]}</div>']
+    for t in SPEEDS["tables"]:
+        rows = "".join(f"<tr><td>{esc(r['speed'])}</td><td>{period_name(r)}</td>{period_cell(r['period'])}{period_cell(r['cells'])}</tr>"
+                       for r in t["rows"])
+        parts.append(f'<h2 id="{slug(t["title"])}">{esc(t["title"])}</h2>'
+                     f'<div class="table-wrap"><table class="periods speeds"><thead><tr><th>Speed</th>'
+                     f'<th>{esc(t["column"])}</th><th class="num">Period</th><th class="num">Cells</th></tr></thead><tbody>{rows}</tbody></table></div>')
+        if t.get("note"):
+            parts.append(f'<p class="muted table-note">{t["note"]}</p>')
+    page("speeds.html", "Speed explorations", "\n".join(parts),
+         "The smallest known spaceship, puffer and rake of each speed in Live Free or Die.")
 
 ITERATIONS = [
     ("Accidental ships and puffers", "accidental puffer iterations.jpg", "accidental ship"),
@@ -717,14 +731,14 @@ def build_challenges():
     body = """<h1>Challenges</h1>
 <div class="prose">
 <p class="lede">Patterns not yet known in Live Free or Die, as of November 2026.</p>
-<p class="muted">Compiled from the <a href="periods.html">period tables</a>, the wiki’s last list of challenges (April 2015),
+<p class="muted">Compiled from the <a href="periods.html">period</a> and <a href="speeds.html">speed</a> tables, the wiki’s last list of challenges (April 2015),
 and the <a href="https://conwaylife.com/forums/viewtopic.php?t=649">ConwayLife forum thread</a>.</p>
 <ul>
 <li>Objects of period 11, 13, 14, 15, 17, 21, 22 and 23, and of most higher periods not in the <a href="periods.html">period tables</a></li>
 <li>Oscillators of period 7, 9, 10, 11, 13 to 18, or 20 to 27</li>
 <li>Spaceships of period 7, 9, 11, 13, 14, 15, 17, 18 or 19. Partial p9 lightspeed ships were posted to the forum in 2021, but none was completed.</li>
 <li>Puffers and rakes of period 11, 13, 14, 15, 17 or 19</li>
-<li>Spaceships of speeds other than c, c/2, 2c/5, c/3, c/4 and c/5 orthogonally, and c/4 diagonally</li>
+<li>Spaceships of <a href="speeds.html">speeds</a> other than c, c/2, 2c/5, c/3, c/4 and c/5 orthogonally, and c/4 diagonally</li>
 <li>Puffers and rakes slower than c, other than at c/2 and c/5</li>
 <li>Knightships: spaceships or puffers that travel obliquely. A (2,1)c/5 front end was posted in 2018, but never completed.</li>
 <li>A reusable reflector for <a href="glossary.html#moon">moons</a>, ideally a stable one. The only known moon reflectors destroy themselves.</li>
@@ -733,6 +747,8 @@ and the <a href="https://conwaylife.com/forums/viewtopic.php?t=649">ConwayLife f
 <li>Spacefillers, other than the light-speed expansion of <a href="glossary.html#chaos">chaos</a></li>
 <li>Replicators</li>
 <li>Stabilizations for wicks and oscillator components that work the same way in Seeds (B2/S)</li>
+<li>Terminations for a single domino wick or <a href="news.html#dual-lever-wick">lever wick</a>, p2 terminations for symmetrical wicks such as the dual lever wick,
+and a stabilization for the edges of the <a href="news.html#pond-agar-oscillator">pond agar</a>, all sought in Arie Paap’s 2015 survey of p2 patterns</li>
 </ul>
 <h2>History</h2>
 <p>The 2008 site kept a list of open problems, promising “eternal gratitude, naming rights, and a place of glory on this web site”
@@ -973,6 +989,7 @@ evolves through consecutive generations, it exhibits emergent and often beautifu
 <a class="card" href="news.html"><strong>News</strong><span>Dated list of discoveries and explorations</span></a>
 <a class="card" href="glossary.html"><strong>Glossary</strong><span>{len(ENTRIES)} terms and objects, {counts["oscillator"]} oscillators, {counts["spaceship"]} spaceships, {counts["puffer"]} puffers and rakes</span></a>
 <a class="card" href="periods.html"><strong>Period explorations</strong><span>The smallest oscillator, puffer and spaceship for each known period</span></a>
+<a class="card" href="speeds.html"><strong>Speed explorations</strong><span>The smallest spaceship, puffer and rake for each known speed</span></a>
 <a class="card" href="challenges.html"><strong>Challenges</strong><span>Undiscovered patterns</span></a>
 <a class="card" href="files.html"><strong>Files</strong><span>Run-length encoded collections and explorations</span></a>
 <a class="card" href="restoration.html"><strong>About this restoration</strong><span>What was recovered, from where, and what is lost</span></a>
@@ -1025,7 +1042,7 @@ def copy_assets():
 if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
     copy_assets()
-    build_index(); build_news(); build_glossary(); build_tables(); build_periods()
+    build_index(); build_news(); build_glossary(); build_tables(); build_periods(); build_speeds()
     build_iterations(); build_challenges(); build_files(); build_viewer(); build_rule110()
     if (DATA / "restoration.html").exists():
         build_restoration()

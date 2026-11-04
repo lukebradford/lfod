@@ -1,0 +1,124 @@
+{
+ "intro": "<p class=\"lede\">The smallest known object of each speed, as of November 2026.</p><p class=\"muted\">Speeds are orthogonal unless marked diagonal; c is one cell per generation. Cells is the minimum population (spaceships) or initial population (puffers and rakes), checked by simulating each pattern. As on the <a href=\"periods.html\">period tables</a>, puffers include rakes, and objects not found by Luke Bradford are credited, with a link to where they were posted. For speeds not yet reached, see <a href=\"challenges.html\">Challenges</a>.</p>",
+ "tables": [
+  {
+   "title": "Spaceships",
+   "column": "Spaceship",
+   "rows": [
+    {
+     "speed": "c",
+     "name": "Moon",
+     "period": "1",
+     "cells": "4"
+    },
+    {
+     "speed": "c/2",
+     "name": "Fruit fly ship",
+     "period": "4",
+     "cells": "36",
+     "credit": "Nora Brown, 2015",
+     "url": "https://conwaylife.com/forums/viewtopic.php?p=16168#p16168"
+    },
+    {
+     "speed": "c/2",
+     "name": "Dust mite ship",
+     "period": "8",
+     "cells": "36"
+    },
+    {
+     "speed": "2c/5",
+     "name": "Zirconium ship",
+     "period": "5",
+     "cells": "268"
+    },
+    {
+     "speed": "c/3",
+     "name": "Wasp ship",
+     "period": "6",
+     "cells": "428",
+     "credit": "Michael Simkin, 2014",
+     "url": "https://conwaylife.com/forums/viewtopic.php?p=13652#p13652"
+    },
+    {
+     "speed": "c/4",
+     "name": "Beachcomber ship",
+     "period": "4",
+     "cells": "396",
+     "credit": "Josh Ball, 2012",
+     "url": "https://conwaylife.com/forums/viewtopic.php?p=6835#p6835"
+    },
+    {
+     "speed": "c/5",
+     "name": "Decade ship",
+     "period": "10",
+     "cells": "114",
+     "credit": "Paul Tooke, 2012",
+     "url": "https://conwaylife.com/forums/viewtopic.php?p=6883#p6883"
+    },
+    {
+     "speed": "c/4 diagonal",
+     "name": "Ram ship",
+     "period": "4",
+     "cells": "37"
+    }
+   ],
+   "note": "The fruit fly ship and dust mite ship tie at c/2."
+  },
+  {
+   "title": "Puffers",
+   "column": "Puffer",
+   "rows": [
+    {
+     "speed": "c",
+     "name": "Double dot puffer",
+     "period": "4",
+     "cells": "6"
+    },
+    {
+     "speed": "c/2",
+     "name": "Buffalo rake",
+     "period": "4",
+     "cells": "88",
+     "credit": "Arie Paap, 2014",
+     "url": "https://conwaylife.com/forums/viewtopic.php?p=12938#p12938"
+    },
+    {
+     "speed": "c/5",
+     "name": "Quintessential rake",
+     "period": "5",
+     "cells": "130"
+    }
+   ],
+   "note": "Every known puffer slower than c is a rake."
+  },
+  {
+   "title": "Rakes",
+   "column": "Rake",
+   "rows": [
+    {
+     "speed": "c",
+     "name": "Unnamed backward moon rake",
+     "period": "4",
+     "cells": "18",
+     "credit": "Game of Life Fun, 2025",
+     "url": "https://conwaylife.com/forums/viewtopic.php?p=217159#p217159"
+    },
+    {
+     "speed": "c/2",
+     "name": "Buffalo rake",
+     "period": "4",
+     "cells": "88",
+     "credit": "Arie Paap, 2014",
+     "url": "https://conwaylife.com/forums/viewtopic.php?p=12938#p12938"
+    },
+    {
+     "speed": "c/5",
+     "name": "Quintessential rake",
+     "period": "5",
+     "cells": "130"
+    }
+   ],
+   "note": "All three fire moons backward."
+  }
+ ]
+}

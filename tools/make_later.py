@@ -62,6 +62,10 @@ for e in entries:
 
 # Claims on archived wiki pages that later finds (most posted before the last capture) made wrong.
 # The wiki text stays as it was; the note follows it.
+P5_OSC = ('Nora Brown found a third p5 oscillator, <a href="news.html#p5-oscillator-with-four-starfish">four starfish hassling some junk</a>, '
+          'in March 2015, and Arie Paap a fourth, the <a href="news.html#bow-tie">bow tie</a>, in August 2016.')
+P2_SHIP = ('Arie Paap posted two more p2 spaceships in March 2015, among them a '
+           '<a href="news.html#p2-c-spaceship">98-cell p2 c spaceship</a>.')
 P5_GUN = ('Arie Paap found a much smaller <a href="news.html#p5-moon-gun">p5 moon gun</a> in August 2016, '
           "so the moon laser is no longer the only known gun.")
 NOTES = {
@@ -71,18 +75,26 @@ NOTES = {
     "decade ship": 'It is no longer the only p10 object: Arie Paap found the first <a href="news.html#p10-puffers">p10 puffers</a> in February 2015.',
     "arrow puffer": 'They are no longer the only p9 objects: Arie Paap found a <a href="news.html#p9-dot-puffer">p9 dot puffer</a> in February 2015, '
                     'and AforAmpere posted another <a href="news.html#p9-puffer">p9 puffer</a> in 2021.',
-    "starfish": 'Arie Paap found a third p5 oscillator, the <a href="news.html#bow-tie">bow tie</a>, in August 2016.',
-    "crossroads": 'Arie Paap found a third p5 oscillator, the <a href="news.html#bow-tie">bow tie</a>, in August 2016.',
+    "starfish": P5_OSC,
+    "crossroads": P5_OSC,
+    "trilogy": 'In March 2015 Arie Paap posted a <a href="news.html#smaller-trilogy">52-cell variation</a> of the trilogy.',
+    "flicker ship": P2_SHIP,
+    "flutter ship": P2_SHIP,
     "moon": 'Not only moon rakes: the <a href="glossary.html#freedom-collider">freedom collider</a> (Arie Paap, January 2015) '
             "is a backward short free ship rake that isn’t a flotilla.",
-    "rake": 'Not only flotillas: the <a href="glossary.html#freedom-collider">freedom collider</a>, described in the same paragraph, '
-            'is a short free ship rake, and in 2025 Game of Life Fun posted <a href="news.html#tiny-p12-and-p24-free-ship-rakes">very small p12 and p24 free ship rakes</a>.',
+    "rake": 'Not only anchor track flotillas: the <a href="glossary.html#freedom-collider">freedom collider</a>, described in the same paragraph, '
+            'is a short free ship rake; fsrm’s <a href="news.html#p12-sideways-free-ship-rake">p12 sideways free ship rake</a> (March 2016) '
+            'is a 65-cell flotilla without anchor tracks; and in 2025 Game of Life Fun posted '
+            '<a href="news.html#tiny-p12-and-p24-free-ship-rakes">very small p12 and p24 free ship rakes</a>.',
     "puffer": 'Not only flotillas: Josh Ball’s c p4 side rake (<a href="news.html#c-p4-side-rake">July 2014</a>) is a sideways rake that isn’t a flotilla, '
-              'and the <a href="glossary.html#freedom-collider">freedom collider</a> (Arie Paap, January 2015) is a backward short free ship rake.',
+              'and the <a href="glossary.html#freedom-collider">freedom collider</a> (Arie Paap, January 2015) is a backward short free ship rake. '
+              'Not only moons and free ships: in June 2025 Game of Life Fun built a <a href="news.html#plus-ship-rake">rake that fires plus ships</a>.',
     "period": "Several “only known” claims here are out of date. "
-              'P2: Josh Ball’s c p2 backrake (<a href="news.html#c-p2-backrake">July 2014</a>) came before the flicker rake, and Arie Paap posted a p2 wick puffer in 2015. '
+              'P2: Josh Ball’s c p2 backrake (<a href="news.html#c-p2-backrake">July 2014</a>) came before the flicker rake, and Arie Paap posted a p2 wick puffer in 2015, '
+              'and two more p2 spaceships, among them a <a href="news.html#p2-c-spaceship">98-cell p2 c spaceship</a>. '
               'P4: Arie Paap’s <a href="news.html#p5-moon-gun">p5 moon gun</a> (2016) means the moon laser is not the only gun. '
-              'P5: the <a href="news.html#bow-tie">bow tie</a> (2016) is a third p5 oscillator. '
+              'P5: Nora Brown’s <a href="news.html#p5-oscillator-with-four-starfish">p5 oscillator</a> (2015) and the '
+              '<a href="news.html#bow-tie">bow tie</a> (2016) are a third and fourth p5 oscillator. '
               'P9: Arie Paap’s <a href="news.html#p9-dot-puffer">p9 dot puffer</a> (2015) and AforAmpere’s p9 puffer (2021). '
               'P10: Arie Paap’s <a href="news.html#p10-puffers">p10 puffers</a> (2015), which travel at c.',
 }
@@ -239,6 +251,8 @@ HEADING = {
     "p2 rake (flicker rake)": (0, 1), "p2 wick puffer, stabilized": (1, 0), "Short-necked giraffe": (1, 1),
     "Completed almost-rake": (1, 0), "p9 puffer": (0, -1), "Small periodic MMS breeder": (0, -1),
     "Tiny p12 and p24 free ship rakes": (0, -1), "c/5 spaceship collection": (1, 0),
+    "p12 sideways free ship rake": (1, 0), "Plus ship rake": (0, -1), "Extensible c/4 diagonal ship": (1, 1),
+    "Ship with a cut-off wave": (-1, 0), "p2 c spaceship": (1, 0), "Anchor track puffer": (1, 0),
 }
 ROTATIONS = [lambda x, y: (x, y), lambda x, y: (-y, x), lambda x, y: (-x, -y), lambda x, y: (y, -x)]
 

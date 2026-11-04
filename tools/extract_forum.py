@@ -56,6 +56,27 @@ SELECT = [
     (277, "Small periodic MMS breeder", "A much smaller periodic breeder, part of a large 2025 survey of rakes and breeders."),
     (281, "Tiny p12 and p24 free ship rakes", "Very small free ship rakes, from the same series."),
     (258, "c/5 spaceship collection", "Three p5 c/5 ships, at least two already known, in whose evolution all 102 isotropic neighborhood conditions occur."),
+    # Later additions, chosen from a full read of the thread in November 2026. An optional crop (x0, y0, x1, y1) keeps one object of a block.
+    (134, "p12 sideways free ship rake", "A 65-cell p12 flotilla of three p6 ships, a p6 puffer and a p4 ship, which fires free ships to both sides. "
+          "It uses no anchor tracks: until then, every known free ship rake was an anchor track flotilla."),
+    (359, "Plus ship rake", "A p48 sideways rake that fires plus ships, which Game of Life Fun called the first rake for a p4 spaceship. "
+          "Added on June 2 to a post first made on May 28."),
+    (89, "p5 oscillator with four starfish", "A p5 oscillator in which four starfish hassle some junk, with a minimum population of 328 cells. "
+         "It was the third known p5 oscillator, after the starfish and crossroads; the bow tie (2016) was the fourth."),
+    (150, "Extensible c/4 diagonal ship", "A c/4 diagonal spaceship with a minimum population of 409 cells, which praosylen posted as an "
+          "“extensible c/4 diagonal pseudo-pushalong”. A ram ship is part of it."),
+    (41, "Ship with a cut-off wave", "Luke had wondered whether the wave carried by the wave-riding ship could be cut off so that it stops growing. "
+         "Josh Ball replied with this p6 c spaceship, which carries a finite wave and has a minimum population of 823 cells."),
+    (98, "Dual lever wick", "From Arie Paap’s survey of p2 patterns: the lever wick, a p2 wick made of one phase of the lever, doubled, ended by two different "
+         "p4 terminations and turned by a p2 mirror in the middle. Both patterns are p4 oscillators."),
+    (108, "Pond agar oscillator", "From the same survey: a p2 oscillator with a 9 × 9 grid of ponds (3 × 3 boxes) at its center. "
+          "The ponds form an agar, a periodic pattern that fills the plane, and Arie Paap was looking for a way to stabilize its edges."),
+    (111, "p2 c spaceship", "From the same survey: a p2 c spaceship with a minimum population of 98 cells. "
+          "Until then, the flicker ship and flutter ship were the only known p2 spaceships."),
+    (116, "Smaller trilogy", "A p3 oscillator with a minimum population of 52 cells, which Arie Paap described as a smaller variation of the trilogy "
+          "(whose smallest form has 62). It comes from his collection of small p3 oscillators.", (54, 49, 74, 69)),
+    (86, "Anchor track puffer", "A p8 puffer that lays anchor tracks, with a trailer that cleans up the puffer’s stray dots. It can be extended to lay "
+         "tracks of any length, so there are puffers whose trails have any period an anchor track can have, 4 × 2ⁿ − 4."),
 ]
 
 POST = re.compile(r"^#(\d+)\s+post (p\d+)\s+by (.+?)\s+at (\d{4}-\d\d-\d\d)", re.M)
@@ -67,10 +88,13 @@ for m in re.finditer(r"\[CODE\](.*?)\[/CODE\]", text, re.S):
     blocks.append((m.group(1), owner))
 
 out = []
-for n, title, note in SELECT:
+for n, title, note, *crop in SELECT:
     body, (_, pid, who, date) = blocks[n - 1]
     lines = [l.strip() for l in body.strip().splitlines() if l.strip() and not l.startswith("#")]
     cells = parse_rle("\n".join(lines))
+    if crop:
+        x0, y0, x1, y1 = crop[0]
+        cells = {(x, y) for x, y in cells if x0 <= x <= x1 and y0 <= y <= y1}
     kind, per, d, _ = classify(cells, 300) if len(cells) < 3000 else ("other", None, None, None)
     out.append({"title": title, "by": who, "date": date, "post": pid, "note": note,
                 "rle": to_rle(cells), "pop": len(cells), "kind": kind, "period": per,
