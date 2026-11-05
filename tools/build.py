@@ -668,57 +668,81 @@ def build_speeds():
          f'\n<script src="assets/race.js?v={asset_version()}" defer></script>',
          "The smallest known spaceship, puffer and rake of each speed in Live Free or Die.")
 
-# The race at the bottom of Speeds: the moon, then the smallest ship at each slower speed, with the speeds
-# the tables give them. The dust mite ship ties the fruit fly ship at c/2 and has the smaller bounding box.
+# The race at the bottom of Speeds: the moon, then the smallest ship at each slower orthogonal speed, with the
+# speeds the tables give them. The dust mite ship ties the fruit fly ship at c/2 and has the smaller bounding box.
+# The smallest diagonal ship is shown on its own after the race.
 RACE = [("moon", "c", 1), ("dust-mite-ship", "c/2", 8), ("zirconium-ship", "2c/5", 5), ("wasp-ship", "c/3", 6),
-        ("beachcomber-ship", "c/4", 4), ("ram-ship", "c/4 diagonal", 4), ("decade-ship", "c/5", 10)]
+        ("beachcomber-ship", "c/4", 4), ("decade-ship", "c/5", 10)]
+DIAGONAL = ("ram-ship", "c/4 diagonal", 4)
+DIAG_TRAVEL = 48  # diagonal steps shown before the tile starts over
 
 def race_html():
-    """Six lanes, noses on one column at generation 0. Each racer is checked here by simulation:
-    after one period it is its first generation moved right (and, for a diagonal ship, as far down),
-    at the speed listed."""
-    by = {e["slug"]: e for e in ENTRIES}
+    """Six lanes, noses on one column at generation 0, then the smallest diagonal ship against the
+    diagonal speed limit. Each ship is checked here by simulation: after one period it is its first
+    generation moved right (and, for the diagonal ship, as far down), at the speed listed."""
     lanes = []
     for s, speed, period in RACE:
-        e = by[s]
-        cells = set(map(tuple, parse_rle(e["rle"])))
-        c, pops, x0, y0, x1, y1 = cells, [], 10**9, 10**9, -10**9, -10**9
-        for _ in range(period):
-            pops.append(len(c))
-            x0 = min(x0, min(x for x, _ in c)); x1 = max(x1, max(x for x, _ in c))
-            y0 = min(y0, min(y for _, y in c)); y1 = max(y1, max(y for _, y in c))
-            c = step(c)
-        dx = min(x for x, _ in c) - min(x for x, _ in cells)
-        dy = min(y for _, y in c) - min(y for _, y in cells)
-        assert dy == (dx if speed.endswith(" diagonal") else 0), s
-        assert {(x - dx, y - dy) for x, y in c} == cells, s
-        n, d = speed.removesuffix(" diagonal").split("c")
-        assert dx * int(d.strip("/") or 1) == (int(n) if n else 1) * period, (s, dx, period)
-        lo, hi = min(pops), max(pops)
-        pop = f"{lo} cells" if lo == hi else f"{lo}–{hi} cells"
-        credit = e.get("credit", "")
-        facts = " · ".join(filter(None, [speed, f"period {period}", pop, credit]))
-        f0 = max(x for x, _ in cells)
-        lanes.append(f'<div class="lane" role="listitem" data-rle="{esc(e["rle"])}" data-f0="{f0}" data-dy="{dy}" data-period="{period}" '
-                     f'data-ext="{x0},{y0},{x1},{y1}" data-label="{esc(e["name"].capitalize())}, {esc(facts)}">'
+        e, facts, f0, dy, ext = racer(s, speed, period)
+        lanes.append(f'<div class="lane" role="listitem" data-rle="{esc(e["rle"])}" data-f0="{f0}" '
+                     f'data-ext="{ext}" data-label="{esc(e["name"].capitalize())}, {esc(facts)}">'
                      f'<div class="lane-head"><a href="glossary.html#{s}">{esc(e["name"].capitalize())}</a> '
                      f'<span class="muted">{esc(facts)}</span></div><canvas role="img"></canvas></div>')
-    return f"""<h2 id="the-race">The race</h2>
-<div class="prose"><p>The moon and the smallest ship at each slower speed, racing from one starting line.
-At generation 0 every ship’s nose is on the same column.
-The shaded side is beyond the light front, which moves one column every generation: nothing that started behind that line can ever get ahead of it.
-The moon rides it exactly. The rest fall behind, each at its own speed, and by the time the moon reaches the end of the track, the decade ship has gone a fifth of the way.</p>
-<p>The ram ship travels diagonally, down and to the right, at a quarter of the speed of light each way.
-Its lane follows it down, so it stays in view and keeps pace with the beachcomber ship.</p>
-<p>Watch the last lane. Of the ships that travel straight, only the decade ship’s nose ever moves backward.
-Once every five generations it falls back two cells, and over the next four it gains three.
-A ship at the speed of light can’t do this: to keep up with light, its nose has to gain a cell every generation.</p></div>
-<div class="race" role="list" aria-label="Seven ships racing, one at each known speed">
+    s, speed, period = DIAGONAL
+    e, facts, _, _, ext = racer(s, speed, period)
+    # The diagonal limit: if no live cell has x + y > k, none can at the next generation have x + y > k + 1,
+    # since a cell with x + y = k + 2 then has at most one live neighbor, and birth takes two. Check the ship
+    # keeps to it, gaining one every two generations, for the whole run the tile shows.
+    c = set(map(tuple, parse_rle(e["rle"])))
+    lead = [max(x + y for x, y in c)]
+    for _ in range(DIAG_TRAVEL * period):
+        c = step(c); lead.append(max(x + y for x, y in c))
+    assert all(b - a <= 1 for a, b in zip(lead, lead[1:])) and lead[-1] - lead[0] == 2 * DIAG_TRAVEL, s
+    diag = (f'<figure class="diag" data-rle="{esc(e["rle"])}" data-ext="{ext}" data-s0="{lead[0]}" '
+            f'data-lap="{DIAG_TRAVEL * period}" data-travel="{DIAG_TRAVEL}" data-label="{esc(e["name"].capitalize())}, {esc(facts)}">'
+            f'<canvas role="img"></canvas><span class="pinfo">GEN 0</span>'
+            f'<figcaption><a href="glossary.html#{s}">{esc(e["name"].capitalize())}</a> <span class="muted">{esc(facts)}</span></figcaption></figure>')
+    return race_text(lanes, diag)
+
+def racer(s, speed, period):
+    """A ship's glossary entry, its facts line, its front column, its drift down per period and the
+    box it covers over its first period, after checking it moves as its speed says."""
+    e = {x["slug"]: x for x in ENTRIES}[s]
+    cells = set(map(tuple, parse_rle(e["rle"])))
+    c, pops, x0, y0, x1, y1 = cells, [], 10**9, 10**9, -10**9, -10**9
+    for _ in range(period):
+        pops.append(len(c))
+        x0 = min(x0, min(x for x, _ in c)); x1 = max(x1, max(x for x, _ in c))
+        y0 = min(y0, min(y for _, y in c)); y1 = max(y1, max(y for _, y in c))
+        c = step(c)
+    dx = min(x for x, _ in c) - min(x for x, _ in cells)
+    dy = min(y for _, y in c) - min(y for _, y in cells)
+    assert dy == (dx if speed.endswith(" diagonal") else 0), s
+    assert {(x - dx, y - dy) for x, y in c} == cells, s
+    n, d = speed.removesuffix(" diagonal").split("c")
+    assert dx * int(d.strip("/") or 1) == (int(n) if n else 1) * period, (s, dx, period)
+    lo, hi = min(pops), max(pops)
+    pop = f"{lo} cells" if lo == hi else f"{lo}–{hi} cells"
+    credit = e.get("credit", "")
+    facts = " · ".join(filter(None, [speed, f"period {period}", pop, credit]))
+    f0 = max(x for x, _ in cells)
+    return e, facts, f0, dy, f"{x0},{y0},{x1},{y1}"
+
+def race_text(lanes, diag):
+    return f"""<div class="race" role="list" aria-label="Six ships racing, one at each known orthogonal speed">
 {"".join(lanes)}
 <div class="pbar"><button type="button" class="race-play" title="Play / pause">▶</button><button type="button" class="race-reset" title="Reset">⟲</button><span class="race-gen muted">GEN 0</span></div>
 </div>
 <p class="muted table-note race-note">Each lane is its ship’s glossary pattern, simulated exactly on its own unbounded plane, one generation per step.
-The ram ship’s lane moves down with it, a cell at a time. Click the track to pause. On narrow screens the longest ships start with their tails cut off by the left edge, and come into view as they move.</p>"""
+Click the track to pause.</p>
+<h3 id="diagonal">Diagonal</h3>
+<div class="prose"><p>Straight ahead, a ship can keep up with light. Along a diagonal it can’t.
+Draw a line at forty-five degrees through the live cell farthest along the diagonal.
+A dead cell two steps beyond that line touches only one cell on it, and birth takes two, so the line can advance at most one step each generation.
+That is one diagonal step every two generations, and the shaded corner is beyond it.
+The ram ship, the smallest known diagonal ship, goes half as fast as that limit allows: one diagonal step every four generations.</p></div>
+{diag}
+<p class="muted table-note race-note">The ram ship is its glossary pattern, simulated exactly on an unbounded plane with a fixed camera, one generation per step.
+It starts over after {DIAG_TRAVEL} diagonal steps. Click it to pause.</p>"""
 
 ITERATIONS = [
     ("Accidental ships and puffers", "accidental puffer iterations.jpg", "accidental ship"),

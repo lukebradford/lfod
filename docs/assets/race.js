@@ -1,14 +1,75 @@
 // The race on the Speeds page: one lane per ship, noses on one column at generation 0, every lane
 // stepped together with the shared B2/S0 engine in lfod.js, the side beyond the light front shaded.
 // Cells are whole device pixels. Each lane is its own unbounded plane; the run restarts when the
-// moon's nose is one column short of the right edge. A diagonal ship's lane follows it down.
+// moon's nose is one column short of the right edge. After the race, a diagonal ship on a fixed
+// square plane, the side beyond the diagonal speed limit (x + y gains at most one a generation) shaded.
 (function () {
   "use strict";
   const RATE = 12, HOLD = 1600;
   const css = (n) => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
   const reduced = matchMedia("(prefers-reduced-motion: reduce)");
 
-  function init() {
+  function init() { race(); diagonal(); }
+
+  // A clock that runs while it is on screen and wanted, holding a moment before each restart.
+  function clock(el, tick, wanted, onState) {
+    const c = { timer: null, wanted, visible: false };
+    const run = () => { const wait = tick(); c.timer = setTimeout(() => requestAnimationFrame(run), wait); };
+    c.sync = () => {
+      const on = c.wanted && c.visible;
+      if (on && !c.timer) c.timer = setTimeout(run, 0);
+      if (!on && c.timer) { clearTimeout(c.timer); c.timer = null; }
+      if (onState) onState(c.wanted);
+    };
+    c.toggle = () => { c.wanted = !c.wanted; c.sync(); };
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver((ents) => { c.visible = ents[0].isIntersecting; c.sync(); }, { rootMargin: "50px" }).observe(el);
+    } else c.visible = true;
+    return c;
+  }
+
+  function diagonal() {
+    const el = document.querySelector(".diag");
+    if (!el || !window.LFoD) return;
+    const { parseRLE, step, kx, ky } = window.LFoD;
+    const [x0, y0, x1, y1] = el.dataset.ext.split(",").map(Number);
+    const s0 = +el.dataset.s0, lap = +el.dataset.lap, travel = +el.dataset.travel;
+    const canvas = el.querySelector("canvas"), info = el.querySelector(".pinfo");
+    canvas.setAttribute("aria-label", `${el.dataset.label}, behind the diagonal speed limit, simulated exactly.`);
+    const start = parseRLE(el.dataset.rle);
+    // the square plane: the first period's box 2 cells in from the top left, room to travel, 2 cells to spare
+    const N = Math.max(x1 - x0, y1 - y0) + 1 + travel + 4, tx = x0 - 2, ty = y0 - 2;
+    const d = { live: start, gen: 0 };
+    const to = (g) => { d.live = start; for (let i = 0; i < g; i++) d.live = step(d.live); d.gen = g; };
+    function draw() {
+      const dpr = window.devicePixelRatio || 1, side = Math.round((el.clientWidth || 300) * dpr);
+      const cs = Math.max(1, Math.floor(side / N)), W = N * cs;
+      if (canvas.width !== W) { canvas.width = W; canvas.height = W; }
+      canvas.style.width = canvas.style.height = `${W / dpr}px`;
+      const ctx = canvas.getContext("2d");
+      ctx.fillStyle = css("--grid-bg"); ctx.fillRect(0, 0, W, W);
+      const k = s0 + d.gen; // nothing can be alive where x + y > k
+      ctx.fillStyle = css("--panel");
+      for (let y = ty; y < ty + N; y++) {
+        const X = (Math.max(k - y + 1, tx) - tx) * cs;
+        if (X < W) ctx.fillRect(X, (y - ty) * cs, W - X, cs);
+      }
+      ctx.fillStyle = css("--cell");
+      for (const c of d.live) ctx.fillRect((kx(c) - tx) * cs, (ky(c) - ty) * cs, cs, cs);
+      info.textContent = `GEN ${d.gen}`;
+    }
+    const c = clock(el, () => {
+      if (d.gen >= lap) { to(0); draw(); return HOLD; }
+      d.live = step(d.live); d.gen++; draw(); return 1000 / RATE;
+    }, !reduced.matches);
+    if (reduced.matches) to(lap);
+    canvas.addEventListener("click", c.toggle);
+    window.addEventListener("resize", draw);
+    matchMedia("(prefers-color-scheme: dark)").addEventListener("change", draw);
+    draw(); c.sync();
+  }
+
+  function race() {
     const el = document.querySelector(".race");
     if (!el || !window.LFoD) return;
     const { parseRLE, step, kx, ky } = window.LFoD;
@@ -17,7 +78,7 @@
       const canvas = l.querySelector("canvas");
       canvas.setAttribute("aria-label", `${l.dataset.label}, racing from the starting line, simulated exactly.`);
       const start = parseRLE(l.dataset.rle);
-      return { canvas, start, live: start, f0: +l.dataset.f0, dy: +l.dataset.dy, period: +l.dataset.period, ext: { x0, y0, x1, y1 } };
+      return { canvas, start, live: start, f0: +l.dataset.f0, ext: { x0, y0, x1, y1 } };
     });
     const genEl = el.querySelector(".race-gen"), playBtn = el.querySelector(".race-play");
     // columns behind the start line that hold every ship's tail at generation 0
@@ -50,9 +111,7 @@
       const { cs, mx } = r, bg = css("--grid-bg"), shade = css("--panel"), ink = css("--cell");
       for (const l of lanes) {
         const c = l.canvas, ctx = c.getContext("2d"), W = c.width, H = c.height;
-        // a diagonal ship's camera follows it down a whole cell at a time, at its average speed
-        const cam = Math.floor((r.gen * l.dy) / l.period);
-        const ox = mx + (r.behind - l.f0) * cs, oy = cs - (l.ext.y0 + cam) * cs;
+        const ox = mx + (r.behind - l.f0) * cs, oy = cs - l.ext.y0 * cs;
         ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
         const X = ox + (l.f0 + r.gen + 1) * cs; // the light front: no cell can be alive at or beyond it
         ctx.fillStyle = shade; ctx.fillRect(X, 0, W - X, H);
