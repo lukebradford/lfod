@@ -36,7 +36,7 @@ def slug(name):
 def asset_version():
     import hashlib
     h = hashlib.sha1()
-    for name in ("style.css", "lfod.js", "w110.js"):
+    for name in ("style.css", "lfod.js", "w110.js", "race.js"):
         h.update((OUT / "assets" / name).read_bytes())
     return h.hexdigest()[:8]
 
@@ -663,8 +663,62 @@ def build_speeds():
                      f'<th>{esc(t["column"])}</th><th class="num">Period</th><th class="num">Cells</th></tr></thead><tbody>{rows}</tbody></table></div>')
         if t.get("note"):
             parts.append(f'<p class="muted table-note">{t["note"]}</p>')
-    page("speeds.html", "Speed explorations", "\n".join(parts),
+    parts.append(race_html())
+    page("speeds.html", "Speed explorations", "\n".join(parts) +
+         f'\n<script src="assets/race.js?v={asset_version()}" defer></script>',
          "The smallest known spaceship, puffer and rake of each speed in Live Free or Die.")
+
+# The race at the bottom of Speeds: the moon, then the smallest ship at each slower speed, with the speeds
+# the tables give them. The dust mite ship ties the fruit fly ship at c/2 and has the smaller bounding box.
+RACE = [("moon", "c", 1), ("dust-mite-ship", "c/2", 8), ("zirconium-ship", "2c/5", 5), ("wasp-ship", "c/3", 6),
+        ("beachcomber-ship", "c/4", 4), ("ram-ship", "c/4 diagonal", 4), ("decade-ship", "c/5", 10)]
+
+def race_html():
+    """Six lanes, noses on one column at generation 0. Each racer is checked here by simulation:
+    after one period it is its first generation moved right (and, for a diagonal ship, as far down),
+    at the speed listed."""
+    by = {e["slug"]: e for e in ENTRIES}
+    lanes = []
+    for s, speed, period in RACE:
+        e = by[s]
+        cells = set(map(tuple, parse_rle(e["rle"])))
+        c, pops, x0, y0, x1, y1 = cells, [], 10**9, 10**9, -10**9, -10**9
+        for _ in range(period):
+            pops.append(len(c))
+            x0 = min(x0, min(x for x, _ in c)); x1 = max(x1, max(x for x, _ in c))
+            y0 = min(y0, min(y for _, y in c)); y1 = max(y1, max(y for _, y in c))
+            c = step(c)
+        dx = min(x for x, _ in c) - min(x for x, _ in cells)
+        dy = min(y for _, y in c) - min(y for _, y in cells)
+        assert dy == (dx if speed.endswith(" diagonal") else 0), s
+        assert {(x - dx, y - dy) for x, y in c} == cells, s
+        n, d = speed.removesuffix(" diagonal").split("c")
+        assert dx * int(d.strip("/") or 1) == (int(n) if n else 1) * period, (s, dx, period)
+        lo, hi = min(pops), max(pops)
+        pop = f"{lo} cells" if lo == hi else f"{lo}–{hi} cells"
+        credit = e.get("credit", "")
+        facts = " · ".join(filter(None, [speed, f"period {period}", pop, credit]))
+        f0 = max(x for x, _ in cells)
+        lanes.append(f'<div class="lane" role="listitem" data-rle="{esc(e["rle"])}" data-f0="{f0}" data-dy="{dy}" data-period="{period}" '
+                     f'data-ext="{x0},{y0},{x1},{y1}" data-label="{esc(e["name"].capitalize())}, {esc(facts)}">'
+                     f'<div class="lane-head"><a href="glossary.html#{s}">{esc(e["name"].capitalize())}</a> '
+                     f'<span class="muted">{esc(facts)}</span></div><canvas role="img"></canvas></div>')
+    return f"""<h2 id="the-race">The race</h2>
+<div class="prose"><p>The moon and the smallest ship at each slower speed, racing from one starting line.
+At generation 0 every ship’s nose is on the same column.
+The shaded side is beyond the light front, which moves one column every generation: nothing that started behind that line can ever get ahead of it.
+The moon rides it exactly. The rest fall behind, each at its own speed, and by the time the moon reaches the end of the track, the decade ship has gone a fifth of the way.</p>
+<p>The ram ship travels diagonally, down and to the right, at a quarter of the speed of light each way.
+Its lane follows it down, so it stays in view and keeps pace with the beachcomber ship.</p>
+<p>Watch the last lane. Of the ships that travel straight, only the decade ship’s nose ever moves backward.
+Once every five generations it falls back two cells, and over the next four it gains three.
+A ship at the speed of light can’t do this: to keep up with light, its nose has to gain a cell every generation.</p></div>
+<div class="race" role="list" aria-label="Seven ships racing, one at each known speed">
+{"".join(lanes)}
+<div class="pbar"><button type="button" class="race-play" title="Play / pause">▶</button><button type="button" class="race-reset" title="Reset">⟲</button><span class="race-gen muted">GEN 0</span></div>
+</div>
+<p class="muted table-note race-note">Each lane is its ship’s glossary pattern, simulated exactly on its own unbounded plane, one generation per step.
+The ram ship’s lane moves down with it, a cell at a time. Click the track to pause. On narrow screens the longest ships start with their tails cut off by the left edge, and come into view as they move.</p>"""
 
 ITERATIONS = [
     ("Accidental ships and puffers", "accidental puffer iterations.jpg", "accidental ship"),

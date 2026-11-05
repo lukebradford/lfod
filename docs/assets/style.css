@@ -180,3 +180,12 @@ a.card:hover { background: var(--code-bg); }
 #hist .t { color: var(--muted); }
 .w110 .err { color: #c00; }
 .w110 .pbar { flex-wrap: wrap; }
+
+/* The race on the Speeds page */
+.race { background: var(--grid-bg); border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; margin-top: 1.2rem; }
+.race .lane + .lane { border-top: 1px solid var(--rule); }
+.race .lane-head { padding: 0.35rem 0.6rem 0.15rem; font-size: 0.85rem; }
+.race .lane-head .muted { font-size: 0.78rem; margin-left: 0.4rem; }
+.race canvas { display: block; width: 100%; cursor: pointer; image-rendering: pixelated; }
+.race .race-gen { margin-left: auto; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.03em; font-variant-numeric: tabular-nums; }
+.race-note { margin-top: 0.6rem; }

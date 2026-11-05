@@ -181,7 +181,7 @@
     }
   }
 
-  window.LFoD = { parseRLE, step, Player };
+  window.LFoD = { parseRLE, step, kx, ky, Player };
 
   // Sortable tables: click a heading to sort by it, again to reverse. Numbers, boxes (by area)
   // and speeds (c, c/2, 2c/5, c/4d) sort by value; empty cells always sort last.
