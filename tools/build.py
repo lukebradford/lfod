@@ -728,22 +728,13 @@ def racer(s, speed, period):
     return e, facts, f0, dy, f"{x0},{y0},{x1},{y1}"
 
 def race_text(lanes, diag):
-    return f"""<h3 id="smallest-ships">Smallest ships of each speed</h3>
+    return f"""<h2 id="smallest-ships">Smallest ships of each speed</h2>
 <div class="race" role="list" aria-label="Six ships racing, one at each known orthogonal speed">
 {"".join(lanes)}
 <div class="pbar"><button type="button" class="race-play" title="Play / pause">▶</button><button type="button" class="race-reset" title="Reset">⟲</button><span class="race-gen muted">GEN 0</span></div>
 </div>
-<p class="muted table-note race-note">Each lane is its ship’s glossary pattern, simulated exactly on its own unbounded plane, one generation per step.
-Click the track to pause.</p>
 <h3 id="diagonal">Diagonal</h3>
-<div class="prose"><p>Straight ahead, a ship can keep up with light. Along a diagonal it can’t.
-Draw a line at forty-five degrees through the live cell farthest along the diagonal.
-A dead cell two steps beyond that line touches only one cell on it, and birth takes two, so the line can advance at most one step each generation.
-That is one diagonal step every two generations, and the shaded corner is beyond it.
-The ram ship, the smallest known diagonal ship, goes half as fast as that limit allows: one diagonal step every four generations.</p></div>
-{diag}
-<p class="muted table-note race-note">The ram ship is its glossary pattern, simulated exactly on an unbounded plane with a fixed camera, one generation per step.
-It starts over after {DIAG_TRAVEL} diagonal steps. Click it to pause.</p>"""
+{diag}"""
 
 ITERATIONS = [
     ("Accidental ships and puffers", "accidental puffer iterations.jpg", "accidental ship"),
