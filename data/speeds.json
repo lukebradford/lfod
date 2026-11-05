@@ -13,14 +13,6 @@
     },
     {
      "speed": "c/2",
-     "name": "Fruit fly ship",
-     "period": "4",
-     "cells": "36",
-     "credit": "Nora Brown, 2015",
-     "url": "https://conwaylife.com/forums/viewtopic.php?p=16168#p16168"
-    },
-    {
-     "speed": "c/2",
      "name": "Dust mite ship",
      "period": "8",
      "cells": "36",
@@ -67,8 +59,7 @@
      "credit": "Josh Ball, 2008",
      "url": "news.html#d2008-12-09"
     }
-   ],
-   "note": "The fruit fly ship and dust mite ship tie at c/2."
+   ]
   },
   {
    "title": "Puffers",

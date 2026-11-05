@@ -669,7 +669,7 @@ def build_speeds():
          "The smallest known spaceship, puffer and rake of each speed in Live Free or Die.")
 
 # The race at the bottom of Speeds: the moon, then the smallest ship at each slower orthogonal speed, with the
-# speeds the tables give them. The dust mite ship ties the fruit fly ship at c/2 and has the smaller bounding box.
+# speeds the tables give them.
 # The smallest diagonal ship is shown on its own after the race.
 RACE = [("moon", "c", 1), ("dust-mite-ship", "c/2", 8), ("zirconium-ship", "2c/5", 5), ("wasp-ship", "c/3", 6),
         ("beachcomber-ship", "c/4", 4), ("decade-ship", "c/5", 10)]
