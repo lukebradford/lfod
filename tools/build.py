@@ -728,7 +728,8 @@ def racer(s, speed, period):
     return e, facts, f0, dy, f"{x0},{y0},{x1},{y1}"
 
 def race_text(lanes, diag):
-    return f"""<div class="race" role="list" aria-label="Six ships racing, one at each known orthogonal speed">
+    return f"""<h3 id="smallest-ships">Smallest ships of each speed</h3>
+<div class="race" role="list" aria-label="Six ships racing, one at each known orthogonal speed">
 {"".join(lanes)}
 <div class="pbar"><button type="button" class="race-play" title="Play / pause">▶</button><button type="button" class="race-reset" title="Reset">⟲</button><span class="race-gen muted">GEN 0</span></div>
 </div>
