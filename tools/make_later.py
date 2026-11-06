@@ -211,7 +211,7 @@ for name, cells, desc, credit, note in [
     ("pocket rake", pocket, "A p4 c clean backward moon rake with an initial population of 32 cells. It was the smallest known rake until 2025.", "",
      "The wiki’s pocket rake page was never archived. This is the 32-cell p4 c rake in the wiki’s October 2013 collection, "
      "which matches the wiki’s figures for the pocket rake. In August 2025 Game of Life Fun posted a smaller one, "
-     f'an <a href="{post_url("p217159")}">18-cell p4 c backward moon rake</a>.'),
+     'an <a href="news.html#18-cell-moon-rake">18-cell p4 c backward moon rake</a>.'),
 ]:
     entries.append({"name": name, "kind": "puffer", "desc": desc, "rle": to_rle(cells), "credit": credit,
                     "source": "collection", "url": COLLECTION_URL, "captured": "2013-10-14", "note": note})
@@ -240,7 +240,7 @@ for name, title, rle, desc, note in [
 # The News page shows orthogonal craft travelling right and diagonal ones down and to the right.
 # Oscillators, guns, the seed and the four-way wave-riding ship are left as posted.
 HEADING = {
-    "c/4 diagonal ship": (-1, -1), "p10 c/5 ship (decade ship)": (0, -1), "Two growing spaceships": (0, 1),
+    "Ram ship posted to the forum": (-1, -1), "p10 c/5 ship (decade ship)": (0, -1), "Two growing spaceships": (0, 1),
     "p12 anchor track flotillas": (1, 0), "p8 c/2 ship": (-1, 0), "c/2 p4 spaceship and backrake": (-1, 0),
     "c p4 side rake": (-1, 0), "c p2 backrake": (-1, 0), "c p6 side rake": (-1, 0), "Buffalo ships": (1, 0),
     "Buffalo rake and ship": (1, 0), "Buffalo bird": (1, 0), "p3 puffers (bent tricycle puffer)": (1, 0),
@@ -252,7 +252,7 @@ HEADING = {
     "Completed almost-rake": (1, 0), "p9 puffer": (0, -1), "Small periodic MMS breeder": (0, -1),
     "Tiny p12 and p24 free ship rakes": (0, -1), "c/5 spaceship collection": (1, 0),
     "p12 sideways free ship rake": (1, 0), "Plus ship rake": (0, -1), "Extensible c/4 diagonal ship": (1, 1),
-    "Ship with a cut-off wave": (-1, 0), "p2 c spaceship": (1, 0), "Anchor track puffer": (1, 0),
+    "Ship with a cut-off wave": (-1, 0), "p2 c spaceship": (1, 0), "Anchor track puffer": (1, 0), "18-cell moon rake": (0, -1),
 }
 ROTATIONS = [lambda x, y: (x, y), lambda x, y: (-y, x), lambda x, y: (-x, -y), lambda x, y: (y, -x)]
 

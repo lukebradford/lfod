@@ -15,7 +15,9 @@ from lfod import parse_rle, classify, to_rle, normalize
 
 SELECT = [
     # (block, title, note)
-    (6, "c/4 diagonal ship", "A c/4 diagonal spaceship, posted while the forum was trying to recover the Verizon site."),
+    (6, "Ram ship posted to the forum", "Josh Ball’s 37-cell p4 c/4 diagonal spaceship, the smallest known diagonal spaceship, which this site catalogued as the ram ship in "
+        '<a href="news.html#d2008-12-09">December 2008</a>. Paul Tooke posted it in reply to Josh Ball’s c/4 orthogonal ship, '
+        "an hour after pointing to the Wayback snapshot of the Verizon site."),
     (9, "p10 c/5 ship (decade ship)", "The first p10 object in the rule; named the decade ship on the wiki."),
     (10, "p4 moon gun (moon laser)", "The first gun in Live Free or Die, a double-barreled p4 moon gun. Named the moon laser on the wiki."),
     (11, "Two growing spaceships", "Two craft whose fronts travel at c while their back ends travel at c/5 and c/3, so they grow longer as they go."),
@@ -59,8 +61,8 @@ SELECT = [
     # Later additions, chosen from a full read of the thread in November 2026. An optional crop (x0, y0, x1, y1) keeps one object of a block.
     (134, "p12 sideways free ship rake", "A 65-cell p12 flotilla of three p6 ships, a p6 puffer and a p4 ship, which fires free ships to both sides. "
           "It uses no anchor tracks: until then, every known free ship rake was an anchor track flotilla."),
-    (359, "Plus ship rake", "A p48 sideways rake that fires plus ships, which Game of Life Fun called the first rake for a p4 spaceship. "
-          "Added on June 2 to a post first made on May 28."),
+    (359, "Plus ship rake", "A p48 sideways rake that fires plus ships. Every earlier rake fired moons, free ships or short free ships, so this was the first rake "
+          "for a p4 spaceship. Added on June 2 to a post first made on May 28."),
     (89, "p5 oscillator with four starfish", "A p5 oscillator in which four starfish hassle some junk, with a minimum population of 328 cells. "
          "It was the third known p5 oscillator, after the starfish and crossroads; the bow tie (2016) was the fourth."),
     (150, "Extensible c/4 diagonal ship", "A c/4 diagonal spaceship with a minimum population of 409 cells, which praosylen posted as an "
@@ -77,6 +79,9 @@ SELECT = [
           "(whose smallest form has 62). It comes from his collection of small p3 oscillators.", (54, 49, 74, 69)),
     (86, "Anchor track puffer", "A p8 puffer that lays anchor tracks, with a trailer that cleans up the puffer’s stray dots. It can be extended to lay "
          "tracks of any length, so there are puffers whose trails have any period an anchor track can have, 4 × 2ⁿ − 4."),
+    (389, "18-cell moon rake", "A p4 c backward moon rake with an initial population of 18 cells, the smallest known rake. The pocket rake, "
+          "the smallest known before it, has 32. It is the first of three p4 moon backrakes in a long post of new rakes and puffers, "
+          "which also holds the first rakes for p12 freedom fighter ships and p6 hex ships.", (0, 0, 17, 5)),
 ]
 
 POST = re.compile(r"^#(\d+)\s+post (p\d+)\s+by (.+?)\s+at (\d{4}-\d\d-\d\d)", re.M)
