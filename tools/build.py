@@ -2,7 +2,7 @@
 
 Usage: python3 tools/build.py   (standard library only)
 """
-import functools, html, json, re, shutil, sys
+import functools, html, json, math, re, shutil, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -36,7 +36,7 @@ def slug(name):
 def asset_version():
     import hashlib
     h = hashlib.sha1()
-    for name in ("style.css", "lfod.js", "w110.js", "race.js"):
+    for name in ("style.css", "lfod.js", "w110.js", "race.js", "periods.js"):
         h.update((OUT / "assets" / name).read_bytes())
     return h.hexdigest()[:8]
 
@@ -650,8 +650,53 @@ def build_periods():
         if t.get("note"):
             note = re.sub(r"\{([^}]*)\}", lambda m: mathml(m.group(1)), t["note"])
             parts.append(f'<p class="muted table-note">{note}</p>')
-    page("periods.html", "Period explorations", "\n".join(parts),
+    parts.append(oscillators_html())
+    page("periods.html", "Period explorations", "\n".join(parts) +
+         f'\n<script src="assets/periods.js?v={asset_version()}" defer></script>',
          "The smallest known oscillator, spaceship and puffer of each period in Live Free or Die.")
+
+# The table at the bottom of Periods: the smallest known oscillator at each period under 20, all running
+# together. The oscillator table's rows name them; the glossary's "anchor track" pattern is the 2-slot one.
+OSC_SLUGS = {"2-slot anchor track": "anchor-track"}
+OSC_LIMIT, OSC_COLS = 20, 5
+
+def oscillators_html():
+    """Two rows of cells, a period and its oscillator in a fixed frame each. Each is checked here by
+    simulation: it first repeats after exactly its period, at the population the table gives, and the frame
+    holds every phase. The run is one cycle of them all, after which every one is back at its first generation."""
+    table = next(t for t in PERIODS["tables"] if t["title"] == "Oscillators")
+    rows = [r for r in table["rows"] if r["period"].isdigit() and int(r["period"]) < OSC_LIMIT]
+    by = {x["slug"]: x for x in ENTRIES}
+    tiles, periods = [], []
+    for r in rows:
+        period, s = int(r["period"]), OSC_SLUGS.get(r["name"], slug(r["name"]))
+        e = by[s]
+        cells = set(map(tuple, parse_rle(e["rle"])))
+        c, pops, box = cells, [], [10**9, 10**9, -10**9, -10**9]
+        for g in range(1, period + 1):
+            pops.append(len(c))
+            box = [min(box[0], min(x for x, _ in c)), min(box[1], min(y for _, y in c)),
+                   max(box[2], max(x for x, _ in c)), max(box[3], max(y for _, y in c))]
+            c = step(c)
+            assert (c == cells) == (g == period), (s, g)
+        assert min(pops) == int(r["cells"]), (s, min(pops), r["cells"])
+        periods.append(period)
+        tiles.append(f'<td><div class="osc-head"><span>Period {period}</span>'
+                     f'<a href="glossary.html#{s}">{esc(r["name"])}</a></div>'
+                     f'<div class="osc" data-rle="{esc(e["rle"])}" data-ext="{",".join(map(str, box))}" '
+                     f'data-label="{esc(r["name"])}, period {period}"><canvas role="img"></canvas></div></td>')
+    lap = functools.reduce(lambda a, b: a * b // math.gcd(a, b), periods)
+    missing = [str(p) for p in range(1, OSC_LIMIT) if p not in periods]
+    note = f'No oscillator is known of period {", ".join(missing[:-1])} or {missing[-1]}.'
+    # the cells left over in the last row hold the note on the periods without one
+    assert len(tiles) % OSC_COLS, "no cell left for the note"
+    tiles.append(f'<td class="osc-note muted" colspan="{-len(tiles) % OSC_COLS}">{note}</td>')
+    trs = "".join(f'<tr>{"".join(tiles[i:i + OSC_COLS])}</tr>' for i in range(0, len(tiles), OSC_COLS))
+    return f"""<h2 id="smallest-oscillators">Smallest oscillators of each period under {OSC_LIMIT}</h2>
+<div class="table-wrap oscs" data-lap="{lap}" data-cols="{OSC_COLS}">
+<table><tbody>{trs}</tbody></table>
+<div class="pbar"><button type="button" class="osc-play" title="Play / pause">▶</button><button type="button" class="osc-reset" title="Reset">⟲</button><span class="osc-gen muted">GEN 0</span></div>
+</div>"""
 
 def build_speeds():
     parts = ["<h1>Speed explorations</h1>", f'<div class="prose">{SPEEDS["intro"]}</div>']

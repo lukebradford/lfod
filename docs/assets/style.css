@@ -192,3 +192,16 @@ a.card:hover { background: var(--code-bg); }
 .diag canvas { display: block; margin: 0 auto; cursor: pointer; image-rendering: pixelated; }
 .diag figcaption { padding: 0.35rem 0.6rem; font-size: 0.85rem; border-top: 1px solid var(--rule); }
 .diag figcaption .muted { font-size: 0.78rem; margin-left: 0.4rem; }
+
+/* The oscillators of each period at the bottom of Periods */
+.oscs { background: var(--grid-bg); }
+.oscs table { background: transparent; table-layout: fixed; }
+.oscs td { vertical-align: top; padding: 0; font-size: 0.8rem; white-space: normal; }
+.oscs td + td { border-left: 1px solid var(--rule); }
+.oscs .osc-head { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.4rem 0.65rem; background: var(--panel); border-bottom: 1px solid var(--rule); }
+.oscs .osc-head span { font-weight: 600; }
+.oscs .osc { padding: 0.65rem; }
+.oscs canvas { display: block; margin: 0 auto; cursor: pointer; image-rendering: pixelated; }
+.oscs .osc-note { vertical-align: middle; padding: 0.65rem; }
+.oscs .pbar { border-top: 1px solid var(--rule); }
+.oscs .osc-gen { margin-left: auto; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.03em; font-variant-numeric: tabular-nums; }
