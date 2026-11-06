@@ -240,17 +240,17 @@ for name, title, rle, desc, note in [
 # The News page shows orthogonal craft travelling right and diagonal ones down and to the right.
 # Oscillators, guns, the seed and the four-way wave-riding ship are left as posted.
 HEADING = {
-    "Ram ship posted to the forum": (-1, -1), "p10 c/5 ship (decade ship)": (0, -1), "Two growing spaceships": (0, 1),
+    "p10 c/5 ship (decade ship)": (0, -1), "Two growing spaceships": (0, 1),
     "p12 anchor track flotillas": (1, 0), "p8 c/2 ship": (-1, 0), "c/2 p4 spaceship and backrake": (-1, 0),
-    "c p4 side rake": (-1, 0), "c p2 backrake": (-1, 0), "c p6 side rake": (-1, 0), "Buffalo ships": (1, 0),
+    "c p4 side rake": (-1, 0), "c p2 backrake": (-1, 0), "c p6 side rake": (-1, 0),
     "Buffalo rake and ship": (1, 0), "Buffalo bird": (1, 0), "p3 puffers (bent tricycle puffer)": (1, 0),
     "c/3 ship (wasp ship)": (-1, 0), "Extended wasp ships": (-1, 0), "c/2 backrake": (0, 1),
-    "c/2 backrake stabilized into a ship": (0, 1), "Sawtooth": (1, 0), "Short free ship rake (freedom collider)": (1, 0),
-    "Anchored freedom collider": (1, 0), "Tiny c/2 ships (fruit fly ship)": (0, 1), "Small c/2 ships": (-1, 0),
-    "p9 dot puffer": (1, 0), "p10 puffers": (1, 0), "MMS breeder": (1, 0), "p5 c spaceship": (0, 1),
+    "Sawtooth": (1, 0), "Short free ship rake (freedom collider)": (1, 0),
+    "Tiny c/2 ships (fruit fly ship)": (0, 1),
+    "p9 dot puffer": (1, 0), "p10 puffers": (1, 0), "MMS breeder": (1, 0),
     "p2 rake (flicker rake)": (0, 1), "p2 wick puffer, stabilized": (1, 0), "Short-necked giraffe": (1, 1),
     "Completed almost-rake": (1, 0), "p9 puffer": (0, -1), "Small periodic MMS breeder": (0, -1),
-    "Tiny p12 and p24 free ship rakes": (0, -1), "c/5 spaceship collection": (1, 0),
+    "Tiny p12 and p24 free ship rakes": (0, -1),
     "p12 sideways free ship rake": (1, 0), "Plus ship rake": (0, -1), "Extensible c/4 diagonal ship": (1, 1),
     "Ship with a cut-off wave": (-1, 0), "p2 c spaceship": (1, 0), "Anchor track puffer": (1, 0), "18-cell moon rake": (0, -1),
 }
@@ -285,13 +285,15 @@ for e in entries:
     if e.get("paras"):
         e["paras"] = [powers(q) for q in e["paras"]]
 
+# News items kept as text only: the pattern adds nothing a reader can see.
+NO_PLAYER = {"c/5 spaceship collection"}
 news = []
 for f in FORUM:
     who = NAMES.get(f["by"], f["by"])
     news.append({"date": f["date"], "source": "forum",
                  "paras": [f'<strong>{f["title"]}</strong> by {who}. {f["note"]} '
                            f'<a href="{post_url(f["post"])}">Forum post</a>.'],
-                 "rle": orient(f["rle"], HEADING.get(f["title"]))})
+                 "rle": None if f["title"] in NO_PLAYER else orient(f["rle"], HEADING.get(f["title"]))})
 news += [
     {"date": "2012-07-21", "source": "forum", "paras": [
         f'Josh Ball (velcrorex) posts the first c/4 orthogonal spaceship, later named the beachcomber ship, to the '

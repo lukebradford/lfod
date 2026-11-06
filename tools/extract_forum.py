@@ -15,9 +15,6 @@ from lfod import parse_rle, classify, to_rle, normalize
 
 SELECT = [
     # (block, title, note)
-    (6, "Ram ship posted to the forum", "Josh Ball’s 37-cell p4 c/4 diagonal spaceship, the smallest known diagonal spaceship, which this site catalogued as the ram ship in "
-        '<a href="news.html#d2008-12-09">December 2008</a>. Paul Tooke posted it in reply to Josh Ball’s c/4 orthogonal ship, '
-        "an hour after pointing to the Wayback snapshot of the Verizon site."),
     (9, "p10 c/5 ship (decade ship)", "The first p10 object in the rule; named the decade ship on the wiki."),
     (10, "p4 moon gun (moon laser)", "The first gun in Live Free or Die, a double-barreled p4 moon gun. Named the moon laser on the wiki."),
     (11, "Two growing spaceships", "Two craft whose fronts travel at c while their back ends travel at c/5 and c/3, so they grow longer as they go."),
@@ -28,7 +25,6 @@ SELECT = [
     (24, "c p2 backrake", "Luke: “the first known rake or puffer at p2.” Checked by simulation: the front end repeats every 2 generations."),
     (25, "c p6 side rake", "A p6 side rake; the basic mechanism leaves debris, so a flotilla cleans it up."),
     (27, "New p4 oscillators and a big six shooter stack", "Includes the oscillators catalogued as shortwave and longwave, and a new way to connect big six shooters."),
-    (29, "Buffalo ships", "A family of p4 c/2 ships with even bilateral symmetry, found with gfind and WLS. Catalogued as the buffalo ships."),
     (31, "Buffalo rake and ship", "A p4 c/2 back rake; catalogued as the buffalo rake, then the smallest known c/2 puffer or rake."),
     (32, "Buffalo bird", "A tagalong that can hop onto most known c/2 ships; it only needs two diagonally adjacent cells in its third generation."),
     (33, "p3 puffers (bent tricycle puffer)", "A variation of the tricycle puffer and a single dot puffer."),
@@ -36,17 +32,13 @@ SELECT = [
     (42, "c/3 ship (wasp ship)", "The first c/3 spaceship, which won one of Luke’s cash prizes. Named the wasp ship."),
     (50, "Extended wasp ships", "Luke found that the wasp ship can be made longer: this one trails two long diagonal arms."),
     (54, "c/2 backrake", "A p4 c/2 backward moon rake, which Nora Brown named the horned rake."),
-    (55, "c/2 backrake stabilized into a ship", "The backrake with a component that eats the moons."),
     (56, "Sawtooth", "A sawtooth: a c/2 ship adds a moon eater to a stream of moons, which a pair of monsters then destroys."),
     (57, "p5 oscillator (crossroads)", "The second p5 oscillator after the starfish. Named crossroads."),
     (63, "Short free ship rake (freedom collider)", "A p8 backward short free ship rake: apart from flotillas, the first rake that emits anything other than moons."),
-    (65, "Anchored freedom collider", "Luke’s anchored version of the freedom collider, posted the same day, with an initial population of 34 cells."),
     (67, "Tiny c/2 ships (fruit fly ship)", "The one at the bottom, with a minimum population of 36, tied the dust mite ship as the smallest c/2 ship. Named the fruit fly ship."),
-    (68, "Small c/2 ships", "Three p4 c/2 ships, with minimum populations of 46, 89 and 96 cells; Luke noted that the 96-cell one was a known unicorn ship."),
     (80, "p9 dot puffer", "The first p9 object other than the arrow puffers."),
     (84, "p10 puffers", "The first p10 puffers, and the only p10 craft that travel at c."),
     (87, "MMS breeder", "The first breeder in Live Free or Die."),
-    (88, "p5 c spaceship", "A p5 c spaceship with a minimum population of 250 cells; the smallest p5 c ship, the nickel ship, has 98."),
     (90, "p2 rake (flicker rake)", "A p2 rake, the second after Josh Ball’s July 2014 backrake (Luke hailed it as the first, but the earlier one is also p2). Luke named it the flicker rake on March 24, 2015."),
     (115, "p2 wick puffer, stabilized", "A p2 puffer whose wick is stabilized at the end."),
     (138, "p5 moon gun", "A surprisingly small p5 moon gun, the second known working gun."),
